@@ -5,7 +5,7 @@ struct Interval {
 } derive(Eq)
 
 ///|
-fn Interval::compare(self : Interval, other : Interval) -> Int {
+impl Compare for Interval with compare(self : Interval, other : Interval) -> Int {
   return self.end - self.start - (other.end - other.start)
 }
 
@@ -27,7 +27,7 @@ fn min_interval_to_include_each_query(
   query_pairs.sort_by(fn(a, b) { a.0 - b.0 })
 
   // Min-heap to keep track of intervals by their size
-  let heap : @priority_queue.T[Interval] = @priority_queue.T::new()
+  let heap : @priority_queue.T[Interval] = @priority_queue.new()
   let result = Array::make(queries.length(), -1)
   let mut interval_index = 0
   for i = 0; i < query_pairs.length(); i = i + 1 {

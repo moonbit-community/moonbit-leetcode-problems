@@ -13,7 +13,7 @@ fn count_good_substrings(s : String) -> Int {
 
 ///|
 fn is_distinct(substring : String) -> Bool {
-  let char_set = @hashmap.T::new()
+  let char_set = @hashmap.new()
   for i = 0; i < substring.length(); i = i + 1 {
     let char = substring[i]
     if char_set.contains(char) {

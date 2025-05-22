@@ -8,7 +8,7 @@ fn num_of_subarrays(arr : Array[Int], k : Int, threshold : Int) -> Int {
   let mut s = sum_initial
   for i = k; i < len; i = i + 1 {
     s = s + arr[i] - arr[i - k]
-    ans = ans + if s >= k * threshold { 1 } else { 0 }
+    ans = ans + (if s >= k * threshold { 1 } else { 0 })
   }
   ans
 }

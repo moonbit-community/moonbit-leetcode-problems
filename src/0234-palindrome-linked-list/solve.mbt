@@ -4,19 +4,23 @@ enum ListNode {
   Node(Int, ListNode)
 }
 
+///|
 fn is_palindrome(head : ListNode) -> Bool {
   let mut slow : ListNode = head
   let mut fast : ListNode = match head {
     Nil => Nil
     Node(_, next) => next
   }
-  while match fast {
-          Nil => false
-          Node(_, next) =>
-            match next {
-              Nil => false
-              _ => true
-            }
+  while {
+          let result = match fast {
+            Nil => false
+            Node(_, next) =>
+              match next {
+                Nil => false
+                _ => true
+              }
+          }
+          result
         } {
     slow = match slow {
       Node(val, next) => next
@@ -34,10 +38,7 @@ fn is_palindrome(head : ListNode) -> Bool {
     Nil => Nil
   }
   let mut prev : ListNode = Nil
-  while match cur {
-          Nil => false
-          _ => true
-        } {
+  while not(cur is Nil) {
     let t : ListNode = match cur {
       Node(_, next) => next
       Nil => Nil
@@ -60,10 +61,7 @@ fn is_palindrome(head : ListNode) -> Bool {
   // Compare reversed half with the first half
   let mut left : ListNode = head
   let mut right : ListNode = prev
-  while match right {
-          Nil => false
-          _ => true
-        } {
+  while not(right is Nil) {
     match (left, right) {
       (Node(val1, next1), Node(val2, next2)) => {
         if val1 != val2 {

@@ -5,7 +5,7 @@ struct Logger {
 
 ///|
 fn Logger::new() -> Logger {
-  Logger::{ limiter: @immut/hashmap.T::new() }
+  Logger::{ limiter: @immut/hashmap.new() }
 }
 
 ///|

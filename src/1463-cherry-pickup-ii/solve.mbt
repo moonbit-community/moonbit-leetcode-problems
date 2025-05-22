@@ -24,7 +24,7 @@ fn cherry_pickup(grid : Array[Array[Int]]) -> Int {
   for i = 1; i < m; i = i + 1 {
     for j1 = 0; j1 < n; j1 = j1 + 1 {
       for j2 = 0; j2 < n; j2 = j2 + 1 {
-        let x = grid[i][j1] + if j1 == j2 { 0 } else { grid[i][j2] }
+        let x = grid[i][j1] + (if j1 == j2 { 0 } else { grid[i][j2] })
         for y1 = j1 - 1; y1 <= j1 + 1; y1 = y1 + 1 {
           for y2 = j2 - 1; y2 <= j2 + 1; y2 = y2 + 1 {
             if y1 >= 0 && y1 < n && y2 >= 0 && y2 < n && f[i - 1][y1][y2] != -1 {

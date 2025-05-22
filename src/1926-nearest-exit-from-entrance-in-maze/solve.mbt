@@ -11,7 +11,7 @@ fn nearest_exit(maze : Array[Array[Char]], entrance : Array[Int]) -> Int {
   let entrance_row = entrance[0]
   let entrance_col = entrance[1]
   let directions = [[-1, 0], [1, 0], [0, -1], [0, 1]]
-  let queue = @queue.T::new()
+  let queue = @queue.new()
   queue.push(Point::{ row: entrance_row, col: entrance_col })
   let visited = Array::make(m, Array::make(n, false))
   visited[entrance_row][entrance_col] = true

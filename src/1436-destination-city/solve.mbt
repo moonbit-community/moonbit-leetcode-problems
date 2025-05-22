@@ -1,7 +1,7 @@
 ///|
 fn dest_city(paths : Array[(String, String)]) -> String {
   let paths_len = paths.length()
-  let set : @hashset.T[String] = @hashset.T::of([])
+  let set : @hashset.T[String] = @hashset.of([])
   for i = 0; i < paths_len; i = i + 1 {
     let (a, _) = paths[i]
     set.insert(a)

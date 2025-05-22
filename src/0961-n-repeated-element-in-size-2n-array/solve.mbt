@@ -1,6 +1,6 @@
 ///|
 struct Set {
-  mut elems : Array[Int]
+  elems : Array[Int]
 }
 
 ///|

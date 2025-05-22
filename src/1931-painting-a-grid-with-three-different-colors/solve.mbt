@@ -46,7 +46,7 @@ fn generate_states_helper(
         m,
         colors,
         {
-          let next = Buffer::new()
+          let next = @buffer.new()
           next.write_string(current)
           next.write_char(colors[i])
           next.to_string()

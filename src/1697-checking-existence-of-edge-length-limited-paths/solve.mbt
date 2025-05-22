@@ -6,8 +6,8 @@ struct UnionFind {
 
 ///|
 fn UnionFind::new(n : Int) -> UnionFind {
-  let parent = FixedArray::new(n, fn() { 0 })
-  let rank = FixedArray::new(n, fn() { 0 })
+  let parent = FixedArray::makei(n, fn(_) { 0 })
+  let rank = FixedArray::makei(n, fn(_) { 0 })
   for i = 0; i < n; i = i + 1 {
     parent[i] = i
   }

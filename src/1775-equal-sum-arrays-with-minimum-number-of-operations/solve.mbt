@@ -3,22 +3,22 @@ type ArrayInt Array[Int]
 
 ///|
 fn ArrayInt::compare(self : ArrayInt, other : ArrayInt) -> Int {
-  for i = 0; i < @math.minimum(self.0.length(), other.0.length()); i = i + 1 {
-    if self.0[i] != other.0[i] {
-      return self.0[i] - other.0[i]
+  for i = 0; i < @math.minimum(self._.length(), other._.length()); i = i + 1 {
+    if self._[i] != other._[i] {
+      return self._[i] - other._[i]
     }
   } else {
-    self.0.length() - other.0.length()
+    self._.length() - other._.length()
   }
 }
 
 ///|
 fn ArrayInt::op_equal(self : ArrayInt, other : ArrayInt) -> Bool {
-  if self.0.length() != other.0.length() {
+  if self._.length() != other._.length() {
     return false
   } else {
-    for i = 0; i < self.0.length(); i = i + 1 {
-      if self.0[i] != other.0[i] {
+    for i = 0; i < self._.length(); i = i + 1 {
+      if self._[i] != other._[i] {
         return false
       }
     } else {

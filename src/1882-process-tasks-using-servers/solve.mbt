@@ -5,7 +5,7 @@ struct Server {
 } derive(Eq)
 
 ///|
-fn Server::compare(self : Server, other : Server) -> Int {
+impl Compare for Server with compare(self : Server, other : Server) -> Int {
   if self.weight != other.weight {
     return self.weight - other.weight
   } else {
@@ -20,8 +20,8 @@ fn process_tasks_using_servers(
 ) -> Array[Int] {
   let n = servers.length()
   let m = tasks.length()
-  let free_servers = @priority_queue.T::new()
-  let task_queue = @queue.T::new()
+  let free_servers = @priority_queue.new()
+  let task_queue = @queue.new()
   let ans = Array::make(m, 0)
   let server_availability = Array::make(n, 0)
   for i = 0; i < n; i = i + 1 {

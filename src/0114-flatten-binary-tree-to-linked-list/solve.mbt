@@ -4,6 +4,7 @@ enum TreeNode {
   Node(Int, TreeNode, TreeNode)
 } derive(Eq)
 
+///|
 fn flatten(root : TreeNode) -> TreeNode {
   let mut current = root
   match current {
@@ -11,9 +12,12 @@ fn flatten(root : TreeNode) -> TreeNode {
     Node(_, left, _) => {
       if left != Empty {
         let mut pre = left
-        while match pre {
-                Empty => abort("")
-                Node(_, _, right) => right != Empty
+        while {
+                let result = match pre {
+                  Empty => abort("")
+                  Node(_, _, right) => right != Empty
+                }
+                result
               } {
           match pre {
             Node(_, _, right) => pre = right

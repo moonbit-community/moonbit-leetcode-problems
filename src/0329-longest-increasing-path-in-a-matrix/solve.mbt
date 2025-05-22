@@ -2,7 +2,7 @@
 struct Solution {
   mut m : Int
   mut n : Int
-  mut matrix : Array[Array[Int]]
+  matrix : Array[Array[Int]]
   mut f : Array[Array[Int]]
 }
 

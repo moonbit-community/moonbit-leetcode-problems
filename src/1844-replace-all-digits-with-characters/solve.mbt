@@ -7,7 +7,7 @@ fn shift(c : Char, x : Int) -> Char {
 
 ///|
 fn replace_digits_with_characters(s : String) -> String {
-  let buffer = Buffer::new(size_hint=s.length() * 4)
+  let buffer = @buffer.new(size_hint=s.length() * 4)
   for i = 0; i < s.length(); i = i + 1 {
     if i % 2 == 0 {
       buffer.write_char(s[i])

@@ -1,7 +1,7 @@
 ///|
 struct SubrectangleQueries {
-  mut g : Array[Array[Int]]
-  mut ops : Array[(Int, Int, Int, Int, Int)]
+  g : Array[Array[Int]]
+  ops : Array[(Int, Int, Int, Int, Int)]
 }
 
 ///|

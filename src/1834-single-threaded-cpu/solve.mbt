@@ -6,7 +6,7 @@ struct Task {
 } derive(Eq)
 
 ///|
-fn Task::compare(self : Task, other : Task) -> Int {
+impl Compare for Task with compare(self : Task, other : Task) -> Int {
   if self.processing_time != other.processing_time {
     return self.processing_time - other.processing_time
   } else {
@@ -43,7 +43,7 @@ fn single_threaded_cpu(tasks : Array[Array[Int]]) -> Array[Int] {
       return a.index - b.index
     }
   })
-  let pq = @priority_queue.T::new()
+  let pq = @priority_queue.new()
   let result = Array::make(n, 0)
   let mut result_index = 0
   let mut current_time = 0

@@ -1,6 +1,6 @@
 ///|
 fn split(string : String, delimiter : Char) -> Array[String] {
-  let buffer = Buffer::new()
+  let buffer = @buffer.new()
   let array = []
   for i = 0; i < string.length(); i = i + 1 {
     if string[i] == delimiter {
@@ -15,7 +15,7 @@ fn split(string : String, delimiter : Char) -> Array[String] {
 
 ///|
 fn join(strings : Array[String], delimiter : String) -> String {
-  let buffer = Buffer::new()
+  let buffer = @buffer.new()
   for i = 0; i < strings.length(); i = i + 1 {
     buffer.write_string(strings[i])
     if i != strings.length() - 1 {

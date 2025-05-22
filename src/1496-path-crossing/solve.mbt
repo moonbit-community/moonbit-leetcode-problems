@@ -21,7 +21,7 @@ fn char_to_direction(c : Char) -> Direction? {
 fn is_path_crossing(path : String) -> Bool {
   let mut i = 0
   let mut j = 0
-  let vis : @hashset.T[Int] = @hashset.T::of([])
+  let vis : @hashset.T[Int] = @hashset.of([])
   vis.insert(0)
   for idx = 0; idx < path.length(); idx = idx + 1 {
     let c = path[idx]

@@ -5,7 +5,7 @@ struct SparseVector {
 
 ///|
 fn SparseVector::new(nums : Array[Int]) -> SparseVector {
-  let d : @hashmap.T[Int, Int] = @hashmap.T::new()
+  let d : @hashmap.T[Int, Int] = @hashmap.new()
   nums.eachi(fn(i, num) { if num != 0 { d.set(i, num) } })
   SparseVector::{ d, }
 }

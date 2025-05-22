@@ -14,7 +14,7 @@ fn RhombusSumCalculator::get_biggest_three_rhombus_sums(
 ) -> Array[Int] {
   let m = self.grid.length()
   let n = self.grid[0].length()
-  let sums = @hashmap.T::new()
+  let sums = @hashmap.new()
   for i = 0; i < m; i = i + 1 {
     for j = 0; j < n; j = j + 1 {
       let max_size = @math.minimum(

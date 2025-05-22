@@ -1,6 +1,6 @@
 enum TreeNode {
   Empty
-  Node(Int, mut ~left : TreeNode, mut ~right : TreeNode)
+  Node(Int, mut left~ : TreeNode, mut right~ : TreeNode)
 } derive(Show, Eq)
 
 fn is_leaf(node : TreeNode) -> Bool {
@@ -18,7 +18,7 @@ fn find_leaf_nodes(root : TreeNode) -> Array[Int] {
     let node = stack.pop_exn()
     match node {
       Empty => ()
-      Node(val, ~left, ~right) =>
+      Node(val, left~, right~) =>
         if is_leaf(node) {
           leaves.push(val)
         } else {
@@ -31,8 +31,8 @@ fn find_leaf_nodes(root : TreeNode) -> Array[Int] {
 }
 
 fn merge_trees(trees : Array[TreeNode]) -> TreeNode? {
-  let root_map = @hashmap.T::new()
-  let leaf_map = @hashmap.T::new()
+  let root_map = @hashmap.new()
+  let leaf_map = @hashmap.new()
   for i = 0; i < trees.length(); i = i + 1 {
     let root = trees[i]
     match root {
@@ -76,7 +76,7 @@ fn replace_leaf(
     let node = stack.pop_exn()
     match node {
       Empty => ()
-      Node(_val, ~left, ~right) as node => {
+      Node(_val, left~, right~) as node => {
         match left {
           Empty => ()
           Node(_leaf_val, left=Empty, right=Empty) => node.left = new_tree
@@ -97,7 +97,7 @@ fn is_valid_bst(root : TreeNode) -> Bool {
   fn helper(node : TreeNode, min : Int, max : Int) -> Bool {
     match node {
       Empty => true
-      Node(val, ~left, ~right) =>
+      Node(val, left~, right~) =>
         if val <= min || val >= max {
           false
         } else {

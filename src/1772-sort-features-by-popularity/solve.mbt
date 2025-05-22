@@ -1,6 +1,6 @@
 ///|
 fn split(string : String, delimiter : Char) -> Array[String] {
-  let buffer = Buffer::new()
+  let buffer = @buffer.new()
   let array = []
   for i = 0; i < string.length(); i = i + 1 {
     if string[i] == delimiter {

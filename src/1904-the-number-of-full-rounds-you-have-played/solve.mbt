@@ -7,8 +7,8 @@ struct Time {
 ///|
 fn parse_time(time_str : String) -> Time! {
   let parts = time_str.split(":").to_array()
-  let hours = @strconv.parse_int!(parts[0])
-  let minutes = @strconv.parse_int!(parts[1])
+  let hours = @strconv.parse_int!(parts[0].to_string())
+  let minutes = @strconv.parse_int!(parts[1].to_string())
   Time::{ hours, minutes }
 }
 

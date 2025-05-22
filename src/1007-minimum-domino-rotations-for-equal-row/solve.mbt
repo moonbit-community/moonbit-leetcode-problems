@@ -5,8 +5,8 @@ fn f(x : Int, tops : Array[Int], bottoms : Array[Int], n : Int) -> Int {
     if tops[i] != x && bottoms[i] != x {
       return n + 1
     }
-    cnt1 = cnt1 + if tops[i] == x { 1 } else { 0 }
-    cnt2 = cnt2 + if bottoms[i] == x { 1 } else { 0 }
+    cnt1 = cnt1 + (if tops[i] == x { 1 } else { 0 })
+    cnt2 = cnt2 + (if bottoms[i] == x { 1 } else { 0 })
   }
   return n - max(cnt1, cnt2)
 }

@@ -20,7 +20,7 @@ fn check_descending(s : String, start : Int, prev_value : Int) -> Bool {
   let mut i = start
   while i < n {
     let end = find_next_split(s, i)
-    let current_value = @strconv.parse_int?(s.substring(start=i, ~end)).unwrap()
+    let current_value = @strconv.parse_int?(s.substring(start=i, end~)).unwrap()
     if current_value != prev_value - 1 {
       return false
     }

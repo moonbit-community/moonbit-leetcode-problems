@@ -10,7 +10,7 @@ fn min_absolute_difference_queries(
   queries : Array[Query]
 ) -> Array[Int] {
   let n = nums.length()
-  let freq_map = @hashmap.T::new()
+  let freq_map = @hashmap.new()
 
   // Preprocess the array to build the frequency map
   for i = 0; i < n; i = i + 1 {
@@ -22,7 +22,7 @@ fn min_absolute_difference_queries(
     let query = queries[i]
     let left = query.left
     let right = query.right
-    let subarray_freq_map = @hashmap.T::new()
+    let subarray_freq_map = @hashmap.new()
     let mut min_diff = 2_000_000_000 // A large number to start with
     let mut all_same = true
 

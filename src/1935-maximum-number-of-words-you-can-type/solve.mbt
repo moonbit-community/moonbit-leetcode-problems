@@ -16,7 +16,7 @@ fn max_number_of_words_you_can_type(
   for word in words {
     let mut can_type = true
     for j = 0; j < word.length(); j = j + 1 {
-      if broken_set.contains(word[j]) {
+      if broken_set.contains(word.char_at(j)) {
         can_type = false
         break
       }

@@ -52,7 +52,7 @@ fn longest_common_subpath(_n : Int, paths : Array[Array[Int]]) -> Int {
     .fold_left(fn(a, b) { @math.minimum(a, b) }, init=100000)
   let rolling_hash = RollingHash::new(base, modulus, max_length)
   fn check(length : Int) -> Bool {
-    let hash_sets = Array::make(paths.length(), @hashmap.T::new())
+    let hash_sets = Array::make(paths.length(), @hashmap.new())
     for i = 0; i < paths.length(); i = i + 1 {
       let hash_values = rolling_hash.hash(paths[i], length)
       for h = 0; h < hash_values.length(); h = h + 1 {

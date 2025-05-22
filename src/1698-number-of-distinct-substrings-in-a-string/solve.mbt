@@ -1,6 +1,6 @@
 ///|
 fn number_of_distinct_substrings(s : String) -> Int {
-  let substrings = @hashset.T::new()
+  let substrings = @hashset.new()
   let n = s.length()
 
   // Generate all substrings

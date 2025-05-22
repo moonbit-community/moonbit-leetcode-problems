@@ -1,13 +1,13 @@
 ///|
 fn split(string : String, delimiter : Char) -> Array[String] {
-  let mut buffer = Buffer::new()
+  let mut buffer = @buffer.new()
   let array = []
   for i = 0; i < string.length(); i = i + 1 {
     if string[i] == delimiter {
       buffer.write_char(string[i])
     } else {
       array.push(buffer.to_string())
-      buffer = Buffer::new()
+      buffer = @buffer.new()
     }
   }
   array

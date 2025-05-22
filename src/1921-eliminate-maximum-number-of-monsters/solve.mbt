@@ -21,7 +21,7 @@ fn unique_length_3_palindromic_subsequences(s : String) -> Int {
       for r = 0; r < right_chars.length(); r = r + 1 {
         let right = right_chars[r]
         if left == right {
-          let palindrome = Buffer::new()
+          let palindrome = @buffer.new()
           palindrome.write_char(left)
           palindrome.write_char(center_char)
           palindrome.write_char(right)

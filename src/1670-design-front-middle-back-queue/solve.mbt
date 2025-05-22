@@ -1,7 +1,7 @@
 ///|
 struct FrontMiddleBackQueue {
-  mut q1 : @deque.T[Int]
-  mut q2 : @deque.T[Int]
+  q1 : @deque.T[Int]
+  q2 : @deque.T[Int]
 }
 
 ///|

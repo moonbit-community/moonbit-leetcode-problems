@@ -18,7 +18,7 @@ fn min_operations_max_profit(
   let mut wait = 0
   let mut i = 0
   while wait > 0 || i < customers.length() {
-    wait = wait + if i < customers.length() { customers[i] } else { 0 }
+    wait = wait + (if i < customers.length() { customers[i] } else { 0 })
     let up = min(4, wait)
     wait = wait - up
     i = i + 1

@@ -1,10 +1,5 @@
 ///|
-type IntInt (Int, Int) derive(Hash)
-
-///|
-fn IntInt::op_equal(self : IntInt, other : IntInt) -> Bool {
-  self._.0 == other._.0 && self._.1 == other._.1
-}
+type IntInt (Int, Int) derive(Eq, Hash)
 
 ///|
 struct MovieEntry {
@@ -37,9 +32,9 @@ fn MovieRentingSystem::new(
   n : Int,
   entries : Array[Array[Int]]
 ) -> MovieRentingSystem {
-  let movie_map = @hashmap.T::new()
-  let rented_movies = @priority_queue.T::new()
-  let rented_set = @hashmap.T::new()
+  let movie_map = @hashmap.new()
+  let rented_movies = @priority_queue.new()
+  let rented_set = @hashmap.new()
   for i = 0; i < entries.length(); i = i + 1 {
     let entry = entries[i]
     let shop = entry[0]
@@ -47,7 +42,7 @@ fn MovieRentingSystem::new(
     let price = entry[2]
     let movie_entry = MovieEntry::{ shop, movie, price }
     if not(movie_map.contains(movie)) {
-      movie_map.set(movie, @priority_queue.T::new())
+      movie_map.set(movie, @priority_queue.new())
     }
     movie_map.get(movie).unwrap().push(movie_entry)
   }
@@ -64,7 +59,7 @@ fn MovieRentingSystem::search(
     return result
   }
   let pq = self.movie_map.get(movie).unwrap()
-  let temp_pq = @priority_queue.T::new()
+  let temp_pq = @priority_queue.new()
   while pq.length() > 0 && result.length() < 5 {
     let entry = pq.pop().unwrap()
     if not(self.rented_set.contains((entry.shop, entry.movie))) {
@@ -96,7 +91,7 @@ fn MovieRentingSystem::drop(
   movie : Int
 ) -> Unit {
   let entry = self.rented_set.get((shop, movie)).unwrap()
-  let new_rented_movies = @priority_queue.T::new()
+  let new_rented_movies = @priority_queue.new()
   self.rented_movies
   .iter()
   .each(fn(old_entry) {
@@ -112,7 +107,7 @@ fn MovieRentingSystem::drop(
 ///|
 fn MovieRentingSystem::report(self : MovieRentingSystem) -> Array[(Int, Int)] {
   let result = Array::new()
-  let temp_pq = @priority_queue.T::new()
+  let temp_pq = @priority_queue.new()
   while self.rented_movies.length() > 0 && result.length() < 5 {
     let entry = self.rented_movies.pop().unwrap()
     result.push((entry.shop, entry.movie))

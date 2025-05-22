@@ -17,14 +17,14 @@ fn minimum_jumps(forbidden : Array[Int], a : Int, b : Int, x : Int) -> Int {
 
   let forbidden_set = @immut/list.T::from_array(forbidden)
   let n = 6000
-  let mut q = @immut/list.T::of([Coordinate::{ i: 0, k: 1 }])
+  let mut q = @immut/list.of([Coordinate::{ i: 0, k: 1 }])
   let vis = Array::make(n, [false, false])
   let mut ans = 0
   while not(q.is_empty()) {
     let t = q.length()
     let mut current_loop = t
     while current_loop > 0 {
-      let mut next : @immut/list.T[Coordinate] = @immut/list.T::of([])
+      let mut next : @immut/list.T[Coordinate] = @immut/list.of([])
       let (current, new_q) = shift_front(q)
       q = new_q
       current_loop = current_loop - 1
@@ -32,11 +32,11 @@ fn minimum_jumps(forbidden : Array[Int], a : Int, b : Int, x : Int) -> Int {
         return ans
       }
       next = next.concat(
-        @immut/list.T::of([Coordinate::{ i: current.i + a, k: 1 }]),
+        @immut/list.of([Coordinate::{ i: current.i + a, k: 1 }]),
       )
       if (current.k & 1) == 1 {
         next = next.concat(
-          @immut/list.T::of([Coordinate::{ i: current.i - b, k: 0 }]),
+          @immut/list.of([Coordinate::{ i: current.i - b, k: 0 }]),
         )
       }
       next.each(fn(new_coord) {
@@ -45,7 +45,7 @@ fn minimum_jumps(forbidden : Array[Int], a : Int, b : Int, x : Int) -> Int {
           not(forbidden_set.contains(new_coord.i)) &&
           not(vis[new_coord.i][new_coord.k]) {
           vis[new_coord.i][new_coord.k] = true
-          q = q.concat(@immut/list.T::of([new_coord]))
+          q = q.concat(@immut/list.of([new_coord]))
         }
       })
     }

@@ -16,7 +16,7 @@ fn reverse(arr : Array[Int], j : Int) -> @immut/list.T[Int] {
 fn pancake_sort(arr : Array[Int]) -> Array[Int] {
   let mut list = @immut/list.T::from_array(arr)
   let n = arr.length()
-  let mut ans = @immut/list.T::of([])
+  let mut ans = @immut/list.of([])
   let mut i = n - 1
   while i > 0 {
     let mut j = i
@@ -25,10 +25,10 @@ fn pancake_sort(arr : Array[Int]) -> Array[Int] {
     }
     if j < i {
       if j > 0 {
-        ans = ans.concat(@immut/list.T::of([j + 1]))
+        ans = ans.concat(@immut/list.of([j + 1]))
         list = reverse(list.to_array(), j)
       }
-      ans = ans.concat(@immut/list.T::of([i + 1]))
+      ans = ans.concat(@immut/list.of([i + 1]))
       list = reverse(list.to_array(), i)
     }
     i = i - 1

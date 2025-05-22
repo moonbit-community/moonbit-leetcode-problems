@@ -19,8 +19,8 @@ fn can_distribute(nums : Array[Int], quantity : Array[Int]) -> Bool {
     }
   })
   let n = cnt.capacity()
-  let mut arr = @immut/list.T::of([])
-  cnt.each(fn(k, v) { arr = arr.concat(@immut/list.T::of([v])) })
+  let mut arr = @immut/list.of([])
+  cnt.each(fn(k, v) { arr = arr.concat(@immut/list.of([v])) })
   let arr = arr.to_array()
   let f = Array::make(n, Array::make((1).lsl(m), false))
   for i = 0; i < n; i = i + 1 {

@@ -19,7 +19,7 @@ fn max_number_of_balloons(text : String) -> Int {
     cnt[idx] = cnt[idx] + 1
   }
   min(
-    @immut/list.T::of([
+    @immut/list.of([
       cnt[0], // 'a'
       cnt[1], // 'b'
       cnt[11] / 2, // 'l' / 2

@@ -27,7 +27,7 @@ fn max_distance(grid : Array[Array[Int]]) -> Int {
         let y : Int = j + dirs[k + 1]
         if x >= 0 && x < n && y >= 0 && y < n && grid[x][y] == 0 {
           grid[x][y] = 1
-          q = q.concat(@immut/list.T::of([(x, y)])) // Simulate queue push
+          q = q.concat(@immut/list.of([(x, y)])) // Simulate queue push
         }
       }
       size = size - 1

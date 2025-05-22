@@ -15,7 +15,7 @@ fn dfs(
   let mut q = q
   if x >= 0 && x < n && y >= 0 && y < n && grid[x][y] == 1 {
     grid[x][y] = 2 // Mark as part of the first island
-    q = q.concat(@immut/list.T::of([Point::{ x, y }]))
+    q = q.concat(@immut/list.of([Point::{ x, y }]))
     let dirs = [-1, 0, 1, 0, -1]
     for k = 0; k < 4; k = k + 1 {
       q = dfs(grid, x + dirs[k], y + dirs[k + 1], n, q)
@@ -57,7 +57,7 @@ fn shortest_bridge(grid : Array[Array[Int]]) -> Int {
           } else if grid[x][y] == 0 {
             // Mark as visited and add to the queue for next layer of BFS
             grid[x][y] = 2
-            new_q = new_q.concat(@immut/list.T::of([Point::{ x, y }]))
+            new_q = new_q.concat(@immut/list.of([Point::{ x, y }]))
           }
         }
       }

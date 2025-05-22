@@ -8,7 +8,7 @@ fn combination_sum3_helper(
 ) -> @immut/list.T[@immut/list.T[Int]] {
   if remainingSum == 0 {
     if t.length() == k {
-      ans.concat(@immut/list.T::of([t]))
+      ans.concat(@immut/list.of([t]))
     } else {
       ans
     }
@@ -17,7 +17,7 @@ fn combination_sum3_helper(
   } else {
     let mut currentAns = ans
     for i = start; i <= 9; i = i + 1 {
-      let mut newT = t.concat(@immut/list.T::of([i]))
+      let mut newT = t.concat(@immut/list.of([i]))
       currentAns = combination_sum3_helper(
         newT,
         currentAns,

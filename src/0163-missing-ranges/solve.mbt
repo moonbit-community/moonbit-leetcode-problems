@@ -13,7 +13,7 @@ fn find_missing_ranges(
   if n == 0 {
     return Cons(Pair(lower, upper), Nil)
   }
-  let mut ans : @immut/list.T[Pair] = @immut/list.T::of([])
+  let mut ans : @immut/list.T[Pair] = @immut/list.of([])
   if nums[0] > lower {
     ans = Cons(Pair(lower, nums[0] - 1), ans)
   }

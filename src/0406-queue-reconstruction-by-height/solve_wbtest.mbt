@@ -8,7 +8,7 @@ test "example 1" {
     Person::{ height: 6, k: 1 },
     Person::{ height: 5, k: 2 },
   ]
-  let expected : @immut/list.T[Person] = @immut/list.T::of([
+  let expected : @immut/list.T[Person] = @immut/list.of([
     Person::{ height: 5, k: 0 },
     Person::{ height: 7, k: 0 },
     Person::{ height: 5, k: 2 },

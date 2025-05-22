@@ -2,7 +2,7 @@
 test "example 1" {
   let sentence1 : Array[String] = ["an", "extraordinary", "meal"]
   let sentence2 : Array[String] = ["one", "good", "dinner"]
-  let similar_pairs = @immut/list.T::of([
+  let similar_pairs = @immut/list.of([
     Pair::{ first: "an", second: "one" },
     Pair::{ first: "extraordinary", second: "good" },
     Pair::{ first: "meal", second: "dinner" },
@@ -14,7 +14,7 @@ test "example 1" {
 test "example 2" {
   let sentence1 : Array[String] = ["great", "acting", "skills"]
   let sentence2 : Array[String] = ["fine", "drama", "talent"]
-  let similar_pairs = @immut/list.T::of([
+  let similar_pairs = @immut/list.of([
     Pair::{ first: "great", second: "fine" },
     Pair::{ first: "acting", second: "drama" },
     Pair::{ first: "skills", second: "talent" },

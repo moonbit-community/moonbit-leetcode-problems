@@ -3,9 +3,9 @@ fn is_valid(s : String) -> Bool {
   if s.length() % 3 != 0 {
     false
   } else {
-    let mut t = @immut/list.T::of([])
+    let mut t = @immut/list.of([])
     fn push_char(arr : @immut/list.T[Char], c : Char) -> @immut/list.T[Char] {
-      arr.concat(@immut/list.T::of([c]))
+      arr.concat(@immut/list.of([c]))
     }
 
     fn pop_last_three(arr : @immut/list.T[Char]) -> @immut/list.T[Char] {

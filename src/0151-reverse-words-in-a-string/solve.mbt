@@ -14,7 +14,7 @@ fn split_words(s : String) -> @immut/list.T[String] {
         t = t + s[j].to_string()
         j = j + 1
       }
-      words = words.concat(@immut/list.T::of([t]))
+      words = words.concat(@immut/list.of([t]))
       i = j
     }
   }

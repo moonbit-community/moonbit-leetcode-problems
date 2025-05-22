@@ -47,9 +47,9 @@ fn bst_from_preorder(preorder : Array[Int]) -> TreeNode? {
 ///|
 fn collect_vals(node : TreeNode?) -> @immut/list.T[Int] {
   match node {
-    None => @immut/list.T::of([])
+    None => @immut/list.of([])
     Some({ val, left, right }) =>
-      @immut/list.T::of([val])
+      @immut/list.of([val])
       .concat(collect_vals(left))
       .concat(collect_vals(right))
   }

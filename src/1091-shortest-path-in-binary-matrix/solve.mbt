@@ -5,11 +5,11 @@ fn shortest_path_binary_matrix(grid : Array[Array[Int]]) -> Int {
   }
   let n = grid.length()
   grid[0][0] = 1
-  let mut q = @immut/list.T::of([[0, 0]])
+  let mut q = @immut/list.of([[0, 0]])
   let mut ans = 1
   let mut flag = false
   while not(q.is_empty()) {
-    let mut nq = @immut/list.T::of([])
+    let mut nq = @immut/list.of([])
     q.each(fn(elem) {
       let (i, j) = (elem[0], elem[1])
       if i == n - 1 && j == n - 1 {
@@ -19,7 +19,7 @@ fn shortest_path_binary_matrix(grid : Array[Array[Int]]) -> Int {
         for y = j - 1; y < j + 1 + 1; y = y + 1 {
           if x >= 0 && x < n && y >= 0 && y < n && grid[x][y] == 0 {
             grid[x][y] = 1
-            nq = nq.concat(@immut/list.T::of([[x, y]]))
+            nq = nq.concat(@immut/list.of([[x, y]]))
           }
         }
       }

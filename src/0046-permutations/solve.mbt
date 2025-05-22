@@ -30,12 +30,12 @@ fn dfs(
 ///|
 fn permute(nums : Array[Int]) -> @immut/list.T[@immut/list.T[Int]] {
   let len = nums.length()
-  let mut ans : @immut/list.T[@immut/list.T[Int]] = @immut/list.T::of([])
+  let mut ans : @immut/list.T[@immut/list.T[Int]] = @immut/list.of([])
   if len == 0 {
     return ans
   }
   let used = Array::make(len, false)
-  let path : @immut/list.T[Int] = @immut/list.T::of([])
+  let path : @immut/list.T[Int] = @immut/list.of([])
   let dfs_res = dfs(nums, len, 0, path, used, ans)
   ans = dfs_res.1
   ans

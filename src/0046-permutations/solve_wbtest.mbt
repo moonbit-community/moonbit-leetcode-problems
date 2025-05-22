@@ -10,11 +10,11 @@ test "example 1" {
 test "example 2" {
   assert_eq!(
     permute([0, 1]),
-    @immut/list.T::of([@immut/list.T::of([0, 1]), @immut/list.T::of([1, 0])]),
+    @immut/list.of([@immut/list.of([0, 1]), @immut/list.of([1, 0])]),
   )
 }
 
 ///|
 test "example 3" {
-  assert_eq!(permute([1]), @immut/list.T::of([@immut/list.T::of([1])]))
+  assert_eq!(permute([1]), @immut/list.of([@immut/list.of([1])]))
 }

@@ -1,3 +1,4 @@
+///|
 fn next_permutation(nums : Array[Int]) -> Bool {
   let mut i = nums.length() - 2
   while i >= 0 && nums[i] >= nums[i + 1] {
@@ -25,6 +26,7 @@ fn next_permutation(nums : Array[Int]) -> Bool {
   return true
 }
 
+///|
 fn to_string(nums : Array[Int]) -> String {
   let result = Array::new()
   for i = 0; i < nums.length(); i = i + 1 {
@@ -33,6 +35,7 @@ fn to_string(nums : Array[Int]) -> String {
   result.join("")
 }
 
+///|
 fn min_swaps(num : String, target : String) -> Int {
   let num_arr = Array::new()
   for i = 0; i < num.length(); i = i + 1 {
@@ -61,6 +64,7 @@ fn min_swaps(num : String, target : String) -> Int {
   swaps
 }
 
+///|
 fn kth_smallest_wonderful_number(num : String, k : Int) -> String {
   let num_arr = Array::new()
   for i = 0; i < num.length(); i = i + 1 {
@@ -72,6 +76,7 @@ fn kth_smallest_wonderful_number(num : String, k : Int) -> String {
   to_string(num_arr)
 }
 
+///|
 fn min_adjacent_swaps_to_reach_kth_smallest_number(
   num : String,
   k : Int

@@ -1,3 +1,4 @@
+///|
 fn find_student_to_replace_chalk(chalk : Array[Int], k : Int) -> Int {
   let n = chalk.length()
   let mut total_chalk_per_cycle = 0

@@ -1,3 +1,4 @@
+///|
 fn count_battleships(board : Array[Array[Char]]) -> Int {
   let m : Int = board.length()
   let n : Int = board[0].length()

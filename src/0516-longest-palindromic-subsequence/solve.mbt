@@ -1,3 +1,4 @@
+///|
 fn longest_palindrome_subseq(s : String) -> Int {
   let n = s.length()
   let dp : Array[Array[Int]] = Array::make(n, Array::make(n, 0))
@@ -16,6 +17,7 @@ fn longest_palindrome_subseq(s : String) -> Int {
   dp[0][n - 1]
 }
 
+///|
 fn max(x : Int, y : Int) -> Int {
   if x > y {
     x

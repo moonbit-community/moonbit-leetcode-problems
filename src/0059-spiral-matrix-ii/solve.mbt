@@ -1,3 +1,4 @@
+///|
 fn generate_matrix(n : Int) -> Array[Array[Int]] {
   let ans = Array::make(n, Array::make(n, 0))
   let mut u = 0

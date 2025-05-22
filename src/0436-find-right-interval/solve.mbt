@@ -1,8 +1,10 @@
+///|
 struct Interval {
   start : Int
   index : Int
 }
 
+///|
 fn binary_search(intervals : Array[Interval], target : Int) -> Int {
   let mut left = 0
   let mut right = intervals.length() - 1
@@ -21,12 +23,10 @@ fn binary_search(intervals : Array[Interval], target : Int) -> Int {
   }
 }
 
+///|
 fn find_right_interval(intervals : Array[Array[Int]]) -> Array[Int] {
   let n = intervals.length()
-  let starts : Array[Interval] = Array::make(
-    n,
-    Interval::{ start: 0, index: 0 },
-  )
+  let starts : Array[Interval] = Array::make(n, Interval::{ start: 0, index: 0 })
   for i = 0; i < n; i = i + 1 {
     starts[i] = Interval::{ start: intervals[i][0], index: i }
   }

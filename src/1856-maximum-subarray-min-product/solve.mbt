@@ -1,3 +1,4 @@
+///|
 fn max_subarray_min_product(nums : Array[Int]) -> Int {
   let mod_value = 1000000007
   let n = nums.length()
@@ -7,7 +8,8 @@ fn max_subarray_min_product(nums : Array[Int]) -> Int {
 
   // Fill left array
   for i = 0; i < n; i = i + 1 {
-    while not(stack.is_empty()) && nums[stack.get(stack.length() - 1).or(0)] >= nums[i] {
+    while not(stack.is_empty()) &&
+          nums[stack.get(stack.length() - 1).or(0)] >= nums[i] {
       stack.pop() |> ignore
     }
     if not(stack.is_empty()) {
@@ -19,7 +21,8 @@ fn max_subarray_min_product(nums : Array[Int]) -> Int {
 
   // Fill right array
   for i = n - 1; i >= 0; i = i - 1 {
-    while not(stack.is_empty()) && nums[stack.get(stack.length() - 1).or(0)] >= nums[i] {
+    while not(stack.is_empty()) &&
+          nums[stack.get(stack.length() - 1).or(0)] >= nums[i] {
       stack.pop() |> ignore
     }
     if not(stack.is_empty()) {
@@ -33,7 +36,8 @@ fn max_subarray_min_product(nums : Array[Int]) -> Int {
   }
   let mut max_product = 0
   for i = 0; i < n; i = i + 1 {
-    let sum = (prefix_sum[right[i]] - prefix_sum[left[i] + 1] + mod_value) % mod_value
+    let sum = (prefix_sum[right[i]] - prefix_sum[left[i] + 1] + mod_value) %
+      mod_value
     let product = nums[i] * sum % mod_value
     if product > max_product {
       max_product = product

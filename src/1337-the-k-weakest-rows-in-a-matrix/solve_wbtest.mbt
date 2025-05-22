@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let mat : Array[Array[Int]] = [
     [1, 1, 0, 0, 0],
@@ -11,6 +12,7 @@ test "example 1" {
   assert_eq!(k_weakest_rows(mat, k), expected)
 }
 
+///|
 test "example 2" {
   let mat : Array[Array[Int]] = [
     [1, 0, 0, 0],

@@ -1,3 +1,4 @@
+///|
 fn abs_diff(a : Int, b : Int) -> Int {
   if a > b {
     a - b
@@ -6,6 +7,7 @@ fn abs_diff(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn min_cost_connect_points(points : Array[(Int, Int)]) -> Int {
   let n = points.length()
   let g : Array[Array[Int]] = Array::make(n, Array::make(n, 0))

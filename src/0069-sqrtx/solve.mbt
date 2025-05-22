@@ -1,3 +1,4 @@
+///|
 fn sqrt(x : Int) -> Int {
   if x == 0 {
     return 0
@@ -7,6 +8,7 @@ fn sqrt(x : Int) -> Int {
   ans.to_int()
 }
 
+///|
 fn sqrt_newtwon(x : Double, s : Double) -> Double {
   let res = (x + s / x) / 2.0
   if res == x {

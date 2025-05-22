@@ -1,3 +1,4 @@
+///|
 fn tuple_with_same_product(nums : Array[Int]) -> Int {
   let product_map : @hashmap.T[Int, Int] = @hashmap.new()
   let n = nums.length()
@@ -12,15 +13,13 @@ fn tuple_with_same_product(nums : Array[Int]) -> Int {
 
   // Step 2: Count valid tuples
   let mut result = 0
-  product_map.each(
-    fn(product, count) {
-      if count > 1 {
-        // For each product, if there are 'count' pairs, we can form 'count * (count - 1) * 4' tuples
-        // because we can permute the pairs and the elements within each pair.
-        result = result + count * (count - 1) * 4
-      }
-    },
-  )
+  product_map.each(fn(product, count) {
+    if count > 1 {
+      // For each product, if there are 'count' pairs, we can form 'count * (count - 1) * 4' tuples
+      // because we can permute the pairs and the elements within each pair.
+      result = result + count * (count - 1) * 4
+    }
+  })
   result
 }
 

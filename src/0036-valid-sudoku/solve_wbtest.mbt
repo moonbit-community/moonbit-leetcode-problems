@@ -1,3 +1,4 @@
+///|
 test "valid sudoku with multiple empty cells" {
   let board = [
     ["5", "3", ".", ".", "7", ".", ".", ".", "."],
@@ -13,6 +14,7 @@ test "valid sudoku with multiple empty cells" {
   assert_eq!(is_valid_sudoku(board), true)
 }
 
+///|
 test "invalid sudoku with repeated number in a row" {
   let board = [
     ["5", "3", ".", ".", "7", ".", ".", ".", "5"], // repeated "5"
@@ -28,6 +30,7 @@ test "invalid sudoku with repeated number in a row" {
   assert_eq!(is_valid_sudoku(board), false)
 }
 
+///|
 test "invalid sudoku with repeated number in a column" {
   let board = [
     ["5", "3", ".", ".", "7", ".", ".", ".", "."],

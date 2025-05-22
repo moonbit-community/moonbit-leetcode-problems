@@ -1,3 +1,4 @@
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a
@@ -6,6 +7,7 @@ fn min(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -14,6 +16,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn compute_area(
   ax1 : Int,
   ay1 : Int,

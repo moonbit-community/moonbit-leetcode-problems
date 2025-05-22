@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let nums = [3, 2, 1, 5, 6, 4]
   let k = 2
@@ -5,6 +6,7 @@ test "example 1" {
   assert_eq!(kth_largest, 5)
 }
 
+///|
 test "example 2" {
   let nums = [3, 2, 3, 1, 2, 4, 5, 5, 6]
   let k = 4

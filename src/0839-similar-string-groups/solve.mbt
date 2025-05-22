@@ -1,7 +1,9 @@
+///|
 struct Solution {
   mut p : Array[Int]
 }
 
+///|
 fn Solution::num_similar_groups(self : Solution, strs : Array[String]) -> Int {
   let n = strs.length()
   self.p = Array::make(n, 0)
@@ -24,6 +26,7 @@ fn Solution::num_similar_groups(self : Solution, strs : Array[String]) -> Int {
   res
 }
 
+///|
 fn Solution::check(a : String, b : String) -> Bool {
   let mut cnt = 0
   let n = a.length()
@@ -35,6 +38,7 @@ fn Solution::check(a : String, b : String) -> Bool {
   cnt <= 2
 }
 
+///|
 fn Solution::find(self : Solution, x : Int) -> Int {
   if self.p[x] != x {
     self.p[x] = Solution::find(self, self.p[x])

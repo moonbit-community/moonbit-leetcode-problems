@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   inspect!(
     combine(4, 2),
@@ -5,6 +6,7 @@ test "example 1" {
   )
 }
 
+///|
 test "example 2" {
   inspect!(combine(1, 1), content="[[1]]")
 }

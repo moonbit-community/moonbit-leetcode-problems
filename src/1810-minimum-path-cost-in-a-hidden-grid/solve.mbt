@@ -1,16 +1,20 @@
+///|
 struct GridMaster {
   can_move : (Char) -> Bool
   move : (Char) -> Int
   is_target : () -> Bool
 }
 
+///|
 struct Cell {
   row : Int
   col : Int
 }
 
+///|
 type IntInt (Int, Int) derive(Hash, Eq)
 
+///|
 fn explore_grid(
   master : GridMaster,
   start_row : Int,
@@ -27,9 +31,8 @@ fn explore_grid(
       let (dir, d_row, d_col) = directions[i]
       let new_row = cell.row + d_row
       let new_col = cell.col + d_col
-      if not(grid.contains(IntInt((new_row, new_col)))) && (master.can_move)(
-        dir,
-      ) {
+      if not(grid.contains(IntInt((new_row, new_col)))) &&
+        (master.can_move)(dir) {
         let cost = (master.move)(dir)
         if cost != -1 {
           grid.set((new_row, new_col), cost)
@@ -45,6 +48,7 @@ fn explore_grid(
   (grid, target)
 }
 
+///|
 fn min_path_cost(master : GridMaster, start_row : Int, start_col : Int) -> Int {
   let (grid, target) = explore_grid(master, start_row, start_col)
   if target == (-1, -1) {
@@ -65,9 +69,8 @@ fn min_path_cost(master : GridMaster, start_row : Int, start_col : Int) -> Int {
       let new_col = col + d_col
       if grid.contains((new_row, new_col)) {
         let new_cost = cost + grid.get((new_row, new_col)).unwrap()
-        if not(visited.contains((new_row, new_col))) || visited.get(
-          (new_row, new_col),
-        ).unwrap() > new_cost {
+        if not(visited.contains((new_row, new_col))) ||
+          visited.get((new_row, new_col)).unwrap() > new_cost {
           visited.set((new_row, new_col), new_cost)
           queue.push((new_row, new_col, new_cost))
         }

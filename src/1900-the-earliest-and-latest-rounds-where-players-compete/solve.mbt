@@ -1,8 +1,10 @@
+///|
 struct TournamentResult {
   earliest_round : Int
   latest_round : Int
 } derive(Show)
 
+///|
 fn simulate_round(players : Array[Int]) -> Array[Int] {
   let n = players.length()
   let winners = Array::make(0, 0)
@@ -19,6 +21,7 @@ fn simulate_round(players : Array[Int]) -> Array[Int] {
   winners
 }
 
+///|
 fn find_earliest_latest_rounds(
   n : Int,
   first_player : Int,
@@ -31,9 +34,8 @@ fn find_earliest_latest_rounds(
   while stack.length() > 0 {
     let (current_players, current_round) = stack.pop().unwrap()
     let next_players = simulate_round(current_players)
-    if next_players.contains(first_player) && next_players.contains(
-      second_player,
-    ) {
+    if next_players.contains(first_player) &&
+      next_players.contains(second_player) {
       if current_round < earliest_round {
         earliest_round = current_round
       }

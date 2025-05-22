@@ -1,3 +1,4 @@
+///|
 fn max(nums : Array[Int]) -> Int {
   let mut ans = nums[0]
   let mut f = nums[0]
@@ -10,6 +11,7 @@ fn max(nums : Array[Int]) -> Int {
   ans
 }
 
+///|
 fn max_int(a : Int, b : Int) -> Int {
   if a > b {
     a

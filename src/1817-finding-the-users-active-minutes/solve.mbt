@@ -1,3 +1,4 @@
+///|
 fn find_users_active_minutes(logs : Array[Array[Int]], k : Int) -> Array[Int] {
   let user_minutes : @hashmap.T[Int, @hashset.T[Int]] = @hashmap.new()
   let uam_count : @hashmap.T[Int, Int] = @hashmap.new()
@@ -13,12 +14,10 @@ fn find_users_active_minutes(logs : Array[Array[Int]], k : Int) -> Array[Int] {
   }
 
   // Step 2: Calculate UAM for each user and count occurrences
-  user_minutes.each(
-    fn(_user_id, minutes_set) {
-      let uam = minutes_set.size()
-      uam_count.set(uam, uam_count.get_or_default(uam, 0) + 1)
-    },
-  )
+  user_minutes.each(fn(_user_id, minutes_set) {
+    let uam = minutes_set.size()
+    uam_count.set(uam, uam_count.get_or_default(uam, 0) + 1)
+  })
 
   // Step 3: Construct the answer array
   let answer = Array::make(k, 0)

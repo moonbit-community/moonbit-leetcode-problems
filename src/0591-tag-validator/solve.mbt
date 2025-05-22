@@ -1,3 +1,4 @@
+///|
 fn check(tag : String) -> Bool {
   let n = tag.length()
   if n < 1 || n > 9 {
@@ -13,6 +14,7 @@ fn check(tag : String) -> Bool {
   }
 }
 
+///|
 fn isValid(code : String) -> Bool {
   let stk : Array[String] = Array::new()
   let mut i = 0
@@ -54,6 +56,7 @@ fn isValid(code : String) -> Bool {
   stk.is_empty()
 }
 
+///|
 fn find(string : String, pattern : String, start : Int) -> Int {
   let mut i = start
   while i <= string.length() - pattern.length() {
@@ -65,6 +68,7 @@ fn find(string : String, pattern : String, start : Int) -> Int {
   -1
 }
 
+///|
 fn slice(string : String, start : Int, stop : Int) -> String {
   let mut result = ""
   for i = start; i < stop; i = i + 1 {
@@ -73,6 +77,7 @@ fn slice(string : String, start : Int, stop : Int) -> String {
   result
 }
 
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a

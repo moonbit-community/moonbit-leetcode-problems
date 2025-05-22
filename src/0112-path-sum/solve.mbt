@@ -1,12 +1,15 @@
+///|
 enum TreeNode {
   Empty
   Node(Int, TreeNode, TreeNode)
 } derive(Eq)
 
+///|
 fn has_path_sum(root : TreeNode, target_sum : Int) -> Bool {
   dfs(root, target_sum)
 }
 
+///|
 fn dfs(root : TreeNode, s : Int) -> Bool {
   match root {
     Empty => false

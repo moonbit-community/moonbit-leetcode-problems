@@ -1,3 +1,4 @@
+///|
 fn is_pangram(sentence : String) -> Bool {
   let letter_count : @hashmap.T[Char, Int] = @hashmap.new()
   let alphabet_size = 26

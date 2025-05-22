@@ -1,7 +1,9 @@
+///|
 fn num_dup_digits_at_most_n(n : Int) -> Int {
   n - f(n)
 }
 
+///|
 fn f(n : Int) -> Int {
   let nums : Array[Int] = []
   let mut n_temp = n
@@ -48,20 +50,14 @@ fn f(n : Int) -> Int {
       let up = if limit { nums[pos] } else { 9 }
       let mut ans = 0
       for i = 0; i <= up; i = i + 1 {
-        if mask.lsr(i).land(1) == 1 {
+        if (mask.lsr(i) & 1) == 1 {
           continue
         }
         if lead && i == 0 {
           ans = ans + dfs(pos - 1, mask, lead, limit && i == up, nums, dp)
         } else {
-          ans = ans + dfs(
-              pos - 1,
-              mask.lor(1).lsl(i),
-              false,
-              limit && i == up,
-              nums,
-              dp,
-            )
+          ans = ans +
+            dfs(pos - 1, mask.lor(1).lsl(i), false, limit && i == up, nums, dp)
         }
       }
       if not(lead) && not(limit) {

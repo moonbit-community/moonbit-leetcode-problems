@@ -1,3 +1,4 @@
+///|
 fn fill(array : Array[Int], value : Int, n : Int) -> Unit {
   let mut i = 0
   while i < n {
@@ -6,6 +7,7 @@ fn fill(array : Array[Int], value : Int, n : Int) -> Unit {
   }
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -14,6 +16,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn candy(ratings : Array[Int]) -> Int {
   let n = ratings.length()
   let left : Array[Int] = Array::make(n, 1)

@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let nums = [1, 0, -1, 0, -2, 2]
   let target = 0
@@ -9,6 +10,7 @@ test "example 1" {
   }
 }
 
+///|
 test "example 2" {
   let nums = [2, 2, 2, 2, 2]
   let target = 8

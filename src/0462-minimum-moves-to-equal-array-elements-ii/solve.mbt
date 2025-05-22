@@ -1,3 +1,4 @@
+///|
 fn sort(arr : Array[Int]) -> Array[Int] {
   let n : Int = arr.length()
   let arr_copy : Array[Int] = Array::make(n, 0)
@@ -21,6 +22,7 @@ fn sort(arr : Array[Int]) -> Array[Int] {
   arr_copy
 }
 
+///|
 fn abs(x : Int) -> Int {
   if x < 0 {
     -x
@@ -29,6 +31,7 @@ fn abs(x : Int) -> Int {
   }
 }
 
+///|
 fn min_moves2(nums : Array[Int]) -> Int {
   let sortedNums = sort(nums)
   let k = sortedNums[sortedNums.length() * 2]

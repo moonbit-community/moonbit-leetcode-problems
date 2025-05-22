@@ -1,3 +1,4 @@
+///|
 fn sort(nums : Array[Int]) -> Unit {
   for i = 0; i < nums.length(); i = i + 1 {
     for j = i + 1; j < nums.length(); j = j + 1 {
@@ -11,6 +12,7 @@ fn sort(nums : Array[Int]) -> Unit {
   }
 }
 
+///|
 fn triangle_number(nums : Array[Int]) -> Int {
   sort(nums)
   let n = nums.length()

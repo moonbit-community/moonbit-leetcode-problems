@@ -1,3 +1,4 @@
+///|
 fn judge_square_sum(c : Int) -> Bool {
   let mut a : Int = 0
   let mut b : Int = sqrt_int(c)
@@ -15,6 +16,7 @@ fn judge_square_sum(c : Int) -> Bool {
   false
 }
 
+///|
 fn sqrt_int(c : Int) -> Int {
   let mut start : Int = 0
   let mut end : Int = c

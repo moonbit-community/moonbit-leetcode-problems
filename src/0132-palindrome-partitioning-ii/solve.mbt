@@ -1,3 +1,4 @@
+///|
 fn min_cut(s : String) -> Int {
   let n = s.length()
   // Initializing the grid `g`.
@@ -32,6 +33,7 @@ fn min_cut(s : String) -> Int {
   f[n - 1]
 }
 
+///|
 fn min(x : Int, y : Int) -> Int {
   if x < y {
     x

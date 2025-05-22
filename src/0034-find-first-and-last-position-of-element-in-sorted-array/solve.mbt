@@ -1,3 +1,4 @@
+///|
 fn search_range(nums : Array[Int], target : Int) -> (Int, Int) {
   let n = nums.length()
   let mut left = 0

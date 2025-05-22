@@ -1,3 +1,4 @@
+///|
 fn add_strings(num1 : String, num2 : String) -> String {
   let mut i = num1.length() - 1
   let mut j = num2.length() - 1
@@ -60,6 +61,7 @@ fn sub_strings(num1 : String, num2 : String) -> String {
   ans
 }
 
+///|
 fn reverse(s : String) -> String {
   let mut result = ""
   for i = s.length() - 1; i >= 0; i = i - 1 {

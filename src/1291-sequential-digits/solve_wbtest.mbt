@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let low : Int = 100
   let high : Int = 300
@@ -5,6 +6,7 @@ test "example 1" {
   assert_eq!(sequential_digits(low, high), expected)
 }
 
+///|
 test "example 2" {
   let low : Int = 1000
   let high : Int = 13000

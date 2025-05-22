@@ -1,3 +1,4 @@
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a
@@ -6,6 +7,7 @@ fn min(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn max_boxes_in_warehouse(boxes : Array[Int], warehouse : Array[Int]) -> Int {
   let n = warehouse.length()
   let left : Array[Int] = Array::make(n, 0)

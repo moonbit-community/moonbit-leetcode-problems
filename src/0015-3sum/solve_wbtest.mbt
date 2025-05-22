@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let nums = [-1, 0, 1, 2, -1, -4]
   let expected = [[-1, -1, 2], [-1, 0, 1]]
@@ -5,6 +6,7 @@ test "example 1" {
   assert_eq!(result, expected)
 }
 
+///|
 test "example 2" {
   let nums = [0, 1, 1]
   let expected = []
@@ -12,6 +14,7 @@ test "example 2" {
   assert_eq!(result, expected)
 }
 
+///|
 test "example 3" {
   let nums = [0, 0, 0]
   let expected = [[0, 0, 0]]

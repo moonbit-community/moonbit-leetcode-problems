@@ -1,3 +1,4 @@
+///|
 fn remove_duplicates(nums : Array[Int]) -> Unit {
   let n = nums.length()
   if n <= 2 {

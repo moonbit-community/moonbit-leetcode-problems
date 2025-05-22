@@ -1,3 +1,4 @@
+///|
 fn max(x : Int, y : Int) -> Int {
   if x > y {
     x
@@ -6,6 +7,7 @@ fn max(x : Int, y : Int) -> Int {
   }
 }
 
+///|
 fn count_triplets(nums : Array[Int]) -> Int {
   let mut mx = 0
   let n = nums.length()
@@ -19,7 +21,7 @@ fn count_triplets(nums : Array[Int]) -> Int {
   while i < n {
     let mut j = 0
     while j < n {
-      cnt[nums[i].land(nums[j])] = cnt[nums[i].land(nums[j])] + 1
+      cnt[nums[i] & nums[j]] = cnt[nums[i] & nums[j]] + 1
       j = j + 1
     }
     i = i + 1
@@ -29,7 +31,7 @@ fn count_triplets(nums : Array[Int]) -> Int {
   while i <= mx {
     let mut j = 0
     while j < n {
-      if i.land(nums[j]) == 0 {
+      if (i & nums[j]) == 0 {
         ans = ans + cnt[i]
       }
       j = j + 1

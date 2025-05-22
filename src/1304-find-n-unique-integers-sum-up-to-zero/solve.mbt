@@ -1,3 +1,4 @@
+///|
 fn fill_zeroes(arr : Array[Int], n : Int) -> Array[Int] {
   for i = 0; i < n; i = i + 1 {
     arr[i] = 0
@@ -5,6 +6,7 @@ fn fill_zeroes(arr : Array[Int], n : Int) -> Array[Int] {
   arr
 }
 
+///|
 fn sum_zero(n : Int) -> Array[Int] {
   let ans : Array[Int] = Array::make(n, 0)
   let ans_filled = fill_zeroes(ans, n)

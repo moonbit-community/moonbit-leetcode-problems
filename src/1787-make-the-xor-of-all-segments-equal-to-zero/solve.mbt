@@ -1,5 +1,7 @@
+///|
 type IntInt (Int, Int) derive(Hash, Eq)
 
+///|
 fn min_changes(nums : Array[Int], k : Int) -> Int {
   let n = nums.length()
   let xor_counts : @hashmap.T[IntInt, Int] = @hashmap.new()
@@ -20,20 +22,18 @@ fn min_changes(nums : Array[Int], k : Int) -> Int {
     for j = 0; j < max_num; j = j + 1 {
       dp[i][j] = prev_min + (i + 1)
     }
-    xor_counts.each(
-      fn(key, count) {
-        if key._.0 == i {
-          total += count
-          max_count = @math.maximum(max_count, count)
-          for j = 0; j < max_num; j = j + 1 {
-            dp[i][j.lxor(key._.1)] = @math.minimum(
-              dp[i][j.lxor(key._.1)],
-              dp[i - 1][j] + (i + 1) - count,
-            )
-          }
+    xor_counts.each(fn(key, count) {
+      if key._.0 == i {
+        total += count
+        max_count = @math.maximum(max_count, count)
+        for j = 0; j < max_num; j = j + 1 {
+          dp[i][j ^ key._.1] = @math.minimum(
+            dp[i][j ^ key._.1],
+            dp[i - 1][j] + (i + 1) - count,
+          )
         }
-      },
-    )
+      }
+    })
     dp[i][0] = @math.minimum(dp[i][0], prev_min + (i + 1) - max_count)
   }
   dp[k - 1][0]

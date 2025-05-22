@@ -1,3 +1,4 @@
+///|
 fn intersection(nums1 : Array[Int], nums2 : Array[Int]) -> Array[Int] {
   let s : Array[Bool] = Array::make(1001, false)
   let ans : Array[Int] = []
@@ -21,6 +22,7 @@ fn intersection(nums1 : Array[Int], nums2 : Array[Int]) -> Array[Int] {
   ans
 }
 
+///|
 fn assert_eq(result : Array[Int], expect : Array[Int]) -> Unit! {
   if result.length() != expect.length() {
     fail!("Length mismatch")

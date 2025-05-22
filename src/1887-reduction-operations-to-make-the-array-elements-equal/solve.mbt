@@ -1,3 +1,4 @@
+///|
 fn reduction_operations(nums : Array[Int]) -> Int {
   // Sort the array
   nums.sort()

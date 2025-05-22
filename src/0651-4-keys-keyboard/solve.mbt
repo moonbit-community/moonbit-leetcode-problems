@@ -1,3 +1,4 @@
+///|
 fn max(dp : Array[Int], i : Int, j : Int) -> Int {
   // Simulate Java's Math.max method.
   if dp[i] > dp[j] {
@@ -7,6 +8,7 @@ fn max(dp : Array[Int], i : Int, j : Int) -> Int {
   }
 }
 
+///|
 fn max_a(n : Int) -> Int {
   let dp : Array[Int] = Array::make(n + 1, 0)
   for i = 0; i < n + 1; i = i + 1 {

@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let nums1 = [1, 3, 4, 8]
   let queries1 = [
@@ -10,6 +11,7 @@ test "example 1" {
   assert_eq!(min_absolute_difference_queries(nums1, queries1), expected1)
 }
 
+///|
 test "example 2" {
   let nums2 = [4, 5, 2, 2, 7, 10]
   let queries2 = [

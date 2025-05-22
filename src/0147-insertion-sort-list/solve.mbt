@@ -1,8 +1,10 @@
+///|
 enum ListNode {
   Empty
   Node(Int, ListNode)
 } derive(Eq, Show)
 
+///|
 fn insertion_sort_list(head : ListNode) -> ListNode {
   let dummy : ListNode = Node(-1, head)
   let mut cur : ListNode = dummy

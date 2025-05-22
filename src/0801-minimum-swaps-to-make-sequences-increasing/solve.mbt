@@ -1,3 +1,4 @@
+///|
 fn min(x : Int, y : Int) -> Int {
   if x < y {
     x
@@ -6,6 +7,7 @@ fn min(x : Int, y : Int) -> Int {
   }
 }
 
+///|
 fn min_swap(nums1 : Array[Int], nums2 : Array[Int]) -> Int {
   let mut a = 0
   let mut b = 1

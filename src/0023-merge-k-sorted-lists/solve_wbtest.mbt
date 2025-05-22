@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let lists = [
     @immut/list.T::of([1, 4, 5]),
@@ -8,12 +9,14 @@ test "example 1" {
   assert_eq!(merge_k_sorted_lists(lists), expected)
 }
 
+///|
 test "example 2" {
   let lists : Array[@immut/list.T[Int]] = []
   let expected = @immut/list.T::of([])
   assert_eq!(merge_k_sorted_lists(lists), expected)
 }
 
+///|
 test "example 3" {
   let lists : Array[@immut/list.T[Int]] = [@immut/list.T::of([])]
   let expected = @immut/list.T::of([])

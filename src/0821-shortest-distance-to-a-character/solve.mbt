@@ -1,3 +1,4 @@
+///|
 fn shortest_char(s : String, c : Char) -> Array[Int] {
   let inf = 2_0000_0000
   let n : Int = s.length()
@@ -20,6 +21,7 @@ fn shortest_char(s : String, c : Char) -> Array[Int] {
   ans
 }
 
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a

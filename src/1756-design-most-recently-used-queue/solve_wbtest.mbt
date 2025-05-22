@@ -1,3 +1,4 @@
+///|
 test "MRUQueue example" {
   let mru_queue = MRUQueue::new(8)
   assert_eq!(mru_queue.fetch(3), 3)

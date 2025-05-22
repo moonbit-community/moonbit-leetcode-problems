@@ -1,17 +1,19 @@
+///|
 struct Interval {
   start : Int
   end : Int
 } derive(Eq, Show)
 
+///|
 fn insert(
   intervals : Array[Interval],
   new_interval : Interval
 ) -> Array[Interval] {
   let intervals_len = intervals.length()
-  let new_intervals : Array[Interval] = Array::make(
-    intervals_len + 1,
-    Interval::{ start: 0, end: 0 },
-  )
+  let new_intervals : Array[Interval] = Array::make(intervals_len + 1, Interval::{
+    start: 0,
+    end: 0,
+  })
   let mut i = 0
   while i < intervals_len {
     new_intervals[i] = intervals[i]
@@ -21,6 +23,7 @@ fn insert(
   merge(new_intervals)
 }
 
+///|
 fn merge(intervals : Array[Interval]) -> Array[Interval] {
   if intervals.length() == 0 {
     return Array::make(0, Interval::{ start: 0, end: 0 })
@@ -47,6 +50,7 @@ fn merge(intervals : Array[Interval]) -> Array[Interval] {
   result
 }
 
+///|
 fn sort_intervals(intervals : Array[Interval]) -> Unit {
   let interv_length = intervals.length()
   let mut i = 0
@@ -64,12 +68,13 @@ fn sort_intervals(intervals : Array[Interval]) -> Unit {
   }
 }
 
+///|
 fn array_push(arr : Array[Interval], elem : Interval) -> Array[Interval] {
   let n = arr.length()
-  let new_arr : Array[Interval] = Array::make(
-    n + 1,
-    Interval::{ start: 0, end: 0 },
-  )
+  let new_arr : Array[Interval] = Array::make(n + 1, Interval::{
+    start: 0,
+    end: 0,
+  })
   for i = 0; i < n; i = i + 1 {
     new_arr[i] = arr[i]
   }

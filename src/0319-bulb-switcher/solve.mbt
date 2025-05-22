@@ -1,3 +1,4 @@
+///|
 fn sqrt(n : Int) -> Int {
   let mut result = 0
   let mut left = 1
@@ -14,6 +15,7 @@ fn sqrt(n : Int) -> Int {
   result
 }
 
+///|
 fn bulb_switch(n : Int) -> Int {
   sqrt(n)
 }

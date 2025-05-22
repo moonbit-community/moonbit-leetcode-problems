@@ -1,3 +1,4 @@
+///|
 fn count_pairs_of_equal_substrings_with_minimum_difference(
   first_string : String,
   second_string : String

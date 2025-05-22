@@ -1,3 +1,4 @@
+///|
 test "exmaple 1" {
   let leftChild : TreeNode = Node(2, Empty, Empty)
   let rightChild : TreeNode = Node(3, Empty, Empty)

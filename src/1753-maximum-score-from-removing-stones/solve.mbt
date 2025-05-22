@@ -1,3 +1,4 @@
+///|
 fn max_score_from_removing_stones(a : Int, b : Int, c : Int) -> Int {
   let piles = [a, b, c]
   let mut score = 0

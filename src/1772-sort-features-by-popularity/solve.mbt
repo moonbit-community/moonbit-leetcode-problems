@@ -1,3 +1,4 @@
+///|
 fn split(string : String, delimiter : Char) -> Array[String] {
   let buffer = Buffer::new()
   let array = []
@@ -12,6 +13,7 @@ fn split(string : String, delimiter : Char) -> Array[String] {
   array
 }
 
+///|
 fn sort_features_by_popularity(
   features : Array[String],
   responses : Array[String]
@@ -59,15 +61,13 @@ fn sort_features_by_popularity(
   }
 
   // Sort feature_info by count (descending) and by original index if counts are equal
-  feature_info.sort_by(
-    fn(a, b) -> Int {
-      if a.1 != b.1 {
-        return b.1 - a.1
-      } else {
-        return a.2 - b.2
-      }
-    },
-  )
+  feature_info.sort_by(fn(a, b) -> Int {
+    if a.1 != b.1 {
+      return b.1 - a.1
+    } else {
+      return a.2 - b.2
+    }
+  })
 
   // Extract the sorted features
   let sorted_features : Array[String] = Array::make(features.length(), "")

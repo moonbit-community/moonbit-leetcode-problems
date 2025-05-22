@@ -1,3 +1,4 @@
+///|
 fn slice(s : String, start : Int, stop : Int) -> String {
   let mut result = ""
   let mut i = start
@@ -8,6 +9,7 @@ fn slice(s : String, start : Int, stop : Int) -> String {
   result
 }
 
+///|
 fn longest_decomposition(text : String) -> Int {
   let n = text.length()
   if n < 2 {

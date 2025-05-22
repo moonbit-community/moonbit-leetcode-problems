@@ -1,3 +1,4 @@
+///|
 fn sort(points : Array[Array[Int]]) -> Array[Array[Int]] {
   let n : Int = points.length()
   let mut i : Int = 0
@@ -15,6 +16,7 @@ fn sort(points : Array[Array[Int]]) -> Array[Array[Int]] {
   points
 }
 
+///|
 fn find_min_arrow_shots(points : Array[Array[Int]]) -> Int {
   let sorted_points = sort(points)
   let mut ans : Int = 0

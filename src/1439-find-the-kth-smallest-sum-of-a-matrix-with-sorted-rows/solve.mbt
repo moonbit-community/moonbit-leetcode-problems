@@ -1,3 +1,4 @@
+///|
 fn merge_and_sort(
   arr_a : Array[Int],
   arr_b : Array[Int],
@@ -34,6 +35,7 @@ fn merge_and_sort(
   result_arr
 }
 
+///|
 fn kth_smallest(mat : Array[Array[Int]], k : Int) -> Int {
   let mut pre : Array[Int] = [0]
   for i = 0; i < mat.length(); i = i + 1 {

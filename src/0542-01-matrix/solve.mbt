@@ -1,8 +1,10 @@
+///|
 struct Point {
   x : Int
   y : Int
 } derive(Eq)
 
+///|
 fn fill(ans : Array[Array[Int]], value : Int) -> Unit {
   let m = ans.length()
   let n = ans[0].length()
@@ -17,6 +19,7 @@ fn fill(ans : Array[Array[Int]], value : Int) -> Unit {
   }
 }
 
+///|
 fn updateMatrix(mat : Array[Array[Int]]) -> Array[Array[Int]] {
   let m = mat.length()
   let n = mat[0].length()

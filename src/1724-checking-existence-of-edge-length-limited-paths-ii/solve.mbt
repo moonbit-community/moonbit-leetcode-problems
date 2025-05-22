@@ -1,8 +1,10 @@
+///|
 struct UnionFind {
   parent : Array[Int]
   rank : Array[Int]
 }
 
+///|
 fn new_union_find(n : Int) -> UnionFind {
   let parent = Array::make(n, 0)
   let rank = Array::make(n, 0)
@@ -12,6 +14,7 @@ fn new_union_find(n : Int) -> UnionFind {
   UnionFind::{ parent, rank }
 }
 
+///|
 fn find(uf : UnionFind, x : Int) -> Int {
   if uf.parent[x] != x {
     uf.parent[x] = find(uf, uf.parent[x])
@@ -19,6 +22,7 @@ fn find(uf : UnionFind, x : Int) -> Int {
   uf.parent[x]
 }
 
+///|
 fn union(uf : UnionFind, x : Int, y : Int) -> Unit {
   let root_x = find(uf, x)
   let root_y = find(uf, y)
@@ -34,11 +38,13 @@ fn union(uf : UnionFind, x : Int, y : Int) -> Unit {
   }
 }
 
+///|
 struct DistanceLimitedPathsExist {
   uf : UnionFind
   edge_list : Array[Array[Int]]
 }
 
+///|
 fn new_distance_limited_paths_exist(
   n : Int,
   edge_list : Array[Array[Int]]
@@ -53,6 +59,7 @@ fn new_distance_limited_paths_exist(
   DistanceLimitedPathsExist::{ uf, edge_list }
 }
 
+///|
 fn query(
   dlpe : DistanceLimitedPathsExist,
   p : Int,

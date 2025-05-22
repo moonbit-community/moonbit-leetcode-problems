@@ -1,13 +1,15 @@
+///|
 fn count_ones(n : Int) -> Int {
   let mut res = 0
   let mut n = n
   while n != 0 {
-    n = n.land(n - 1)
+    n = n & (n - 1)
     res = res + 1
   }
   res
 }
 
+///|
 fn compare(a : Int, b : Int) -> Int {
   let ones_diff = count_ones(a) - count_ones(b)
   if ones_diff == 0 {
@@ -17,6 +19,7 @@ fn compare(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn sort_by_bits(arr : Array[Int]) -> Array[Int] {
   fn quick_sort(arr : Array[Int], low : Int, high : Int) {
     if low < high {

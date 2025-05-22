@@ -1,9 +1,11 @@
+///|
 fn new_min_stack() -> (@immut/list.T[Int], @immut/list.T[Int]) {
   let stk1 : @immut/list.T[Int] = Nil
   let stk2 : @immut/list.T[Int] = Cons(max_value(), Nil)
   (stk1, stk2)
 }
 
+///|
 fn push(
   stack : (@immut/list.T[Int], @immut/list.T[Int]),
   val : Int
@@ -15,6 +17,7 @@ fn push(
   (newStk1, newStk2)
 }
 
+///|
 fn pop(
   stack : (@immut/list.T[Int], @immut/list.T[Int])
 ) -> (@immut/list.T[Int], @immut/list.T[Int]) {
@@ -29,6 +32,7 @@ fn pop(
   }
 }
 
+///|
 fn top(stack : (@immut/list.T[Int], @immut/list.T[Int])) -> Int {
   let (stk1, _) = stack
   match stk1 {
@@ -37,6 +41,7 @@ fn top(stack : (@immut/list.T[Int], @immut/list.T[Int])) -> Int {
   }
 }
 
+///|
 fn get_min(stack : (@immut/list.T[Int], @immut/list.T[Int])) -> Int {
   let (_, stk2) = stack
   match stk2 {
@@ -45,6 +50,7 @@ fn get_min(stack : (@immut/list.T[Int], @immut/list.T[Int])) -> Int {
   }
 }
 
+///|
 fn min(x : Int, y : Int) -> Int {
   if x < y {
     x
@@ -53,6 +59,7 @@ fn min(x : Int, y : Int) -> Int {
   }
 }
 
+///|
 fn max_value() -> Int {
   2147483647
 }

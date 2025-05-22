@@ -1,3 +1,4 @@
+///|
 fn average_waiting_time(customers : Array[(Int, Int)]) -> Double {
   let mut total_waiting_time = 0.0
   let mut current_time = 0

@@ -1,7 +1,9 @@
+///|
 fn create_2d_array(m : Int, n : Int, init_val : Int) -> Array[Array[Int]] {
   Array::make(m, Array::make(n, init_val))
 }
 
+///|
 fn max_side_length(mat : Array[Array[Int]], threshold : Int) -> Int {
   let m = mat.length()
   let n = mat[0].length()

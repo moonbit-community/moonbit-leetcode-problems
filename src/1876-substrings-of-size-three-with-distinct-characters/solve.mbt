@@ -1,3 +1,4 @@
+///|
 fn count_good_substrings(s : String) -> Int {
   let mut count = 0
   let n = s.length()
@@ -10,6 +11,7 @@ fn count_good_substrings(s : String) -> Int {
   count
 }
 
+///|
 fn is_distinct(substring : String) -> Bool {
   let char_set = @hashmap.T::new()
   for i = 0; i < substring.length(); i = i + 1 {

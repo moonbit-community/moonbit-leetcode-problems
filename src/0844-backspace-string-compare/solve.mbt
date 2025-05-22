@@ -1,3 +1,4 @@
+///|
 fn backspace_compare(s : String, t : String) -> Bool {
   let mut i : Int = s.length() - 1
   let mut j : Int = t.length() - 1

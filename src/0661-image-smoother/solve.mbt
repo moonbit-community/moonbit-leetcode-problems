@@ -1,3 +1,4 @@
+///|
 fn image_smoother(img : Array[Array[Int]]) -> Array[Array[Int]] {
   let m = img.length()
   let n = img[0].length()

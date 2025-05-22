@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let distance = [1, 2, 3, 4]
   let start = 0
@@ -5,6 +6,7 @@ test "example 1" {
   assert_eq!(distance_between_bus_stops(distance, start, destination), 4)
 }
 
+///|
 test "example 2" {
   let distance = [1, 2, 3, 4]
   let start = 0
@@ -12,6 +14,7 @@ test "example 2" {
   assert_eq!(distance_between_bus_stops(distance, start, destination), 3)
 }
 
+///|
 test "example 3" {
   let distance = [1, 2, 3, 4]
   let start = 3

@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let root = TreeNode::Node(
     5,
@@ -19,6 +20,7 @@ test "example 1" {
   assert_eq!(has_path_sum(root, 22), true)
 }
 
+///|
 test "example 2" {
   let root = TreeNode::Node(
     1,
@@ -28,6 +30,7 @@ test "example 2" {
   assert_eq!(has_path_sum(root, 5), false)
 }
 
+///|
 test "example 3" {
   let root = TreeNode::Empty
   assert_eq!(has_path_sum(root, 0), false)

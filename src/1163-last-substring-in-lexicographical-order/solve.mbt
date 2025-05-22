@@ -1,3 +1,4 @@
+///|
 fn slice(string : String, start : Int) -> String {
   let mut result = ""
   let n = string.length()
@@ -7,6 +8,7 @@ fn slice(string : String, start : Int) -> String {
   result
 }
 
+///|
 fn last_substring(s : String) -> String {
   let n = s.length()
   let mut i = 0

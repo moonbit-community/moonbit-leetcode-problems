@@ -1,3 +1,4 @@
+///|
 fn min_operations_to_make_array_increasing(nums : Array[Int]) -> Int {
   let mut operations = 0
   for i = 1; i < nums.length(); i = i + 1 {

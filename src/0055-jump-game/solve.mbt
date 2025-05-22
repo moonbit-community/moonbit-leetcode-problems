@@ -1,3 +1,4 @@
+///|
 fn can_jump(nums : Array[Int]) -> Bool {
   let mut mx = 0
   for i = 0; i < nums.length(); i = i + 1 {
@@ -9,6 +10,7 @@ fn can_jump(nums : Array[Int]) -> Bool {
   true
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a

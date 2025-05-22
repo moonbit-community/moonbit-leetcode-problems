@@ -1,8 +1,10 @@
+///|
 enum Tree[Int] {
   Empty
   Node(Tree[Int], Int, Tree[Int])
 } derive(Eq, Show)
 
+///|
 fn sorted_arr_to_bst(nums : Array[Int]) -> Tree[Int] {
   fn build(
     tree : Tree[Int],

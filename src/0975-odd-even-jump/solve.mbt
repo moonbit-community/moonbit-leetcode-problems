@@ -1,11 +1,13 @@
 // There's no direct TreeMap equivalent in Moonbit, so we'll simulate it with arrays
 // Also, no nulls in Moonbit, using -1 to represent not found scenarios
 
+///|
 struct HiLo {
   hi : Int
   lo : Int
 }
 
+///|
 fn odd_even_jumps(arr : Array[Int]) -> Int {
   let n = arr.length()
   let f = Array::make(n, Array::make(2, -1)) // Equivalent of `f` from Java initialization
@@ -50,7 +52,7 @@ fn odd_even_jumps(arr : Array[Int]) -> Int {
     if f[i][k] != -1 {
       return f[i][k]
     }
-    f[i][k] = dfs(f, g, n, jump, k.lxor(1))
+    f[i][k] = dfs(f, g, n, jump, k ^ 1)
     return f[i][k]
   }
 

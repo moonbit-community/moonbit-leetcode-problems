@@ -1,3 +1,4 @@
+///|
 fn num_distinct(s : String, t : String) -> Int {
   let n : Int = t.length()
   let f : Array[Int] = Array::make(n + 1, 0)

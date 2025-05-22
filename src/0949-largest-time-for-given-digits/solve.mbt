@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -26,15 +27,15 @@ fn largest_time_from_digits(arr : Array[Int]) -> String {
   } else {
     let hours = ans / 60
     let minutes = ans % 60
-    let formatted_time = if hours < 10 {
+    let formatted_time = (if hours < 10 {
         "0" + hours.to_string()
       } else {
         hours.to_string()
-      } + ":" + if minutes < 10 {
+      }) + ":" + (if minutes < 10 {
         "0" + minutes.to_string()
       } else {
         minutes.to_string()
-      }
+      })
     formatted_time
   }
 }

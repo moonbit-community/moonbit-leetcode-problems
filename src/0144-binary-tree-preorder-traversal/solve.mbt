@@ -1,8 +1,10 @@
+///|
 enum TreeNode {
   Empty
   Node(Int, TreeNode, TreeNode)
 }
 
+///|
 fn append(list : @immut/list.T[Int], value : Int) -> @immut/list.T[Int] {
   match list {
     Nil => Cons(value, Nil)
@@ -10,6 +12,7 @@ fn append(list : @immut/list.T[Int], value : Int) -> @immut/list.T[Int] {
   }
 }
 
+///|
 fn dfs(root : TreeNode, ans : @immut/list.T[Int]) -> @immut/list.T[Int] {
   match root {
     Empty => ans
@@ -21,6 +24,7 @@ fn dfs(root : TreeNode, ans : @immut/list.T[Int]) -> @immut/list.T[Int] {
   }
 }
 
+///|
 fn preorder_traversal(root : TreeNode) -> @immut/list.T[Int] {
   dfs(root, Nil)
 }

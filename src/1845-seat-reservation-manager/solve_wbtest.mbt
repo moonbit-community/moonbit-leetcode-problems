@@ -1,3 +1,4 @@
+///|
 test "SeatManager tests" {
   let seat_manager = SeatManager::new(5)
   assert_eq!(seat_manager.reserve(), 1)

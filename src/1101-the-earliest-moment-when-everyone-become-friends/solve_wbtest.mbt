@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   assert_eq!(
     earliest_acq(

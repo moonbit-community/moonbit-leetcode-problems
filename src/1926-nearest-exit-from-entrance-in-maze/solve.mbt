@@ -1,8 +1,10 @@
+///|
 struct Point {
   row : Int
   col : Int
 }
 
+///|
 fn nearest_exit(maze : Array[Array[Char]], entrance : Array[Int]) -> Int {
   let m = maze.length()
   let n = maze[0].length()
@@ -20,18 +22,19 @@ fn nearest_exit(maze : Array[Array[Char]], entrance : Array[Int]) -> Int {
       let current = queue.pop_exn()
       let row = current.row
       let col = current.col
-      if (row == 0 || row == m - 1 || col == 0 || col == n - 1) && not(
-        row == entrance_row && col == entrance_col,
-      ) {
+      if (row == 0 || row == m - 1 || col == 0 || col == n - 1) &&
+        not(row == entrance_row && col == entrance_col) {
         return steps
       }
       for d = 0; d < directions.length(); d = d + 1 {
         let dir = directions[d]
         let new_row = row + dir[0]
         let new_col = col + dir[1]
-        if new_row >= 0 && new_row < m && new_col >= 0 && new_col < n && not(
-          visited[new_row][new_col] && maze[new_row][new_col] == '.',
-        ) {
+        if new_row >= 0 &&
+          new_row < m &&
+          new_col >= 0 &&
+          new_col < n &&
+          not(visited[new_row][new_col] && maze[new_row][new_col] == '.') {
           visited[new_row][new_col] = true
           queue.push(Point::{ row: new_row, col: new_col })
         }

@@ -1,3 +1,4 @@
+///|
 fn min(numbers : @immut/list.T[Int]) -> Int {
   match numbers {
     Nil => abort("Empty list has no minimum")
@@ -10,6 +11,7 @@ fn min(numbers : @immut/list.T[Int]) -> Int {
   }
 }
 
+///|
 fn max_number_of_balloons(text : String) -> Int {
   let cnt : Array[Int] = Array::make(26, 0)
   for i = 0; i < text.length(); i = i + 1 {
@@ -17,14 +19,12 @@ fn max_number_of_balloons(text : String) -> Int {
     cnt[idx] = cnt[idx] + 1
   }
   min(
-    @immut/list.T::of(
-      [
-        cnt[0], // 'a'
-        cnt[1], // 'b'
-        cnt[11] / 2, // 'l' / 2
-        cnt[14] / 2, // 'o' / 2
-        cnt[13],
-      ],
-    ),
+    @immut/list.T::of([
+      cnt[0], // 'a'
+      cnt[1], // 'b'
+      cnt[11] / 2, // 'l' / 2
+      cnt[14] / 2, // 'o' / 2
+      cnt[13],
+    ]),
   ) // 'n'
 }

@@ -1,3 +1,4 @@
+///|
 fn min_number_of_people_to_teach(
   n : Int,
   languages : Array[Array[Int]],
@@ -30,6 +31,7 @@ fn min_number_of_people_to_teach(
   count
 }
 
+///|
 fn have_common_language(lang1 : Array[Int], lang2 : Array[Int]) -> Bool {
   for i = 0; i < lang1.length(); i = i + 1 {
     for j = 0; j < lang2.length(); j = j + 1 {

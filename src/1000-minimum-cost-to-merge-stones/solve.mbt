@@ -1,3 +1,4 @@
+///|
 fn sum_array(arr : Array[Int], n : Int) -> Array[Int] {
   let s : Array[Int] = Array::make(n + 1, 0)
   let mut i = 1
@@ -8,6 +9,7 @@ fn sum_array(arr : Array[Int], n : Int) -> Array[Int] {
   s
 }
 
+///|
 fn fill_inf(
   f : Array[Array[Array[Int]]],
   n : Int,
@@ -29,6 +31,7 @@ fn fill_inf(
   }
 }
 
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a
@@ -37,6 +40,7 @@ fn min(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn merge_stones(stones : Array[Int], big_k : Int) -> Int {
   let n = stones.length()
   if (n - 1) % (big_k - 1) != 0 {

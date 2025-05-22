@@ -1,3 +1,4 @@
+///|
 test "rhombus_sum_calculator" {
   let grid1 = [
     [3, 4, 5, 1, 3],

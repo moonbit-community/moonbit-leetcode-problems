@@ -1,3 +1,4 @@
+///|
 fn count(n : Int, curr : Int) -> Int {
   for next = curr + 1, cnt = 0, curr = curr
       curr <= n
@@ -9,6 +10,7 @@ fn count(n : Int, curr : Int) -> Int {
   }
 }
 
+///|
 fn find_kth_number(n : Int, k : Int) -> Int {
   let mut k = k - 1
   let mut curr = 1
@@ -25,6 +27,7 @@ fn find_kth_number(n : Int, k : Int) -> Int {
   curr
 }
 
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a

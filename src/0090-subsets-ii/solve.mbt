@@ -1,3 +1,4 @@
+///|
 fn subsets_with_dup(nums : Array[Int]) -> Array[Array[Int]] {
   nums.sort()
   let n = nums.length()
@@ -7,8 +8,8 @@ fn subsets_with_dup(nums : Array[Int]) -> Array[Array[Int]] {
     t.clear()
     let mut flag = true
     for i = 0; i < n; i = i + 1 {
-      if mask.land((1).lsl(i)) != 0 {
-        if i > 0 && mask.lsr((i - 1).land(1)) == 0 && nums[i] == nums[i - 1] {
+      if (mask & (1).lsl(i)) != 0 {
+        if i > 0 && mask.lsr((i - 1) & 1) == 0 && nums[i] == nums[i - 1] {
           flag = false
           break
         }

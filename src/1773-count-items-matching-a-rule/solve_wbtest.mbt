@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let items = [
     ["phone", "blue", "pixel"],
@@ -9,6 +10,7 @@ test "example 1" {
   assert_eq!(count_items_matching_a_rule(items, rule_key, rule_value), 1)
 }
 
+///|
 test "example 2" {
   let items = [
     ["phone", "blue", "pixel"],
@@ -20,6 +22,7 @@ test "example 2" {
   assert_eq!(count_items_matching_a_rule(items, rule_key, rule_value), 2)
 }
 
+///|
 test "example with no matches" {
   let items = [
     ["phone", "blue", "pixel"],

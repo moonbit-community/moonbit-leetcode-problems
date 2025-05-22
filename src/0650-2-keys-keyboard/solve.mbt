@@ -1,3 +1,4 @@
+///|
 fn min_steps(n : Int) -> Int {
   let dp : Array[Int] = Array::make(n + 1, 0)
   for i = 0; i < n + 1; i = i + 1 {
@@ -16,6 +17,7 @@ fn min_steps(n : Int) -> Int {
   dp[n]
 }
 
+///|
 fn min(x : Int, y : Int) -> Int {
   if x < y {
     x

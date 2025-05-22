@@ -1,3 +1,4 @@
+///|
 fn latest_time_by_replacing_hidden_digits(time : String) -> String {
   let time_chars = Array::make(5, ' ')
   for i = 0; i < 5; i = i + 1 {

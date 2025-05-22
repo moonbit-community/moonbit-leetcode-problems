@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -6,6 +7,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn max_profit(prices : Array[Int]) -> Int {
   let n = prices.length()
   // Initialize dp table

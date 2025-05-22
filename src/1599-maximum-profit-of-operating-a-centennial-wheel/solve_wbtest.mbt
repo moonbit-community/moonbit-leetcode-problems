@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let customers = [8, 3]
   let boarding_cost = 5
@@ -8,6 +9,7 @@ test "example 1" {
   )
 }
 
+///|
 test "example 2" {
   let customers = [10, 9, 6]
   let boarding_cost = 6
@@ -18,6 +20,7 @@ test "example 2" {
   )
 }
 
+///|
 test "example 3" {
   let customers = [3, 4, 0, 5, 1]
   let boarding_cost = 1

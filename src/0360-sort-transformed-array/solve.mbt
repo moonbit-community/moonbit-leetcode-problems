@@ -1,7 +1,9 @@
+///|
 fn f(a : Int, b : Int, c : Int, x : Int) -> Int {
   a * x * x + b * x + c
 }
 
+///|
 fn sort_transformed_array(
   nums : Array[Int],
   a : Int,

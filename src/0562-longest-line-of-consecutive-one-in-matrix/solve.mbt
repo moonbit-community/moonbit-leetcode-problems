@@ -1,3 +1,4 @@
+///|
 fn max(values : Array[Int]) -> Int {
   let mut ans = 0
   let mut i = 0
@@ -8,6 +9,7 @@ fn max(values : Array[Int]) -> Int {
   ans
 }
 
+///|
 fn longest_line(matrix : Array[Array[Int]]) -> Int {
   let m = matrix.length()
   let n = matrix[0].length()

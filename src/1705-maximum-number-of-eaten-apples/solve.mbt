@@ -1,5 +1,7 @@
+///|
 type IntInt (Int, Int)
 
+///|
 fn IntInt::compare(self : IntInt, other : IntInt) -> Int {
   let compare_first = self.0.0.compare(other.0.0)
   if compare_first == 0 {
@@ -9,10 +11,12 @@ fn IntInt::compare(self : IntInt, other : IntInt) -> Int {
   }
 }
 
+///|
 fn IntInt::op_equal(self : IntInt, other : IntInt) -> Bool {
   self.0.0 == other.0.0 && self.0.1 == other.0.1
 }
 
+///|
 fn max_number_of_eaten_apples(apples : Array[Int], days : Array[Int]) -> Int {
   let n = apples.length()
   let pq : @priority_queue.T[IntInt] = @priority_queue.T::new()

@@ -1,3 +1,4 @@
+///|
 fn min_sub_array_len(target : Int, nums : Array[Int]) -> Int {
   let n = nums.length()
   let mut s = 0
@@ -20,6 +21,7 @@ fn min_sub_array_len(target : Int, nums : Array[Int]) -> Int {
   }
 }
 
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     return a

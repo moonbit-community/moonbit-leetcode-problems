@@ -1,3 +1,4 @@
+///|
 enum ListNode {
   Nil
   Node(Int, ListNode)

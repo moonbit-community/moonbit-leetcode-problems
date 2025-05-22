@@ -1,3 +1,4 @@
+///|
 fn min_space_wasted_from_packaging(
   packages : Array[Int],
   boxes : Array[Array[Int]]
@@ -22,7 +23,8 @@ fn min_space_wasted_from_packaging(
       let package_size = packages[package_index]
 
       // Find the smallest box that can fit the current package
-      while box_index < supplier_boxes_length && supplier_boxes[box_index] < package_size {
+      while box_index < supplier_boxes_length &&
+            supplier_boxes[box_index] < package_size {
         box_index = box_index + 1
       }
 

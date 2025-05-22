@@ -1,8 +1,10 @@
+///|
 struct ListNode {
   val : Int
   mut next : ListNode?
 } derive(Eq)
 
+///|
 fn remove_duplicates(head : ListNode?) -> ListNode? {
   if head == None {
     return None
@@ -36,6 +38,7 @@ fn remove_duplicates(head : ListNode?) -> ListNode? {
 }
 
 // Helper function to create a linked list from an array
+///|
 fn create_linked_list(values : Array[Int]) -> ListNode? {
   if values.length() == 0 {
     return None
@@ -50,6 +53,7 @@ fn create_linked_list(values : Array[Int]) -> ListNode? {
 }
 
 // Helper function to convert a linked list to an array for testing
+///|
 fn linked_list_to_array(head : ListNode?) -> Array[Int] {
   let result : Array[Int] = []
   let mut current : ListNode? = head

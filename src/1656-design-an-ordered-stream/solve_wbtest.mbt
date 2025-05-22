@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let ordered_stream = OrderedStream::new(5)
   assert_eq!(ordered_stream.insert(3, "ccccc"), [])

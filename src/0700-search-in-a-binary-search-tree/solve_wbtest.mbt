@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let root = TreeNode::Node(
     4,
@@ -18,6 +19,7 @@ test "example 1" {
   )
 }
 
+///|
 test "example 2" {
   let root = TreeNode::Node(
     4,
@@ -31,6 +33,7 @@ test "example 2" {
   assert_eq!(search_bst(root, 5), Leaf)
 }
 
+///|
 test "example 3" {
   let root = TreeNode::Leaf
   assert_eq!(search_bst(root, 1), Leaf)

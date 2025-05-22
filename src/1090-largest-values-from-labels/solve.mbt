@@ -1,7 +1,9 @@
+///|
 fn larger_pair(a : (Int, Int), b : (Int, Int)) -> Bool {
   a.0 > b.0
 }
 
+///|
 fn sort_pairs(pairs : @immut/list.T[(Int, Int)]) -> @immut/list.T[(Int, Int)] {
   match pairs {
     Nil => Nil
@@ -26,6 +28,7 @@ fn sort_pairs(pairs : @immut/list.T[(Int, Int)]) -> @immut/list.T[(Int, Int)] {
   }
 }
 
+///|
 fn largest_vals_from_labels(
   values : Array[Int],
   labels : Array[Int],

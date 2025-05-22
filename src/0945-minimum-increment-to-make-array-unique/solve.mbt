@@ -1,3 +1,4 @@
+///|
 fn sort_array(arr : Array[Int]) -> Unit {
   for i = 0; i < arr.length(); i = i + 1 {
     for j = i + 1; j < arr.length(); j = j + 1 {
@@ -11,6 +12,7 @@ fn sort_array(arr : Array[Int]) -> Unit {
   }
 }
 
+///|
 fn min_increment_for_unique(nums : Array[Int]) -> Int {
   sort_array(nums)
   let mut ans = 0

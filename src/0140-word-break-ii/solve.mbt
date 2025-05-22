@@ -1,12 +1,15 @@
+///|
 struct Trie {
   children : Array[Trie?]
   mut is_end : Bool
 }
 
+///|
 fn Trie::new() -> Trie {
   Trie::{ children: Array::make(26, None), is_end: false }
 }
 
+///|
 fn Trie::insert(self : Trie, word : String) -> Unit {
   let mut node = self
   for i = 0; i < word.length(); i = i + 1 {
@@ -20,6 +23,7 @@ fn Trie::insert(self : Trie, word : String) -> Unit {
   node.is_end = true
 }
 
+///|
 fn Trie::search(self : Trie, word : String) -> Bool {
   let mut node = self
   for i = 0; i < word.length(); i = i + 1 {
@@ -32,6 +36,7 @@ fn Trie::search(self : Trie, word : String) -> Bool {
   node.is_end
 }
 
+///|
 fn dfs(trie : Trie, s : String) -> @immut/list.T[@immut/list.T[String]] {
   if s.length() == 0 {
     return Cons(Cons("", Nil), Nil)
@@ -59,6 +64,7 @@ fn dfs(trie : Trie, s : String) -> @immut/list.T[@immut/list.T[String]] {
   res
 }
 
+///|
 fn slice(s : String, start : Int, end : Int) -> String {
   let mut result = ""
   let mut i = start
@@ -69,6 +75,7 @@ fn slice(s : String, start : Int, end : Int) -> String {
   result
 }
 
+///|
 fn list_to_string(
   lists : @immut/list.T[@immut/list.T[String]]
 ) -> @immut/list.T[String] {
@@ -79,6 +86,7 @@ fn list_to_string(
   }
 }
 
+///|
 fn join(list : @immut/list.T[String], sep : String) -> String {
   match list {
     Nil => ""

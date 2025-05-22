@@ -1,3 +1,4 @@
+///|
 fn max_coins(piles : Array[Int]) -> Int {
   let sorted_piles = @immut/list.T::from_array(piles).sort().to_array()
   let n = sorted_piles.length()

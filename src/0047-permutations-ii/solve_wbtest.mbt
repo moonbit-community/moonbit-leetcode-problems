@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   inspect!(
     permute_unique([1, 1, 2]),
@@ -5,6 +6,7 @@ test "example 1" {
   )
 }
 
+///|
 test "example 2 " {
   inspect!(
     permute_unique([1, 2, 3]),

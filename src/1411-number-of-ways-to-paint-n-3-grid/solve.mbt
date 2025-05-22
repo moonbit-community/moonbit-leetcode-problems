@@ -1,3 +1,4 @@
+///|
 fn num_of_ways(n : Int) -> Int {
   let mod = 1000000000 + 7
   let mut f0 = 6

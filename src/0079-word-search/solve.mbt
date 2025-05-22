@@ -1,3 +1,4 @@
+///|
 fn exist(board : Array[Array[Char]], word : String) -> Bool {
   let m = board.length()
   let n = board[0].length()

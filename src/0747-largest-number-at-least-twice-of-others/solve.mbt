@@ -1,3 +1,4 @@
+///|
 fn dominant_index(nums : Array[Int]) -> Int {
   let n = nums.length()
   let mut k = 0

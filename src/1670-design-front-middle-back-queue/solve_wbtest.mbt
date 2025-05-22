@@ -1,3 +1,4 @@
+///|
 test "checking push and pop operations" {
   let queue = FrontMiddleBackQueue::new()
   queue.push_front(1)
@@ -8,6 +9,7 @@ test "checking push and pop operations" {
   assert_eq!(queue.pop_back(), 3)
 }
 
+///|
 test "checking after rebalancing" {
   let queue = FrontMiddleBackQueue::new()
   queue.push_front(1)

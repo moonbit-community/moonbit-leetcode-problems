@@ -1,3 +1,4 @@
+///|
 fn max_alternating_subsequence_sum(nums : Array[Int]) -> Int {
   let mut even_sum = 0
   let mut odd_sum = @int.min_value

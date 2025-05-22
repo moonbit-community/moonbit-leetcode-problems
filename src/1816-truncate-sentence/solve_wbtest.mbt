@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   assert_eq!(
     truncate_sentence("Hello how are you Contestant", 4),
@@ -5,6 +6,7 @@ test "example 1" {
   )
 }
 
+///|
 test "example 2" {
   assert_eq!(
     truncate_sentence("What is the solution to this problem", 4),
@@ -12,6 +14,7 @@ test "example 2" {
   )
 }
 
+///|
 test "example 3" {
   assert_eq!(
     truncate_sentence("chopper is not a tanuki", 5),

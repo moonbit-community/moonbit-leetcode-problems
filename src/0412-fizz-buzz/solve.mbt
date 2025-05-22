@@ -1,3 +1,4 @@
+///|
 fn fizz_buzz(n : Int) -> @immut/list.T[String] {
   fn appendFizzBuzz(i : Int, s : String) -> String {
     let mut result = s
@@ -22,6 +23,7 @@ fn fizz_buzz(n : Int) -> @immut/list.T[String] {
   reverseList(ans)
 }
 
+///|
 fn reverseList(list : @immut/list.T[String]) -> @immut/list.T[String] {
   loop list, @immut/list.T::Nil {
     @immut/list.T::Nil, acc => acc

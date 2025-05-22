@@ -1,3 +1,4 @@
+///|
 fn powerful_integers(x : Int, y : Int, bound : Int) -> Array[Int] {
   let mut ans_set : @immut/list.T[Int] = Nil
   let mut a = 1

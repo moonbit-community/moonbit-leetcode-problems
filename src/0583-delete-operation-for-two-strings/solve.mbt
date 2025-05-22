@@ -1,3 +1,4 @@
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a
@@ -6,6 +7,7 @@ fn min(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn min_distance(word1 : String, word2 : String) -> Int {
   let m : Int = word1.length()
   let n : Int = word2.length()

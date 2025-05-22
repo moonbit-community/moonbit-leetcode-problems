@@ -1,3 +1,4 @@
+///|
 fn join(sentence : Array[String], delimiter : String) -> String {
   if sentence.length() == 0 {
     return ""
@@ -11,6 +12,7 @@ fn join(sentence : Array[String], delimiter : String) -> String {
   result
 }
 
+///|
 fn words_typing(sentence : Array[String], rows : Int, cols : Int) -> Int {
   let s = join(sentence, " ") + " "
   let m = s.length()

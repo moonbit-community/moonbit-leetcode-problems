@@ -1,3 +1,4 @@
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a
@@ -6,6 +7,7 @@ fn min(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn min_score_triangulation(values : Array[Int]) -> Int {
   let n = values.length()
   let f = Array::make(n, Array::make(n, 0))
@@ -20,7 +22,9 @@ fn min_score_triangulation(values : Array[Int]) -> Int {
       while k < j {
         ans = min(
           ans,
-          dfs(i, k, values, f) + dfs(k, j, values, f) + values[i] * values[k] * values[j],
+          dfs(i, k, values, f) +
+          dfs(k, j, values, f) +
+          values[i] * values[k] * values[j],
         )
         k = k + 1
       }

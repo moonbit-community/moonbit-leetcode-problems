@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let root = TreeNode::Node(
     4,
@@ -12,6 +13,7 @@ test "example 1" {
   assert_eq!(root.insert(5), expected)
 }
 
+///|
 test "example 2" {
   let root = TreeNode::Node(
     40,
@@ -26,6 +28,7 @@ test "example 2" {
   assert_eq!(root.insert(25), expected)
 }
 
+///|
 test "example 3" {
   let root = TreeNode::Empty
   let expected = TreeNode::Node(5, Empty, Empty)

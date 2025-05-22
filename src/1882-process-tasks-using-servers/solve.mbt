@@ -1,8 +1,10 @@
+///|
 struct Server {
   weight : Int
   index : Int
 } derive(Eq)
 
+///|
 fn Server::compare(self : Server, other : Server) -> Int {
   if self.weight != other.weight {
     return self.weight - other.weight
@@ -11,6 +13,7 @@ fn Server::compare(self : Server, other : Server) -> Int {
   }
 }
 
+///|
 fn process_tasks_using_servers(
   servers : Array[Int],
   tasks : Array[Int]

@@ -1,3 +1,4 @@
+///|
 fn count_homogenous_substrings(s : String) -> Int {
   let mod_value = 1_000_000_007
   let mut count = 0

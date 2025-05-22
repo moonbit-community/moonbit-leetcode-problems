@@ -1,9 +1,11 @@
+///|
 struct Solution {
   s : String
   n : Int
   mut ans : @immut/list.T[String]
 }
 
+///|
 fn dfs(
   self : Solution,
   i : Int,
@@ -34,6 +36,7 @@ fn dfs(
   dfs(self, i + 1, l, r, lcnt + x, rcnt + y, t + c)
 }
 
+///|
 fn remove_invalid_parentheses(s : String) -> Solution {
   let n = s.length()
   let mut l = 0

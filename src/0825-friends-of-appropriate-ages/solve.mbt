@@ -1,3 +1,4 @@
+///|
 fn num_friend_requests(ages : Array[Int]) -> Int {
   let counter : Array[Int] = Array::make(121, 0)
   let mut ans = 0

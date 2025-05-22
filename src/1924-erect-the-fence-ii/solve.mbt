@@ -1,23 +1,28 @@
+///|
 struct Point {
   x : Double
   y : Double
 }
 
+///|
 struct Circle {
   center : Point
   radius : Double
 }
 
+///|
 fn distance(p1 : Point, p2 : Point) -> Double {
   let dx = p1.x - p2.x
   let dy = p1.y - p2.y
   (dx * dx + dy * dy).sqrt()
 }
 
+///|
 fn is_inside_circle(circle : Circle, point : Point) -> Bool {
   distance(circle.center, point) <= circle.radius
 }
 
+///|
 fn min_circle_trivial(points : Array[Point]) -> Circle {
   match points.length() {
     0 => Circle::{ center: Point::{ x: 0.0, y: 0.0 }, radius: 0.0 }
@@ -34,10 +39,18 @@ fn min_circle_trivial(points : Array[Point]) -> Circle {
       let (x2, y2) = (points[1].x, points[1].y)
       let (x3, y3) = (points[2].x, points[2].y)
       let d = 2.0 * (x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2))
-      let ux = ((x1 * x1 + y1 * y1) * (y2 - y3) + (x2 * x2 + y2 * y2) * (y3 - y1) +
-        (x3 * x3 + y3 * y3) * (y1 - y2)) / d
-      let uy = ((x1 * x1 + y1 * y1) * (x3 - x2) + (x2 * x2 + y2 * y2) * (x1 - x3) +
-        (x3 * x3 + y3 * y3) * (x2 - x1)) / d
+      let ux = (
+          (x1 * x1 + y1 * y1) * (y2 - y3) +
+          (x2 * x2 + y2 * y2) * (y3 - y1) +
+          (x3 * x3 + y3 * y3) * (y1 - y2)
+        ) /
+        d
+      let uy = (
+          (x1 * x1 + y1 * y1) * (x3 - x2) +
+          (x2 * x2 + y2 * y2) * (x1 - x3) +
+          (x3 * x3 + y3 * y3) * (x2 - x1)
+        ) /
+        d
       let center = Point::{ x: ux, y: uy }
       let radius = distance(center, points[0])
       Circle::{ center, radius }
@@ -46,6 +59,7 @@ fn min_circle_trivial(points : Array[Point]) -> Circle {
   }
 }
 
+///|
 fn welzl_helper(points : ArrayView[Point], boundary : Array[Point]) -> Circle {
   if points.length() == 0 || boundary.length() == 3 {
     return min_circle_trivial(boundary)
@@ -56,16 +70,15 @@ fn welzl_helper(points : ArrayView[Point], boundary : Array[Point]) -> Circle {
   if is_inside_circle(circle, p) {
     return circle
   }
-  let new_boundary = {
-      [..boundary, p]
-    }
+  let new_boundary = [..boundary, p]
   welzl_helper(remaining_points, new_boundary)
 }
 
+///|
 fn find_min_circle(trees : Array[Array[Int]]) -> Array[Double] {
-  let points = trees.map(
-    fn(tree) { Point::{ x: tree[0].to_double(), y: tree[1].to_double() } },
-  )
+  let points = trees.map(fn(tree) {
+    Point::{ x: tree[0].to_double(), y: tree[1].to_double() }
+  })
   let circle = welzl_helper(
     points[:],
     Array::make(0, Point::{ x: 0.0, y: 0.0 }),

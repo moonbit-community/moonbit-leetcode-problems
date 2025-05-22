@@ -1,3 +1,4 @@
+///|
 fn contains(base : String, sub : String) -> Bool {
   if base.length() < sub.length() {
     false
@@ -15,6 +16,7 @@ fn contains(base : String, sub : String) -> Bool {
   }
 }
 
+///|
 fn repeat(str : String, times : Int) -> String {
   let mut result = ""
   for i = 0; i < times; i = i + 1 {
@@ -23,6 +25,7 @@ fn repeat(str : String, times : Int) -> String {
   result
 }
 
+///|
 fn repeated_string_match(a : String, b : String) -> Int {
   let m = a.length()
   let n = b.length()

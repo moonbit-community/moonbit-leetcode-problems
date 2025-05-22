@@ -1,3 +1,4 @@
+///|
 fn is_point_inside_circle(point : (Int, Int), circle : (Int, Int, Int)) -> Bool {
   let (px, py) = point
   let (cx, cy, r) = circle
@@ -5,6 +6,7 @@ fn is_point_inside_circle(point : (Int, Int), circle : (Int, Int, Int)) -> Bool 
   distance_squared <= r * r
 }
 
+///|
 fn count_points_inside_circles(
   points : Array[(Int, Int)],
   queries : Array[(Int, Int, Int)]

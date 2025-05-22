@@ -1,3 +1,4 @@
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a
@@ -6,6 +7,7 @@ fn min(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn min_falling_path_sum(matrix : Array[Array[Int]]) -> Int {
   let n = matrix.length()
   let mut f : Array[Int] = Array::make(n, 0)

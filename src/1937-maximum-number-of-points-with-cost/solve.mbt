@@ -1,3 +1,4 @@
+///|
 fn max_number_of_points_with_cost(points : Array[Array[Int]]) -> Int {
   let m = points.length()
   let n = points[0].length()
@@ -39,6 +40,7 @@ fn max_number_of_points_with_cost(points : Array[Array[Int]]) -> Int {
   result
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a

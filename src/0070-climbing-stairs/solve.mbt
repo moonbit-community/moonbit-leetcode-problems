@@ -1,3 +1,4 @@
+///|
 fn climb_stairs(n : Int) -> Int {
   if n <= 1 {
     return n

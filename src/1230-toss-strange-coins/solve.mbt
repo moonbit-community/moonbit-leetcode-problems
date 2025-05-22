@@ -1,3 +1,4 @@
+///|
 fn probability_of_heads(prob : Array[Double], target : Int) -> Double {
   let n = prob.length()
   let f = Array::make(n + 1, Array::make(target + 1, 0.0))

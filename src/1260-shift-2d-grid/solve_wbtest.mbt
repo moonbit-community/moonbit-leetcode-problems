@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let grid : Array[Array[Int]] = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
   let k = 1
@@ -5,6 +6,7 @@ test "example 1" {
   assert_eq!(shift_grid(grid, k), expected)
 }
 
+///|
 test "example 2" {
   let grid : Array[Array[Int]] = [
     [3, 8, 1, 9],
@@ -22,6 +24,7 @@ test "example 2" {
   assert_eq!(shift_grid(grid, k), expected)
 }
 
+///|
 test "example 3" {
   let grid : Array[Array[Int]] = [[1]]
   let k = 100

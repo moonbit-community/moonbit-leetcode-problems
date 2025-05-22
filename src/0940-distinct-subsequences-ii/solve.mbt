@@ -1,6 +1,8 @@
 // Definition for constants
+///|
 let mod_val : Int = 1000000007
 
+///|
 fn sum(arr : Array[Int]) -> Int {
   let mut x : Int = 0
   let mut i : Int = 0
@@ -11,6 +13,7 @@ fn sum(arr : Array[Int]) -> Int {
   x
 }
 
+///|
 fn distinct_subseq_ii(s : String) -> Int {
   let dp : Array[Int] = Array::make(26, 0)
   let mut i : Int = 0

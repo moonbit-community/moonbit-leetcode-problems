@@ -1,3 +1,4 @@
+///|
 fn count_segments(s : String) -> Int {
   let mut ans = 0
   let mut i = 0

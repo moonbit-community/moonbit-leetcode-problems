@@ -1,3 +1,4 @@
+///|
 fn consecutive_number_sum(n : Int) -> Int {
   let n = n / 2
   let mut ans = 0

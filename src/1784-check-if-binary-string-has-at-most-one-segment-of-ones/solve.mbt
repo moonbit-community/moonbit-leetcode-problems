@@ -1,3 +1,4 @@
+///|
 fn has_at_most_one_segment_of_ones(s : String) -> Bool {
   let mut found_one = false
   let mut segment_ended = false

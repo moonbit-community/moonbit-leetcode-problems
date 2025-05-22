@@ -1,3 +1,4 @@
+///|
 fn my_atoi(s : String) -> Int {
   let length = s.length()
   let mut index = 0
@@ -33,11 +34,13 @@ fn my_atoi(s : String) -> Int {
 }
 
 // Helper function to check if a character is a digit
+///|
 fn is_digit(c : Char) -> Bool {
   c >= '0' && c <= '9'
 }
 
 // Helper function to convert a character to a digit
+///|
 fn to_digit(c : Char) -> Int {
   c.to_int() - '0'.to_int()
 }

@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -6,6 +7,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn shortest_common_supersequence(str1 : String, str2 : String) -> String {
   let m = str1.length()
   let n = str2.length()

@@ -1,8 +1,10 @@
+///|
 enum TreeNode {
   Empty
   Node(Int, TreeNode, TreeNode)
 }
 
+///|
 struct Solution {
   mut i : Int
   mut ok : Bool
@@ -10,10 +12,12 @@ struct Solution {
   mut ans : @immut/list.T[Int]
 }
 
+///|
 fn Solution::new(voyage : Array[Int]) -> Solution {
   { i: 0, ok: true, voyage, ans: @immut/list.T::Nil }
 }
 
+///|
 fn Solution::flip_match_voyage(
   self : Solution,
   root : TreeNode
@@ -26,6 +30,7 @@ fn Solution::flip_match_voyage(
   }
 }
 
+///|
 fn Solution::dfs(self : Solution, root : TreeNode) -> Unit {
   match root {
     Empty => ()

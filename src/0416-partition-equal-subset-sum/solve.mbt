@@ -1,3 +1,4 @@
+///|
 fn sum(nums : Array[Int]) -> Int {
   let mut s = 0
   let mut i = 0
@@ -8,6 +9,7 @@ fn sum(nums : Array[Int]) -> Int {
   s
 }
 
+///|
 fn can_partition(nums : Array[Int]) -> Bool {
   let s = sum(nums)
   if s % 2 == 1 {

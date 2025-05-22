@@ -1,3 +1,4 @@
+///|
 fn make_array_2d(
   rows : Int,
   cols : Int,
@@ -10,6 +11,7 @@ fn make_array_2d(
   result
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -18,6 +20,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn longest_arith_seq_length(nums : Array[Int]) -> Int {
   let n = nums.length()
   let mut ans = 0

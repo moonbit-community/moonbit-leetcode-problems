@@ -1,13 +1,16 @@
+///|
 enum TreeNode {
   Empty
   Node(Int, TreeNode, TreeNode)
 }
 
+///|
 fn min_camera_cover(root : TreeNode) -> Int {
   let ans = dfs(root)
   min(ans.0, ans.1)
 }
 
+///|
 fn dfs(root : TreeNode) -> (Int, Int, Int) {
   match root {
     Empty => {
@@ -25,6 +28,7 @@ fn dfs(root : TreeNode) -> (Int, Int, Int) {
   }
 }
 
+///|
 fn min(x : Int, y : Int) -> Int {
   if x < y {
     x

@@ -1,3 +1,4 @@
+///|
 fn get_winner(arr : Array[Int], k : Int) -> Int {
   let mut mx = arr[0]
   let mut cnt = 0

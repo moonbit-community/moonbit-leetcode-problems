@@ -1,3 +1,4 @@
+///|
 fn n_queens_count(n : Int) -> Int {
   let columns : @hashset.T[Int] = @hashset.new()
   let diagonals1 : @hashset.T[Int] = @hashset.new()
@@ -5,6 +6,7 @@ fn n_queens_count(n : Int) -> Int {
   backtrack(n, 0, columns, diagonals1, diagonals2)
 }
 
+///|
 fn backtrack(
   n : Int,
   row : Int,

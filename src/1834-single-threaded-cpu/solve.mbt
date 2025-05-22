@@ -1,9 +1,11 @@
+///|
 struct Task {
   index : Int
   enqueue_time : Int
   processing_time : Int
 } derive(Eq)
 
+///|
 fn Task::compare(self : Task, other : Task) -> Int {
   if self.processing_time != other.processing_time {
     return self.processing_time - other.processing_time
@@ -12,6 +14,7 @@ fn Task::compare(self : Task, other : Task) -> Int {
   }
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -20,29 +23,26 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn single_threaded_cpu(tasks : Array[Array[Int]]) -> Array[Int] {
   let n = tasks.length()
   let task_list = []
   for i = 0; i < n; i = i + 1 {
-    task_list.push(
-      Task::{
-        index: i,
-        enqueue_time: tasks[i][0],
-        processing_time: tasks[i][1],
-      },
-    )
+    task_list.push(Task::{
+      index: i,
+      enqueue_time: tasks[i][0],
+      processing_time: tasks[i][1],
+    })
   }
 
   // Sort tasks by enqueue time, and by index if enqueue times are equal
-  task_list.sort_by(
-    fn(a : Task, b : Task) -> Int {
-      if a.enqueue_time != b.enqueue_time {
-        return a.enqueue_time - b.enqueue_time
-      } else {
-        return a.index - b.index
-      }
-    },
-  )
+  task_list.sort_by(fn(a : Task, b : Task) -> Int {
+    if a.enqueue_time != b.enqueue_time {
+      return a.enqueue_time - b.enqueue_time
+    } else {
+      return a.index - b.index
+    }
+  })
   let pq = @priority_queue.T::new()
   let result = Array::make(n, 0)
   let mut result_index = 0

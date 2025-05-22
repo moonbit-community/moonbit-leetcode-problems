@@ -1,14 +1,13 @@
+///|
 fn first_missing_positive(nums : Array[Int]) -> Int {
   let n = nums.length()
-  let new_nums = nums.map(
-    fn(num) {
-      let mut new_num = num
-      if num <= 0 {
-        new_num = n + 1
-      }
-      new_num
-    },
-  )
+  let new_nums = nums.map(fn(num) {
+    let mut new_num = num
+    if num <= 0 {
+      new_num = n + 1
+    }
+    new_num
+  })
   for i = 0; i < n; i = i + 1 {
     let num = new_nums[i].abs()
     if num <= n {

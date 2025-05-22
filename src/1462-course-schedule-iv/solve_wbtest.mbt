@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let n = 2
   let prerequisites = [(0, 1)]
@@ -5,6 +6,7 @@ test "example 1" {
   assert_eq!(check_if_prerequisite(n, prerequisites, queries), [true, false])
 }
 
+///|
 test "example 2" {
   let n = 2
   let prerequisites = []

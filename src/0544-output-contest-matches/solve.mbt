@@ -1,7 +1,9 @@
+///|
 fn concatenate(a : String, b : String) -> String {
   "(" + a + "," + b + ")"
 }
 
+///|
 fn find_contest_match(n : Int) -> String {
   let team : Array[String] = Array::make(n, "")
   let mut i = 0

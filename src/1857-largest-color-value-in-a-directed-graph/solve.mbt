@@ -1,3 +1,4 @@
+///|
 fn largest_color_value_in_directed_graph(
   colors : String,
   edges : Array[Array[Int]]
@@ -36,21 +37,22 @@ fn largest_color_value_in_directed_graph(
       max_color_value = @math.maximum(max_color_value, color_freq[node][i])
     }
     if graph.contains(node) {
-      graph.get(node).unwrap().each(
-        fn(neighbor) {
-          for i = 0; i < 26; i = i + 1 {
-            color_freq[neighbor][i] = @math.maximum(
-              color_freq[neighbor][i],
-              color_freq[node][i],
-            )
-          }
-          color_freq[neighbor][colors[neighbor].to_int() - 'a'.to_int()] += 1
-          in_degree[neighbor] -= 1
-          if in_degree[neighbor] == 0 {
-            queue.push(neighbor)
-          }
-        },
-      )
+      graph
+      .get(node)
+      .unwrap()
+      .each(fn(neighbor) {
+        for i = 0; i < 26; i = i + 1 {
+          color_freq[neighbor][i] = @math.maximum(
+            color_freq[neighbor][i],
+            color_freq[node][i],
+          )
+        }
+        color_freq[neighbor][colors[neighbor].to_int() - 'a'.to_int()] += 1
+        in_degree[neighbor] -= 1
+        if in_degree[neighbor] == 0 {
+          queue.push(neighbor)
+        }
+      })
     }
   }
 

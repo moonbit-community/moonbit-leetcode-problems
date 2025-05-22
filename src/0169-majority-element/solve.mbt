@@ -1,3 +1,4 @@
+///|
 fn majority_element(nums : Array[Int]) -> Int {
   let mut cnt = 0
   let mut m = 0

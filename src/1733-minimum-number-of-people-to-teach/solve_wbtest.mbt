@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let n = 2
   let languages = [[1], [2], [1, 2]]
@@ -5,6 +6,7 @@ test "example 1" {
   assert_eq!(min_number_of_people_to_teach(n, languages, friendships), 1)
 }
 
+///|
 test "example 2" {
   let n = 3
   let languages = [[2], [1, 3], [1, 2], [3]]

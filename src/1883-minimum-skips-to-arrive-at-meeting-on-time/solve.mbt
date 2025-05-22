@@ -1,3 +1,4 @@
+///|
 fn min_skips_to_arrive_at_meeting_on_time(
   dist : Array[Int],
   speed : Int,
@@ -22,6 +23,7 @@ fn min_skips_to_arrive_at_meeting_on_time(
   return -1
 }
 
+///|
 fn ceil(x : Double) -> Double {
   if x == x.floor() {
     return x
@@ -30,6 +32,7 @@ fn ceil(x : Double) -> Double {
   }
 }
 
+///|
 fn min(a : Double, b : Double) -> Double {
   if a < b {
     return a

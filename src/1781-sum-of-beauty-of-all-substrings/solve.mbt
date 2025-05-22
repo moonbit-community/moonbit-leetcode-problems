@@ -1,3 +1,4 @@
+///|
 fn sum_of_beauty_of_all_substrings(s : String) -> Int {
   let n = s.length()
   let mut sum_of_beauty = 0

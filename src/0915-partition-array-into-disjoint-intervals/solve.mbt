@@ -1,3 +1,4 @@
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a
@@ -6,6 +7,7 @@ fn min(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -14,6 +16,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn partition_disjoint(nums : Array[Int]) -> Int {
   let n = nums.length()
   let mi : Array[Int] = Array::make(n + 1, 0)

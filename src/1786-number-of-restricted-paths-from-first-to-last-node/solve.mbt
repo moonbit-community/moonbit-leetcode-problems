@@ -1,3 +1,4 @@
+///|
 fn dijkstra(n : Int, edges : Array[Array[Int]], start : Int) -> Array[Int] {
   let graph : Array[Array[(Int, Int)]] = Array::make(n + 1, Array::new())
   for i = 0; i < edges.length(); i = i + 1 {
@@ -30,6 +31,7 @@ fn dijkstra(n : Int, edges : Array[Array[Int]], start : Int) -> Array[Int] {
   dist
 }
 
+///|
 fn count_restricted_paths(n : Int, edges : Array[Array[Int]]) -> Int {
   let dist = dijkstra(n, edges, n)
   let graph : Array[Array[Int]] = Array::make(n + 1, Array::new())

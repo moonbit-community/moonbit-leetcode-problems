@@ -1,3 +1,4 @@
+///|
 fn largest_merge(word1 : String, word2 : String) -> String {
   let mut merge = ""
   let mut i = 0
@@ -13,10 +14,13 @@ fn largest_merge(word1 : String, word2 : String) -> String {
       j = j + 1
     } else {
       let mut k = 1
-      while i + k < word1_len && j + k < word2_len && word1[i + k] == word2[j + k] {
+      while i + k < word1_len &&
+            j + k < word2_len &&
+            word1[i + k] == word2[j + k] {
         k = k + 1
       }
-      if i + k < word1_len && (j + k == word2_len || word1[i + k] > word2[j + k]) {
+      if i + k < word1_len &&
+        (j + k == word2_len || word1[i + k] > word2[j + k]) {
         merge = merge + word1[i].to_string()
         i = i + 1
       } else {

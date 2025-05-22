@@ -1,3 +1,4 @@
+///|
 fn max_score_sightseeing_pair(values : Array[Int]) -> Int {
   let mut ans = 0
   let mut mx = values[0]
@@ -8,6 +9,7 @@ fn max_score_sightseeing_pair(values : Array[Int]) -> Int {
   ans
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a

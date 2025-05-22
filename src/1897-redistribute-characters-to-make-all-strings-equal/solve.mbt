@@ -1,3 +1,4 @@
+///|
 fn can_make_equal(words : Array[String]) -> Bool {
   let char_count : @hashmap.T[Char, Int] = @hashmap.new()
   let num_words = words.length()
@@ -14,9 +15,7 @@ fn can_make_equal(words : Array[String]) -> Bool {
   let mut result = true
 
   // Check if the frequency of each character is divisible by the number of strings
-  char_count.each(
-    fn(__, count) { if count % num_words != 0 { result = false } },
-  )
+  char_count.each(fn(__, count) { if count % num_words != 0 { result = false } })
   return result
 }
 

@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let grid = [[1, 1], [1, 2]]
   let row = 0
@@ -7,6 +8,7 @@ test "example 1" {
   assert_eq!(color_border(grid, row, col, color), expected)
 }
 
+///|
 test "example 2" {
   let grid = [[1, 2, 2], [2, 3, 2]]
   let row = 0

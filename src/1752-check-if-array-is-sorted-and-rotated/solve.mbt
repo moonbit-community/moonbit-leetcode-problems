@@ -1,3 +1,4 @@
+///|
 fn is_sorted_and_rotated(nums : Array[Int]) -> Bool {
   let n = nums.length()
   let mut pivot = -1

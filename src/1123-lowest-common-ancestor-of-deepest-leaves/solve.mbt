@@ -1,9 +1,11 @@
+///|
 enum TreeNode {
   Empty
   Node(Int, TreeNode, TreeNode)
 } derive(Eq, Show)
 
 // Custom dfs function to find the lowest common ancestor of deepest leaves.
+///|
 fn dfs(node : TreeNode) -> (TreeNode, Int) {
   match node {
     Empty => (Empty, 0)
@@ -22,6 +24,7 @@ fn dfs(node : TreeNode) -> (TreeNode, Int) {
 }
 
 // Main function to find the lowest common ancestor of the deepest leaves.
+///|
 fn lca_deepest_leaves(root : TreeNode) -> TreeNode {
   let (result, _) = dfs(root)
   result

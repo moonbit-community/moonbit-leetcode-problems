@@ -1,3 +1,4 @@
+///|
 test "Logger test 1" {
   let logger = Logger::new()
   assert_eq!(logger.should_print_message(1, "foo"), true)

@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let mat : Matrix = Matrix::{ rows: 2, cols: 3, data: [[1, 2, 3], [4, 5, 6]] }
   let r = 3
@@ -10,6 +11,7 @@ test "example 1" {
   assert_eq!(matrix_reshape(mat, r, c), expected)
 }
 
+///|
 test "example 2" {
   let mat : Matrix = Matrix::{ rows: 2, cols: 2, data: [[1, 2], [3, 4]] }
   let r = 1
@@ -18,6 +20,7 @@ test "example 2" {
   assert_eq!(matrix_reshape(mat, r, c), expected)
 }
 
+///|
 test "infeasible reshape" {
   let mat : Matrix = Matrix::{ rows: 2, cols: 2, data: [[1, 2], [3, 4]] }
   let r = 3

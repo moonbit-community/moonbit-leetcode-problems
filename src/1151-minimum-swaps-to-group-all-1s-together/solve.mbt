@@ -1,4 +1,5 @@
-fn slice[T](array : Array[T], start : Int, end : Int) -> Array[T] {
+///|
+fn[T] slice(array : Array[T], start : Int, end : Int) -> Array[T] {
   if end < start + 1 {
     []
   } else {
@@ -10,6 +11,7 @@ fn slice[T](array : Array[T], start : Int, end : Int) -> Array[T] {
   }
 }
 
+///|
 fn min_swaps(data : Array[Int]) -> Int {
   fn sum(arr : Array[Int]) -> Int {
     let mut acc = 0

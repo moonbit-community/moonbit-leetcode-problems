@@ -1,3 +1,4 @@
+///|
 fn optimal_division(nums : Array[Int]) -> String {
   let n : Int = nums.length()
   match n {

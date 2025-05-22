@@ -1,3 +1,4 @@
+///|
 fn search(nums : Array[Int], x : Int) -> Int {
   let mut left = 0
   let mut right = nums.length()
@@ -12,6 +13,7 @@ fn search(nums : Array[Int], x : Int) -> Int {
   left
 }
 
+///|
 fn is_majority_element(nums : Array[Int], target : Int) -> Bool {
   let left = search(nums, target)
   let right = search(nums, target + 1)

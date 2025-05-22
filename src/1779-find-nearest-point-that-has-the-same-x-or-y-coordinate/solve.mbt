@@ -1,3 +1,4 @@
+///|
 fn abs(x : Int) -> Int {
   if x < 0 {
     -x
@@ -6,6 +7,7 @@ fn abs(x : Int) -> Int {
   }
 }
 
+///|
 fn find_nearest_point(x : Int, y : Int, points : Array[Array[Int]]) -> Int {
   let mut min_distance = 2_0000_0000
   let mut min_index = -1

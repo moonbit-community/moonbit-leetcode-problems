@@ -1,3 +1,4 @@
+///|
 fn k_length_apart(nums : Array[Int], k : Int) -> Bool {
   let mut j = -(k + 1)
   let n = nums.length()

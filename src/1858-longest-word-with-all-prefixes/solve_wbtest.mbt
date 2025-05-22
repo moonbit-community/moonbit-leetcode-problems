@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let words = Array::make(5, "")
   words[0] = "k "
@@ -8,6 +9,7 @@ test "example 1" {
   assert_eq!(longest_word_with_all_prefixes(words), "kiran ")
 }
 
+///|
 test "example 2" {
   let words = Array::make(7, "")
   words[0] = "a "
@@ -20,6 +22,7 @@ test "example 2" {
   assert_eq!(longest_word_with_all_prefixes(words), "apple ")
 }
 
+///|
 test "example 3" {
   let words = Array::make(4, "")
   words[0] = "abc "

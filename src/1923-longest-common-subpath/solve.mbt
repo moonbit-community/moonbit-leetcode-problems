@@ -1,9 +1,11 @@
+///|
 struct RollingHash {
   base : Int
   modulus : Int
   powers : Array[Int]
 }
 
+///|
 fn RollingHash::new(base : Int, modulus : Int, max_length : Int) -> RollingHash {
   let powers = Array::make(max_length + 1, 0)
   powers[0] = 1
@@ -13,6 +15,7 @@ fn RollingHash::new(base : Int, modulus : Int, max_length : Int) -> RollingHash 
   RollingHash::{ base, modulus, powers }
 }
 
+///|
 fn RollingHash::hash(
   self : RollingHash,
   path : Array[Int],
@@ -26,7 +29,11 @@ fn RollingHash::hash(
   }
   hash_values[0] = current_hash
   for i = length; i < n; i = i + 1 {
-    current_hash = (current_hash * self.base + path[i] - path[i - length] * self.powers[length]) %
+    current_hash = (
+        current_hash * self.base +
+        path[i] -
+        path[i - length] * self.powers[length]
+      ) %
       self.modulus
     if current_hash < 0 {
       current_hash = current_hash + self.modulus
@@ -36,13 +43,13 @@ fn RollingHash::hash(
   hash_values
 }
 
+///|
 fn longest_common_subpath(_n : Int, paths : Array[Array[Int]]) -> Int {
   let base = 101
   let modulus = 1000000007
-  let max_length = paths.map(fn(path) { path.length() }).fold_left(
-    fn(a, b) { @math.minimum(a, b) },
-    init=100000,
-  )
+  let max_length = paths
+    .map(fn(path) { path.length() })
+    .fold_left(fn(a, b) { @math.minimum(a, b) }, init=100000)
   let rolling_hash = RollingHash::new(base, modulus, max_length)
   fn check(length : Int) -> Bool {
     let hash_sets = Array::make(paths.length(), @hashmap.T::new())
@@ -54,7 +61,10 @@ fn longest_common_subpath(_n : Int, paths : Array[Array[Int]]) -> Int {
       }
     }
     let first_set = hash_sets[0]
-    let first_set_keys = first_set.iter().map(fn { (key, _value) => key }).collect()
+    let first_set_keys = first_set
+      .iter()
+      .map(fn { (key, _value) => key })
+      .collect()
     for i = 0; i < first_set_keys.length(); i = i + 1 {
       let hash_value = first_set_keys[i]
       let mut all_contain = true

@@ -1,3 +1,4 @@
+///|
 fn smallest_sufficient_team(
   req_skills : Array[String],
   people : Array[Array[String]]
@@ -10,7 +11,7 @@ fn smallest_sufficient_team(
   }
   let p : Array[Int] = Array::make(n, 0)
   for i = 0; i < n; i = i + 1 {
-    let f = fn(s) { p[i] = p[i].lor((1).lsl(d.get(s).or(0))) }
+    let f = fn(s) { p[i] = p[i] | (1).lsl(d.get(s).or(0)) }
     people[i].each(f)
   }
   let inf = @int.max_value
@@ -23,7 +24,7 @@ fn smallest_sufficient_team(
       continue
     }
     for j = 0; j < n; j = j + 1 {
-      let combined = i.lor(p[j])
+      let combined = i | p[j]
       if f[i] + 1 < f[combined] {
         f[combined] = f[i] + 1
         g[combined] = j

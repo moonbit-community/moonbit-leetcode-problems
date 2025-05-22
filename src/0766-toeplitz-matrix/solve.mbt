@@ -1,3 +1,4 @@
+///|
 fn is_toeplitz_matrix(matrix : Array[Array[Int]]) -> Bool {
   let m = matrix.length()
   let n = matrix[0].length()

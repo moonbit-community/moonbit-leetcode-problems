@@ -1,3 +1,4 @@
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a
@@ -6,6 +7,7 @@ fn min(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn dfs(f : @hashmap.T[Int, Int], x : Int, v : Int) -> Int {
   if x >= v {
     return min(v * 2 - 1, (x - v) * 2)
@@ -28,6 +30,7 @@ fn dfs(f : @hashmap.T[Int, Int], x : Int, v : Int) -> Int {
   ans
 }
 
+///|
 fn least_ops_express_target(x : Int, target : Int) -> Int {
   let f : @hashmap.T[Int, Int] = @hashmap.new()
   dfs(f, x, target)

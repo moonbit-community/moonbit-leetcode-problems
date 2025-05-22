@@ -1,3 +1,4 @@
+///|
 fn split(string : String, delimiter : Char) -> Array[String] {
   let buffer = Buffer::new()
   let array = []
@@ -12,6 +13,7 @@ fn split(string : String, delimiter : Char) -> Array[String] {
   array
 }
 
+///|
 fn join(strings : Array[String], delimiter : String) -> String {
   let buffer = Buffer::new()
   for i = 0; i < strings.length(); i = i + 1 {
@@ -23,6 +25,7 @@ fn join(strings : Array[String], delimiter : String) -> String {
   buffer.to_string()
 }
 
+///|
 fn truncate_sentence(s : String, k : Int) -> String {
   // Split the sentence into words
   let words = s |> split(' ')

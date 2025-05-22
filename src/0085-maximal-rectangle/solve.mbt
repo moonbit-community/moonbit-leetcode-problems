@@ -1,3 +1,4 @@
+///|
 fn maximal_rect(matrix : Array[Array[String]]) -> Int {
   let m = matrix.length()
   if m == 0 {
@@ -22,8 +23,8 @@ fn maximal_rect(matrix : Array[Array[String]]) -> Int {
     let down = Array::make(m, 0)
     let stack : Array[Int] = Array::new()
     for i = 0; i < m; i = i + 1 {
-      while not(stack.is_empty()) && left[stack.get(stack.length() - 1).or(0)][j] >=
-            left[i][j] {
+      while not(stack.is_empty()) &&
+            left[stack.get(stack.length() - 1).or(0)][j] >= left[i][j] {
         stack.pop() |> ignore
       }
       up[i] = stack.get(stack.length() - 1).or(-1)
@@ -31,7 +32,8 @@ fn maximal_rect(matrix : Array[Array[String]]) -> Int {
     }
     stack.clear()
     for i = m - 1; i >= 0; i = i - 1 {
-      while not(stack.is_empty()) && left[stack[stack.length() - 1]][j] >= left[i][j] {
+      while not(stack.is_empty()) &&
+            left[stack[stack.length() - 1]][j] >= left[i][j] {
         stack.pop() |> ignore
       }
       down[i] = stack.get(stack.length() - 1).or(m)

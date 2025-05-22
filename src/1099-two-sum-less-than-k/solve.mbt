@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -6,6 +7,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn two_sum_less_than_k(nums : Array[Int], k : Int) -> Int {
   nums.sort()
   let mut ans = -1

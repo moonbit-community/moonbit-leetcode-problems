@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -6,6 +7,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn max_sum_after_partitioning(arr : Array[Int], k : Int) -> Int {
   let n = arr.length()
   let f = Array::make(n + 1, 0)

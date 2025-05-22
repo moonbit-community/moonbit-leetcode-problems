@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -6,6 +7,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn sort_points(points : Array[(Int, Int)]) -> Array[(Int, Int)] {
   let n = points.length()
   for i = 0; i < n; i = i + 1 {
@@ -20,6 +22,7 @@ fn sort_points(points : Array[(Int, Int)]) -> Array[(Int, Int)] {
   points
 }
 
+///|
 fn max_width_of_vertical_area(points : Array[(Int, Int)]) -> Int {
   let sorted_points = sort_points(points)
   let mut ans = 0

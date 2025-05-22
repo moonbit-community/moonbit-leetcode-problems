@@ -1,3 +1,4 @@
+///|
 fn number_of_ways(num_people : Int) -> Int {
   let mod = 1000000000 + 7
   let f : Array[Int] = Array::make(num_people + 1, 0)

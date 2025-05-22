@@ -1,3 +1,4 @@
+///|
 fn max_element(nums : Array[Int]) -> Int {
   let mut max_val = nums[0]
   for i = 1; i < nums.length(); i = i + 1 {
@@ -8,6 +9,7 @@ fn max_element(nums : Array[Int]) -> Int {
   max_val
 }
 
+///|
 fn min_limit_of_balls_in_bag(nums : Array[Int], max_operations : Int) -> Int {
   let max_num = max_element(nums)
   let mut left = 1
@@ -23,6 +25,7 @@ fn min_limit_of_balls_in_bag(nums : Array[Int], max_operations : Int) -> Int {
   left
 }
 
+///|
 fn can_achieve_penalty(
   nums : Array[Int],
   penalty : Int,

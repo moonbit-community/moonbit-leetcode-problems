@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let root = TreeNode::Node(
     0,
@@ -11,6 +12,7 @@ test "example 1" {
   assert_eq!(min_camera_cover(root), 1)
 }
 
+///|
 test "example 2" {
   let root = TreeNode::Empty
   assert_eq!(min_camera_cover(root), 0)

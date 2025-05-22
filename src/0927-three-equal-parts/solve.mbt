@@ -1,7 +1,9 @@
+///|
 struct Solution {
   arr : Array[Int]
 }
 
+///|
 fn Solution::three_equal_parts(self : Solution) -> Array[Int] {
   let cnt = self.arr.fold_left(fn(acc, v) { acc + v }, init=0)
   let n : Int = self.arr.length()
@@ -27,6 +29,7 @@ fn Solution::three_equal_parts(self : Solution) -> Array[Int] {
   }
 }
 
+///|
 fn Solution::find(self : Solution, x : Int) -> Int {
   let mut s : Int = 0
   let mut i : Int = 0

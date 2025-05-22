@@ -1,4 +1,5 @@
-fn concat[X](this : ArrayView[X], that : ArrayView[X]) -> ArrayView[X] {
+///|
+fn[X] concat(this : ArrayView[X], that : ArrayView[X]) -> ArrayView[X] {
   let array = Array::new()
   for i = 0; i < this.length(); i = i + 1 {
     array.push(this[i])
@@ -9,6 +10,7 @@ fn concat[X](this : ArrayView[X], that : ArrayView[X]) -> ArrayView[X] {
   array[:]
 }
 
+///|
 fn count_students(
   students : ArrayView[Int],
   sandwiches : ArrayView[Int]

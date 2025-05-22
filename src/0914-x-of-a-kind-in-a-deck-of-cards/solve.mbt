@@ -1,3 +1,4 @@
+///|
 fn gcd(a : Int, b : Int) -> Int {
   if b == 0 {
     a
@@ -6,6 +7,7 @@ fn gcd(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn has_groups_size_x(deck : Array[Int]) -> Bool {
   let cnt : Array[Int] = Array::make(10000, 0)
   let mut i = 0

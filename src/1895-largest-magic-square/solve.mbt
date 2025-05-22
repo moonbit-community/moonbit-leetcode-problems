@@ -1,3 +1,4 @@
+///|
 fn is_magic_square(
   grid : Array[Array[Int]],
   x : Int,
@@ -35,6 +36,7 @@ fn is_magic_square(
   return true
 }
 
+///|
 fn largest_magic_square(grid : Array[Array[Int]]) -> Int {
   let m = grid.length()
   let n = grid[0].length()

@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let n = 5
   let edges = [
@@ -12,6 +13,7 @@ test "example 1" {
   assert_eq!(count_restricted_paths(n, edges), 3)
 }
 
+///|
 test "example 2" {
   let n = 7
   let edges = [

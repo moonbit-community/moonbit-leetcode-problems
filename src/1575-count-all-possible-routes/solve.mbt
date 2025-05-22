@@ -1,3 +1,4 @@
+///|
 fn abs_diff(a : Int, b : Int) -> Int {
   if a > b {
     a - b
@@ -6,6 +7,7 @@ fn abs_diff(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn count_routes(
   locations : Array[Int],
   start : Int,

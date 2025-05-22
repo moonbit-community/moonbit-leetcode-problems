@@ -1,3 +1,4 @@
+///|
 fn string_to_long(s : String) -> Int {
   let mut res = 0
   let mut i = 0
@@ -8,6 +9,7 @@ fn string_to_long(s : String) -> Int {
   res
 }
 
+///|
 fn get_radix(len : Int, num : Int) -> Int {
   let mut l = 2
   let mut r = num - 1
@@ -26,6 +28,7 @@ fn get_radix(len : Int, num : Int) -> Int {
   }
 }
 
+///|
 fn calc(radix : Int, len : Int) -> Int {
   let mut p = 1
   let mut sum = 0
@@ -43,6 +46,7 @@ fn calc(radix : Int, len : Int) -> Int {
   sum
 }
 
+///|
 fn smallest_good_base(n : String) -> String {
   let num = string_to_long(n)
   let mut len = 63

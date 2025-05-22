@@ -1,3 +1,4 @@
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a
@@ -6,6 +7,7 @@ fn min(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -14,6 +16,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn lucky_numbers(matrix : Array[Array[Int]]) -> Array[Int] {
   let m = matrix.length()
   let n = matrix[0].length()

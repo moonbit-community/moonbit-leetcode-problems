@@ -1,3 +1,4 @@
+///|
 fn find_min(nums : Array[Int]) -> Int {
   let n = nums.length()
   if nums[0] <= nums[n - 1] {

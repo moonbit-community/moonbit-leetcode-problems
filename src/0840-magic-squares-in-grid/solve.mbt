@@ -1,9 +1,11 @@
+///|
 struct Solution {
   m : Int
   n : Int
   grid : Array[Array[Int]]
 }
 
+///|
 fn Solution::num_magic_squares_inside(self : Solution) -> Int {
   let mut ans = 0
   for i = 0; i < self.m; i = i + 1 {
@@ -14,6 +16,7 @@ fn Solution::num_magic_squares_inside(self : Solution) -> Int {
   ans
 }
 
+///|
 fn Solution::check(self : Solution, i : Int, j : Int) -> Int {
   if i + 3 > self.m || j + 3 > self.n {
     return 0

@@ -1,3 +1,4 @@
+///|
 fn count_pairs_in_two_arrays(nums1 : Array[Int], nums2 : Array[Int]) -> Int {
   let n = nums1.length()
   let diff = Array::make(n, 0)

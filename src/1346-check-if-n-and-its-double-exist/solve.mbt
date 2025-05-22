@@ -1,3 +1,4 @@
+///|
 fn check_if_exist(arr : Array[Int]) -> Bool {
   let mut s : @immut/list.T[Int] = @immut/list.T::of([])
   for i = 0; i < arr.length(); i = i + 1 {

@@ -1,3 +1,4 @@
+///|
 fn next_palindrome(num : String) -> String {
   let n = num.length()
   let half_len = n / 2
@@ -18,6 +19,7 @@ fn next_palindrome(num : String) -> String {
   }
 }
 
+///|
 fn find_next_permutation(s : String) -> String {
   let chars = s.to_array()
   let n = chars.length()
@@ -47,6 +49,7 @@ fn find_next_permutation(s : String) -> String {
   return chars.to_string()
 }
 
+///|
 fn construct_palindrome(
   first_half : String,
   has_middle : Bool,

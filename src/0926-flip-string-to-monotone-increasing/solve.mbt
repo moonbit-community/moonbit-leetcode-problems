@@ -16,6 +16,7 @@ fn min_flips_mono_incr(s : String) -> Int {
 }
 
 // Helper function to find minimum between two integers
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a

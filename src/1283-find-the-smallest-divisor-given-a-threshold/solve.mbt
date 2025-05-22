@@ -1,3 +1,4 @@
+///|
 fn max(nums : Array[Int]) -> Int {
   let mut max_value = nums[0]
   for i = 0; i < nums.length(); i = i + 1 {
@@ -9,6 +10,7 @@ fn max(nums : Array[Int]) -> Int {
   max_value
 }
 
+///|
 fn ceil(dividend : Int, divisor : Int) -> Int {
   if dividend % divisor == 0 {
     return dividend / divisor
@@ -17,6 +19,7 @@ fn ceil(dividend : Int, divisor : Int) -> Int {
   }
 }
 
+///|
 fn smallest_divisor(nums : Array[Int], threshold : Int) -> Int {
   let mut l = 1
   let r = max(nums)

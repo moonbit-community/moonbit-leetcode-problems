@@ -1,3 +1,4 @@
+///|
 fn count_vowel_permutation(n : Int) -> Int {
   let mod = 1000000007
   let f : Array[Int] = Array::make(5, 1)

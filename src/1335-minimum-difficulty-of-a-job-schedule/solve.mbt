@@ -1,3 +1,4 @@
+///|
 fn max(x : Int, y : Int) -> Int {
   if x > y {
     x
@@ -6,6 +7,7 @@ fn max(x : Int, y : Int) -> Int {
   }
 }
 
+///|
 fn min(x : Int, y : Int) -> Int {
   if x < y {
     x
@@ -14,6 +16,7 @@ fn min(x : Int, y : Int) -> Int {
   }
 }
 
+///|
 fn min_difficulty(job_difficulty : Array[Int], d : Int) -> Int {
   let n = job_difficulty.length()
   let inf = 2_0000_0000

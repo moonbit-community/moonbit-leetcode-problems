@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let solution = Solution::{
     costs: [2, 7, 15],
@@ -8,6 +9,7 @@ test "example 1" {
   assert_eq!(solution.mincost_tickets(), 11)
 }
 
+///|
 test "example 2" {
   let solution = Solution::{
     costs: [10, 60, 120],

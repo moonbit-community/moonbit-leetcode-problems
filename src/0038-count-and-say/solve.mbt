@@ -1,3 +1,4 @@
+///|
 fn count_and_say(n : Int) -> String {
   let mut str = "1"
   for i = 2; i <= n; i = i + 1 {

@@ -1,8 +1,10 @@
+///|
 enum TreeNode {
   Leaf
   Node(Int, TreeNode, TreeNode)
 } derive(Eq, Show)
 
+///|
 fn search_bst(root : TreeNode, val : Int) -> TreeNode {
   match root {
     Leaf => Leaf

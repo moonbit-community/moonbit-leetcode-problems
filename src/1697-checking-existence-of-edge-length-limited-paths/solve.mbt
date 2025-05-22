@@ -1,8 +1,10 @@
+///|
 struct UnionFind {
   parent : FixedArray[Int]
   rank : FixedArray[Int]
 }
 
+///|
 fn UnionFind::new(n : Int) -> UnionFind {
   let parent = FixedArray::new(n, fn() { 0 })
   let rank = FixedArray::new(n, fn() { 0 })
@@ -12,6 +14,7 @@ fn UnionFind::new(n : Int) -> UnionFind {
   UnionFind::{ parent, rank }
 }
 
+///|
 fn UnionFind::find(self : UnionFind, x : Int) -> Int {
   if self.parent[x] != x {
     self.parent[x] = self.find(self.parent[x])
@@ -19,6 +22,7 @@ fn UnionFind::find(self : UnionFind, x : Int) -> Int {
   self.parent[x]
 }
 
+///|
 fn UnionFind::union(self : UnionFind, x : Int, y : Int) -> Unit {
   let rootX = self.find(x)
   let rootY = self.find(y)
@@ -34,14 +38,17 @@ fn UnionFind::union(self : UnionFind, x : Int, y : Int) -> Unit {
   }
 }
 
+///|
 fn edge_cmp(a : Array[Int], b : Array[Int]) -> Int {
   a[2] - b[2]
 }
 
+///|
 fn query_cmp(a : Array[Int], b : Array[Int]) -> Int {
   a[2] - b[2]
 }
 
+///|
 fn distance_limited_paths_exist(
   n : Int,
   edge_list : Array[Array[Int]],

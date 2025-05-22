@@ -1,7 +1,9 @@
+///|
 fn char_to_numerical_value(c : Char) -> Int {
   c.to_int() - 'a'.to_int()
 }
 
+///|
 fn word_to_numerical_value(word : String) -> Int {
   let mut numerical_value = 0
   for i = 0; i < word.length(); i = i + 1 {
@@ -10,6 +12,7 @@ fn word_to_numerical_value(word : String) -> Int {
   numerical_value
 }
 
+///|
 fn check_if_word_equals_summation_of_two_words(
   first_word : String,
   second_word : String,

@@ -1,3 +1,4 @@
+///|
 fn find_closest_elements(
   arr : Array[Int],
   k : Int,

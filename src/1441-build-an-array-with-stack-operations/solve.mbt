@@ -1,3 +1,4 @@
+///|
 fn build_array(target : Array[Int], n : Int) -> Array[String] {
   let vec : Array[String] = []
   let mut cur = 0

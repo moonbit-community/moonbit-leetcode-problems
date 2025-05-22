@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let boxes = "110"
   let expected = [1, 1, 3]
@@ -7,6 +8,7 @@ test "example 1" {
   )
 }
 
+///|
 test "example 2" {
   let boxes = "001011"
   let expected = [11, 8, 5, 4, 3, 4]
@@ -16,6 +18,7 @@ test "example 2" {
   )
 }
 
+///|
 test "all zeros" {
   let boxes = "0000"
   let expected = [0, 0, 0, 0]
@@ -25,6 +28,7 @@ test "all zeros" {
   )
 }
 
+///|
 test "all ones" {
   let boxes = "1111"
   let expected = [3, 2, 3, 4]
@@ -34,6 +38,7 @@ test "all ones" {
   )
 }
 
+///|
 test "single ball" {
   let boxes = "01000"
   let expected = [1, 0, 1, 2, 3]

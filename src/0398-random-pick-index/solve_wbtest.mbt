@@ -1,3 +1,4 @@
+///|
 test "example pick" {
   let nums = [1, 2, 3, 3, 3]
   let solution = Solution::new(nums)
@@ -6,6 +7,7 @@ test "example pick" {
   assert_eq!(solution.pick(3), 2) // In a real random scenario, any index of 3 (2, 3, or 4) could be returned.
 }
 
+///|
 test "example no match" {
   let nums = [1, 2, 3, 4, 5]
   let solution = Solution::new(nums)

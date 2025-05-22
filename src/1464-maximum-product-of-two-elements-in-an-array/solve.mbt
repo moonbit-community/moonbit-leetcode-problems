@@ -1,3 +1,4 @@
+///|
 fn max_product(nums : Array[Int]) -> Int {
   let n = nums.length()
   for i = 0; i < 2; i = i + 1 {

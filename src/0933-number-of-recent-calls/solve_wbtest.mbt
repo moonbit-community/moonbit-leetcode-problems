@@ -1,3 +1,4 @@
+///|
 test "RecentCounter test" {
   let obj = RecentCounter::new()
   assert_eq!(obj.ping(1), 1)

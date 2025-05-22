@@ -1,3 +1,4 @@
+///|
 fn find_peak_element_2d(mat : Array[Array[Int]]) -> Array[Int] {
   let m = mat.length()
   let n = mat[0].length()
@@ -16,8 +17,8 @@ fn find_peak_element_2d(mat : Array[Array[Int]]) -> Array[Int] {
   fn find_peak(mat : Array[Array[Int]], left : Int, right : Int) -> Array[Int] {
     let mid = (left + right) / 2
     let (max_row, max_val) = find_max_in_column(mat, mid)
-    if (mid == 0 || mat[max_row][mid - 1] < max_val) && (mid == n - 1 || mat[max_row][mid +
-    1] < max_val) {
+    if (mid == 0 || mat[max_row][mid - 1] < max_val) &&
+      (mid == n - 1 || mat[max_row][mid + 1] < max_val) {
       return [max_row, mid]
     } else if mid > 0 && mat[max_row][mid - 1] > max_val {
       return find_peak(mat, left, mid - 1)

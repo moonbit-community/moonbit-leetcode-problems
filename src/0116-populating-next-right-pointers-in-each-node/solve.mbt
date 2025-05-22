@@ -1,8 +1,10 @@
+///|
 enum Tree {
   Empty
   Node(Int, Tree, Tree, Tree)
 } derive(Eq, Show)
 
+///|
 fn connect(root : Tree) -> Tree {
   match root {
     Empty => Empty

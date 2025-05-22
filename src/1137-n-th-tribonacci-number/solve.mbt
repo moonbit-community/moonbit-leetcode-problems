@@ -1,3 +1,4 @@
+///|
 fn mul(a : Array[Array[Int]], b : Array[Array[Int]]) -> Array[Array[Int]] {
   let m = a.length()
   let n = b[0].length()
@@ -14,6 +15,7 @@ fn mul(a : Array[Array[Int]], b : Array[Array[Int]]) -> Array[Array[Int]] {
   c
 }
 
+///|
 fn pow(a : Array[Array[Int]], n : Int) -> Array[Array[Int]] {
   let mut a = a
   let mut res : Array[Array[Int]] = [[1, 1, 0]]
@@ -28,6 +30,7 @@ fn pow(a : Array[Array[Int]], n : Int) -> Array[Array[Int]] {
   res
 }
 
+///|
 fn tribonacci(n : Int) -> Int {
   if n == 0 {
     return 0

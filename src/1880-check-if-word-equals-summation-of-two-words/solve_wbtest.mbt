@@ -1,3 +1,4 @@
+///|
 test "example_1" {
   let first_word = "acb"
   let second_word = "cba"
@@ -10,6 +11,7 @@ test "example_1" {
   )
 }
 
+///|
 test "example_2" {
   let first_word = "aaa"
   let second_word = "a"
@@ -22,6 +24,7 @@ test "example_2" {
   )
 }
 
+///|
 test "example_3" {
   let first_word = "aaa"
   let second_word = "a"

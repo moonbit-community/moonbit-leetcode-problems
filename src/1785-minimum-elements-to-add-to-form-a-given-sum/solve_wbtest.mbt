@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let nums = [1, -1, 1]
   let limit = 3
@@ -5,6 +6,7 @@ test "example 1" {
   assert_eq!(min_elements_to_add(nums, limit, goal), 2)
 }
 
+///|
 test "example 2" {
   let nums = [1, -10, 9, 1]
   let limit = 100
@@ -12,6 +14,7 @@ test "example 2" {
   assert_eq!(min_elements_to_add(nums, limit, goal), 1)
 }
 
+///|
 test "example 3" {
   let nums = [5, -5, 5]
   let limit = 5
@@ -19,6 +22,7 @@ test "example 3" {
   assert_eq!(min_elements_to_add(nums, limit, goal), 2)
 }
 
+///|
 test "example 4" {
   let nums = [-1, -2, -3]
   let limit = 1

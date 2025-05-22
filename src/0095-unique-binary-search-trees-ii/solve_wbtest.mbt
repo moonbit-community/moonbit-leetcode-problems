@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   inspect!(
     generate_trees(3),
@@ -5,6 +6,7 @@ test "example 1" {
   )
 }
 
+///|
 test "example 2" {
   inspect!(generate_trees(1), content="[[1]]")
 }

@@ -1,8 +1,10 @@
+///|
 struct Position {
   row : Int
   col : Int
 }
 
+///|
 fn get_position(x : Int, n : Int) -> Position {
   let row = (x - 1) / n
   let mut col = (x - 1) % n
@@ -12,6 +14,7 @@ fn get_position(x : Int, n : Int) -> Position {
   Position::{ row: n - 1 - row, col }
 }
 
+///|
 fn snakes_and_ladders(board : Array[Array[Int]]) -> Int {
   let n = board.length()
   let vis : Array[Bool] = Array::make(n * n + 1, false)
@@ -59,6 +62,7 @@ fn snakes_and_ladders(board : Array[Array[Int]]) -> Int {
   -1
 }
 
+///|
 fn append(list : @immut/list.T[Int], value : Int) -> @immut/list.T[Int] {
   match list {
     Nil => Cons(value, Nil)
@@ -66,6 +70,7 @@ fn append(list : @immut/list.T[Int], value : Int) -> @immut/list.T[Int] {
   }
 }
 
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a

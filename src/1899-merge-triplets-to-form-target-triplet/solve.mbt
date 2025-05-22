@@ -1,3 +1,4 @@
+///|
 fn can_form_target_triplet(
   triplets : Array[Array[Int]],
   target : Array[Int]
@@ -5,7 +6,9 @@ fn can_form_target_triplet(
   let filtered_triplets = Array::new()
   for i = 0; i < triplets.length(); i = i + 1 {
     let triplet = triplets[i]
-    if triplet[0] <= target[0] && triplet[1] <= target[1] && triplet[2] <= target[2] {
+    if triplet[0] <= target[0] &&
+      triplet[1] <= target[1] &&
+      triplet[2] <= target[2] {
       filtered_triplets.push(triplet)
     }
   }

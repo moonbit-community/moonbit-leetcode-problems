@@ -1,3 +1,4 @@
+///|
 fn sort(nums : Array[Int]) -> Array[Int] {
   if nums.length() <= 1 {
     return nums
@@ -16,12 +17,13 @@ fn sort(nums : Array[Int]) -> Array[Int] {
   }
   let sorted_less = sort(less.to_array())
   let sorted_greater = sort(greater.to_array())
-  let res = @immut/list.T::from_array(sorted_less).concat(
-    @immut/list.T::from_array(Array::make(1, pivot)),
-  ).concat(@immut/list.T::from_array(sorted_greater))
+  let res = @immut/list.T::from_array(sorted_less)
+    .concat(@immut/list.T::from_array(Array::make(1, pivot)))
+    .concat(@immut/list.T::from_array(sorted_greater))
   res.to_array()
 }
 
+///|
 fn array_pair_sum(nums : Array[Int]) -> Int {
   let sortedNums = sort(nums)
   let mut ans = 0

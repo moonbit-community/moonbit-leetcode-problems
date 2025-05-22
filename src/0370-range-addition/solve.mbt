@@ -1,3 +1,4 @@
+///|
 fn update_range(arr : Array[Int], l : Int, r : Int, c : Int) -> Unit {
   arr[l] = arr[l] + c
   if r + 1 < arr.length() {
@@ -5,6 +6,7 @@ fn update_range(arr : Array[Int], l : Int, r : Int, c : Int) -> Unit {
   }
 }
 
+///|
 fn apply_updates(arr : Array[Int], updates : Array[Array[Int]]) -> Unit {
   let mut i = 0
   while i < updates.length() {
@@ -14,6 +16,7 @@ fn apply_updates(arr : Array[Int], updates : Array[Array[Int]]) -> Unit {
   }
 }
 
+///|
 fn cumulative_sum(arr : Array[Int]) -> Unit {
   let mut i = 1
   while i < arr.length() {
@@ -22,6 +25,7 @@ fn cumulative_sum(arr : Array[Int]) -> Unit {
   }
 }
 
+///|
 fn get_modified_array(length : Int, updates : Array[Array[Int]]) -> Array[Int] {
   let result : Array[Int] = Array::make(length, 0)
   apply_updates(result, updates)

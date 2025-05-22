@@ -1,8 +1,10 @@
+///|
 struct TopVotedCandidate {
   times : Array[Int]
   win_persons : Array[Int]
 }
 
+///|
 fn TopVotedCandidate::new(
   persons : Array[Int],
   times : Array[Int]
@@ -25,6 +27,7 @@ fn TopVotedCandidate::new(
   TopVotedCandidate::{ times, win_persons }
 }
 
+///|
 fn TopVotedCandidate::q(self : TopVotedCandidate, t : Int) -> Int {
   let mut left = 0
   let mut right = self.win_persons.length() - 1

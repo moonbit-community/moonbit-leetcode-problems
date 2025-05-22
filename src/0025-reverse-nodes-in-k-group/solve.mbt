@@ -1,4 +1,5 @@
-fn split[X : Show](
+///|
+fn[X : Show] split(
   this : @immut/list.T[X],
   k : Int
 ) -> (@immut/list.T[X], @immut/list.T[X]) {
@@ -13,7 +14,8 @@ fn split[X : Show](
   }
 }
 
-fn reverse_k_group[X : Eq + Show](
+///|
+fn[X : Eq + Show] reverse_k_group(
   head : @immut/list.T[X],
   k : Int
 ) -> @immut/list.T[X] {

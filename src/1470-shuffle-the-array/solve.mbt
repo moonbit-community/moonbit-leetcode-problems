@@ -1,3 +1,4 @@
+///|
 fn shuffle(nums : Array[Int], n : Int) -> Array[Int] {
   let ans = []
   let mut i = 0

@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let root : Tree = Node(
     Node(
@@ -14,6 +15,7 @@ test "example 1" {
   assert_eq!(get_val(ancestor), 6)
 }
 
+///|
 test "example 2" {
   let root : Tree = Node(
     Node(

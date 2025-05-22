@@ -1,9 +1,11 @@
+///|
 struct Pair {
   index : Int
   value : Int
 }
 
 // Since MoonBit does not directly support maps, we simulate it with a list of Pair structs.
+///|
 fn add_pair(
   pairs : @immut/list.T[Pair],
   key : Int,
@@ -12,6 +14,7 @@ fn add_pair(
   Cons(Pair::{ index: key, value: val }, pairs)
 }
 
+///|
 fn get_pair(pairs : @immut/list.T[Pair], key : Int) -> Int? {
   match pairs {
     Nil => None
@@ -24,6 +27,7 @@ fn get_pair(pairs : @immut/list.T[Pair], key : Int) -> Int? {
   }
 }
 
+///|
 fn contains_key(pairs : @immut/list.T[Pair], key : Int) -> Bool {
   match get_pair(pairs, key) {
     None => false
@@ -31,6 +35,7 @@ fn contains_key(pairs : @immut/list.T[Pair], key : Int) -> Bool {
   }
 }
 
+///|
 fn sum_mod_k(nums : Array[Int], k : Int) -> Bool {
   let mut mp : @immut/list.T[Pair] = Nil
   mp = add_pair(mp, 0, -1)

@@ -1,3 +1,4 @@
+///|
 fn char_to_uppercase(c : Char) -> Char {
   let ascii_val = c.to_int()
   if ascii_val >= 97 && ascii_val <= 122 {
@@ -6,6 +7,7 @@ fn char_to_uppercase(c : Char) -> Char {
   c
 }
 
+///|
 fn char_to_lowercase(c : Char) -> Char {
   let ascii_val = c.to_int()
   if ascii_val >= 65 && ascii_val <= 90 {
@@ -14,6 +16,7 @@ fn char_to_lowercase(c : Char) -> Char {
   c
 }
 
+///|
 fn is_nice_substring(substring : String) -> Bool {
   let char_set : @hashmap.T[Char, Bool] = @hashmap.new()
   for i = 0; i < substring.length(); i = i + 1 {
@@ -33,6 +36,7 @@ fn is_nice_substring(substring : String) -> Bool {
   true
 }
 
+///|
 fn longest_nice_substring(s : String) -> String {
   let mut longest = ""
   let s_len = s.length()

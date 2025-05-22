@@ -1,3 +1,4 @@
+///|
 fn restore_array(adjacent_pairs : Array[Array[Int]]) -> Array[Int] {
   let graph : @hashmap.T[Int, Array[Int]] = @hashmap.new()
   let degree : @hashmap.T[Int, Int] = @hashmap.new()

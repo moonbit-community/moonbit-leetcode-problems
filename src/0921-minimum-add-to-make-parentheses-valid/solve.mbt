@@ -1,3 +1,4 @@
+///|
 fn min_add_to_make_valid(s : String) -> Int {
   let stack : Array[Char] = Array::new()
   let mut index = 0

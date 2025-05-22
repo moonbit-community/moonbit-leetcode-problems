@@ -1,3 +1,4 @@
+///|
 fn distance_between_bus_stops(
   distance : Array[Int],
   start : Int,
@@ -14,6 +15,7 @@ fn distance_between_bus_stops(
   min(a, s - a)
 }
 
+///|
 fn min(x : Int, y : Int) -> Int {
   if x < y {
     x

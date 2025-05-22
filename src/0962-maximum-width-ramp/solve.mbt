@@ -1,3 +1,4 @@
+///|
 fn max_width_ramp(nums : Array[Int]) -> Int {
   let n : Int = nums.length()
   let stk : Array[Int] = Array::new()
@@ -8,7 +9,8 @@ fn max_width_ramp(nums : Array[Int]) -> Int {
     }
   }
   for i = n - 1; i >= 0; i = i - 1 {
-    while not(stk.is_empty()) && nums[stk.get(stk.length() - 1).or(0)] <= nums[i] {
+    while not(stk.is_empty()) &&
+          nums[stk.get(stk.length() - 1).or(0)] <= nums[i] {
       ans = @math.maximum(ans, i - stk.pop().or(0))
     }
     if stk.is_empty() {

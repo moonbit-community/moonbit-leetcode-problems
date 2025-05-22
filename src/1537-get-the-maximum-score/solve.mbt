@@ -1,3 +1,4 @@
+///|
 fn max(f : Int, g : Int) -> Int {
   if f > g {
     f
@@ -6,6 +7,7 @@ fn max(f : Int, g : Int) -> Int {
   }
 }
 
+///|
 fn max_sum(nums1 : Array[Int], nums2 : Array[Int]) -> Int {
   let mod = 1000000007
   let m = nums1.length()

@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let encoded1 = Array::make(2, Pair::{ value: 0, freq: 0 })
   encoded1[0] = Pair::{ value: 1, freq: 3 }
@@ -11,6 +12,7 @@ test "example 1" {
   assert_eq!(result[0].freq, 6)
 }
 
+///|
 test "example 2" {
   let encoded1 = Array::make(3, Pair::{ value: 0, freq: 0 })
   encoded1[0] = Pair::{ value: 1, freq: 3 }

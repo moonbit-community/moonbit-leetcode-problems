@@ -1,3 +1,4 @@
+///|
 fn construct_array(n : Int, k : Int) -> Array[Int] {
   let ans : Array[Int] = Array::make(n, 0)
   let mut l = 1

@@ -1,3 +1,4 @@
+///|
 fn maximize_number_of_nice_divisors(prime_factors : Int) -> Int {
   let mod_value = 1_000_000_007
   if prime_factors == 1 {
@@ -15,6 +16,7 @@ fn maximize_number_of_nice_divisors(prime_factors : Int) -> Int {
   }
 }
 
+///|
 fn power(base : Int, exponent : Int, mod_value : Int) -> Int {
   let mut result = 1
   let mut base = base % mod_value

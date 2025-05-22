@@ -1,7 +1,9 @@
+///|
 fn idx(c : String) -> Int {
   c[0].to_int() - 'a'.to_int()
 }
 
+///|
 fn max(cnt : Array[Int], index : Int) -> Int {
   let target = cnt[index]
   let mut max_val = 0
@@ -16,6 +18,7 @@ fn max(cnt : Array[Int], index : Int) -> Int {
   max_val
 }
 
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a
@@ -24,6 +27,7 @@ fn min(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn max_rep_opt1(text : String) -> Int {
   let cnt : Array[Int] = Array::make(26, 0)
   for i = 0; i < text.length(); i = i + 1 {

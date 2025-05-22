@@ -1,3 +1,4 @@
+///|
 fn to_string_2(n : Int) -> String {
   let mut n = n
   if n == 0 {
@@ -12,6 +13,7 @@ fn to_string_2(n : Int) -> String {
   result
 }
 
+///|
 fn contains(haystack : String, needle : String) -> Bool {
   let haystack_len = haystack.length()
   let needle_len = needle.length()
@@ -33,6 +35,7 @@ fn contains(haystack : String, needle : String) -> Bool {
   false
 }
 
+///|
 fn query_string(s : String, n : Int) -> Bool {
   if n > 1000 {
     return false

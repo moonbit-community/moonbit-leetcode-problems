@@ -1,3 +1,4 @@
+///|
 fn number_of_different_integers(word : String) -> Int {
   let mut modified_word = ""
   for i = 0; i < word.length(); i = i + 1 {
@@ -19,6 +20,7 @@ fn number_of_different_integers(word : String) -> Int {
   unique_integers.size()
 }
 
+///|
 fn split_by_space(s : String) -> Array[String] {
   let result : Array[String] = []
   let mut current = ""
@@ -38,6 +40,7 @@ fn split_by_space(s : String) -> Array[String] {
   result
 }
 
+///|
 fn trim_leading_zeros(s : String) -> String {
   let mut start = 0
   while start < s.length() && s[start] == '0' {
@@ -50,6 +53,7 @@ fn trim_leading_zeros(s : String) -> String {
   }
 }
 
+///|
 fn substring(s : String, start : Int, end : Int) -> String {
   let mut result = ""
   for i = start; i < end; i = i + 1 {

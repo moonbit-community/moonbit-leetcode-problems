@@ -1,3 +1,4 @@
+///|
 fn num_identical_pairs(nums : Array[Int]) -> Int {
   let cnt = Array::make(101, 0)
   let mut ans = 0

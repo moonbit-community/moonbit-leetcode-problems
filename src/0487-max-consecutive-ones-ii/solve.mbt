@@ -1,3 +1,4 @@
+///|
 fn find_max_consecutive_ones(nums : Array[Int]) -> Int {
   let n : Int = nums.length()
   let left : Array[Int] = Array::make(n, 0)
@@ -32,6 +33,7 @@ fn find_max_consecutive_ones(nums : Array[Int]) -> Int {
   ans
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a

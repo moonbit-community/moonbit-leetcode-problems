@@ -1,3 +1,4 @@
+///|
 fn insert_into_sorted_list(
   node : Int,
   list : @immut/list.T[Int]
@@ -13,6 +14,7 @@ fn insert_into_sorted_list(
   }
 }
 
+///|
 fn merge_k_sorted_lists(
   lists : Array[@immut/list.T[Int]]
 ) -> @immut/list.T[Int] {

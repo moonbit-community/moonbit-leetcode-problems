@@ -1,5 +1,7 @@
+///|
 fn divide(dividend : Int, divisor : Int) -> Int {
-  let is_negative = (dividend < 0 && divisor > 0) || (dividend > 0 && divisor < 0)
+  let is_negative = (dividend < 0 && divisor > 0) ||
+    (dividend > 0 && divisor < 0)
   let dividend_abs = dividend.abs()
   let divisor_abs = divisor.abs()
   let mut quotient = 0

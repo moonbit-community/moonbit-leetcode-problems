@@ -1,3 +1,4 @@
+///|
 fn sum_four_divisors(nums : Array[Int]) -> Int {
   fn f(x : Int) -> Int {
     let mut cnt = 2

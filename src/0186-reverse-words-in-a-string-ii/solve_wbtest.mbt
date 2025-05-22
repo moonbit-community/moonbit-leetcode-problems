@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let s : Array[Char] = [
     't', 'h', 'e', ' ', 's', 'k', 'y', ' ', 'i', 's', ' ', 'b', 'l', 'u', 'e',
@@ -8,12 +9,14 @@ test "example 1" {
   assert_eq!(reverse_words(s), expected)
 }
 
+///|
 test "example 2" {
   let s : Array[Char] = ['h', 'e', 'l', 'l', 'o']
   let expected : Array[Char] = ['h', 'e', 'l', 'l', 'o']
   assert_eq!(reverse_words(s), expected)
 }
 
+///|
 test "example 3" {
   let s : Array[Char] = ['a', ' ', 'b', ' ', 'c']
   let expected : Array[Char] = ['c', ' ', 'b', ' ', 'a']

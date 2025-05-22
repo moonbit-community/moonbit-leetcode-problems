@@ -1,3 +1,4 @@
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a
@@ -6,6 +7,7 @@ fn min(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -14,14 +16,15 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn num_moves_stones_ii(stones : Array[Int]) -> Array[Int] {
   // Sorting the stones
   let stones = stones
   stones.sort()
   let n = stones.length()
   let mut mi = n
-  let mx = max(stones[n - 1] - stones[1] + 1, stones[n - 2] - stones[0] + 1) - (n -
-    1)
+  let mx = max(stones[n - 1] - stones[1] + 1, stones[n - 2] - stones[0] + 1) -
+    (n - 1)
   let mut j = 0
   for i = 0; i < n; i = i + 1 { // Using for loop, but for iterating with two variables, we only use the outer one explicitly
     while j < n {

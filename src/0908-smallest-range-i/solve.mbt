@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -6,6 +7,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a
@@ -14,6 +16,7 @@ fn min(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn smallest_range_i(nums : Array[Int], k : Int) -> Int {
   let mut mx = 0
   let mut mi = 10000

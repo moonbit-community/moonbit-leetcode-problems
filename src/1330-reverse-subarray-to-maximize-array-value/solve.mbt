@@ -1,3 +1,4 @@
+///|
 fn abs_diff(a : Int, b : Int) -> Int {
   if a > b {
     a - b
@@ -6,6 +7,7 @@ fn abs_diff(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -14,6 +16,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a
@@ -22,6 +25,7 @@ fn min(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn max_value_after_reverse(nums : Array[Int]) -> Int {
   let n = nums.length()
   let mut s = 0

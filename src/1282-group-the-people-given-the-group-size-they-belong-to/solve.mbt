@@ -1,3 +1,4 @@
+///|
 fn group_the_people(group_sizes : Array[Int]) -> Array[Array[Int]] {
   let mut res = @immut/list.T::of([])
   let map : @hashmap.T[Int, @immut/list.T[Int]] = @hashmap.new()

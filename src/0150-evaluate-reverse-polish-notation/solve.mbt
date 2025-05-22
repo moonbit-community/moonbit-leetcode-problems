@@ -1,12 +1,15 @@
+///|
 enum Stack {
   Empty
   Node(Int, Stack)
 }
 
+///|
 fn push(stack : Stack, value : Int) -> Stack {
   Node(value, stack)
 }
 
+///|
 fn pop(stack : Stack) -> (Int, Stack) {
   match stack {
     Node(head, tail) => (head, tail)
@@ -14,6 +17,7 @@ fn pop(stack : Stack) -> (Int, Stack) {
   }
 }
 
+///|
 fn eval_rpn(tokens : @immut/list.T[String]) -> Int {
   let mut stack : Stack = Empty
   fn is_digit(c : Char) -> Bool {

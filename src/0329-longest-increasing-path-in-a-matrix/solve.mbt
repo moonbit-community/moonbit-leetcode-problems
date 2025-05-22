@@ -1,3 +1,4 @@
+///|
 struct Solution {
   mut m : Int
   mut n : Int
@@ -5,6 +6,7 @@ struct Solution {
   mut f : Array[Array[Int]]
 }
 
+///|
 fn Solution::longestIncreasingPath(self : Solution) -> Int {
   self.m = self.matrix.length()
   self.n = self.matrix[0].length()
@@ -22,6 +24,7 @@ fn Solution::longestIncreasingPath(self : Solution) -> Int {
   ans
 }
 
+///|
 fn Solution::dfs(self : Solution, i : Int, j : Int) -> Int {
   if self.f[i][j] != 0 {
     return self.f[i][j]
@@ -31,7 +34,11 @@ fn Solution::dfs(self : Solution, i : Int, j : Int) -> Int {
   while k < 4 {
     let x = i + dirs[k]
     let y = j + dirs[k + 1]
-    if x >= 0 && x < self.m && y >= 0 && y < self.n && self.matrix[x][y] > self.matrix[i][j] {
+    if x >= 0 &&
+      x < self.m &&
+      y >= 0 &&
+      y < self.n &&
+      self.matrix[x][y] > self.matrix[i][j] {
       self.f[i][j] = max(self.f[i][j], Solution::dfs(self, x, y))
     }
     k = k + 1
@@ -40,6 +47,7 @@ fn Solution::dfs(self : Solution, i : Int, j : Int) -> Int {
   self.f[i][j]
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a

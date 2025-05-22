@@ -1,3 +1,4 @@
+///|
 fn sorted_squares(nums : Array[Int]) -> Array[Int] {
   let n : Int = nums.length()
   let res : Array[Int] = Array::make(n, 0)

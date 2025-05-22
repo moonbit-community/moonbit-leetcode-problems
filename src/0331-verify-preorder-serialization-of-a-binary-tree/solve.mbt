@@ -1,3 +1,4 @@
+///|
 fn split(s : String, delim : Char) -> @immut/list.T[String] {
   fn helper(
     acc : @immut/list.T[String],
@@ -20,6 +21,7 @@ fn split(s : String, delim : Char) -> @immut/list.T[String] {
   helper(Nil, "", 0)
 }
 
+///|
 fn is_valid_serialization(preorder : String) -> Bool {
   let strs = split(preorder, ',')
   let diff = 1

@@ -1,3 +1,4 @@
+///|
 struct Solution {
   costs : Array[Int]
   days : Array[Int]
@@ -5,12 +6,14 @@ struct Solution {
   mut n : Int
 }
 
+///|
 fn Solution::mincost_tickets(self : Solution) -> Int {
   self.n = self.days.length()
   self.f = Array::make(self.n, -1)
   self.dfs(0)
 }
 
+///|
 fn Solution::dfs(self : Solution, i : Int) -> Int {
   let time : Array[Int] = [1, 7, 30]
   if i >= self.n {
@@ -28,6 +31,7 @@ fn Solution::dfs(self : Solution, i : Int) -> Int {
   res
 }
 
+///|
 fn Solution::lower_bound(self : Solution, x : Int) -> Int {
   let mut left = 0
   let mut right = self.n
@@ -42,6 +46,7 @@ fn Solution::lower_bound(self : Solution, x : Int) -> Int {
   left
 }
 
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a

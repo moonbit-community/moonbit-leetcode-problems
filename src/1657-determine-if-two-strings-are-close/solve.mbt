@@ -1,3 +1,4 @@
+///|
 fn count_characters(word : String) -> Array[Int] {
   let counts = Array::make(26, 0)
   for i = 0; i < word.length(); i = i + 1 {
@@ -7,6 +8,7 @@ fn count_characters(word : String) -> Array[Int] {
   counts
 }
 
+///|
 fn close_strings(word1 : String, word2 : String) -> Bool {
   let cnt1 = count_characters(word1)
   let cnt2 = count_characters(word2)

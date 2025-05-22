@@ -1,3 +1,4 @@
+///|
 fn slice(string : String, start : Int, stop : Int) -> String {
   let mut result = ""
   for i = start; i < stop; i = i + 1 {
@@ -6,17 +7,16 @@ fn slice(string : String, start : Int, stop : Int) -> String {
   result
 }
 
+///|
 fn find_substring(s : String, words : Array[String]) -> Array[Int] {
   let result = []
   let word_num = words.length()
   let word_len = words[0].length()
   let all_words : @hashmap.T[String, Int] = @hashmap.new()
-  words.each(
-    fn(w) {
-      let val = all_words.get_or_default(w, 0)
-      all_words.set(w, val + 1)
-    },
-  )
+  words.each(fn(w) {
+    let val = all_words.get_or_default(w, 0)
+    all_words.set(w, val + 1)
+  })
   for i = 0; i < s.length() - word_num * word_len + 1; i = i + 1 {
     let has_words : @hashmap.T[String, Int] = @hashmap.new()
     let mut num = 0

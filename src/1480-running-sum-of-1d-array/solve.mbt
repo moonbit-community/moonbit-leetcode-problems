@@ -1,3 +1,4 @@
+///|
 fn running_sum(nums : Array[Int]) -> Array[Int] {
   let mut i = 1
   while i < nums.length() {

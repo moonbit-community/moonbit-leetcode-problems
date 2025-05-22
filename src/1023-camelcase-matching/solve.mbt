@@ -1,3 +1,4 @@
+///|
 fn camel_match(queries : Array[String], pattern : String) -> Array[Bool] {
   fn check(s : String, t : String) -> Bool {
     let m = s.length()

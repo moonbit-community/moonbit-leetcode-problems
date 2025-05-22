@@ -1,3 +1,4 @@
+///|
 fn dfs(
   nums : Array[Int],
   len : Int,
@@ -26,6 +27,7 @@ fn dfs(
   (path, res)
 }
 
+///|
 fn permute(nums : Array[Int]) -> @immut/list.T[@immut/list.T[Int]] {
   let len = nums.length()
   let mut ans : @immut/list.T[@immut/list.T[Int]] = @immut/list.T::of([])

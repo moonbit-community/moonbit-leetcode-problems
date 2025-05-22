@@ -1,8 +1,10 @@
+///|
 struct Point {
   x : Int
   y : Int
 }
 
+///|
 fn map_of_highest_peak(is_water : Array[Array[Int]]) -> Array[Array[Int]] {
   let m = is_water.length()
   let n = is_water[0].length()
@@ -33,8 +35,11 @@ fn map_of_highest_peak(is_water : Array[Array[Int]]) -> Array[Array[Int]] {
           let dir = directions[i]
           let new_x = x + dir.0
           let new_y = y + dir.1
-          if new_x >= 0 && new_x < m && new_y >= 0 && new_y < n && height[new_x][new_y] ==
-          -1 {
+          if new_x >= 0 &&
+            new_x < m &&
+            new_y >= 0 &&
+            new_y < n &&
+            height[new_x][new_y] == -1 {
             height[new_x][new_y] = height[x][y] + 1
             queue.push(Point::{ x: new_x, y: new_y })
           }

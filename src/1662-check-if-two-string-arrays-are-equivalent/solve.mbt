@@ -1,3 +1,4 @@
+///|
 fn array_strings_are_equal(
   word1 : Array[String],
   word2 : Array[String]
@@ -7,6 +8,7 @@ fn array_strings_are_equal(
   joined_word1 == joined_word2
 }
 
+///|
 fn join_array(arr : Array[String]) -> String {
   let mut result : String = ""
   for i = 0; i < arr.length(); i = i + 1 {

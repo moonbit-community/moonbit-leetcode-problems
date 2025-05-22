@@ -1,3 +1,4 @@
+///|
 fn add_negabinary(arr1 : Array[Int], arr2 : Array[Int]) -> Array[Int] {
   let mut i = arr1.length() - 1
   let mut j = arr2.length() - 1

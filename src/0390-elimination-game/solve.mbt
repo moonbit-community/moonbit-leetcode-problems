@@ -1,3 +1,4 @@
+///|
 fn last_remaining(n : Int) -> Int {
   let mut a1 = 1
   let mut an = n

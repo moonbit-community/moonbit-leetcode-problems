@@ -1,3 +1,4 @@
+///|
 fn stone_game_viii(stones : Array[Int]) -> Int {
   let n = stones.length()
   let prefix_sums = Array::make(n + 1, 0)
@@ -18,6 +19,7 @@ fn stone_game_viii(stones : Array[Int]) -> Int {
   return dp[1]
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a

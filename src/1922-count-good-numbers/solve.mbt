@@ -1,3 +1,4 @@
+///|
 fn count_good_numbers(n : Int) -> Int {
   let mod_value = 1_000_000_007
   let even_count = 5
@@ -7,7 +8,7 @@ fn count_good_numbers(n : Int) -> Int {
     let mut base = base % mod_value
     let mut exp = exp
     while exp > 0 {
-      if exp.land(1) == 1 {
+      if (exp & 1) == 1 {
         result = result * base % mod_value
       }
       exp = exp.lsr(1)
@@ -17,8 +18,8 @@ fn count_good_numbers(n : Int) -> Int {
   }
 
   let half_n = n / 2
-  let result = mod_pow(even_count, half_n + n % 2, mod_value) * mod_pow(
-      prime_count, half_n, mod_value,
-    ) % mod_value
+  let result = mod_pow(even_count, half_n + n % 2, mod_value) *
+    mod_pow(prime_count, half_n, mod_value) %
+    mod_value
   result
 }

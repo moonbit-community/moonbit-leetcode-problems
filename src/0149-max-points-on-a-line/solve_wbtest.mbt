@@ -1,8 +1,10 @@
+///|
 test "example 1" {
   let points : Array[Array[Int]] = [[1, 1], [2, 2], [3, 3]]
   assert_eq!(max_points(points), 3)
 }
 
+///|
 test "example 2" {
   let points : Array[Array[Int]] = [
     [1, 1],

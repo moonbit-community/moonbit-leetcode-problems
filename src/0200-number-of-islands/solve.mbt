@@ -1,3 +1,4 @@
+///|
 fn dfs(grid : Array[Array[String]], i : Int, j : Int, m : Int, n : Int) -> Unit {
   grid[i][j] = "0" // Mark as visited
   let dirs = [-1, 0, 1, 0, -1]
@@ -12,6 +13,7 @@ fn dfs(grid : Array[Array[String]], i : Int, j : Int, m : Int, n : Int) -> Unit 
   }
 }
 
+///|
 fn num_islands(grid : Array[Array[String]]) -> Int {
   let m = grid.length()
   let n = grid[0].length()

@@ -1,3 +1,4 @@
+///|
 fn kth_smallest(matrix : Array[Array[Int]], k : Int) -> Int {
   let n : Int = matrix.length()
   let mut left : Int = matrix[0][0]
@@ -13,6 +14,7 @@ fn kth_smallest(matrix : Array[Array[Int]], k : Int) -> Int {
   left
 }
 
+///|
 fn check(matrix : Array[Array[Int]], mid : Int, k : Int, n : Int) -> Bool {
   let mut count : Int = 0
   for i = n - 1, j = 0; i >= 0 && j < n; {

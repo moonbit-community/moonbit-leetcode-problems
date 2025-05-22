@@ -1,3 +1,4 @@
+///|
 fn min_element(x : Int, y : Int) -> Int {
   if x < y {
     x
@@ -6,6 +7,7 @@ fn min_element(x : Int, y : Int) -> Int {
   }
 }
 
+///|
 fn min_operations(nums : Array[Int], x : Int) -> Int {
   let sum = nums.fold_left(init=0, fn(a, b) { a + b })
   let vis : @hashmap.T[Int, Int] = @hashmap.new()

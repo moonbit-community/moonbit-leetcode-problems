@@ -1,8 +1,10 @@
+///|
 struct UnionFind {
   p : Array[Int]
   size : Array[Int]
 }
 
+///|
 fn UnionFind::new(n : Int) -> UnionFind {
   let p = Array::make(n, 0)
   let size = Array::make(n, 1)
@@ -12,6 +14,7 @@ fn UnionFind::new(n : Int) -> UnionFind {
   UnionFind::{ p, size }
 }
 
+///|
 fn UnionFind::find(self : UnionFind, x : Int) -> Int {
   if self.p[x] != x {
     self.p[x] = self.find(self.p[x])
@@ -19,6 +22,7 @@ fn UnionFind::find(self : UnionFind, x : Int) -> Int {
   self.p[x]
 }
 
+///|
 fn union(self : UnionFind, a : Int, b : Int) -> Bool {
   let pa = self.find(a)
   let pb = self.find(b)
@@ -36,6 +40,7 @@ fn union(self : UnionFind, a : Int, b : Int) -> Bool {
   }
 }
 
+///|
 fn are_connected(
   n : Int,
   threshold : Int,
@@ -49,10 +54,8 @@ fn are_connected(
       b = b + a
     }
   }
-  queries.map(
-    fn(query) {
-      let (a, b) = query
-      uf.find(a) == uf.find(b)
-    },
-  )
+  queries.map(fn(query) {
+    let (a, b) = query
+    uf.find(a) == uf.find(b)
+  })
 }

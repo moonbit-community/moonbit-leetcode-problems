@@ -1,9 +1,11 @@
+///|
 enum TreeNode {
   Empty
   Node(Int, TreeNode, TreeNode)
 } derive(Eq)
 
-fn concat[X](
+///|
+fn[X] concat(
   list1 : @immut/list.T[X],
   list2 : @immut/list.T[X]
 ) -> @immut/list.T[X] {
@@ -13,6 +15,7 @@ fn concat[X](
   }
 }
 
+///|
 fn dfs(node : TreeNode) -> @immut/list.T[Int] {
   match node {
     Empty => Nil
@@ -24,6 +27,7 @@ fn dfs(node : TreeNode) -> @immut/list.T[Int] {
   }
 }
 
+///|
 fn postorder_traversal(root : TreeNode) -> @immut/list.T[Int] {
   dfs(root)
 }

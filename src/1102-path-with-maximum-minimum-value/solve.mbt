@@ -1,3 +1,4 @@
+///|
 fn find(p : Array[Int], x : Int) -> Int {
   if p[x] != x {
     p[x] = find(p, p[x])
@@ -5,6 +6,7 @@ fn find(p : Array[Int], x : Int) -> Int {
   p[x]
 }
 
+///|
 fn maximum_minimum_path(grid : Array[Array[Int]]) -> Int {
   let m = grid.length()
   let n = grid[0].length()

@@ -1,3 +1,4 @@
+///|
 fn minimum_deletions(s : String) -> Int {
   let n = s.length()
   let f = Array::make(n + 1, 0)
@@ -13,6 +14,7 @@ fn minimum_deletions(s : String) -> Int {
   f[n]
 }
 
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a

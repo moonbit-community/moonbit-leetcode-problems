@@ -1,3 +1,4 @@
+///|
 fn sort(nums : Array[Int]) -> Unit {
   let n = nums.length()
   let mut i = 0
@@ -15,6 +16,7 @@ fn sort(nums : Array[Int]) -> Unit {
   }
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -23,6 +25,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn largestDivisibleSubset(nums : Array[Int]) -> @immut/list.T[Int] {
   sort(nums)
   let n = nums.length()

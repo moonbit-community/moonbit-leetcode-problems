@@ -1,3 +1,4 @@
+///|
 fn floor_div(x : Int, y : Int) -> Int {
   // Custom implementation of floor division
   let is_negative = (x < 0 && y > 0) || (x > 0 && y < 0)
@@ -11,6 +12,7 @@ fn floor_div(x : Int, y : Int) -> Int {
   }
 }
 
+///|
 fn count_largest_group(n : Int) -> Int {
   let cnt : Array[Int] = Array::make(40, 0)
   let mut mx = 0

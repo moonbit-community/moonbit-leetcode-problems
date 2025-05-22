@@ -1,12 +1,15 @@
+///|
 struct Trie {
   children : Array[Trie?]
   mut v : Int?
 } derive(Eq)
 
+///|
 fn Trie::new() -> Trie {
   { children: Array::make(26, None), v: None }
 }
 
+///|
 fn Trie::insert(self : Trie, w : String, idx : Int) -> Unit {
   let mut node = self
   let mut i = 0
@@ -24,6 +27,7 @@ fn Trie::insert(self : Trie, w : String, idx : Int) -> Unit {
   node.v = Some(idx)
 }
 
+///|
 fn Trie::search(self : Trie, w : String, i : Int, j : Int) -> Int? {
   let mut node = self
   let mut k = j
@@ -38,6 +42,7 @@ fn Trie::search(self : Trie, w : String, i : Int, j : Int) -> Int? {
   node.v
 }
 
+///|
 fn isPalindrome(w : String, start : Int, end : Int) -> Bool {
   let mut i = start
   let mut j = end
@@ -51,6 +56,7 @@ fn isPalindrome(w : String, start : Int, end : Int) -> Bool {
   true
 }
 
+///|
 fn palindrome_pairs(words : Array[String]) -> @immut/list.T[@immut/list.T[Int]] {
   let trie = Trie::new()
   let n = words.length()

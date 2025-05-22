@@ -1,3 +1,4 @@
+///|
 fn reverse_number(x : Int) -> Int {
   let mut rev = 0
   let mut num = x
@@ -8,6 +9,7 @@ fn reverse_number(x : Int) -> Int {
   rev
 }
 
+///|
 fn count_nice_pairs(nums : Array[Int]) -> Int {
   let mod_value = 1_000_000_007
   let freq_map : @hashmap.T[Int, Int] = @hashmap.new()

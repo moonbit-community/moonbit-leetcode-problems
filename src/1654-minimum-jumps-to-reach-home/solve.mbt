@@ -1,8 +1,10 @@
+///|
 struct Coordinate {
   i : Int
   k : Int
 }
 
+///|
 fn minimum_jumps(forbidden : Array[Int], a : Int, b : Int, x : Int) -> Int {
   fn shift_front(
     q : @immut/list.T[Coordinate]
@@ -32,21 +34,20 @@ fn minimum_jumps(forbidden : Array[Int], a : Int, b : Int, x : Int) -> Int {
       next = next.concat(
         @immut/list.T::of([Coordinate::{ i: current.i + a, k: 1 }]),
       )
-      if current.k.land(1) == 1 {
+      if (current.k & 1) == 1 {
         next = next.concat(
           @immut/list.T::of([Coordinate::{ i: current.i - b, k: 0 }]),
         )
       }
-      next.each(
-        fn(new_coord) {
-          if new_coord.i >= 0 && new_coord.i < n && not(
-            forbidden_set.contains(new_coord.i),
-          ) && not(vis[new_coord.i][new_coord.k]) {
-            vis[new_coord.i][new_coord.k] = true
-            q = q.concat(@immut/list.T::of([new_coord]))
-          }
-        },
-      )
+      next.each(fn(new_coord) {
+        if new_coord.i >= 0 &&
+          new_coord.i < n &&
+          not(forbidden_set.contains(new_coord.i)) &&
+          not(vis[new_coord.i][new_coord.k]) {
+          vis[new_coord.i][new_coord.k] = true
+          q = q.concat(@immut/list.T::of([new_coord]))
+        }
+      })
     }
     ans = ans + 1
   }

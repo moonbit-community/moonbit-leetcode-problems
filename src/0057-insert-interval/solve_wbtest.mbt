@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let intervals : Array[Interval] = [
     Interval::{ start: 1, end: 3 },
@@ -12,6 +13,7 @@ test "example 1" {
   assert_eq!(merged_intervals, expected)
 }
 
+///|
 test "example 2" {
   let intervals : Array[Interval] = [
     Interval::{ start: 1, end: 2 },

@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let books : Array[Array[Int]] = [
     [1, 1],
@@ -12,6 +13,7 @@ test "example 1" {
   assert_eq!(min_height_shelves(books, shelf_width), 6)
 }
 
+///|
 test "example 2" {
   let books : Array[Array[Int]] = [[1, 3], [2, 4], [3, 2]]
   let shelf_width = 6

@@ -1,3 +1,4 @@
+///|
 fn search(nums : Array[Int], target : Int) -> Int {
   let n = nums.length()
   let mut left = 0

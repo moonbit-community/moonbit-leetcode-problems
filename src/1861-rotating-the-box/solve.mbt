@@ -1,7 +1,9 @@
+///|
 struct Box {
   elems : Array[Array[Char]]
 } derive(Eq, Show)
 
+///|
 fn simulate_gravity(box : Box) -> Box {
   let m = box.elems.length()
   let n = box.elems[0].length()
@@ -21,6 +23,7 @@ fn simulate_gravity(box : Box) -> Box {
   new_box
 }
 
+///|
 fn rotate_box(box : Box) -> Box {
   let m = box.elems.length()
   let n = box.elems[0].length()
@@ -33,6 +36,7 @@ fn rotate_box(box : Box) -> Box {
   rotated_box
 }
 
+///|
 fn rotate_the_box(box : Box) -> Box {
   let box_with_gravity = simulate_gravity(box)
   rotate_box(box_with_gravity)

@@ -1,3 +1,4 @@
+///|
 fn maximum_69_number(num : Int) -> Int {
   let num_str = num.to_string()
   let mut result_chars = @immut/list.T::of([])

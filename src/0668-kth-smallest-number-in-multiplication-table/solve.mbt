@@ -1,3 +1,4 @@
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a
@@ -6,6 +7,7 @@ fn min(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn find_kth_number(m : Int, n : Int, k : Int) -> Int {
   let mut left : Int = 1
   let mut right : Int = m * n

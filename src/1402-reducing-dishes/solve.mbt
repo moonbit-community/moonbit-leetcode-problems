@@ -1,3 +1,4 @@
+///|
 fn max_satisfaction(satisfaction : Array[Int]) -> Int {
   satisfaction.sort()
   satisfaction.rev_inplace()

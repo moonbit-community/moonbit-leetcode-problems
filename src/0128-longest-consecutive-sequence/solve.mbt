@@ -1,3 +1,4 @@
+///|
 fn longest_consecutive(nums : Array[Int]) -> Int {
   let n = nums.length()
   if n < 2 {

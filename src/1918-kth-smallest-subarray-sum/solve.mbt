@@ -1,3 +1,4 @@
+///|
 fn kth_smallest_subarray_sum(nums : Array[Int], k : Int) -> Int {
   let min_element = nums.fold_left(
     fn(a, b) { @math.minimum(a, b) },

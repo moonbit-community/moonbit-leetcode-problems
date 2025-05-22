@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let picture : Array[Array[Char]] = [
     ['W', 'W', 'B'],
@@ -7,6 +8,7 @@ test "example 1" {
   assert_eq!(find_lonely_pixel(picture), 3)
 }
 
+///|
 test "example 2" {
   let picture : Array[Array[Char]] = [
     ['B', 'B', 'B'],

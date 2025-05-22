@@ -1,3 +1,4 @@
+///|
 fn flipgame(fronts : Array[Int], backs : Array[Int]) -> Int {
   let mut s : @immut/list.T[Int] = Nil
   let n = fronts.length()
@@ -24,6 +25,7 @@ fn flipgame(fronts : Array[Int], backs : Array[Int]) -> Int {
   }
 }
 
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a

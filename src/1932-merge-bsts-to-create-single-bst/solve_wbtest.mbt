@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let trees = [
     Node(2, left=Node(1, left=Empty, right=Empty), right=Empty),
@@ -25,6 +26,7 @@ test "example 1" {
   }
 }
 
+///|
 test "example 2" {
   let trees = [
     Node(
@@ -45,6 +47,7 @@ test "example 2" {
   inspect!(merge_trees(trees), content="None")
 }
 
+///|
 test "example 3" {
   let trees = [
     Node(5, left=Node(4, left=Empty, right=Empty), right=Empty),

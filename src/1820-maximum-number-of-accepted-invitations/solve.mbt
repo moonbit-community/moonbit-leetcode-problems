@@ -1,3 +1,4 @@
+///|
 fn max_number_of_accepted_invitations(grid : Array[Array[Int]]) -> Int {
   let m = grid.length()
   let n = grid[0].length()
@@ -15,13 +16,14 @@ fn max_number_of_accepted_invitations(grid : Array[Array[Int]]) -> Int {
     for girl = 0; girl < n; girl = girl + 1 {
       if grid[boy][girl] == 1 && not(seen[girl]) {
         seen[girl] = true
-        if match_girl_to_boy[girl] == -1 || dfs(
-          match_girl_to_boy[girl],
-          seen,
-          match_boy_to_girl,
-          match_girl_to_boy,
-          grid,
-        ) {
+        if match_girl_to_boy[girl] == -1 ||
+          dfs(
+            match_girl_to_boy[girl],
+            seen,
+            match_boy_to_girl,
+            match_girl_to_boy,
+            grid,
+          ) {
           match_boy_to_girl[boy] = girl
           match_girl_to_boy[girl] = boy
           return true

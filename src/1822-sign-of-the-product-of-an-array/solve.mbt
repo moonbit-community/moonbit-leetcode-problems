@@ -1,3 +1,4 @@
+///|
 fn sign_func(x : Int) -> Int {
   if x > 0 {
     1
@@ -8,6 +9,7 @@ fn sign_func(x : Int) -> Int {
   }
 }
 
+///|
 fn array_sign(nums : Array[Int]) -> Int {
   let mut product_sign = 1
   for i = 0; i < nums.length(); i = i + 1 {

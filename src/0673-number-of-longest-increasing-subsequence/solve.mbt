@@ -1,3 +1,4 @@
+///|
 fn find_number_of_l_i_s(nums : Array[Int]) -> Int {
   let n : Int = nums.length()
   let f : Array[Int] = Array::make(n, 1)

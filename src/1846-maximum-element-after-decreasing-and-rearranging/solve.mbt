@@ -1,3 +1,4 @@
+///|
 fn max_element_after_decreasing_and_rearranging(arr : Array[Int]) -> Int {
   // Step 1: Sort the array
   arr.sort()

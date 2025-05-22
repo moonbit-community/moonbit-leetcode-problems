@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -6,6 +7,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn wiggle_max_length(nums : Array[Int]) -> Int {
   let up : Int = 1
   let down : Int = 1

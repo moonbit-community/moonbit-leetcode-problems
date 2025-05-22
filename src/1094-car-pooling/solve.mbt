@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -6,6 +7,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn car_pooling(trips : Array[(Int, Int, Int)], capacity : Int) -> Bool {
   let mut mx = 0
   trips.each(fn(trip) { mx = max(mx, trip.2) })

@@ -1,3 +1,4 @@
+///|
 fn reverse_integer(x : Int) -> Int {
   let max_int = @int.max_value
   let is_negative = x < 0

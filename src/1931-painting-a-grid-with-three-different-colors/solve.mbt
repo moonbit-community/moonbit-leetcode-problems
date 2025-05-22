@@ -1,3 +1,4 @@
+///|
 fn paint_grid(m : Int, n : Int) -> Int {
   let mod_val = 1000000007
   let colors = ['R', 'G', 'B']
@@ -21,12 +22,14 @@ fn paint_grid(m : Int, n : Int) -> Int {
   result
 }
 
+///|
 fn generate_states(m : Int, colors : Array[Char]) -> Array[String] {
   let states = Array::make(0, "")
   generate_states_helper(m, colors, "", states)
   states
 }
 
+///|
 fn generate_states_helper(
   m : Int,
   colors : Array[Char],
@@ -54,6 +57,7 @@ fn generate_states_helper(
   }
 }
 
+///|
 fn valid_transition(state1 : String, state2 : String) -> Bool {
   for i = 0; i < state1.length(); i = i + 1 {
     if state1[i] == state2[i] {

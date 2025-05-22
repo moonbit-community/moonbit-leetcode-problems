@@ -1,3 +1,4 @@
+///|
 fn find_derangement(n : Int) -> Int {
   let mod : Int = 1000000007
   let mut a : Int = 1

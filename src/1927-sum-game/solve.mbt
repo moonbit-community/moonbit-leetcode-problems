@@ -1,3 +1,4 @@
+///|
 fn sum_game(num : String) -> Bool {
   let n = num.length()
   let half_n = n / 2

@@ -1,3 +1,4 @@
+///|
 fn solve_sudoku(board : Array[Array[Char]]) -> Unit {
   let line = Array::make(9, Array::make(9, false))
   let column = Array::make(9, Array::make(9, false))
@@ -19,6 +20,7 @@ fn solve_sudoku(board : Array[Array[Char]]) -> Unit {
   valid = dfs(board, 0, spaces, false, line, column, block)
 }
 
+///|
 fn dfs(
   board : Array[Array[Char]],
   pos : Int,
@@ -36,9 +38,9 @@ fn dfs(
   let i = space[0]
   let j = space[1]
   for digit = 0; digit < 9 && not(res); digit = digit + 1 {
-    if not(line[i][digit]) && not(column[j][digit]) && not(
-      block[i / 3][j / 3][digit],
-    ) {
+    if not(line[i][digit]) &&
+      not(column[j][digit]) &&
+      not(block[i / 3][j / 3][digit]) {
       line[i][digit] = true
       column[j][digit] = true
       block[i / 3][j / 3][digit] = true

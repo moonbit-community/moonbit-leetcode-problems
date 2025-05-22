@@ -1,3 +1,4 @@
+///|
 fn max_depth(s : String) -> Int {
   let mut ans = 0
   let mut d = 0
@@ -16,6 +17,7 @@ fn max_depth(s : String) -> Int {
   ans
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a

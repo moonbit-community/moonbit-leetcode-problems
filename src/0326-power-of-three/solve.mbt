@@ -1,3 +1,4 @@
+///|
 fn is_power_of_three(n : Int) -> Bool {
   let mut num = n
   while num > 2 {

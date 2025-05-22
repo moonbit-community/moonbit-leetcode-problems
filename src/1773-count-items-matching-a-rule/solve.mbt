@@ -1,3 +1,4 @@
+///|
 fn count_items_matching_a_rule(
   items : Array[Array[String]],
   rule_key : String,

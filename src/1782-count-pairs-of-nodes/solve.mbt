@@ -1,3 +1,4 @@
+///|
 fn count_pairs_of_nodes(
   n : Int,
   edges : Array[Array[Int]],
@@ -32,9 +33,9 @@ fn count_pairs_of_nodes(
     for a = 1; a <= n; a = a + 1 {
       for b = a + 1; b <= n; b = b + 1 {
         let key = a.to_string() + "," + b.to_string()
-        let incident_count = node_counts[a] + node_counts[b] - edge_counts.get_or_default(
-            key, 0,
-          )
+        let incident_count = node_counts[a] +
+          node_counts[b] -
+          edge_counts.get_or_default(key, 0)
         if incident_count > query {
           count += 1
         }

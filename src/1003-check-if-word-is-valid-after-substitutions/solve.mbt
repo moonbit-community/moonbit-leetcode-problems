@@ -1,3 +1,4 @@
+///|
 fn is_valid(s : String) -> Bool {
   if s.length() % 3 != 0 {
     false
@@ -12,9 +13,10 @@ fn is_valid(s : String) -> Bool {
     }
 
     fn check_last_three(arr : @immut/list.T[Char]) -> Bool {
-      arr.length() >= 3 && arr.nth_exn(arr.length() - 3) == 'a' && arr.nth_exn(
-        arr.length() - 2,
-      ) == 'b' && arr.nth_exn(arr.length() - 1) == 'c'
+      arr.length() >= 3 &&
+      arr.nth_exn(arr.length() - 3) == 'a' &&
+      arr.nth_exn(arr.length() - 2) == 'b' &&
+      arr.nth_exn(arr.length() - 1) == 'c'
     }
 
     for i = 0; i < s.length(); i = i + 1 {

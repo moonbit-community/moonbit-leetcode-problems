@@ -1,3 +1,4 @@
+///|
 fn max_distance(nums1 : Array[Int], nums2 : Array[Int]) -> Int {
   let mut max_dist = 0
   let n1_len = nums1.length()

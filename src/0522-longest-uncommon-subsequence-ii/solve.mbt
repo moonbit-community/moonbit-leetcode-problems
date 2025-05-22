@@ -1,3 +1,4 @@
+///|
 fn find_lus_length(strs : Array[String]) -> Int {
   let mut ans = -1
   let n = strs.length()
@@ -23,6 +24,7 @@ fn find_lus_length(strs : Array[String]) -> Int {
   ans
 }
 
+///|
 fn check(a : String, b : String) -> Bool {
   let mut j = 0
   let a_length = a.length()
@@ -37,6 +39,7 @@ fn check(a : String, b : String) -> Bool {
   j == b_length
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a

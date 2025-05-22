@@ -1,12 +1,15 @@
+///|
 struct FrontMiddleBackQueue {
   mut q1 : @deque.T[Int]
   mut q2 : @deque.T[Int]
 }
 
+///|
 fn FrontMiddleBackQueue::new() -> FrontMiddleBackQueue {
   FrontMiddleBackQueue::{ q1: @deque.new(), q2: @deque.new() }
 }
 
+///|
 fn FrontMiddleBackQueue::push_front(
   self : FrontMiddleBackQueue,
   val : Int
@@ -15,6 +18,7 @@ fn FrontMiddleBackQueue::push_front(
   self.rebalance()
 }
 
+///|
 fn FrontMiddleBackQueue::push_middle(
   self : FrontMiddleBackQueue,
   val : Int
@@ -23,6 +27,7 @@ fn FrontMiddleBackQueue::push_middle(
   self.rebalance()
 }
 
+///|
 fn FrontMiddleBackQueue::push_back(
   self : FrontMiddleBackQueue,
   val : Int
@@ -31,6 +36,7 @@ fn FrontMiddleBackQueue::push_back(
   self.rebalance()
 }
 
+///|
 fn FrontMiddleBackQueue::pop_front(self : FrontMiddleBackQueue) -> Int {
   if self.q1.is_empty() && self.q2.is_empty() {
     return -1
@@ -44,6 +50,7 @@ fn FrontMiddleBackQueue::pop_front(self : FrontMiddleBackQueue) -> Int {
   val.unwrap()
 }
 
+///|
 fn FrontMiddleBackQueue::pop_middle(self : FrontMiddleBackQueue) -> Int {
   if self.q1.is_empty() && self.q2.is_empty() {
     return -1
@@ -57,6 +64,7 @@ fn FrontMiddleBackQueue::pop_middle(self : FrontMiddleBackQueue) -> Int {
   val.unwrap()
 }
 
+///|
 fn FrontMiddleBackQueue::pop_back(self : FrontMiddleBackQueue) -> Int {
   if self.q2.is_empty() {
     return -1
@@ -66,6 +74,7 @@ fn FrontMiddleBackQueue::pop_back(self : FrontMiddleBackQueue) -> Int {
   val.unwrap()
 }
 
+///|
 fn FrontMiddleBackQueue::rebalance(self : FrontMiddleBackQueue) -> Unit {
   if self.q1.capacity() > self.q2.capacity() {
     let val = self.q1.pop_back()

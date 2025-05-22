@@ -1,3 +1,4 @@
+///|
 fn poor_pigs(buckets : Int, minutesToDie : Int, minutesToTest : Int) -> Int {
   let base : Int = minutesToTest / minutesToDie + 1
   let mut res : Int = 0

@@ -1,3 +1,4 @@
+///|
 fn is_rectangle_overla(rec1 : Array[Int], rec2 : Array[Int]) -> Bool {
   let x1 = rec1[0]
   let y1 = rec1[1]

@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let orders : Array[Array[Int]] = [
     [10, 5, 0],
@@ -8,6 +9,7 @@ test "example 1" {
   assert_eq!(number_of_orders_in_backlog(orders), 6)
 }
 
+///|
 test "example 2" {
   let orders : Array[Array[Int]] = [
     [7, 1000000000, 1],

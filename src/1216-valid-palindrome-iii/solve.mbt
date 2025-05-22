@@ -1,3 +1,4 @@
+///|
 fn is_valid_palindrome(s : String, k : Int) -> Bool {
   let n = s.length()
   let f : Array[Array[Int]] = Array::make(n, Array::make(n, 0))

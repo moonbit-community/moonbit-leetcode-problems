@@ -1,3 +1,4 @@
+///|
 fn longest_palindromic_substring(s : String) -> String {
   let n = s.length()
   if n < 2 {
@@ -27,6 +28,7 @@ fn longest_palindromic_substring(s : String) -> String {
   return slice(s, start, end + 1)
 }
 
+///|
 fn slice(string : String, start : Int, stop : Int) -> String {
   let mut result = ""
   for i = start; i < stop; i = i + 1 {

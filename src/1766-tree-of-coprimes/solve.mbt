@@ -1,8 +1,10 @@
+///|
 struct TreeNode {
   value : Int
   children : Array[TreeNode]
 }
 
+///|
 fn gcd(a : Int, b : Int) -> Int {
   let mut a = a
   let mut b = b
@@ -14,6 +16,7 @@ fn gcd(a : Int, b : Int) -> Int {
   a
 }
 
+///|
 fn dfs(
   node : TreeNode,
   nums : Array[Int],
@@ -38,6 +41,7 @@ fn dfs(
   stack.pop() |> ignore
 }
 
+///|
 fn tree_of_coprimes(nums : Array[Int], edges : Array[Array[Int]]) -> Array[Int] {
   let n = nums.length()
   let tree = Array::make(n, TreeNode::{ value: 0, children: [] })

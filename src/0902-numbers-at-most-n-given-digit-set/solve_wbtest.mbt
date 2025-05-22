@@ -1,3 +1,4 @@
+///|
 test "example" {
   let solution = Solution::new()
   let digits : Array[String] = ["1", "3", "5", "7"]

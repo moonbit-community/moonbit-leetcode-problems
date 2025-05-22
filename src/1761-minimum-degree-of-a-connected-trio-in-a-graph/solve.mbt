@@ -1,3 +1,4 @@
+///|
 fn min_degree_of_connected_trio(n : Int, edges : Array[Array[Int]]) -> Int {
   let adj_list : Array[Array[Int]] = Array::new(capacity=n + 1)
   for i = 0; i < edges.length(); i = i + 1 {
@@ -11,10 +12,12 @@ fn min_degree_of_connected_trio(n : Int, edges : Array[Array[Int]]) -> Int {
   for u = 1; u <= n; u = u + 1 {
     for v = u + 1; v <= n; v = v + 1 {
       for w = v + 1; w <= n; w = w + 1 {
-        if adj_list[u].contains(v) && adj_list[v].contains(w) && adj_list[w].contains(
-          u,
-        ) {
-          let degree = adj_list[u].length() + adj_list[v].length() + adj_list[w].length() -
+        if adj_list[u].contains(v) &&
+          adj_list[v].contains(w) &&
+          adj_list[w].contains(u) {
+          let degree = adj_list[u].length() +
+            adj_list[v].length() +
+            adj_list[w].length() -
             6
           if degree < min_degree {
             min_degree = degree

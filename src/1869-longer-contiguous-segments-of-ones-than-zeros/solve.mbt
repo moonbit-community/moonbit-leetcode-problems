@@ -1,3 +1,4 @@
+///|
 fn longer_contiguous_segments_of_ones_than_zeros(s : String) -> Bool {
   let mut max_ones = 0
   let mut max_zeros = 0

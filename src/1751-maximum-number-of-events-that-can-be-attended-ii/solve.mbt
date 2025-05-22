@@ -1,3 +1,4 @@
+///|
 fn max_value(events : Array[Array[Int]], k : Int) -> Int {
   // Sort events by their end day
   events.sort_by(fn(a, b) { a[1] - b[1] })

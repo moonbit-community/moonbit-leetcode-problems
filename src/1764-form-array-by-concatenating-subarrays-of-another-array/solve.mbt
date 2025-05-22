@@ -1,3 +1,4 @@
+///|
 fn can_form_array(groups : Array[Array[Int]], nums : Array[Int]) -> Bool {
   let mut nums_index = 0
   for i = 0; i < groups.length(); i = i + 1 {

@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let tree = Tree::Node(
     1,

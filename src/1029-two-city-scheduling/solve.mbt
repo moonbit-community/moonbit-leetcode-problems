@@ -1,7 +1,9 @@
+///|
 fn difference(a : (Int, Int), b : (Int, Int)) -> Int {
   a.0 - a.1 - (b.0 - b.1)
 }
 
+///|
 fn sort_by_difference(costs : Array[(Int, Int)]) -> Array[(Int, Int)] {
   let len = costs.length()
   let sorted = costs
@@ -17,6 +19,7 @@ fn sort_by_difference(costs : Array[(Int, Int)]) -> Array[(Int, Int)] {
   sorted
 }
 
+///|
 fn two_city_sched_cost(costs : Array[(Int, Int)]) -> Int {
   let sorted_costs = sort_by_difference(costs)
   let n = sorted_costs.length() / 2

@@ -1,3 +1,4 @@
+///|
 fn sort(array : Array[Int]) -> Unit {
   for i = 0; i < array.length(); i = i + 1 {
     for j = i + 1; j < array.length(); j = j + 1 {
@@ -11,6 +12,7 @@ fn sort(array : Array[Int]) -> Unit {
   }
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -19,6 +21,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn bag_of_tokens_score(tokens : Array[Int], power : Int) -> Int {
   sort(tokens) // Sort the tokens array
   let mut i = 0

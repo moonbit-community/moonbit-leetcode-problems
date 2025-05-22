@@ -1,3 +1,4 @@
+///|
 fn closest_dessert_cost(
   base_costs : Array[Int],
   topping_costs : Array[Int],
@@ -37,14 +38,9 @@ fn closest_dessert_cost(
 
   for i = 0; i < base_costs.length(); i = i + 1 {
     let base_cost = base_costs[i]
-    dfs(
-      topping_costs,
-      0,
-      base_cost,
-      target,
-      Ref::{ val: closest_cost },
-      Ref::{ val: closest_diff },
-    )
+    dfs(topping_costs, 0, base_cost, target, Ref::{ val: closest_cost }, Ref::{
+      val: closest_diff,
+    })
   }
   closest_cost
 }

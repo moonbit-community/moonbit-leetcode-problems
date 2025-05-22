@@ -1,3 +1,4 @@
+///|
 fn faulty_sensor(sensor1 : Array[Int], sensor2 : Array[Int]) -> Int {
   let n = sensor1.length()
   let mut i = 0

@@ -1,3 +1,4 @@
+///|
 fn make_matrix(
   rows : Int,
   cols : Int,
@@ -12,6 +13,7 @@ fn make_matrix(
   matrix
 }
 
+///|
 fn color_border(
   grid : Array[Array[Int]],
   row : Int,

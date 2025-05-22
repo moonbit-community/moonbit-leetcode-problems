@@ -1,8 +1,10 @@
+///|
 struct MinCost {
   value : Bool
   cost : Int
 }
 
+///|
 fn min_cost_to_change_final_value(expression : String) -> Int {
   let stack = Array::make(0, MinCost::{ value: false, cost: 0 })
   let mut i = 0
@@ -46,6 +48,7 @@ fn min_cost_to_change_final_value(expression : String) -> Int {
   stack.pop().unwrap().cost
 }
 
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a

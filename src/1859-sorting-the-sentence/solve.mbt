@@ -1,3 +1,4 @@
+///|
 fn split(string : String, delimiter : Char) -> Array[String] {
   let buffer = Buffer::new()
   let array = []
@@ -12,6 +13,7 @@ fn split(string : String, delimiter : Char) -> Array[String] {
   array
 }
 
+///|
 fn reconstruct_sentence(s : String) -> String {
   // Split the sentence into words
   let words = s |> split(' ')

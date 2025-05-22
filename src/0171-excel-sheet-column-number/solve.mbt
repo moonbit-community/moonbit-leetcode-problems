@@ -1,3 +1,4 @@
+///|
 fn title_to_number(column_title : String) -> Int {
   let mut res = 0
   for i = 0; i < column_title.length(); i = i + 1 {

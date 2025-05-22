@@ -1,3 +1,4 @@
+///|
 fn sum_even_after_queries(
   nums : Array[Int],
   queries : Array[Array[Int]]

@@ -1,3 +1,4 @@
+///|
 fn maximum_product(nums : Array[Int]) -> Int {
   let inf : Int = @int.max_value
   let mut mi1 = inf

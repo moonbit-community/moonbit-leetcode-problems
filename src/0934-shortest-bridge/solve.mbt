@@ -1,8 +1,10 @@
+///|
 struct Point {
   x : Int
   y : Int
 }
 
+///|
 fn dfs(
   grid : Array[Array[Int]],
   x : Int,
@@ -22,6 +24,7 @@ fn dfs(
   q
 }
 
+///|
 fn shortest_bridge(grid : Array[Array[Int]]) -> Int {
   let n = grid.length()
   let mut q : @immut/list.T[Point] = Nil

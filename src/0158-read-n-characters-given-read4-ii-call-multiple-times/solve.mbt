@@ -1,17 +1,21 @@
+///|
 enum ArrayChar {
   Nil
   Cons(Char, ArrayChar)
 } derive(Eq, Show)
 
+///|
 fn mock_read4_function(_buf4 : ArrayChar) -> Int {
   4
 }
 
+///|
 struct Solution {
   buf4 : ArrayChar
   read4 : (ArrayChar) -> Int
 }
 
+///|
 fn Solution::read(self : Solution, _buf : ArrayChar, n : Int) -> Int {
   let mut j = 0
   let mut i = 0
@@ -33,6 +37,7 @@ fn Solution::read(self : Solution, _buf : ArrayChar, n : Int) -> Int {
   j
 }
 
+///|
 fn Solution::mock_read4(buf4 : ArrayChar) -> Int {
   mock_read4_function(buf4)
 }

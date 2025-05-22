@@ -1,3 +1,4 @@
+///|
 fn maximal_network_rank(n : Int, roads : Array[(Int, Int)]) -> Int {
   fn fill_array(n : Int, value : Int) -> Array[Int] {
     let arr = Array::make(n, value)

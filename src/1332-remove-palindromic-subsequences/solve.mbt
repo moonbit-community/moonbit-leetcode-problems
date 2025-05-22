@@ -1,3 +1,4 @@
+///|
 fn remove_palindrome_sub(s : String) -> Int {
   let mut i = 0
   let mut j = s.length() - 1

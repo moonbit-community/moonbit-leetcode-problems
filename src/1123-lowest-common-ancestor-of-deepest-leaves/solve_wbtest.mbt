@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let root : TreeNode = Node(
     1,
@@ -12,6 +13,7 @@ test "example 1" {
   assert_eq!(lca_deepest_leaves(root), expected)
 }
 
+///|
 test "example 2" {
   let root : TreeNode = Node(
     1,

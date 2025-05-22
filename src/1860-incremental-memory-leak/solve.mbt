@@ -1,3 +1,4 @@
+///|
 fn incremental_memory_leak(memory1 : Int, memory2 : Int) -> Array[Int] {
   let mut memory1_crash = memory1
   let mut memory2_crash = memory2

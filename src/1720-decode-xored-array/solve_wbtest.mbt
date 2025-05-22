@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let encoded = [1, 2, 3]
   let first = 1
@@ -5,6 +6,7 @@ test "example 1" {
   assert_eq!(decode_xored_array(encoded, first), expected)
 }
 
+///|
 test "example 2" {
   let encoded = [6, 2, 7, 3]
   let first = 4
@@ -12,6 +14,7 @@ test "example 2" {
   assert_eq!(decode_xored_array(encoded, first), expected)
 }
 
+///|
 test "edge case with single element" {
   let encoded = []
   let first = 5
@@ -19,6 +22,7 @@ test "edge case with single element" {
   assert_eq!(decode_xored_array(encoded, first), expected)
 }
 
+///|
 test "large numbers" {
   let encoded = [100000, 0, 100000]
   let first = 0

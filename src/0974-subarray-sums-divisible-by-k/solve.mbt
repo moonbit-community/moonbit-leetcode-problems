@@ -1,11 +1,14 @@
+///|
 struct CountMap {
   mut data : Array[(Int, Int)]
 }
 
+///|
 fn CountMap::new() -> CountMap {
   { data: [] }
 }
 
+///|
 fn CountMap::get_or_default(
   self : CountMap,
   key : Int,
@@ -16,6 +19,7 @@ fn CountMap::get_or_default(
   default_val
 }
 
+///|
 fn CountMap::merge(self : CountMap, key : Int, val : Int) -> Unit {
   let mut found = false
   for i = 0; i < self.data.length(); i = i + 1 {
@@ -31,17 +35,16 @@ fn CountMap::merge(self : CountMap, key : Int, val : Int) -> Unit {
   }
 }
 
+///|
 fn subarrays_div_by_k(nums : Array[Int], k : Int) -> Int {
   let cnt = CountMap::new()
   cnt.merge(0, 1)
   let mut ans = 0
   let mut s = 0
-  nums.each(
-    fn(x) {
-      s = ((s + x) % k + k) % k
-      ans = ans + cnt.get_or_default(s, 0)
-      cnt.merge(s, 1)
-    },
-  )
+  nums.each(fn(x) {
+    s = ((s + x) % k + k) % k
+    ans = ans + cnt.get_or_default(s, 0)
+    cnt.merge(s, 1)
+  })
   ans
 }

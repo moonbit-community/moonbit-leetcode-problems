@@ -1,3 +1,4 @@
+///|
 fn bit_count(x : Int) -> Int {
   let mut count = 0
   let mut num = x
@@ -10,6 +11,7 @@ fn bit_count(x : Int) -> Int {
   count
 }
 
+///|
 fn is_prime(n : Int) -> Bool {
   if n <= 1 {
     return false
@@ -24,6 +26,7 @@ fn is_prime(n : Int) -> Bool {
   true
 }
 
+///|
 fn count_prime_set_bits(left : Int, right : Int) -> Int {
   let mut ans = 0
   for i = left; i <= right; i = i + 1 {

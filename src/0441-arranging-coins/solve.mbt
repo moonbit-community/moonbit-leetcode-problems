@@ -1,3 +1,4 @@
+///|
 fn arrange_coins(n : Int) -> Int {
   let mut left : Int = 1
   let mut right : Int = n

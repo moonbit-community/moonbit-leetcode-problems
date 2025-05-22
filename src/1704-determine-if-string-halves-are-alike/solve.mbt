@@ -1,3 +1,4 @@
+///|
 fn is_vowel(c : Char) -> Bool {
   match c {
     'a' | 'e' | 'i' | 'o' | 'u' | 'A' | 'E' | 'I' | 'O' | 'U' => true
@@ -5,6 +6,7 @@ fn is_vowel(c : Char) -> Bool {
   }
 }
 
+///|
 fn count_vowels(s : String) -> Int {
   let mut count = 0
   for i = 0; i < s.length(); i = i + 1 {
@@ -16,6 +18,7 @@ fn count_vowels(s : String) -> Int {
   count
 }
 
+///|
 fn halves_are_alike(s : String) -> Bool {
   let len = s.length()
   let mid = len / 2

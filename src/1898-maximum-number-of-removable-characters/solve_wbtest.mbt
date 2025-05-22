@@ -1,3 +1,4 @@
+///|
 test "example_1" {
   let s = "abcacb"
   let p = "ab"
@@ -5,6 +6,7 @@ test "example_1" {
   assert_eq!(maximum_number_of_removable_characters(s, p, removable), 2)
 }
 
+///|
 test "example_2" {
   let s = "abcbddddd"
   let p = "abcd"
@@ -12,6 +14,7 @@ test "example_2" {
   assert_eq!(maximum_number_of_removable_characters(s, p, removable), 1)
 }
 
+///|
 test "example_3" {
   let s = "abcab"
   let p = "abc"

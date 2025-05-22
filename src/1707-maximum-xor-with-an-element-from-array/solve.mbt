@@ -1,3 +1,4 @@
+///|
 fn can_transform(s : String, t : String) -> Bool {
   let mut i = 0
   let mut j = 0

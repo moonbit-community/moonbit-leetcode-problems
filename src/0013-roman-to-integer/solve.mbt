@@ -1,3 +1,4 @@
+///|
 fn roman_to_integer(s : String) -> Int {
   let roman_map : Map[Char, Int] = {
     'I': 1,

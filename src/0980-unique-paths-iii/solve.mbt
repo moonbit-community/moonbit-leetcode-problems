@@ -1,3 +1,4 @@
+///|
 struct GridInfo {
   m : Int
   n : Int
@@ -6,6 +7,7 @@ struct GridInfo {
   vis : Array[Array[Bool]]
 }
 
+///|
 fn dfs(info : GridInfo, i : Int, j : Int, k : Int) -> Int {
   if info.grid[i][j] == 2 {
     if k == info.cnt + 1 {
@@ -20,8 +22,12 @@ fn dfs(info : GridInfo, i : Int, j : Int, k : Int) -> Int {
   while h < 4 {
     let x = i + dirs[h]
     let y = j + dirs[h + 1]
-    if x >= 0 && x < info.m && y >= 0 && y < info.n && not(info.vis[x][y]) && info.grid[x][y] !=
-    -1 {
+    if x >= 0 &&
+      x < info.m &&
+      y >= 0 &&
+      y < info.n &&
+      not(info.vis[x][y]) &&
+      info.grid[x][y] != -1 {
       info.vis[x][y] = true
       ans = ans + dfs(info, x, y, k + 1)
       info.vis[x][y] = false
@@ -31,6 +37,7 @@ fn dfs(info : GridInfo, i : Int, j : Int, k : Int) -> Int {
   ans
 }
 
+///|
 fn unique_paths_iii(grid : Array[Array[Int]]) -> Int {
   let m = grid.length()
   let n = grid[0].length()

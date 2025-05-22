@@ -1,9 +1,11 @@
+///|
 fn swap(nums : Array[Int], i : Int, j : Int) -> Unit {
   let temp = nums[i]
   nums[i] = nums[j]
   nums[j] = temp
 }
 
+///|
 fn reverse(nums : Array[Int], start : Int, end : Int) -> Array[Int] {
   let mut i = start
   let mut j = end
@@ -15,6 +17,7 @@ fn reverse(nums : Array[Int], start : Int, end : Int) -> Array[Int] {
   nums
 }
 
+///|
 fn next_permutation(nums : Array[Int]) -> Array[Int] {
   let n = nums.length()
   let mut i = n - 2

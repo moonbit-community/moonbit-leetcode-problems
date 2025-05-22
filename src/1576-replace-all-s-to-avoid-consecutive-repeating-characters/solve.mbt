@@ -1,3 +1,4 @@
+///|
 fn replace_question_mark(s : String) -> String {
   let n = s.length()
   let cs = Array::make(n, '0') // Initialize an empty array with NULL characters to store the result

@@ -1,3 +1,4 @@
+///|
 test "floodFill example" {
   let image : Array[Array[Int]] = [[1, 1, 1], [1, 1, 0], [1, 0, 1]]
   let sr = 1

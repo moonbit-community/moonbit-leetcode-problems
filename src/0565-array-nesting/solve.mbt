@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -6,6 +7,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn array_nesting(nums : Array[Int]) -> Int {
   let n : Int = nums.length()
   let vis : Array[Bool] = Array::make(n, false)

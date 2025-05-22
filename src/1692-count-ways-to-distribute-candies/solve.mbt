@@ -1,3 +1,4 @@
+///|
 fn ways_to_distribute(n : Int, k : Int) -> Int {
   let mod = 1000000007
   // Initialize a 2D array with zeros

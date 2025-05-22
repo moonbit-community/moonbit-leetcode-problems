@@ -1,3 +1,4 @@
+///|
 fn max_ice_cream_bars(costs : Array[Int], coins : Int) -> Int {
   let max_cost = 100000
   let count = Array::make(max_cost + 1, 0)

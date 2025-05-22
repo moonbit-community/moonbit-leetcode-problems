@@ -1,3 +1,4 @@
+///|
 fn max_power(s : String) -> Int {
   let mut ans = 1
   let mut t = 1
@@ -12,6 +13,7 @@ fn max_power(s : String) -> Int {
   ans
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a

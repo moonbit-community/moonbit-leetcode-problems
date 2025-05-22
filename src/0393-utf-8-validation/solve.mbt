@@ -1,3 +1,4 @@
+///|
 fn valid_utf8(data : Array[Int]) -> Bool {
   let mut n : Int = 0
   let mut i : Int = 0

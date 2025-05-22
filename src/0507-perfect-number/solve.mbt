@@ -1,3 +1,4 @@
+///|
 fn check_perfect_number(num : Int) -> Bool {
   if num == 1 {
     return false

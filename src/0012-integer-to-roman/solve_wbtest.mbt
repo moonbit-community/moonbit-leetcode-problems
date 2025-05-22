@@ -1,15 +1,19 @@
+///|
 test "example 1" {
   assert_eq!(int_to_roman(3), "III")
 }
 
+///|
 test "example 2" {
   assert_eq!(int_to_roman(58), "LVIII")
 }
 
+///|
 test "example 3" {
   assert_eq!(int_to_roman(1994), "MCMXCIV")
 }
 
+///|
 test "additional cases" {
   assert_eq!(int_to_roman(1), "I")
   assert_eq!(int_to_roman(4), "IV")

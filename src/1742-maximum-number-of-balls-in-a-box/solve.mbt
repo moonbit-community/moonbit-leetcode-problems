@@ -1,3 +1,4 @@
+///|
 fn sum_of_digits(num : Int) -> Int {
   let mut sum = 0
   let mut n = num
@@ -8,6 +9,7 @@ fn sum_of_digits(num : Int) -> Int {
   sum
 }
 
+///|
 fn max_balls_in_box(low_limit : Int, high_limit : Int) -> Int {
   let box_count : @hashmap.T[Int, Int] = @hashmap.new()
   let mut max_count = 0

@@ -1,3 +1,4 @@
+///|
 fn my_pow(x : Double, n : Int) -> Double {
   if n >= 0 {
     qpow(x, n)
@@ -6,6 +7,7 @@ fn my_pow(x : Double, n : Int) -> Double {
   }
 }
 
+///|
 fn qpow(a : Double, n : Int) -> Double {
   let mut ans = 1.0
   for i = n, p = a; i > 0; i = i / 2, p = p * p {
@@ -17,6 +19,7 @@ fn qpow(a : Double, n : Int) -> Double {
 }
 
 // custom assertion function
+///|
 fn assert_eps(result : Double, expect : Double) -> Unit! {
   let delta = result - expect
   if (delta < 1.0e-6 && delta >= 0.0) || (delta < 0.0 && delta > -1.0e-6) {

@@ -1,3 +1,4 @@
+///|
 fn is_letter_or_digit(c : Char) -> Bool {
   match c {
     'a' => true
@@ -66,6 +67,7 @@ fn is_letter_or_digit(c : Char) -> Bool {
   }
 }
 
+///|
 fn to_lower_case(c : Char) -> Char {
   match c {
     'A' => 'a'
@@ -98,6 +100,7 @@ fn to_lower_case(c : Char) -> Char {
   }
 }
 
+///|
 fn is_palindrome(s : String) -> Bool {
   let mut i = 0
   let length = s.length()

@@ -1,3 +1,4 @@
+///|
 fn gcd(a : Int, b : Int) -> Int {
   if b == 0 {
     a
@@ -6,6 +7,7 @@ fn gcd(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn max_element(nums : Array[Int]) -> Int {
   let mut max_num = 0
   for i = 0; i < nums.length(); i = i + 1 {
@@ -16,6 +18,7 @@ fn max_element(nums : Array[Int]) -> Int {
   max_num
 }
 
+///|
 fn number_of_different_subsequences_gcds(nums : Array[Int]) -> Int {
   let max_num = max_element(nums)
   let gcds = @hashmap.new()

@@ -1,3 +1,4 @@
+///|
 fn find_min(nums : Array[Int]) -> Int {
   let mut left = 0
   let mut right = nums.length() - 1

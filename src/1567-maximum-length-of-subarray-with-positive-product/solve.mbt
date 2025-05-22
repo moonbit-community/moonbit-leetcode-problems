@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -6,6 +7,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn get_max_len(nums : Array[Int]) -> Int {
   let mut n1 = if nums[0] > 0 { 1 } else { 0 }
   let mut n2 = if nums[0] < 0 { 1 } else { 0 }

@@ -1,12 +1,15 @@
+///|
 struct OrderedStream {
   mut ptr : Int
   vals : Array[String]
 }
 
+///|
 fn OrderedStream::new(n : Int) -> OrderedStream {
   OrderedStream::{ ptr: 0, vals: Array::make(n, "") }
 }
 
+///|
 fn OrderedStream::insert(
   self : OrderedStream,
   id_key : Int,

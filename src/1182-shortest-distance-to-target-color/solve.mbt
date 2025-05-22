@@ -1,3 +1,4 @@
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a
@@ -6,6 +7,7 @@ fn min(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn shortest_distance_color(
   colors : Array[Int],
   queries : @immut/list.T[(Int, Int)]
@@ -27,12 +29,10 @@ fn shortest_distance_color(
     left[i][colors[i - 1] - 1] = i - 1
   }
   let ans : Array[Int] = []
-  queries.each(
-    fn(query) {
-      let (i, c) = query
-      let d = min(i - left[i + 1][c - 1], right[i][c - 1] - i)
-      ans.push(if d > n { -1 } else { d })
-    },
-  )
+  queries.each(fn(query) {
+    let (i, c) = query
+    let d = min(i - left[i + 1][c - 1], right[i][c - 1] - i)
+    ans.push(if d > n { -1 } else { d })
+  })
   @immut/list.from_array(ans)
 }

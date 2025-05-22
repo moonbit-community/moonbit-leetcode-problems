@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let nums = [1, 2, 3, 2, 2, 1, 3]
   let k = 3
@@ -5,6 +6,7 @@ test "example 1" {
   assert_eq!(distinct_numbers_in_each_subarray(nums, k), expected)
 }
 
+///|
 test "example 2" {
   let nums = [1, 1, 1, 1, 2, 3, 4]
   let k = 4

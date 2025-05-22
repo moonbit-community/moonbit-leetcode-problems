@@ -1,3 +1,4 @@
+///|
 fn interpret(command : String) -> String {
   let n = command.length()
   let ans : Array[String] = Array::new()

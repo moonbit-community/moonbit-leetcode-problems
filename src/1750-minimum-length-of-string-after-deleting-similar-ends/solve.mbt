@@ -1,3 +1,4 @@
+///|
 fn min_length_after_deleting_similar_ends(s : String) -> Int {
   let mut left = 0
   let mut right = s.length() - 1

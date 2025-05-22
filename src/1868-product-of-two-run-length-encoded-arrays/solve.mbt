@@ -1,8 +1,10 @@
+///|
 struct Pair {
   value : Int
   freq : Int
 }
 
+///|
 fn expand(encoded : Array[Pair]) -> Array[Int] {
   let nums = Array::make(0, 0)
   for i = 0; i < encoded.length(); i = i + 1 {
@@ -14,6 +16,7 @@ fn expand(encoded : Array[Pair]) -> Array[Int] {
   nums
 }
 
+///|
 fn compress(nums : Array[Int]) -> Array[Pair] {
   let encoded = Array::make(0, Pair::{ value: 0, freq: 0 })
   let mut i = 0
@@ -30,6 +33,7 @@ fn compress(nums : Array[Int]) -> Array[Pair] {
   encoded
 }
 
+///|
 fn product_of_encoded_arrays(
   encoded1 : Array[Pair],
   encoded2 : Array[Pair]

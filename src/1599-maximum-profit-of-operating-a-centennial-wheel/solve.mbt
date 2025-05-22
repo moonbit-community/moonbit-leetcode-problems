@@ -1,3 +1,4 @@
+///|
 fn min(value1 : Int, value2 : Int) -> Int {
   if value1 < value2 {
     value1

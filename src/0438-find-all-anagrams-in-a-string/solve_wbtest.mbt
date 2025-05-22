@@ -1,3 +1,4 @@
+///|
 test "find anagrams example 1" {
   assert_eq!(
     find_anagrams("cbaebabacd", "abc"),
@@ -5,6 +6,7 @@ test "find anagrams example 1" {
   )
 }
 
+///|
 test "find anagrams example 2" {
   assert_eq!(
     find_anagrams("abab", "ab"),

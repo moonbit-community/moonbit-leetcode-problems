@@ -1,3 +1,4 @@
+///|
 fn min_window(s : String, t : String) -> String {
   let ori : @hashmap.T[Char, Int] = @hashmap.new()
   let cnt : @hashmap.T[Char, Int] = @hashmap.new()
@@ -35,12 +36,14 @@ fn min_window(s : String, t : String) -> String {
   return slice(s, ans_l, ans_r)
 }
 
+///|
 fn check(ori : @hashmap.T[Char, Int], cnt : @hashmap.T[Char, Int]) -> Bool {
   let mut res = true
   ori.each(fn(k, v) { if cnt.get_or_default(k, 0) < v { res = false } })
   res
 }
 
+///|
 fn slice(string : String, start : Int, stop : Int) -> String {
   let mut result = ""
   for i = start; i < stop; i = i + 1 {

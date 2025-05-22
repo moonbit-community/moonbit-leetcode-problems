@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let board : Array[Array[Int]] = [
     [-1, -1, -1, -1, -1, -1],

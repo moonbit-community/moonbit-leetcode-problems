@@ -1,3 +1,4 @@
+///|
 fn fib(n : Int) -> Int {
   let mut a = 0
   let mut b = 1

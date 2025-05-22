@@ -1,3 +1,4 @@
+///|
 fn bit_count(x : Int) -> Int {
   let mut count = 0
   let mut num = x
@@ -10,6 +11,7 @@ fn bit_count(x : Int) -> Int {
   count
 }
 
+///|
 fn count_bits(n : Int) -> Array[Int] {
   let ans : Array[Int] = Array::make(n + 1, 0)
   for i = 0; i <= n; i = i + 1 {

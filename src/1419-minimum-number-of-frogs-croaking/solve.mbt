@@ -1,3 +1,4 @@
+///|
 fn index_of(chr : Char, str : String) -> Int {
   let n = str.length()
   for i = 0; i < n; i = i + 1 {
@@ -8,6 +9,7 @@ fn index_of(chr : Char, str : String) -> Int {
   -1
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -16,6 +18,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn min_number_of_frogs(croak_of_frogs : String) -> Int {
   let n = croak_of_frogs.length()
   if n % 5 != 0 {

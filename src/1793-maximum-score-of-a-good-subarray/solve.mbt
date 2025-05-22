@@ -1,3 +1,4 @@
+///|
 fn max_score_of_good_subarray(nums : Array[Int], k : Int) -> Int {
   let n = nums.length()
   let mut left = k

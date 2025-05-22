@@ -1,3 +1,4 @@
+///|
 test "find_min" {
   let result_1 = find_min([3, 4, 5, 1, 2])
   assert_eq!(result_1, 1)

@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -6,6 +7,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn total_fruit(fruits : Array[Int]) -> Int {
   let cnt : @hashmap.T[Int, Int] = @hashmap.new()
   let mut ans = 0

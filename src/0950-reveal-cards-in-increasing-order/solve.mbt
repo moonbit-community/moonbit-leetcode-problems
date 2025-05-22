@@ -1,3 +1,4 @@
+///|
 fn deck_revealed_increasing(deck : Array[Int]) -> Array[Int] {
   deck.sort()
   let n = deck.length()

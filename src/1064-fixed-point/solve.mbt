@@ -1,3 +1,4 @@
+///|
 fn fixed_point(arr : Array[Int]) -> Int {
   let mut left = 0
   let mut right = arr.length() - 1

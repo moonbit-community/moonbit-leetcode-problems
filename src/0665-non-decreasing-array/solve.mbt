@@ -1,3 +1,4 @@
+///|
 fn is_sorted(nums : Array[Int]) -> Bool {
   let mut i = 0
   while i < nums.length() - 1 {
@@ -9,6 +10,7 @@ fn is_sorted(nums : Array[Int]) -> Bool {
   return true
 }
 
+///|
 fn check_possibility(nums : Array[Int]) -> Bool {
   let mut i = 0
   while i < nums.length() - 1 {

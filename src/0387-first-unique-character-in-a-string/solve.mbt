@@ -1,3 +1,4 @@
+///|
 fn first_uniq_char(s : String) -> Int {
   let cnt : Array[Int] = Array::make(26, 0)
   let n : Int = s.length()

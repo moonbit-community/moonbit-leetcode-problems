@@ -1,3 +1,4 @@
+///|
 test "test lexical_order with n=13" {
   let result = lexical_order(13)
   let expected : @immut/list.T[Int] = Cons(
@@ -22,6 +23,7 @@ test "test lexical_order with n=13" {
   assert_eq!(result, expected)
 }
 
+///|
 test "test lexical_order with n=2" {
   let result = lexical_order(2)
   let expected : @immut/list.T[Int] = Cons(1, Cons(2, Nil))

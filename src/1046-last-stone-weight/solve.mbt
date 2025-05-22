@@ -1,3 +1,4 @@
+///|
 fn last_stone_weight(stones : Array[Int]) -> Int {
   let pq : @priority_queue.T[Int] = @priority_queue.from_array(stones)
   while pq.length() > 1 {

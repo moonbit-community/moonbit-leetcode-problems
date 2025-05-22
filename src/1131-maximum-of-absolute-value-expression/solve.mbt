@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -6,6 +7,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a
@@ -14,6 +16,7 @@ fn min(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn max_abs_val_expr(arr1 : Array[Int], arr2 : Array[Int]) -> Int {
   let dirs : Array[Int] = [1, -1, -1, 1, 1]
   let inf = @int.max_value

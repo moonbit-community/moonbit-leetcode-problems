@@ -1,3 +1,4 @@
+///|
 fn game_of_life(board : Array[Array[Int]]) -> Array[Array[Int]] {
   let m = board.length()
   let n = board[0].length()

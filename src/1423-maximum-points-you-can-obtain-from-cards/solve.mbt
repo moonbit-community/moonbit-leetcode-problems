@@ -1,3 +1,4 @@
+///|
 fn sum(from : Int, to : Int, card_points : Array[Int]) -> Int {
   let mut result = 0
   for i = from; i < to; i = i + 1 {
@@ -6,6 +7,7 @@ fn sum(from : Int, to : Int, card_points : Array[Int]) -> Int {
   result
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -14,6 +16,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn max_score(card_points : Array[Int], k : Int) -> Int {
   let n = card_points.length()
   let mut s = sum(n - k, n, card_points)

@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let root1 = TreeNode::Node(
     1,
@@ -28,6 +29,7 @@ test "example 1" {
   assert_eq!(flip_equiv(root1, root2), true)
 }
 
+///|
 test "example 2" {
   let root1 = TreeNode::Node(
     1,

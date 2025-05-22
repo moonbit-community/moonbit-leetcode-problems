@@ -1,3 +1,4 @@
+///|
 fn calculate_time(keyboard : String, word : String) -> Int {
   let pos : Array[Int] = Array::make(26, 0)
   // Filling the pos array with the respective positions
@@ -16,6 +17,7 @@ fn calculate_time(keyboard : String, word : String) -> Int {
   ans
 }
 
+///|
 fn abs(x : Int) -> Int {
   if x < 0 {
     return -x

@@ -1,3 +1,4 @@
+///|
 fn compare_version(version1 : String, version2 : String) -> Int {
   let m = version1.length()
   let n = version2.length()

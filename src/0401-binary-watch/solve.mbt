@@ -1,3 +1,4 @@
+///|
 fn bitCount(x : Int) -> Int {
   let mut count = 0
   let mut num = x
@@ -10,6 +11,7 @@ fn bitCount(x : Int) -> Int {
   count
 }
 
+///|
 fn read_binary_watch(turnedOn : Int) -> @immut/list.T[String] {
   let mut ans : @immut/list.T[String] = @immut/list.T::Nil
   let mut i = 0
@@ -27,6 +29,7 @@ fn read_binary_watch(turnedOn : Int) -> @immut/list.T[String] {
   ans
 }
 
+///|
 fn formatTime(hour : Int, minute : Int) -> String {
   let hourStr = hour.to_string()
   let minuteStr = if minute < 10 {
@@ -37,6 +40,7 @@ fn formatTime(hour : Int, minute : Int) -> String {
   hourStr + ":" + minuteStr
 }
 
+///|
 fn concat(list : @immut/list.T[String], sep : String) -> String {
   loop list, "" {
     @immut/list.T::Nil, str => str

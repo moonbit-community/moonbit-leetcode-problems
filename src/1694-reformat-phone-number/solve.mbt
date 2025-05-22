@@ -1,3 +1,4 @@
+///|
 fn reformat_number(number : String) -> String {
   let chars : Array[Char] = []
   let mut index = 0

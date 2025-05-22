@@ -1,3 +1,4 @@
+///|
 fn max(arr : Array[Int]) -> Int {
   let mut max_val = arr[0]
   for i = 1; i < arr.length(); i = i + 1 {
@@ -8,6 +9,7 @@ fn max(arr : Array[Int]) -> Int {
   max_val
 }
 
+///|
 fn rearrange_barcodes(barcodes : Array[Int]) -> Array[Int] {
   let mx = max(barcodes)
   let cnt = Array::make(mx + 1, 0)

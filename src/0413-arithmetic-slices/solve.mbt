@@ -1,3 +1,4 @@
+///|
 fn number_of_arithmetic_slices(nums : Array[Int]) -> Int {
   let mut ans : Int = 0
   let mut cnt : Int = 0

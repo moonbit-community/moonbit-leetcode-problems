@@ -1,3 +1,4 @@
+///|
 fn total(price : Array[Int], needs : Array[Int]) -> Int {
   let mut sum = 0
   let n = price.length()
@@ -9,6 +10,7 @@ fn total(price : Array[Int], needs : Array[Int]) -> Int {
   sum
 }
 
+///|
 fn shoppingOffers(
   price : Array[Int],
   special : Array[Array[Int]],

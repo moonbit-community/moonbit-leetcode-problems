@@ -1,3 +1,4 @@
+///|
 fn abs_diff(a : Int, b : Int) -> Int {
   if a > b {
     a - b
@@ -6,6 +7,7 @@ fn abs_diff(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -14,6 +16,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn min_time_to_visit_all_points(points : Array[Array[Int]]) -> Int {
   let mut ans = 0
   let mut i = 1

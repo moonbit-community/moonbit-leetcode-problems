@@ -1,3 +1,4 @@
+///|
 fn distinct_numbers_in_each_subarray(nums : Array[Int], k : Int) -> Array[Int] {
   let n = nums.length()
   let ans = Array::make(n - k + 1, 0)

@@ -1,3 +1,4 @@
+///|
 test "example" {
   let grid : Array[Array[Char]] = [
     ['0', 'E', '0', '0'],

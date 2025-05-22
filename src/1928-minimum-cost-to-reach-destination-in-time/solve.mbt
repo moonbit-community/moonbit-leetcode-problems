@@ -1,8 +1,10 @@
+///|
 struct Edge {
   to : Int
   time : Int
 }
 
+///|
 fn min_cost_to_reach_destination_in_time(
   max_time : Int,
   edges : Array[Array[Int]],
@@ -48,6 +50,7 @@ fn min_cost_to_reach_destination_in_time(
   }
 }
 
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a

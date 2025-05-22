@@ -1,3 +1,4 @@
+///|
 fn validate_stack_sequences(pushed : Array[Int], popped : Array[Int]) -> Bool {
   let stk : Array[Int] = Array::new()
   let n = pushed.length()

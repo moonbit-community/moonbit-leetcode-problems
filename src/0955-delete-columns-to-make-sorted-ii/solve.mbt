@@ -1,3 +1,4 @@
+///|
 fn min_deletion_size(a : Array[String]) -> Int {
   let len = a.length()
   if len <= 1 {

@@ -1,7 +1,9 @@
+///|
 fn dec(bucket : Array[Int], index : Int) -> Unit {
   bucket[index] = bucket[index] - 1
 }
 
+///|
 fn wiggle_sort(nums : Array[Int]) -> Unit {
   let bucket : Array[Int] = Array::make(5001, 0)
   let n = nums.length()

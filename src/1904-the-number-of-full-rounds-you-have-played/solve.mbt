@@ -1,8 +1,10 @@
+///|
 struct Time {
   hours : Int
   minutes : Int
 }
 
+///|
 fn parse_time(time_str : String) -> Time! {
   let parts = time_str.split(":").to_array()
   let hours = @strconv.parse_int!(parts[0])
@@ -10,10 +12,12 @@ fn parse_time(time_str : String) -> Time! {
   Time::{ hours, minutes }
 }
 
+///|
 fn time_to_minutes(time : Time) -> Int {
   time.hours * 60 + time.minutes
 }
 
+///|
 fn count_full_rounds(login_time : Time, logout_time : Time) -> Int {
   let login_minutes = time_to_minutes(login_time)
   let mut logout_minutes = time_to_minutes(logout_time)
@@ -25,6 +29,7 @@ fn count_full_rounds(login_time : Time, logout_time : Time) -> Int {
   end_round - start_round
 }
 
+///|
 fn count_full_rounds_string(
   login_time_str : String,
   logout_time_str : String

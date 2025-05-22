@@ -1,3 +1,4 @@
+///|
 fn search_insert(nums : Array[Int], target : Int) -> Int {
   let mut low = 0
   let mut high = nums.length() - 1

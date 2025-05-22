@@ -1,3 +1,4 @@
+///|
 fn two_sum(nums : Array[Int], target : Int) -> Array[Int] {
   let num_to_index : @hashmap.T[Int, Int] = @hashmap.new()
   for i = 0; i < nums.length(); i = i + 1 {

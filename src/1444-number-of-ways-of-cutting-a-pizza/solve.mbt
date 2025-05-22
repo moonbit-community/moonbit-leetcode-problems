@@ -1,3 +1,4 @@
+///|
 fn create_array3d(
   m : Int,
   n : Int,
@@ -7,10 +8,12 @@ fn create_array3d(
   Array::make(m, Array::make(n, Array::make(k, initial_value)))
 }
 
+///|
 fn create_array2d(m : Int, n : Int, initial_value : Int) -> Array[Array[Int]] {
   Array::make(m, Array::make(n, initial_value))
 }
 
+///|
 fn ways(pizza : Array[String], k : Int) -> Int {
   let mod = 1000000007
   let m = pizza.length()

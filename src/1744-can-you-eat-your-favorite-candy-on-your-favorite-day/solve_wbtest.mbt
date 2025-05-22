@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let candies_count = [7, 4, 5, 3, 8]
   let queries = [[0, 2, 2], [4, 2, 4], [2, 13, 1000000000]]
@@ -8,6 +9,7 @@ test "example 1" {
   )
 }
 
+///|
 test "example 2" {
   let candies_count = [5, 2, 6, 4, 1]
   let queries = [[3, 1, 2], [4, 10, 3], [3, 10, 100], [4, 100, 30], [1, 3, 1]]

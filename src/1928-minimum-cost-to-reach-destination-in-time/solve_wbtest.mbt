@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let max_time = 30
   let edges = [
@@ -15,6 +16,7 @@ test "example 1" {
   )
 }
 
+///|
 test "example 2" {
   let max_time = 29
   let edges = [
@@ -32,6 +34,7 @@ test "example 2" {
   )
 }
 
+///|
 test "example 3" {
   let max_time = 25
   let edges = [

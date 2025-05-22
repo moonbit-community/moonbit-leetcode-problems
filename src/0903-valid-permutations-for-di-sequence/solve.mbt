@@ -1,3 +1,4 @@
+///|
 fn num_perms_di_sequence(s : String) -> Int {
   let mod = 1000000007
   let n = s.length()

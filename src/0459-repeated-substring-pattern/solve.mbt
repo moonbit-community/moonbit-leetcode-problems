@@ -1,3 +1,4 @@
+///|
 fn substring(s : String, start : Int, end : Int) -> String {
   let mut result : String = ""
   let mut i : Int = start
@@ -8,6 +9,7 @@ fn substring(s : String, start : Int, end : Int) -> String {
   result
 }
 
+///|
 fn contains(big : String, small : String) -> Bool {
   let big_len : Int = big.length()
   let small_len : Int = small.length()
@@ -24,6 +26,7 @@ fn contains(big : String, small : String) -> Bool {
   false
 }
 
+///|
 fn repeated_substring_pattern(s : String) -> Bool {
   let str : String = s + s
   contains(substring(str, 1, str.length() - 1), s)

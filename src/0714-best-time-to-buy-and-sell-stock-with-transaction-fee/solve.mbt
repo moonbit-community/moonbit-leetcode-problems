@@ -1,3 +1,4 @@
+///|
 fn max_profit(prices : Array[Int], fee : Int) -> Int {
   let n : Int = prices.length()
   let f : Array[Array[Int]] = Array::make(n, Array::make(2, 0))
@@ -11,6 +12,7 @@ fn max_profit(prices : Array[Int], fee : Int) -> Int {
   f[n - 1][0]
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a

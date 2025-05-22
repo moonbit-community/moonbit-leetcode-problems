@@ -1,3 +1,4 @@
+///|
 fn min_cost(n : Int, cuts : Array[Int]) -> Int {
   let vec_cuts = Array::copy(cuts)
   vec_cuts.push(0)
@@ -16,6 +17,7 @@ fn min_cost(n : Int, cuts : Array[Int]) -> Int {
   f[0][m - 1]
 }
 
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a

@@ -1,3 +1,4 @@
+///|
 fn n_queens(n : Int) -> Array[Array[String]] {
   let sol : Array[Array[String]] = []
   let queens = Array::make(n, -1)
@@ -8,6 +9,7 @@ fn n_queens(n : Int) -> Array[Array[String]] {
   sol
 }
 
+///|
 fn backtrack(
   sol : Array[Array[String]],
   queens : Array[Int],
@@ -46,6 +48,7 @@ fn backtrack(
   }
 }
 
+///|
 fn generate_board(queens : Array[Int], n : Int) -> Array[String] {
   let board : Array[String] = []
   for i = 0; i < n; i = i + 1 {

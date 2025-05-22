@@ -1,3 +1,4 @@
+///|
 fn count_wonderful_substrings(word : String) -> Int {
   let count_map : @hashmap.T[Int, Int] = @hashmap.new()
   count_map.set(0, 1)

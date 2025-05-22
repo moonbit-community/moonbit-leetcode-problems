@@ -1,3 +1,4 @@
+///|
 fn is_one_bit_character(bits : Array[Int]) -> Bool {
   let mut i = 0
   let n = bits.length()

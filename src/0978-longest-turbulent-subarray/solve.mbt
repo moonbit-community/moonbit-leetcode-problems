@@ -1,3 +1,4 @@
+///|
 fn max_turbulence_size(arr : Array[Int]) -> Int {
   let mut ans = 1
   let mut f = 1
@@ -14,6 +15,7 @@ fn max_turbulence_size(arr : Array[Int]) -> Int {
   ans
 }
 
+///|
 fn max(x : Int, y : Int) -> Int {
   if x > y {
     x

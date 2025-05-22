@@ -1,3 +1,4 @@
+///|
 fn can_place_flowers(flowerbed : Array[Int], n : Int) -> Bool {
   let m : Int = flowerbed.length()
   let mut n = n

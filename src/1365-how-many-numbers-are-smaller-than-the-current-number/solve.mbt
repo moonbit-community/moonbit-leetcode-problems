@@ -1,3 +1,4 @@
+///|
 fn smaller_numbers_than_current(nums : Array[Int]) -> Array[Int] {
   fn search(nums : Array[Int], x : Int) -> Int {
     let mut l = 0

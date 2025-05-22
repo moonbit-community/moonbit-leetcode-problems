@@ -1,3 +1,4 @@
+///|
 fn min_flips_to_alternating(s : String) -> Int {
   let n = s.length()
   let mut flips_pattern1 = 0

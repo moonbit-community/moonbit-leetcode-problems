@@ -1,3 +1,4 @@
+///|
 fn count_square_sum_triples(n : Int) -> Int {
   let mut count = 0
   for a = 1; a <= n; a = a + 1 {

@@ -1,7 +1,9 @@
+///|
 struct UnionFind {
   p : Array[Int]
 }
 
+///|
 fn UnionFind::new(n : Int) -> UnionFind {
   let p : Array[Int] = Array::make(n, 0)
   for i = 0; i < n; i = i + 1 {
@@ -10,6 +12,7 @@ fn UnionFind::new(n : Int) -> UnionFind {
   UnionFind::{ p, }
 }
 
+///|
 fn UnionFind::union(self : UnionFind, a : Int, b : Int) -> Unit {
   let pa = self.find(a)
   let pb = self.find(b)
@@ -18,6 +21,7 @@ fn UnionFind::union(self : UnionFind, a : Int, b : Int) -> Unit {
   }
 }
 
+///|
 fn UnionFind::find(self : UnionFind, x : Int) -> Int {
   if self.p[x] != x {
     self.p[x] = self.find(self.p[x])
@@ -25,6 +29,7 @@ fn UnionFind::find(self : UnionFind, x : Int) -> Int {
   self.p[x]
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -33,6 +38,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn largest_component_size(nums : Array[Int]) -> Int {
   let mut m = 0
   for i = 0; i < nums.length(); i = i + 1 {

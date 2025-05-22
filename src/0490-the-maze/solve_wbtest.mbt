@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let maze : Array[Array[Int]] = [
     [0, 0, 1, 0, 0],
@@ -11,6 +12,7 @@ test "example 1" {
   @test.is_true!(has_path(maze, start, destination))
 }
 
+///|
 test "example 2" {
   let maze : Array[Array[Int]] = [
     [0, 0, 1, 0, 0],

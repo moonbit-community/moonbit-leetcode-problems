@@ -1,3 +1,4 @@
+///|
 fn max_rotate_function(nums : Array[Int]) -> Int {
   let mut f = 0
   let mut s = 0
@@ -18,6 +19,7 @@ fn max_rotate_function(nums : Array[Int]) -> Int {
   ans
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a

@@ -1,10 +1,12 @@
 // Definition for a binary tree node
+///|
 enum TreeNode[T] {
   Empty
   Node(T, TreeNode[T], TreeNode[T])
 } derive(Eq, Show)
 
-fn TreeNode::insert[T : Compare](self : TreeNode[T], val : T) -> TreeNode[T] {
+///|
+fn[T : Compare] TreeNode::insert(self : TreeNode[T], val : T) -> TreeNode[T] {
   match self {
     Empty => Node(val, Empty, Empty)
     Node(data, left, right) =>

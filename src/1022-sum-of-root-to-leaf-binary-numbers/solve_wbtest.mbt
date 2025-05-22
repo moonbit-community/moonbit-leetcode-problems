@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let left_child = TreeNode::Node(
     0,
@@ -13,6 +14,7 @@ test "example 1" {
   assert_eq!(sum_root_to_leaf(root), 22)
 }
 
+///|
 test "example 2" {
   let root = TreeNode::Node(0, Empty, Empty)
   assert_eq!(sum_root_to_leaf(root), 0)

@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let strs = Array::make(3, "")
   strs[0] = "flower"
@@ -6,6 +7,7 @@ test "example 1" {
   assert_eq!(longest_common_prefix(strs), "fl")
 }
 
+///|
 test "example 2" {
   let strs = Array::make(3, "")
   strs[0] = "dog"
@@ -14,17 +16,20 @@ test "example 2" {
   assert_eq!(longest_common_prefix(strs), "")
 }
 
+///|
 test "empty array" {
   let strs = Array::make(0, "")
   assert_eq!(longest_common_prefix(strs), "")
 }
 
+///|
 test "single element array" {
   let strs = Array::make(1, "")
   strs[0] = "moonbit"
   assert_eq!(longest_common_prefix(strs), "moonbit")
 }
 
+///|
 test "all elements same" {
   let strs = Array::make(3, "")
   strs[0] = "moon"

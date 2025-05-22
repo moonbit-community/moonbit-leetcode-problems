@@ -1,11 +1,14 @@
+///|
 struct Solution {
   nums : Array[Int]
 }
 
+///|
 fn Solution::new(nums : Array[Int]) -> Solution {
   Solution::{ nums, }
 }
 
+///|
 fn Solution::pick(self : Solution, target : Int) -> Int {
   let mut n = 0
   let mut ans = 0

@@ -1,9 +1,11 @@
 // Union-Find data structure
+///|
 struct UnionFind {
   parent : Array[Int]
   rank : Array[Int]
 }
 
+///|
 fn make_union_find(n : Int) -> UnionFind {
   let parent = Array::make(n, 0)
   let rank = Array::make(n, 0)
@@ -13,6 +15,7 @@ fn make_union_find(n : Int) -> UnionFind {
   UnionFind::{ parent, rank }
 }
 
+///|
 fn find(uf : UnionFind, x : Int) -> Int {
   if uf.parent[x] != x {
     uf.parent[x] = find(uf, uf.parent[x])
@@ -20,6 +23,7 @@ fn find(uf : UnionFind, x : Int) -> Int {
   uf.parent[x]
 }
 
+///|
 fn union(uf : UnionFind, x : Int, y : Int) -> Unit {
   let root_x = find(uf, x)
   let root_y = find(uf, y)
@@ -36,6 +40,7 @@ fn union(uf : UnionFind, x : Int, y : Int) -> Unit {
 }
 
 // Function to minimize hamming distance
+///|
 fn minimize_hamming_distance(
   source : Array[Int],
   target : Array[Int],
@@ -53,18 +58,17 @@ fn minimize_hamming_distance(
   }
 
   // Map to store elements in each group
-  let group_elements = {  }
+  let group_elements = {}
 
   // Populate the map with elements from source
   for i = 0; i < n; i = i + 1 {
     let root = find(uf, i)
     if not(group_elements.contains(root)) {
-      group_elements[root] = {  }
+      group_elements[root] = {}
     }
-    let count = group_elements[root].map_or_else(
-      fn() { 0 },
-      fn(x) { x[source[i]].or_else(fn() { 0 }) },
-    )
+    let count = group_elements[root].map_or_else(fn() { 0 }, fn(x) {
+      x[source[i]].or_else(fn() { 0 })
+    })
     group_elements[root].unwrap()[source[i]] = count + 1
   }
 

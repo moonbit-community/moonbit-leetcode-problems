@@ -1,8 +1,10 @@
+///|
 enum TreeNode {
   Empty
   Node(Int, TreeNode, TreeNode)
 }
 
+///|
 fn is_same_tree(p : TreeNode, q : TreeNode) -> Bool {
   match (p, q) {
     (Empty, Empty) => true

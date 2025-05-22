@@ -1,3 +1,4 @@
+///|
 fn search(nums : Array[Int], target : Int) -> Bool {
   let n = nums.length()
   if n == 0 {

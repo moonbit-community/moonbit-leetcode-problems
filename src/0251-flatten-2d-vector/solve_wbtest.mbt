@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let vec = [[1, 2], [3], [4]]
   let obj = Vector2D::new(vec)

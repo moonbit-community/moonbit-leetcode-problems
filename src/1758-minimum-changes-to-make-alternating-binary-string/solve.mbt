@@ -1,3 +1,4 @@
+///|
 fn min_changes_to_make_alternating(s : String) -> Int {
   let n = s.length()
   let mut count_0_start = 0

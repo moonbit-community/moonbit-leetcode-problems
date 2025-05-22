@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -6,6 +7,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a
@@ -14,6 +16,7 @@ fn min(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn max_product(nums : Array[Int]) -> Int {
   let mut f = nums[0]
   let mut g = nums[0]

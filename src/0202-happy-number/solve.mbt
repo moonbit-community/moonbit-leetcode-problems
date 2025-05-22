@@ -1,3 +1,4 @@
+///|
 fn get_next(n : Int) -> Int {
   for num = n, res = 0
       num != 0
@@ -8,6 +9,7 @@ fn get_next(n : Int) -> Int {
   }
 }
 
+///|
 fn is_happy(n : Int) -> Bool {
   let mut slow = n
   let mut fast = get_next(n)

@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -6,6 +7,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn find_substring_in_wrapround_string(p : String) -> Int {
   let dp : Array[Int] = Array::make(26, 0)
   let mut k = 0

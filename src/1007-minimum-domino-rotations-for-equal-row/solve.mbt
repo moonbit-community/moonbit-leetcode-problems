@@ -11,6 +11,7 @@ fn f(x : Int, tops : Array[Int], bottoms : Array[Int], n : Int) -> Int {
   return n - max(cnt1, cnt2)
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -19,6 +20,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a
@@ -27,6 +29,7 @@ fn min(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn min_domino_rotations(tops : Array[Int], bottoms : Array[Int]) -> Int {
   let n = tops.length()
   let ans = min(f(tops[0], tops, bottoms, n), f(bottoms[0], tops, bottoms, n))

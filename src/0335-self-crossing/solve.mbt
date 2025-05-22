@@ -1,3 +1,4 @@
+///|
 fn is_self_crossing(distance : Array[Int]) -> Bool {
   let d = distance
   let mut i = 3
@@ -8,8 +9,11 @@ fn is_self_crossing(distance : Array[Int]) -> Bool {
     if i >= 4 && d[i - 1] == d[i - 3] && d[i] + d[i - 4] >= d[i - 2] {
       return true
     }
-    if i >= 5 && d[i - 2] >= d[i - 4] && d[i - 1] <= d[i - 3] && d[i] >= d[i - 2] -
-    d[i - 4] && d[i - 1] + d[i - 5] >= d[i - 3] {
+    if i >= 5 &&
+      d[i - 2] >= d[i - 4] &&
+      d[i - 1] <= d[i - 3] &&
+      d[i] >= d[i - 2] - d[i - 4] &&
+      d[i - 1] + d[i - 5] >= d[i - 3] {
       return true
     }
     i = i + 1

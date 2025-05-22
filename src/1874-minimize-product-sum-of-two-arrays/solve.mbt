@@ -1,3 +1,4 @@
+///|
 fn minimize_product_sum(nums1 : Array[Int], nums2 : Array[Int]) -> Int {
   // Sort nums1 in ascending order
   nums1.sort()

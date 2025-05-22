@@ -1,3 +1,4 @@
+///|
 fn can_make_pali_queries(
   s : String,
   queries : @immut/list.T[(Int, Int, Int)]
@@ -11,14 +12,12 @@ fn can_make_pali_queries(
     let c = s[i - 1].to_int() - 'a'.to_int()
     ss[i][c] = ss[i][c] + 1
   }
-  queries.map(
-    fn(query) -> Bool {
-      let (l, r, k) = query
-      let mut x = 0
-      for j = 0; j < 26; j = j + 1 {
-        x = x + (ss[r + 1][j] - ss[l][j]) % 2
-      }
-      x / 2 <= k
-    },
-  )
+  queries.map(fn(query) -> Bool {
+    let (l, r, k) = query
+    let mut x = 0
+    for j = 0; j < 26; j = j + 1 {
+      x = x + (ss[r + 1][j] - ss[l][j]) % 2
+    }
+    x / 2 <= k
+  })
 }

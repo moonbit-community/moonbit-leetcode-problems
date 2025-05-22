@@ -1,3 +1,4 @@
+///|
 fn find_lonely_pixel(picture : Array[Array[Char]]) -> Int {
   let m : Int = picture.length()
   let n : Int = picture[0].length()

@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -6,6 +7,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn longest_str_chain(words : Array[String]) -> Int {
   fn sort_by_length(arr : Array[String]) -> Array[String] {
     // Using bubble sort for simplicity

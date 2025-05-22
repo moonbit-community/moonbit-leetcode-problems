@@ -1,3 +1,4 @@
+///|
 fn prev_perm_opt1(arr : Array[Int]) -> Array[Int] {
   let n = arr.length()
   let mut i = n - 1

@@ -1,24 +1,28 @@
 // main solution
+///|
 struct Solution {
   a : Array[Int]
   dp : Array[Array[Int]]
 }
 
+///|
 fn Solution::new() -> Solution {
   { a: Array::make(33, 0), dp: Array::make(33, Array::make(2, -1)) }
 }
 
+///|
 fn Solution::findIntegers(self : Solution, n : Int) -> Int {
   let mut len = 0
   let mut n = n
   while n > 0 {
     len = len + 1
-    self.a[len] = n.land(1)
+    self.a[len] = n & 1
     n = n.lsr(1)
   }
   self.dfs(len, 0, true)
 }
 
+///|
 fn Solution::dfs(self : Solution, pos : Int, pre : Int, limit : Bool) -> Int {
   if pos <= 0 {
     return 1

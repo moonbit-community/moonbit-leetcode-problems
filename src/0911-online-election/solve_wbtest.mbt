@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let persons = [0, 1, 1, 0, 0, 1, 0]
   let times = [0, 5, 10, 15, 20, 25, 30]

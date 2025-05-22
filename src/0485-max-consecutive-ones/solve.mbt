@@ -1,3 +1,4 @@
+///|
 fn max(x : Int, y : Int) -> Int {
   if x > y {
     x
@@ -6,6 +7,7 @@ fn max(x : Int, y : Int) -> Int {
   }
 }
 
+///|
 fn find_max_consecutive_ones(nums : Array[Int]) -> Int {
   let mut cnt = 0
   let mut ans = 0

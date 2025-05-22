@@ -1,3 +1,4 @@
+///|
 fn slice_string(s : String, start : Int, end : Int) -> String {
   let mut result = ""
   for i = start; i < end; i = i + 1 {
@@ -6,6 +7,7 @@ fn slice_string(s : String, start : Int, end : Int) -> String {
   result
 }
 
+///|
 fn slice(arr : Array[Int], start : Int, end : Int) -> Array[Int] {
   let result = Array::make(end - start, 0)
   let mut j = 0
@@ -16,6 +18,7 @@ fn slice(arr : Array[Int], start : Int, end : Int) -> Array[Int] {
   result
 }
 
+///|
 fn reduce(arr : Array[Int], initial_value : Int) -> Int {
   let mut result = initial_value
   for i = 0; i < arr.length(); i = i + 1 {
@@ -24,6 +27,7 @@ fn reduce(arr : Array[Int], initial_value : Int) -> Int {
   result
 }
 
+///|
 fn day_of_year(date : String) -> Int {
   let y = @strconv.parse_int?(slice_string(date, 0, 4)).unwrap()
   let m = @strconv.parse_int?(slice_string(date, 5, 7)).unwrap()

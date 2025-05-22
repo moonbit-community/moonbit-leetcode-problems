@@ -1,3 +1,4 @@
+///|
 fn sum_array(values : Array[Int]) -> Int {
   // Helper function to calculate the sum of an array
   let mut result = 0
@@ -7,6 +8,7 @@ fn sum_array(values : Array[Int]) -> Int {
   result
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   // Helper function to find the maximum of two numbers
   if a > b {
@@ -16,6 +18,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn maximum_wealth(accounts : Array[Array[Int]]) -> Int {
   // Main function to find the maximum wealth
   let mut max_wealth = 0

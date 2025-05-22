@@ -1,3 +1,4 @@
+///|
 fn min_swaps(nums : Array[Int], k : Int) -> Int {
   // Step 1: Find positions of all 1s in the array
   let positions = Array::new()

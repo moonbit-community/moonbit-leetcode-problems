@@ -1,3 +1,4 @@
+///|
 fn max_binary_string(binary : String) -> String {
   let n = binary.length()
   let mut first_zero = -1

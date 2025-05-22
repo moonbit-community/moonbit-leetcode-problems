@@ -1,3 +1,4 @@
+///|
 fn sort(nums : Array[Int]) -> Array[Int] {
   let n = nums.length()
   let result : Array[Int] = Array::make(n, 0)
@@ -17,6 +18,7 @@ fn sort(nums : Array[Int]) -> Array[Int] {
   result
 }
 
+///|
 fn min(x : Int, y : Int) -> Int {
   if x < y {
     x
@@ -25,6 +27,7 @@ fn min(x : Int, y : Int) -> Int {
   }
 }
 
+///|
 fn max(x : Int, y : Int) -> Int {
   if x > y {
     x
@@ -33,6 +36,7 @@ fn max(x : Int, y : Int) -> Int {
   }
 }
 
+///|
 fn smallest_range_ii(nums : Array[Int], k : Int) -> Int {
   let sorted_nums = sort(nums)
   let n = sorted_nums.length()

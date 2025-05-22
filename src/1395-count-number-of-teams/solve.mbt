@@ -1,3 +1,4 @@
+///|
 fn num_teams(rating : Array[Int]) -> Int {
   let mut ans = 0
   let n = rating.length()

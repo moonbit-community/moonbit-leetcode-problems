@@ -1,3 +1,4 @@
+///|
 fn compress(chars : Array[Char]) -> Int {
   let n : Int = chars.length()
   let mut k : Int = 0
@@ -23,6 +24,7 @@ fn compress(chars : Array[Char]) -> Int {
   k
 }
 
+///|
 fn int_to_string(num : Int) -> String {
   if num == 0 {
     return "0"

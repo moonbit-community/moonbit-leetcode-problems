@@ -1,8 +1,10 @@
+///|
 enum TreeNode {
   Empty
   Node(Int, TreeNode, TreeNode)
 }
 
+///|
 fn max_path_sum(root : TreeNode) -> Int {
   let ans = -1001 // Removed mut as its mutability is never used
   fn dfs(root : TreeNode, ans : Int) -> (Int, Int) {
@@ -24,6 +26,7 @@ fn max_path_sum(root : TreeNode) -> Int {
   ans
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a

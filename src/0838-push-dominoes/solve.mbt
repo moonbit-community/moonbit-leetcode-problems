@@ -1,8 +1,10 @@
+///|
 struct Force {
   mut time : Int
   mut forces : @immut/list.T[Char]
 }
 
+///|
 fn pushDominoes(dominoes : String) -> String {
   let n = dominoes.length()
   let forces = Array::make(n, { time: -1, forces: @immut/list.T::Nil })

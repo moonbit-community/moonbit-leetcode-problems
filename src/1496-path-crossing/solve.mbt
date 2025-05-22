@@ -1,3 +1,4 @@
+///|
 enum Direction {
   N
   S
@@ -5,6 +6,7 @@ enum Direction {
   W
 }
 
+///|
 fn char_to_direction(c : Char) -> Direction? {
   match c {
     'N' => Some(Direction::N)
@@ -15,6 +17,7 @@ fn char_to_direction(c : Char) -> Direction? {
   }
 }
 
+///|
 fn is_path_crossing(path : String) -> Bool {
   let mut i = 0
   let mut j = 0

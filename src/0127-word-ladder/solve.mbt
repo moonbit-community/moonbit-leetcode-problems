@@ -1,13 +1,16 @@
+///|
 struct Queue {
   mut elems : @immut/list.T[String]
 }
 
 // Defining push operation as methods for Queue
+///|
 fn Queue::push(self : Queue, elem : String) -> Unit {
   self.elems = Cons(elem, self.elems)
 }
 
 // Define the pop operation for Queue
+///|
 fn Queue::pop(self : Queue) -> String {
   fn aux(
     elems : @immut/list.T[String],
@@ -26,6 +29,7 @@ fn Queue::pop(self : Queue) -> String {
 }
 
 // Calculate the size of the Queue
+///|
 fn Queue::size(self : Queue) -> Int {
   loop self.elems, 0 {
     Cons(_, tail), acc => continue tail, acc + 1
@@ -34,11 +38,13 @@ fn Queue::size(self : Queue) -> Int {
 }
 
 // Factory function to create a Queue
+///|
 fn create_queue() -> Queue {
   Queue::{ elems: Nil }
 }
 
 // Function to remove an element from a list
+///|
 fn remove(list : @immut/list.T[String], elem : String) -> @immut/list.T[String] {
   match list {
     Cons(head, tail) =>
@@ -52,6 +58,7 @@ fn remove(list : @immut/list.T[String], elem : String) -> @immut/list.T[String] 
 }
 
 // Given a begin word, an end word, and a list of valid words, find the length of the shortest transformation sequence from begin to end
+///|
 fn ladder_length(
   begin_word : String,
   end_word : String,

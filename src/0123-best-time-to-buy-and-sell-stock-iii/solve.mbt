@@ -1,3 +1,4 @@
+///|
 fn max_profit(prices : Array[Int]) -> Int {
   let mut f1 = -prices[0]
   let mut f2 = 0
@@ -14,6 +15,7 @@ fn max_profit(prices : Array[Int]) -> Int {
   f4
 }
 
+///|
 fn max(x : Int, y : Int) -> Int {
   if x > y {
     x

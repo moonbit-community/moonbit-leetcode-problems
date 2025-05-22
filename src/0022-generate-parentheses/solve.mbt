@@ -1,5 +1,6 @@
 // Define a structure to represent the stack
 // Function to generate all combinations of well-formed parentheses
+///|
 fn generate_parentheses(n : Int) -> Array[String] {
   let result = []
   let stack = []
@@ -37,7 +38,8 @@ fn generate_parentheses(n : Int) -> Array[String] {
   result
 }
 
-fn clone[X](array : Array[X]) -> Array[X] {
+///|
+fn[X] clone(array : Array[X]) -> Array[X] {
   let len = array.length()
   if len == 0 {
     []
@@ -50,7 +52,8 @@ fn clone[X](array : Array[X]) -> Array[X] {
   }
 }
 
-fn sort[X : Compare + Eq](array : Array[X]) -> Array[X] {
+///|
+fn[X : Compare + Eq] sort(array : Array[X]) -> Array[X] {
   let return_array = array |> clone
   return_array.sort()
   return_array

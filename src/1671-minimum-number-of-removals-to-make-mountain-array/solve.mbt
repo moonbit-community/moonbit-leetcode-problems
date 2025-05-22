@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -6,6 +7,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn minimum_mountain_removals(nums : Array[Int]) -> Int {
   let n = nums.length()
   let left = Array::make(n, 1)

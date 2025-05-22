@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let first_string = "abcd"
   let second_string = "bccda"
@@ -9,6 +10,7 @@ test "example 1" {
   )
 }
 
+///|
 test "example 2" {
   let first_string = "ab"
   let second_string = "cd"
@@ -20,6 +22,7 @@ test "example 2" {
   )
 }
 
+///|
 test "example 3" {
   let first_string = "aab"
   let second_string = "baa"

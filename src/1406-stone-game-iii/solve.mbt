@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -6,6 +7,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn stone_game_iii(stone_value : Array[Int]) -> String {
   let n = stone_value.length()
   let inf = 2_0000_0000

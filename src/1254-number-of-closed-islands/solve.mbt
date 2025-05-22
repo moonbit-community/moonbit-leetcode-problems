@@ -1,3 +1,4 @@
+///|
 fn closed_island(grid : Array[Array[Int]]) -> Int {
   let m = grid.length()
   let n = grid[0].length()

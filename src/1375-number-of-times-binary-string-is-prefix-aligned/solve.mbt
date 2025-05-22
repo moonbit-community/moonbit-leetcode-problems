@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -6,6 +7,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn num_times_all_blue(flips : Array[Int]) -> Int {
   let mut ans = 0
   let mut mx = 0

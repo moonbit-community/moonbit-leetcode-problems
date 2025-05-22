@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   assert_eq!(
     camel_match(
@@ -8,6 +9,7 @@ test "example 1" {
   )
 }
 
+///|
 test "example 2" {
   assert_eq!(
     camel_match(
@@ -18,6 +20,7 @@ test "example 2" {
   )
 }
 
+///|
 test "example 3" {
   assert_eq!(
     camel_match(

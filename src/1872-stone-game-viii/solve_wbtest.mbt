@@ -1,3 +1,4 @@
+///|
 test "example_1" {
   let stones = Array::make(5, 0)
   stones[0] = -1
@@ -8,6 +9,7 @@ test "example_1" {
   assert_eq!(stone_game_viii(stones), 5)
 }
 
+///|
 test "example_2" {
   let stones = Array::make(7, 0)
   stones[0] = 7
@@ -20,6 +22,7 @@ test "example_2" {
   assert_eq!(stone_game_viii(stones), 13)
 }
 
+///|
 test "example_3" {
   let stones = Array::make(2, 0)
   stones[0] = -10

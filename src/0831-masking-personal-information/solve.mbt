@@ -1,3 +1,4 @@
+///|
 fn to_lowercase(s : String) -> String {
   let mut result = ""
   let a_code = 'a'.to_int()
@@ -14,6 +15,7 @@ fn to_lowercase(s : String) -> String {
   result
 }
 
+///|
 fn count_uppercase_letters(s : String) -> Int {
   let mut count = 0
   for i = 0; i < s.length(); i = i + 1 {
@@ -24,6 +26,7 @@ fn count_uppercase_letters(s : String) -> Int {
   count
 }
 
+///|
 fn maskPII(s : String) -> String {
   if count_uppercase_letters(s) > 0 { // Treat as email
     let s = to_lowercase(s)
@@ -33,10 +36,9 @@ fn maskPII(s : String) -> String {
         i = si
       }
     }
-    let masked = s[0].to_string() + "*****" + s.substring(
-        start=i - 1,
-        end=s.length(),
-      )
+    let masked = s[0].to_string() +
+      "*****" +
+      s.substring(start=i - 1, end=s.length())
     masked
   } else { // Treat as phone number
     let mut digits = ""
@@ -47,10 +49,8 @@ fn maskPII(s : String) -> String {
       }
     }
     let cnt = digits.length() - 10
-    let suf = "***-***-" + digits.substring(
-        start=digits.length() - 4,
-        end=digits.length(),
-      )
+    let suf = "***-***-" +
+      digits.substring(start=digits.length() - 4, end=digits.length())
     if cnt == 0 {
       suf
     } else {

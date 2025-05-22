@@ -1,3 +1,4 @@
+///|
 fn split(string : String, delimiter : Char) -> Array[String] {
   let mut buffer = Buffer::new()
   let array = []
@@ -12,6 +13,7 @@ fn split(string : String, delimiter : Char) -> Array[String] {
   array
 }
 
+///|
 fn sentence_similarity(sentence1 : String, sentence2 : String) -> Bool {
   let words1 = split(sentence1, ' ')
   let words2 = split(sentence2, ' ')

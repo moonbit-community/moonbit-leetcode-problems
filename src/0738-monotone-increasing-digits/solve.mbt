@@ -1,3 +1,4 @@
+///|
 fn toCharArray(number : Int) -> Array[Int] {
   let str = number.to_string()
   let result = Array::make(str.length(), 0)
@@ -7,6 +8,7 @@ fn toCharArray(number : Int) -> Array[Int] {
   result
 }
 
+///|
 fn parseInt(chars : Array[Int]) -> Int {
   let mut result = 0
   for i = 0; i < chars.length(); i = i + 1 {
@@ -15,6 +17,7 @@ fn parseInt(chars : Array[Int]) -> Int {
   result
 }
 
+///|
 fn monotone_increasing_digits(n : Int) -> Int {
   let s = toCharArray(n)
   let mut i = 1

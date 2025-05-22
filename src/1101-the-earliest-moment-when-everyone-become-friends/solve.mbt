@@ -1,3 +1,4 @@
+///|
 fn find(p : Array[Int], x : Int) -> Int {
   if p[x] != x {
     let parent = find(p, p[x])
@@ -7,6 +8,7 @@ fn find(p : Array[Int], x : Int) -> Int {
 }
 
 // Custom sort function for logs based on the first element of each subarray
+///|
 fn sort_logs(logs : Array[Array[Int]]) -> Unit {
   for i = 1; i < logs.length(); i = i + 1 {
     let key = logs[i]
@@ -20,6 +22,7 @@ fn sort_logs(logs : Array[Array[Int]]) -> Unit {
   }
 }
 
+///|
 fn earliest_acq(logs : Array[Array[Int]], n : Int) -> Int {
   let p : Array[Int] = Array::make(n, 0)
   for i = 0; i < n; i = i + 1 {

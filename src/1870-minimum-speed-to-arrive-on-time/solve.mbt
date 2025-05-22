@@ -1,3 +1,4 @@
+///|
 fn calculate_time(dist : Array[Int], speed : Int) -> Double {
   let mut total_time = 0.0
   for i = 0; i < dist.length(); i = i + 1 {
@@ -10,6 +11,7 @@ fn calculate_time(dist : Array[Int], speed : Int) -> Double {
   total_time
 }
 
+///|
 fn min_speed_to_arrive_on_time(dist : Array[Int], hour : Double) -> Int {
   if (dist.length() - 1).to_double() >= hour {
     return -1

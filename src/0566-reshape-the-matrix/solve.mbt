@@ -1,9 +1,11 @@
+///|
 struct Matrix {
   rows : Int
   cols : Int
   data : Array[Array[Int]]
 } derive(Eq, Show)
 
+///|
 fn matrix_reshape(mat : Matrix, r : Int, c : Int) -> Matrix {
   let m = mat.rows
   let n = mat.cols

@@ -1,3 +1,4 @@
+///|
 fn array_sum(nums : Array[Int]) -> Int {
   let mut sum = 0
   let mut i = 0
@@ -8,6 +9,7 @@ fn array_sum(nums : Array[Int]) -> Int {
   sum
 }
 
+///|
 fn min_element(nums : Array[Int]) -> Int {
   let mut min = nums[0]
   let mut i = 1
@@ -20,6 +22,7 @@ fn min_element(nums : Array[Int]) -> Int {
   min
 }
 
+///|
 fn min_moves(nums : Array[Int]) -> Int {
   array_sum(nums) - min_element(nums) * nums.length()
 }

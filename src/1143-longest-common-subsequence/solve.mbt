@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -6,6 +7,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn longest_common_subsequence(text1 : String, text2 : String) -> Int {
   let m = text1.length()
   let n = text2.length()

@@ -1,3 +1,4 @@
+///|
 fn min_drops_required(n : Int) -> Int {
   let dp = Array::make(3, Array::make(n + 1, 0))
   for j = 1; j <= n; j = j + 1 {

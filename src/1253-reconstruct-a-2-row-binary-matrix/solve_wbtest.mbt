@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let upper = 2
   let lower = 1
@@ -6,6 +7,7 @@ test "example 1" {
   assert_eq!(reconstruct_matrix(upper, lower, colsum), expected)
 }
 
+///|
 test "example 2" {
   let upper = 2
   let lower = 3

@@ -1,3 +1,4 @@
+///|
 fn is_valid_parentheses(s : String) -> Bool {
   let stack : Array[Char] = []
   let pairs : @hashmap.T[Char, Char] = @hashmap.new()

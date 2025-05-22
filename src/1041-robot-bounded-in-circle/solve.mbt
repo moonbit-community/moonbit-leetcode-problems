@@ -1,3 +1,4 @@
+///|
 fn is_robot_bounded(instructions : String) -> Bool {
   let dist : Array[Int] = [0, 0, 0, 0]
   let mut k = 0

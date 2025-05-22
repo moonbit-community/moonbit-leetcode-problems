@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let rectangle = [[1, 2, 1], [4, 3, 4], [3, 2, 1], [1, 1, 1]]
   let obj = subrectangle_queries_new(rectangle)
@@ -8,6 +9,7 @@ test "example 1" {
   assert_eq!(subrectangle_queries_get_value(obj, 0, 2), 5)
 }
 
+///|
 test "example 2" {
   let rectangle = [[1, 1, 1], [2, 2, 2], [3, 3, 3]]
   let obj = subrectangle_queries_new(rectangle)

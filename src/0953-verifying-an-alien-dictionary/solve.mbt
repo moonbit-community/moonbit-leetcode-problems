@@ -1,3 +1,4 @@
+///|
 fn is_alien_sorted(words : Array[String], order : String) -> Bool {
   let m : Array[Int] = Array::make(26, -1)
   for i = 0; i < 26; i = i + 1 {

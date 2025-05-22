@@ -1,3 +1,4 @@
+///|
 fn fill(arr : Array[Int], value : Int) -> Unit {
   let n = arr.length()
   let mut i = 0
@@ -7,6 +8,7 @@ fn fill(arr : Array[Int], value : Int) -> Unit {
   }
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -15,6 +17,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn longest_mountain(arr : Array[Int]) -> Int {
   let n = arr.length()
   let f : Array[Int] = Array::make(n, 0)

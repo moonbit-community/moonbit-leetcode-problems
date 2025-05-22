@@ -1,3 +1,4 @@
+///|
 fn is_long_pressed_name(name : String, typed : String) -> Bool {
   let m : Int = name.length()
   let n : Int = typed.length()

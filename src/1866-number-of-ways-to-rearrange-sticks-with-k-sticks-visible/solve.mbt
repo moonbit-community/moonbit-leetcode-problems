@@ -1,3 +1,4 @@
+///|
 fn rearrange_sticks(n : Int, k : Int) -> Int {
   let mod_val = 1_000_000_007
   let dp = Array::make(n + 1, Array::make(k + 1, 0))

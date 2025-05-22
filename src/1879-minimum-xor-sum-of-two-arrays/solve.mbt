@@ -1,3 +1,4 @@
+///|
 fn min_xor_sum(nums1 : Array[Int], nums2 : Array[Int]) -> Int {
   let n = nums1.length()
   let mut min_sum = 2_147_483_647 // Initialize to a large number
@@ -15,7 +16,7 @@ fn min_xor_sum(nums1 : Array[Int], nums2 : Array[Int]) -> Int {
     if l == r {
       let mut sum = 0
       for i = 0; i < arr.length(); i = i + 1 {
-        sum = sum + nums1[i].lxor(arr[i])
+        sum = sum + (nums1[i] ^ arr[i])
       }
       if sum < min_sum {
         min_sum = sum

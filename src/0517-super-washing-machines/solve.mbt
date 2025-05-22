@@ -1,3 +1,4 @@
+///|
 fn find_min_moves(machines : Array[Int]) -> Int {
   let n : Int = machines.length()
   let mut s : Int = 0
@@ -18,6 +19,7 @@ fn find_min_moves(machines : Array[Int]) -> Int {
   ans
 }
 
+///|
 fn max(x : Int, y : Int) -> Int {
   if x > y {
     x
@@ -26,6 +28,7 @@ fn max(x : Int, y : Int) -> Int {
   }
 }
 
+///|
 fn abs(x : Int) -> Int {
   if x < 0 {
     -x

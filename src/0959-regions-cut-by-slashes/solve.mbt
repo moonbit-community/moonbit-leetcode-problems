@@ -1,8 +1,10 @@
+///|
 struct Solution {
   p : Array[Int]
   mut size : Int
 }
 
+///|
 fn Solution::find(self : Solution, x : Int) -> Int {
   let mut x = x
   while self.p[x] != x {
@@ -11,6 +13,7 @@ fn Solution::find(self : Solution, x : Int) -> Int {
   x
 }
 
+///|
 fn Solution::union(self : Solution, a : Int, b : Int) -> Unit {
   let pa = self.find(a)
   let pb = self.find(b)
@@ -21,6 +24,7 @@ fn Solution::union(self : Solution, a : Int, b : Int) -> Unit {
   self.size = self.size - 1
 }
 
+///|
 fn regions_by_slashes(grid : Array[String]) -> Int {
   let n = grid.length()
   let p : Array[Int] = Array::make(n * n * 4, 0)

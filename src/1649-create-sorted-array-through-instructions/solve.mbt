@@ -1,12 +1,15 @@
+///|
 struct BinaryIndexedTree {
   n : Int
   c : Array[Int]
 }
 
+///|
 fn BinaryIndexedTree::new(n : Int) -> BinaryIndexedTree {
   BinaryIndexedTree::{ n, c: Array::make(n + 1, 0) }
 }
 
+///|
 fn BinaryIndexedTree::update(
   self : BinaryIndexedTree,
   x : Int,
@@ -15,20 +18,22 @@ fn BinaryIndexedTree::update(
   let mut x = x
   while x <= self.n {
     self.c[x] = self.c[x] + v
-    x = x + x.land(-x)
+    x = x + (x & -x)
   }
 }
 
+///|
 fn BinaryIndexedTree::query(self : BinaryIndexedTree, x : Int) -> Int {
   let mut s = 0
   let mut x = x
   while x > 0 {
     s = s + self.c[x]
-    x = x - x.land(-x)
+    x = x - (x & -x)
   }
   s
 }
 
+///|
 fn create_sorted_array(instructions : Array[Int]) -> Int {
   fn max(arr : Array[Int]) -> Int {
     let mut m = arr[0]

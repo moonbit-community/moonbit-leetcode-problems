@@ -1,3 +1,4 @@
+///|
 fn valid_mountain_array(arr : Array[Int]) -> Bool {
   let n = arr.length()
   if n < 3 {

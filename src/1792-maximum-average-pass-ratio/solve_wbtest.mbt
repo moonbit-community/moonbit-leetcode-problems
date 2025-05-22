@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let classes : Array[Class] = [
     new_class(1, 2),
@@ -9,6 +10,7 @@ test "example 1" {
   assert_approx_eq!(result, 0.78333, 0.00001)
 }
 
+///|
 test "example 2" {
   let classes : Array[Class] = [
     new_class(2, 4),

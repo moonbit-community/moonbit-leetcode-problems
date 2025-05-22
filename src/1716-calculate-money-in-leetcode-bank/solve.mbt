@@ -1,3 +1,4 @@
+///|
 fn calculate_money_in_leetcode_bank(n : Int) -> Int {
   let mut total_money = 0
   let mut day = 1

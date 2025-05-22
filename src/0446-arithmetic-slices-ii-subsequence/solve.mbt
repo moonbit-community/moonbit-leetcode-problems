@@ -1,8 +1,10 @@
+///|
 struct MapEntry {
   key : Int
   value : Int
 }
 
+///|
 fn map_get_default(
   map : @immut/list.T[MapEntry],
   key : Int,
@@ -19,6 +21,7 @@ fn map_get_default(
   }
 }
 
+///|
 fn map_merge(
   map : @immut/list.T[MapEntry],
   key : Int,
@@ -35,6 +38,7 @@ fn map_merge(
   }
 }
 
+///|
 fn number_of_arithmetic_slices(nums : Array[Int]) -> Int {
   let n : Int = nums.length()
   let f : Array[@immut/list.T[MapEntry]] = Array::make(n, Nil)

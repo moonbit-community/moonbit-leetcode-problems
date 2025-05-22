@@ -1,3 +1,4 @@
+///|
 fn min_sideway_jumps(obstacles : Array[Int]) -> Int {
   let n = obstacles.length() - 1
   let dp = Array::make(3, Array::make(n + 1, 2_0000_0000))

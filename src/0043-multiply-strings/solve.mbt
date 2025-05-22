@@ -1,3 +1,4 @@
+///|
 fn multiply(num1 : String, num2 : String) -> String {
   if num1 == "0" || num2 == "0" {
     return "0"

@@ -1,3 +1,4 @@
+///|
 fn get_permutation(n : Int, k : Int) -> String {
   let fac = Array::make(n, 0)
   fac[0] = 1

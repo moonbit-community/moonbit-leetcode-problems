@@ -1,3 +1,4 @@
+///|
 fn longest_common_prefix(strs : Array[String]) -> String {
   if strs.length() == 0 {
     return ""

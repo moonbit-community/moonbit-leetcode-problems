@@ -1,3 +1,4 @@
+///|
 fn is_number(s : String) -> Bool {
   let n = s.length()
   let mut i = 0
@@ -7,7 +8,8 @@ fn is_number(s : String) -> Bool {
   if i == n {
     return false
   }
-  if s.get(i) == '.' && (i + 1 == n || s.get(i + 1) == 'e' || s.get(i + 1) == 'E') {
+  if s.get(i) == '.' &&
+    (i + 1 == n || s.get(i + 1) == 'e' || s.get(i + 1) == 'E') {
     return false
   }
   let mut dot = 0

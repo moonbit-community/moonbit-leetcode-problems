@@ -1,3 +1,4 @@
+///|
 fn tictactoe(moves : Array[(Int, Int)]) -> String {
   let n = moves.length()
   let cnt = Array::make(8, 0)

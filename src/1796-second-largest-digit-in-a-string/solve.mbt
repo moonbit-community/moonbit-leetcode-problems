@@ -1,11 +1,14 @@
+///|
 fn is_digit(c : Char) -> Bool {
   c >= '0' && c <= '9'
 }
 
+///|
 fn char_to_digit(c : Char) -> Int {
   c.to_int() - '0'.to_int()
 }
 
+///|
 fn second_largest_digit_in_string(s : String) -> Int {
   let mut largest_digit = -1
   let mut second_largest_digit = -1

@@ -1,3 +1,4 @@
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a
@@ -6,6 +7,7 @@ fn min(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn num_rolls_to_target(n : Int, k : Int, target : Int) -> Int {
   let f : Array[Array[Int]] = Array::make(n + 1, Array::make(target + 1, 0))
   f[0][0] = 1

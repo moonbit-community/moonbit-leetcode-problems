@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let root = TreeNode::Node(
     10,
@@ -11,6 +12,7 @@ test "example 1" {
   assert_eq!(range_sum_bst(root, 7, 15), 32)
 }
 
+///|
 test "example 2" {
   let root = TreeNode::Node(
     10,

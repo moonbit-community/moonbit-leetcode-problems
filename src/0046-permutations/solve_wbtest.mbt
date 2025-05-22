@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   inspect!(
     permute([1, 2, 3]),
@@ -5,6 +6,7 @@ test "example 1" {
   )
 }
 
+///|
 test "example 2" {
   assert_eq!(
     permute([0, 1]),
@@ -12,6 +14,7 @@ test "example 2" {
   )
 }
 
+///|
 test "example 3" {
   assert_eq!(permute([1]), @immut/list.T::of([@immut/list.T::of([1])]))
 }

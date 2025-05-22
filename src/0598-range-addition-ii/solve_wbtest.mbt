@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let m = 3
   let n = 3
@@ -5,6 +6,7 @@ test "example 1" {
   assert_eq!(max_count(m, n, ops), 4)
 }
 
+///|
 test "example 2" {
   let m = 3
   let n = 3
@@ -12,6 +14,7 @@ test "example 2" {
   assert_eq!(max_count(m, n, ops), 9)
 }
 
+///|
 test "example 3" {
   let m = 4
   let n = 7

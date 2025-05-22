@@ -1,3 +1,4 @@
+///|
 fn is_palindrome(x : Int) -> Bool {
   if x < 0 {
     return false

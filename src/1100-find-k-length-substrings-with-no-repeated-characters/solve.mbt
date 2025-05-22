@@ -1,3 +1,4 @@
+///|
 fn count_unique_characters(substr : String) -> Int {
   let char_counts : Array[Int] = Array::make(26, 0) // Assume lowercase ascii
   for i = 0; i < substr.length(); i = i + 1 {
@@ -14,6 +15,7 @@ fn count_unique_characters(substr : String) -> Int {
   unique_count
 }
 
+///|
 fn num_k_len_substr_no_repeats(s : String, k : Int) -> Int {
   let n = s.length()
   if k > n {
@@ -30,6 +32,7 @@ fn num_k_len_substr_no_repeats(s : String, k : Int) -> Int {
 }
 
 // Helper function to slice a String since Moonbit standard library doesn't include it
+///|
 fn slice(string : String, start : Int, stop : Int) -> String {
   let mut result = ""
   for i = start; i < stop; i = i + 1 {

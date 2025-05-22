@@ -1,3 +1,4 @@
+///|
 fn maxKilledEnemies(grid : Array[Array[Char]]) -> Int {
   let m : Int = grid.length()
   let n : Int = grid[0].length()

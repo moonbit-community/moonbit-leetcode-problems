@@ -1,3 +1,4 @@
+///|
 fn max_operations(nums : Array[Int], k : Int) -> Int {
   let cnt_map : @hashmap.T[Int, Int] = @hashmap.new()
   let mut ans = 0

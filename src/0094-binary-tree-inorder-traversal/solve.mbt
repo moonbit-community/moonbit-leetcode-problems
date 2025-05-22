@@ -1,8 +1,10 @@
+///|
 enum Tree[Int] {
   Empty
   Node(Tree[Int], Int, Tree[Int])
 }
 
+///|
 fn append(a : Array[Int], x : Int) -> Array[Int] {
   let new_arr = Array::make(a.length() + 1, 0)
   let mut i = 0
@@ -14,6 +16,7 @@ fn append(a : Array[Int], x : Int) -> Array[Int] {
   new_arr
 }
 
+///|
 fn inorder(t : Tree[Int]) -> Array[Int] {
   fn go(t : Tree[Int], acc : Array[Int]) -> Array[Int] {
     match t {

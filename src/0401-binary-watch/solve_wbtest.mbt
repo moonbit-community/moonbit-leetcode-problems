@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let result = read_binary_watch(1)
   let expectedResult = @immut/list.T::Cons(
@@ -7,6 +8,7 @@ test "example 1" {
   assert_eq!(result, expectedResult)
 }
 
+///|
 test "example 2" {
   let result = read_binary_watch(2)
   let expectedResult = @immut/list.T::Cons(

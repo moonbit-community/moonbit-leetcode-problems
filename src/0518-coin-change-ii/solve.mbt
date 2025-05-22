@@ -1,3 +1,4 @@
+///|
 fn change(amount : Int, coins : Array[Int]) -> Int {
   let m : Int = coins.length()
   let dp : Array[Array[Int]] = Array::make(m + 1, Array::make(amount + 1, 0))

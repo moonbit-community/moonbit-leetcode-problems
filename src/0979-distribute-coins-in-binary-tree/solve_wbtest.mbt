@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let root = TreeNode::Node(
     3,
@@ -11,6 +12,7 @@ test "example 1" {
   assert_eq!(distribute_coins(root, 0), 3)
 }
 
+///|
 test "example 2" {
   let root = TreeNode::Node(
     0,
@@ -20,6 +22,7 @@ test "example 2" {
   assert_eq!(distribute_coins(root, 0), 2)
 }
 
+///|
 test "example 3" {
   let root = TreeNode::Node(
     1,

@@ -1,3 +1,4 @@
+///|
 fn can_eat_favorite_candy_on_favorite_day(
   candies_count : Array[Int],
   queries : Array[Array[Int]]
@@ -16,8 +17,8 @@ fn can_eat_favorite_candy_on_favorite_day(
     let daily_cap = queries[i][2]
 
     // Check if we can eat the candy on the favorite day
-    let can_eat = prefix_sums[favorite_type] / daily_cap <= favorite_day && prefix_sums[favorite_type] +
-      candies_count[favorite_type] > favorite_day
+    let can_eat = prefix_sums[favorite_type] / daily_cap <= favorite_day &&
+      prefix_sums[favorite_type] + candies_count[favorite_type] > favorite_day
     answer[i] = can_eat
   }
   answer

@@ -1,8 +1,10 @@
+///|
 enum TreeNode {
   Empty
   Node(Int, TreeNode, TreeNode)
 }
 
+///|
 fn is_unival_tree(root : TreeNode) -> Bool {
   match root {
     Empty => true
@@ -10,6 +12,7 @@ fn is_unival_tree(root : TreeNode) -> Bool {
   }
 }
 
+///|
 fn dfs(root : TreeNode, val : Int) -> Bool {
   match root {
     Empty => true

@@ -1,7 +1,8 @@
+///|
 fn remove_vowels(s : String) -> String {
-  let vowels_list = @immut/list.T::of(
-    ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'],
-  )
+  let vowels_list = @immut/list.T::of([
+    'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U',
+  ])
   let mut result : String = ""
 
   // Loop through each character in the input string

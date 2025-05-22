@@ -1,3 +1,4 @@
+///|
 fn island_perimeter(grid : Array[Array[Int]]) -> Int {
   let mut ans = 0
   let m = grid.length()

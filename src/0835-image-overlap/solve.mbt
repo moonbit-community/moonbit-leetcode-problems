@@ -1,8 +1,10 @@
+///|
 struct Point {
   x : Int
   y : Int
 }
 
+///|
 fn largest_overlap(img1 : Array[Array[Int]], img2 : Array[Array[Int]]) -> Int {
   let n : Int = img1.length()
   let mut ans : Int = 0

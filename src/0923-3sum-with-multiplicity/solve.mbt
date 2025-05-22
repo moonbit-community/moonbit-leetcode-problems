@@ -1,5 +1,7 @@
+///|
 let mod_value : Int = 1000000007
 
+///|
 fn three_sum_multi(arr : Array[Int], target : Int) -> Int {
   let cnt : Array[Int] = Array::make(101, 0)
   let mut array_len : Int = 0

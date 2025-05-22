@@ -1,3 +1,4 @@
+///|
 fn diet_plan_performance(
   calories : Array[Int],
   k : Int,

@@ -1,3 +1,4 @@
+///|
 fn can_complete_circuit(gas : Array[Int], cost : Array[Int]) -> Int {
   let n = gas.length()
   let mut i = n - 1

@@ -1,3 +1,4 @@
+///|
 fn substring(s : String, start : Int, end : Int) -> String {
   let mut res = ""
   let mut i = start
@@ -8,6 +9,7 @@ fn substring(s : String, start : Int, end : Int) -> String {
   return res
 }
 
+///|
 fn string_to_int(s : String) -> Int {
   let mut res = 0
   let mut i = 0
@@ -18,6 +20,7 @@ fn string_to_int(s : String) -> Int {
   return res
 }
 
+///|
 fn restore_ip_address(s : String) -> @immut/list.T[String] {
   let mut res = @immut/list.T::Nil
   fn dfs(ip : String, index : Int, octet : Int) {

@@ -1,3 +1,4 @@
+///|
 fn number_of_distinct_substrings(s : String) -> Int {
   let substrings = @hashset.T::new()
   let n = s.length()

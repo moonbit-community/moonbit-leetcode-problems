@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -6,6 +7,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn max_coins(nums : Array[Int]) -> Int {
   let n = nums.length() + 2
   let vals : Array[Int] = Array::make(n, 1) // Creating an Array of length n with all values initialised to 1

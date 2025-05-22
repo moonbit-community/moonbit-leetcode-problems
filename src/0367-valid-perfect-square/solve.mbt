@@ -1,3 +1,4 @@
+///|
 fn is_perfect_square(num : Int) -> Bool {
   let mut left : Int = 1
   let mut right : Int = num

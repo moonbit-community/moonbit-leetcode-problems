@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -6,6 +7,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn max_in_array(arr : Array[Int]) -> Int {
   let mut max_val = arr[0]
   for i = 1; i < arr.length(); i = i + 1 {
@@ -14,6 +16,7 @@ fn max_in_array(arr : Array[Int]) -> Int {
   max_val
 }
 
+///|
 fn maximum_unique_subarray(nums : Array[Int]) -> Int {
   let m = max_in_array(nums)
   let n = nums.length()

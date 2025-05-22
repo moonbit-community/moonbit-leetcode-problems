@@ -1,3 +1,4 @@
+///|
 fn is_palindrome(s : String) -> Bool {
   let len = s.length()
   for i = 0; i < len / 2; i = i + 1 {
@@ -8,6 +9,7 @@ fn is_palindrome(s : String) -> Bool {
   return true
 }
 
+///|
 fn can_split_into_three_palindromes(s : String) -> Bool {
   let len = s.length()
   for i = 1; i < len - 1; i = i + 1 {
@@ -23,6 +25,7 @@ fn can_split_into_three_palindromes(s : String) -> Bool {
   return false
 }
 
+///|
 fn slice(string : String, start : Int, stop : Int) -> String {
   let mut result = ""
   for i = start; i < stop; i = i + 1 {

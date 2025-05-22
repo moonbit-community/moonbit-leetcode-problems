@@ -1,3 +1,4 @@
+///|
 fn subtract_product_and_sum(n : Int) -> Int {
   let mut x = 1
   let mut y = 0
@@ -12,9 +13,10 @@ fn subtract_product_and_sum(n : Int) -> Int {
 }
 
 // Implement the floor division manually as no direct function is provided
+///|
 fn floor_div(numerator : Int, denominator : Int) -> Int {
-  let is_negative = (numerator < 0 && denominator > 0) || (numerator > 0 && denominator <
-    0)
+  let is_negative = (numerator < 0 && denominator > 0) ||
+    (numerator > 0 && denominator < 0)
   let numerator_abs = numerator.abs()
   let denominator_abs = denominator.abs()
   let mut quotient = 0

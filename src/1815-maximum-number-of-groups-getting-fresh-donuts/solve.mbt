@@ -1,3 +1,4 @@
+///|
 fn max_happy_groups(batch_size : Int, groups : Array[Int]) -> Int {
   let n = groups.length()
   let count = Array::make(batch_size, 0)
@@ -21,6 +22,7 @@ fn max_happy_groups(batch_size : Int, groups : Array[Int]) -> Int {
   result
 }
 
+///|
 fn backtrack(
   batch_size : Int,
   remaining : Array[Int],

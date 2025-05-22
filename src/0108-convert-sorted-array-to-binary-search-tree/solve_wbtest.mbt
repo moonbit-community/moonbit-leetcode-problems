@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let nums = [1, 2, 3]
   let tree = sorted_arr_to_bst(nums)

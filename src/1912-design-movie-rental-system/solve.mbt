@@ -1,15 +1,19 @@
+///|
 type IntInt (Int, Int) derive(Hash)
 
+///|
 fn IntInt::op_equal(self : IntInt, other : IntInt) -> Bool {
   self._.0 == other._.0 && self._.1 == other._.1
 }
 
+///|
 struct MovieEntry {
   shop : Int
   movie : Int
   price : Int
 } derive(Eq)
 
+///|
 struct MovieRentingSystem {
   shops : Int
   movie_map : @hashmap.T[Int, @priority_queue.T[MovieEntry]]
@@ -17,6 +21,7 @@ struct MovieRentingSystem {
   rented_set : @hashmap.T[IntInt, MovieEntry]
 }
 
+///|
 impl Compare for MovieEntry with compare(a : MovieEntry, b : MovieEntry) -> Int {
   if a.price != b.price {
     return a.price - b.price
@@ -27,6 +32,7 @@ impl Compare for MovieEntry with compare(a : MovieEntry, b : MovieEntry) -> Int 
   return a.movie - b.movie
 }
 
+///|
 fn MovieRentingSystem::new(
   n : Int,
   entries : Array[Array[Int]]
@@ -48,6 +54,7 @@ fn MovieRentingSystem::new(
   return MovieRentingSystem::{ shops: n, movie_map, rented_movies, rented_set }
 }
 
+///|
 fn MovieRentingSystem::search(
   self : MovieRentingSystem,
   movie : Int
@@ -71,6 +78,7 @@ fn MovieRentingSystem::search(
   return result
 }
 
+///|
 fn MovieRentingSystem::rent(
   self : MovieRentingSystem,
   shop : Int,
@@ -81,6 +89,7 @@ fn MovieRentingSystem::rent(
   self.rented_set.set((shop, movie), entry)
 }
 
+///|
 fn MovieRentingSystem::drop(
   self : MovieRentingSystem,
   shop : Int,
@@ -90,18 +99,17 @@ fn MovieRentingSystem::drop(
   let new_rented_movies = @priority_queue.T::new()
   self.rented_movies
   .iter()
-  .each(
-    fn(old_entry) {
-      if entry != old_entry {
-        new_rented_movies.push(old_entry)
-      }
-    },
-  )
+  .each(fn(old_entry) {
+    if entry != old_entry {
+      new_rented_movies.push(old_entry)
+    }
+  })
   self.rented_movies = new_rented_movies
   self.movie_map.get(movie).unwrap().push(entry)
   self.rented_set.remove((shop, movie))
 }
 
+///|
 fn MovieRentingSystem::report(self : MovieRentingSystem) -> Array[(Int, Int)] {
   let result = Array::new()
   let temp_pq = @priority_queue.T::new()

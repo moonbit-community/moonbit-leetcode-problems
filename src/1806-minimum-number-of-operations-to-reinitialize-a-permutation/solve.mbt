@@ -1,3 +1,4 @@
+///|
 fn min_operations_to_reinitialize_permutation(n : Int) -> Int {
   let initial_perm = Array::make(n, 0)
   for i = 0; i < n; i = i + 1 {

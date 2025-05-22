@@ -1,3 +1,4 @@
+///|
 fn max_result(nums : Array[Int], k : Int) -> Int {
   let deque : @deque.T[Int] = @deque.new()
   let n = nums.length()

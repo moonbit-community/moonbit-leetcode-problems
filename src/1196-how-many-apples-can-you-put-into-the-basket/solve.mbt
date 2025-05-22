@@ -1,3 +1,4 @@
+///|
 fn max_number_of_apples(weights : @immut/list.T[Int]) -> Int {
   fn merge_sort(list : @immut/list.T[Int]) -> @immut/list.T[Int] {
     match list {
@@ -34,17 +35,17 @@ fn max_number_of_apples(weights : @immut/list.T[Int]) -> Int {
   }
 
   let sorted_weights = merge_sort(weights)
-  let (count, _) = sorted_weights.fold_left(
-    init=(0, 0),
-    fn(acc : (Int, Int), w : Int) -> (Int, Int) {
-      let (count, total) = acc
-      let new_total = total + w
-      if new_total > 5000 {
-        (count, total)
-      } else {
-        (count + 1, new_total)
-      }
-    },
-  )
+  let (count, _) = sorted_weights.fold_left(init=(0, 0), fn(
+    acc : (Int, Int),
+    w : Int
+  ) -> (Int, Int) {
+    let (count, total) = acc
+    let new_total = total + w
+    if new_total > 5000 {
+      (count, total)
+    } else {
+      (count + 1, new_total)
+    }
+  })
   count
 }

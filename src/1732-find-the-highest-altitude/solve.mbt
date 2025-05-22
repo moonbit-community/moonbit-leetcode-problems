@@ -1,3 +1,4 @@
+///|
 fn find_highest_altitude(gain : Array[Int]) -> Int {
   let mut current_altitude = 0
   let mut highest_altitude = 0

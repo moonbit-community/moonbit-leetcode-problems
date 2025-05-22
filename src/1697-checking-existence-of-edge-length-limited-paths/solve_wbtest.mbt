@@ -1,3 +1,4 @@
+///|
 test "Example 1" {
   inspect!(
     distance_limited_paths_exist(
@@ -9,6 +10,7 @@ test "Example 1" {
   )
 }
 
+///|
 test "Example 2" {
   inspect!(
     distance_limited_paths_exist(

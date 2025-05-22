@@ -1,3 +1,4 @@
+///|
 fn min_number_operations(target : Array[Int]) -> Int {
   let mut f = target[0]
   let mut i = 1

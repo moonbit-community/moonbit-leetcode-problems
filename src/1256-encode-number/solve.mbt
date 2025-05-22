@@ -1,3 +1,4 @@
+///|
 fn to_binary_string(n : Int) -> String {
   match n {
     0 => "0"
@@ -6,6 +7,7 @@ fn to_binary_string(n : Int) -> String {
   }
 }
 
+///|
 fn encode(num : Int) -> String {
   let num = num + 1
   let binary_str = to_binary_string(num)

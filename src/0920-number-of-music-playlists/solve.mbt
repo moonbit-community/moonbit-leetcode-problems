@@ -1,3 +1,4 @@
+///|
 fn num_music_playlists(n : Int, goal : Int, k : Int) -> Int {
   let mod : Int = 1000000007
   let f : Array[Array[Int]] = Array::make(goal + 1, Array::make(n + 1, 0))

@@ -1,3 +1,4 @@
+///|
 fn merge(intervals : Array[Array[Int]]) -> Array[Array[Int]] {
   if intervals.length() == 0 {
     return [[]]

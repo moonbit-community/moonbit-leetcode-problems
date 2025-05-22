@@ -1,3 +1,4 @@
+///|
 fn max_number_of_consecutive_values_you_can_make(coins : Array[Int]) -> Int {
   // Sort the coins array
   coins.sort()

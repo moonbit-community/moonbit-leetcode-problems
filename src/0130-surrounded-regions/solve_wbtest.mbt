@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let solution = Solution::{ p: [] }
   let board : Array[Array[Char]] = [
@@ -16,6 +17,7 @@ test "example 1" {
   assert_eq!(board, expected)
 }
 
+///|
 test "example 2" {
   let solution = Solution::{ p: [] }
   let board : Array[Array[Char]] = [['X']]

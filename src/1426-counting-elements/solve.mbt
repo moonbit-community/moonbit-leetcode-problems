@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -6,6 +7,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn count_elements(arr : Array[Int]) -> Int {
   let mut mx = 0
   arr.each(fn(x) { mx = max(mx, x) })

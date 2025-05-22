@@ -1,3 +1,4 @@
+///|
 fn is_decomposable(s : String) -> Bool {
   let n = s.length()
   let mut i = 0

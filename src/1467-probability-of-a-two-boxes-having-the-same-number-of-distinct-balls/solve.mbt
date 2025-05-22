@@ -1,3 +1,4 @@
+///|
 fn dfs(
   balls : Array[Int],
   c : Array[Array[Int]],
@@ -30,6 +31,7 @@ fn dfs(
   }
 }
 
+///|
 fn get_probability(balls : Array[Int]) -> Int {
   let n = balls.fold_left(fn(a, b) { a + b }, init=0) / 2
   let mut mx = 0
@@ -45,7 +47,7 @@ fn get_probability(balls : Array[Int]) -> Int {
   let k = balls.length()
   let f : Array[Array[Array[Int]]] = Array::make(
     k,
-    Array::make(n + 1, Array::make((k / 2).lor(1), -1)),
+    Array::make(n + 1, Array::make((k / 2) | 1, -1)),
   )
   let result = dfs(balls, c, f, 0, n, k, k, n)
   result / c[n / 2][n]

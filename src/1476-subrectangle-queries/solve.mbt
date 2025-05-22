@@ -1,14 +1,17 @@
+///|
 struct SubrectangleQueries {
   mut g : Array[Array[Int]]
   mut ops : Array[(Int, Int, Int, Int, Int)]
 }
 
+///|
 fn subrectangle_queries_new(
   rectangle : Array[Array[Int]]
 ) -> SubrectangleQueries {
   SubrectangleQueries::{ g: rectangle, ops: [] }
 }
 
+///|
 fn subrectangle_queries_update_subrectangle(
   self : SubrectangleQueries,
   row1 : Int,
@@ -20,6 +23,7 @@ fn subrectangle_queries_update_subrectangle(
   self.ops.push((row1, col1, row2, col2, new_value))
 }
 
+///|
 fn subrectangle_queries_get_value(
   self : SubrectangleQueries,
   row : Int,

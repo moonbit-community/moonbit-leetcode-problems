@@ -1,3 +1,4 @@
+///|
 fn new_21_game(n : Int, k : Int, max_pts : Int) -> Double {
   if k == 0 {
     return 1.0
@@ -15,6 +16,7 @@ fn new_21_game(n : Int, k : Int, max_pts : Int) -> Double {
   f[0]
 }
 
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a

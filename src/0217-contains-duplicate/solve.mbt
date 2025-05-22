@@ -1,3 +1,4 @@
+///|
 fn bubble_sort(arr : Array[Int]) -> Array[Int] {
   let mut n = arr.length()
   let mut swapped = true
@@ -18,6 +19,7 @@ fn bubble_sort(arr : Array[Int]) -> Array[Int] {
   arr
 }
 
+///|
 fn contains_duplicate(nums : Array[Int]) -> Bool {
   let sorted_nums = bubble_sort(nums) // Sort the array
   let n = sorted_nums.length()

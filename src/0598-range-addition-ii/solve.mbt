@@ -1,3 +1,4 @@
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a
@@ -6,6 +7,7 @@ fn min(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn max_count(m : Int, n : Int, ops : Array[Array[Int]]) -> Int {
   let mut m = m
   let mut n = n

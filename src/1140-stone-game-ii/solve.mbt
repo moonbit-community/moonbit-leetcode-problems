@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -6,6 +7,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn stone_game_ii(piles : Array[Int]) -> Int {
   let n = piles.length()
   let f = Array::make(n, Array::make(n + 1, 0)) // 2D array initialization

@@ -1,3 +1,4 @@
+///|
 fn find(p : Array[Int], x : Int) -> Int {
   if p[x] != x {
     p[x] = find(p, p[x])
@@ -5,6 +6,7 @@ fn find(p : Array[Int], x : Int) -> Int {
   p[x]
 }
 
+///|
 fn minimum_cost(n : Int, connections : Array[Array[Int]]) -> Int {
   let mut n = n
   let p : Array[Int] = Array::make(n, 0)

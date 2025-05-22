@@ -1,3 +1,4 @@
+///|
 fn split_words(s : String) -> @immut/list.T[String] {
   let mut words : @immut/list.T[String] = Nil
   let mut i = 0
@@ -20,6 +21,7 @@ fn split_words(s : String) -> @immut/list.T[String] {
   words
 }
 
+///|
 fn reverse_list(words : @immut/list.T[String]) -> @immut/list.T[String] {
   fn helper(
     list : @immut/list.T[String],
@@ -34,6 +36,7 @@ fn reverse_list(words : @immut/list.T[String]) -> @immut/list.T[String] {
   helper(words, Nil)
 }
 
+///|
 fn join_words(words : @immut/list.T[String], sep : String) -> String {
   match words {
     Nil => ""
@@ -45,6 +48,7 @@ fn join_words(words : @immut/list.T[String], sep : String) -> String {
   }
 }
 
+///|
 fn reverse_words(s : String) -> String {
   let words = split_words(s)
   let reversed = reverse_list(words)

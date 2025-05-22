@@ -1,3 +1,4 @@
+///|
 fn min(x : Int, y : Int) -> Int {
   if x < y {
     x
@@ -6,6 +7,7 @@ fn min(x : Int, y : Int) -> Int {
   }
 }
 
+///|
 fn distribute_candies(candies : Int, num_people : Int) -> Array[Int] {
   let ans : Array[Int] = Array::make(num_people, 0)
   let mut i = 0

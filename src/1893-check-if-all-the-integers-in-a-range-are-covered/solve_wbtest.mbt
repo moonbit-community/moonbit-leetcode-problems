@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let ranges = [[1, 2], [3, 4], [5, 6]]
   let left = 2
@@ -5,6 +6,7 @@ test "example 1" {
   assert_eq!(is_range_covered(ranges, left, right), true)
 }
 
+///|
 test "example 2" {
   let ranges = [[1, 10], [10, 20]]
   let left = 21
@@ -12,6 +14,7 @@ test "example 2" {
   assert_eq!(is_range_covered(ranges, left, right), false)
 }
 
+///|
 test "example 3" {
   let ranges = [[1, 5], [6, 10], [11, 15]]
   let left = 5
@@ -19,6 +22,7 @@ test "example 3" {
   assert_eq!(is_range_covered(ranges, left, right), true)
 }
 
+///|
 test "example 4" {
   let ranges = [[1, 5], [6, 10], [11, 15]]
   let left = 16
@@ -26,6 +30,7 @@ test "example 4" {
   assert_eq!(is_range_covered(ranges, left, right), false)
 }
 
+///|
 test "example 5" {
   let ranges = [[1, 50]]
   let left = 1

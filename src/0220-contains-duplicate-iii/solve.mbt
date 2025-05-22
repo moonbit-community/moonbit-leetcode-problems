@@ -4,6 +4,7 @@
 // Since implementing a Red-Black Tree from scratch in MoonBit would be complex and beyond the scope,
 // and given MoonBit's limitations, we'll focus on a simplified approach.
 
+///|
 fn abs_diff_is_not_greater(a : Int, b : Int, max_diff : Int) -> Bool {
   if a > b {
     return a - b <= max_diff
@@ -12,6 +13,7 @@ fn abs_diff_is_not_greater(a : Int, b : Int, max_diff : Int) -> Bool {
   }
 }
 
+///|
 fn contains_nearby_almost_duplicate(
   nums : Array[Int],
   index_diff : Int,

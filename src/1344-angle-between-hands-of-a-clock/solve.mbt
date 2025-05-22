@@ -1,3 +1,4 @@
+///|
 fn angle_clock(hour : Int, minutes : Int) -> Double {
   let hour = hour.to_double()
   let minutes = minutes.to_double()
@@ -7,6 +8,7 @@ fn angle_clock(hour : Int, minutes : Int) -> Double {
   min_double(diff, 360.0 - diff)
 }
 
+///|
 fn abs_double(x : Double) -> Double {
   if x < 0.0 {
     -x
@@ -15,6 +17,7 @@ fn abs_double(x : Double) -> Double {
   }
 }
 
+///|
 fn min_double(a : Double, b : Double) -> Double {
   if a < b {
     a

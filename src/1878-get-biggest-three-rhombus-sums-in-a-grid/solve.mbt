@@ -1,11 +1,14 @@
+///|
 struct RhombusSumCalculator {
   grid : Array[Array[Int]]
 }
 
+///|
 fn RhombusSumCalculator::new(grid : Array[Array[Int]]) -> RhombusSumCalculator {
   RhombusSumCalculator::{ grid, }
 }
 
+///|
 fn RhombusSumCalculator::get_biggest_three_rhombus_sums(
   self : RhombusSumCalculator
 ) -> Array[Int] {
@@ -26,12 +29,10 @@ fn RhombusSumCalculator::get_biggest_three_rhombus_sums(
   }
   let sorted_sums = Array::make(sums.size(), 0)
   let mut index = 0
-  sums.each(
-    fn(sum, __) {
-      sorted_sums[index] = sum
-      index = index + 1
-    },
-  )
+  sums.each(fn(sum, __) {
+    sorted_sums[index] = sum
+    index = index + 1
+  })
   sorted_sums.sort_by(fn(a, b) { b - a })
   let result_length = @math.minimum(3, sorted_sums.length())
   let result = Array::make(result_length, 0)
@@ -41,6 +42,7 @@ fn RhombusSumCalculator::get_biggest_three_rhombus_sums(
   result
 }
 
+///|
 fn RhombusSumCalculator::calculate_rhombus_sum(
   self : RhombusSumCalculator,
   i : Int,
@@ -54,7 +56,10 @@ fn RhombusSumCalculator::calculate_rhombus_sum(
     sum = sum + self.grid[i - k][j - k]
     sum = sum + self.grid[i + k][j - k]
   }
-  sum - self.grid[i - size][j] - self.grid[i + size][j] - self.grid[i][j - size] -
+  sum -
+  self.grid[i - size][j] -
+  self.grid[i + size][j] -
+  self.grid[i][j - size] -
   self.grid[i][j + size]
 }
 

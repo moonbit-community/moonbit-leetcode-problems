@@ -1,7 +1,9 @@
+///|
 fn char_to_index(c : Char) -> Int {
   c.to_int() - 'a'.to_int()
 }
 
+///|
 fn find_anagrams(s : String, p : String) -> @immut/list.T[Int] {
   let m = s.length()
   let n = p.length()

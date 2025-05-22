@@ -1,3 +1,4 @@
+///|
 fn find_poisoned_duration(timeSeries : Array[Int], duration : Int) -> Int {
   let n : Int = timeSeries.length()
   let mut ans : Int = duration
@@ -9,6 +10,7 @@ fn find_poisoned_duration(timeSeries : Array[Int], duration : Int) -> Int {
   ans
 }
 
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a

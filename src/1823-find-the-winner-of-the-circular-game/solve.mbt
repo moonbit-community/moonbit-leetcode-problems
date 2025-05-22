@@ -1,3 +1,4 @@
+///|
 fn find_winner_of_circular_game(n : Int, k : Int) -> Int {
   let mut friends = Array::make(n, 0)
   for i = 0; i < n; i = i + 1 {

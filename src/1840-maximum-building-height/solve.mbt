@@ -1,8 +1,10 @@
+///|
 struct Restriction {
   id : Int
   mut max_height : Int
 }
 
+///|
 fn max_building(n : Int, restrictions : Array[Restriction]) -> Int {
   let restrictions = restrictions
   restrictions.push(Restriction::{ id: 1, max_height: 0 })

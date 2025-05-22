@@ -1,11 +1,14 @@
+///|
 struct Matrix {
   elems : Array[Array[Int]]
 } derive(Eq, Show)
 
+///|
 fn swap(a : Int, b : Int) -> (Int, Int) {
   (b, a)
 }
 
+///|
 fn rotate(matrix : Matrix) -> Matrix {
   let temp_matrix = Matrix::{ elems: matrix.elems }
   let n = temp_matrix.elems.length()

@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let nums : Array[Int] = [1, 5, 1, 1, 6, 4]
   wiggle_sort(nums)
@@ -6,6 +7,7 @@ test "example 1" {
   assert_eq!(nums, [1, 6, 1, 5, 1, 4])
 }
 
+///|
 test "example 2" {
   let nums : Array[Int] = [1, 3, 2, 2, 3, 1]
   wiggle_sort(nums)

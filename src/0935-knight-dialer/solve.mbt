@@ -1,3 +1,4 @@
+///|
 fn knight_dialer(n : Int) -> Int {
   let mod = 1000000007
   if n == 1 {

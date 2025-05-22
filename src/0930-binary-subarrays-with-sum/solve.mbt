@@ -1,3 +1,4 @@
+///|
 fn num_subarrays_with_sum(nums : Array[Int], goal : Int) -> Int {
   let cnt : Array[Int] = Array::make(nums.length() + 1, 0)
   cnt[0] = 1

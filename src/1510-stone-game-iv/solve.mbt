@@ -1,3 +1,4 @@
+///|
 fn winner_square_game(n : Int) -> Bool {
   let f = Array::make(n + 1, -1)
   fn dfs(f : Array[Int], i : Int) -> Bool {

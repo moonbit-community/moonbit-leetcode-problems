@@ -1,3 +1,4 @@
+///|
 fn min_deletion_size(strs : Array[String]) -> Int {
   let n : Int = strs[0].length()
   let dp : Array[Int] = Array::make(n, 1)
@@ -15,6 +16,7 @@ fn min_deletion_size(strs : Array[String]) -> Int {
   n - mx
 }
 
+///|
 fn check(i : Int, j : Int, strs : Array[String]) -> Bool {
   let mut idx : Int = 0
   while idx < strs.length() {
@@ -26,6 +28,7 @@ fn check(i : Int, j : Int, strs : Array[String]) -> Bool {
   true
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a

@@ -1,3 +1,4 @@
+///|
 fn sort_intervals(intervals : Array[Array[Int]]) -> Array[Array[Int]] {
   // Bubble sort based on the second element of each interval
   let n = intervals.length()
@@ -14,6 +15,7 @@ fn sort_intervals(intervals : Array[Array[Int]]) -> Array[Array[Int]] {
   intervals
 }
 
+///|
 fn erase_overlap_intervals(intervals : Array[Array[Int]]) -> Int {
   let sorted_intervals = sort_intervals(intervals)
   let mut t = sorted_intervals[0][1]

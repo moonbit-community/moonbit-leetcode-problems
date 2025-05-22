@@ -1,8 +1,10 @@
+///|
 enum Tree {
   Empty
   Node(Tree, Int, Tree)
 }
 
+///|
 fn lowest_common_ancestor(root : Tree, p : Int, q : Int) -> Tree {
   match root {
     Empty => Empty
@@ -17,6 +19,7 @@ fn lowest_common_ancestor(root : Tree, p : Int, q : Int) -> Tree {
   }
 }
 
+///|
 fn get_val(node : Tree) -> Int {
   match node {
     Empty => 0

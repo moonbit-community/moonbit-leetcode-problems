@@ -1,3 +1,4 @@
+///|
 fn subsets(nums : Array[Int]) -> Array[Array[Int]] {
   let t : Array[Int] = []
   let ans : Array[Array[Int]] = []
@@ -6,7 +7,7 @@ fn subsets(nums : Array[Int]) -> Array[Array[Int]] {
     t.clear()
     for i = 0; i < n; i = i + 1 {
       let cur = (1).lsl(i)
-      if mask.land(cur) > 0 {
+      if (mask & cur) > 0 {
         t.push(nums[i])
       }
     }

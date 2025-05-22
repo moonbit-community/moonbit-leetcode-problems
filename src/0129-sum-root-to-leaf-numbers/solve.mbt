@@ -1,12 +1,15 @@
+///|
 enum TreeNode {
   Empty
   Node(Int, TreeNode, TreeNode)
 }
 
+///|
 fn sum_numbers(root : TreeNode) -> Int {
   dfs(root, 0)
 }
 
+///|
 fn dfs(root : TreeNode, s : Int) -> Int {
   match root {
     Empty => 0

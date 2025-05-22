@@ -1,3 +1,4 @@
+///|
 fn sort_colors(nums : Array[Int]) -> Array[Int] {
   let n = nums.length()
   let mut ptr = 0
@@ -16,6 +17,7 @@ fn sort_colors(nums : Array[Int]) -> Array[Int] {
   nums
 }
 
+///|
 fn swap(nums : Array[Int], i : Int, j : Int) -> Unit {
   let temp = nums[i]
   nums[i] = nums[j]

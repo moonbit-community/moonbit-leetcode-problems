@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   match a > b {
     true => a
@@ -5,6 +6,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn min_taps(n : Int, ranges : Array[Int]) -> Int {
   let last = Array::make(n + 1, 0)
   for i = 0; i <= n; i = i + 1 {

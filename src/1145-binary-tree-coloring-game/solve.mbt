@@ -1,8 +1,10 @@
+///|
 enum TreeNode {
   Empty
   Node(Int, TreeNode, TreeNode)
 } derive(Eq, Show)
 
+///|
 fn dfs(root : TreeNode, x : Int) -> TreeNode {
   match root {
     Empty => Empty
@@ -19,6 +21,7 @@ fn dfs(root : TreeNode, x : Int) -> TreeNode {
   }
 }
 
+///|
 fn count(root : TreeNode) -> Int {
   match root {
     Empty => 0
@@ -26,6 +29,7 @@ fn count(root : TreeNode) -> Int {
   }
 }
 
+///|
 fn btree_game_winning_move(root : TreeNode, n : Int, x : Int) -> Bool {
   let node = dfs(root, x)
   let l = count(

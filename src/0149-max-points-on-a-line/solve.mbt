@@ -1,3 +1,4 @@
+///|
 fn max_points(points : Array[Array[Int]]) -> Int {
   let n = points.length()
   let mut ans = 1
@@ -23,6 +24,7 @@ fn max_points(points : Array[Array[Int]]) -> Int {
   ans
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a

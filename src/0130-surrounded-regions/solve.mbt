@@ -1,7 +1,9 @@
+///|
 struct Solution {
   mut p : Array[Int]
 }
 
+///|
 fn Solution::solve(self : Solution, board : Array[Array[Char]]) -> Unit {
   let m = board.length()
   let n = board[0].length()
@@ -33,6 +35,7 @@ fn Solution::solve(self : Solution, board : Array[Array[Char]]) -> Unit {
   }
 }
 
+///|
 fn Solution::find(self : Solution, x : Int) -> Int {
   if self.p[x] != x {
     self.p[x] = self.find(self.p[x])

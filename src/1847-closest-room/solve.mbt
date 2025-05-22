@@ -1,3 +1,4 @@
+///|
 fn closest_room(
   rooms : Array[(Int, Int)],
   queries : Array[(Int, Int)]

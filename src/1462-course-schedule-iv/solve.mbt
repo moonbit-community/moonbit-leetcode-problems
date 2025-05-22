@@ -1,3 +1,4 @@
+///|
 fn check_if_prerequisite(
   n : Int,
   prerequisites : Array[(Int, Int)],

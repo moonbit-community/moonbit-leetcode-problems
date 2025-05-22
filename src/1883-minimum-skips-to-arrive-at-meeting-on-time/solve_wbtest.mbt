@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let dist = [1, 3, 2]
   let speed = 4
@@ -8,6 +9,7 @@ test "example 1" {
   )
 }
 
+///|
 test "example 2" {
   let dist = [7, 3, 5, 5]
   let speed = 2
@@ -18,6 +20,7 @@ test "example 2" {
   )
 }
 
+///|
 test "example 3" {
   let dist = [7, 3, 5, 5]
   let speed = 1

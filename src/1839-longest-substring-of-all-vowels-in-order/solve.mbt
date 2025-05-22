@@ -1,3 +1,4 @@
+///|
 fn longest_beautiful_substring(word : String) -> Int {
   let vowels = ['a', 'e', 'i', 'o', 'u']
   let mut max_length = 0

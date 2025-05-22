@@ -1,3 +1,4 @@
+///|
 fn word_break(s : String, word_dict : @immut/list.T[String]) -> Bool {
   let n = s.length()
   let f : Array[Bool] = Array::make(n + 1, false)

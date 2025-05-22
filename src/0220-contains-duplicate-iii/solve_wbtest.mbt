@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let nums = [1, 2, 3, 1]
   let index_diff = 3
@@ -7,6 +8,7 @@ test "example 1" {
   assert_eq!(result, expected)
 }
 
+///|
 test "example 2" {
   let nums = [1, 5, 9, 1, 5, 9]
   let index_diff = 2

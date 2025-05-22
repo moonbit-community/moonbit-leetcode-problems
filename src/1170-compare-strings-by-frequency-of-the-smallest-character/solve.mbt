@@ -1,3 +1,4 @@
+///|
 fn f(s : String) -> Int {
   let cnt : Array[Int] = Array::make(26, 0)
   for i = 0; i < s.length(); i = i + 1 {
@@ -11,6 +12,7 @@ fn f(s : String) -> Int {
   return 0
 }
 
+///|
 fn bin_search(nums : Array[Int], x : Int) -> Int {
   let mut l = 0
   let mut r = nums.length()
@@ -25,16 +27,15 @@ fn bin_search(nums : Array[Int], x : Int) -> Int {
   nums.length() - l
 }
 
+///|
 fn num_smaller_by_frequency(
   queries : @immut/list.T[String],
   words : @immut/list.T[String]
 ) -> @immut/list.T[Int] {
   let nums = words.map(f)
   nums.to_array().sort_by(fn(a, b) { a - b })
-  queries.map(
-    fn(q) {
-      let x = f(q)
-      bin_search(nums.to_array(), x)
-    },
-  )
+  queries.map(fn(q) {
+    let x = f(q)
+    bin_search(nums.to_array(), x)
+  })
 }

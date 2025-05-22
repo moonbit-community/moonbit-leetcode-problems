@@ -1,8 +1,10 @@
+///|
 struct Query {
   left : Int
   right : Int
 }
 
+///|
 fn min_absolute_difference_queries(
   nums : Array[Int],
   queries : Array[Query]
@@ -31,9 +33,11 @@ fn min_absolute_difference_queries(
     }
 
     // Check if all elements are the same
-    subarray_freq_map.each(
-      fn(_key, value) { if value != right - left + 1 { all_same = false } },
-    )
+    subarray_freq_map.each(fn(_key, value) {
+      if value != right - left + 1 {
+        all_same = false
+      }
+    })
     if all_same {
       result[i] = -1
     } else {

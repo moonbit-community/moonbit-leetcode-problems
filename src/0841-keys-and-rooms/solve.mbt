@@ -1,9 +1,11 @@
+///|
 struct Graph {
   rooms : @immut/list.T[@immut/list.T[Int]]
   mut visited : @immut/list.T[Bool]
   mut count : Int
 }
 
+///|
 fn Graph::new(rooms : @immut/list.T[@immut/list.T[Int]]) -> Graph {
   {
     rooms,
@@ -12,6 +14,7 @@ fn Graph::new(rooms : @immut/list.T[@immut/list.T[Int]]) -> Graph {
   }
 }
 
+///|
 fn Graph::dfs(self : Graph, i : Int) -> Graph {
   match self.visited.nth_exn(i) {
     true => self
@@ -33,6 +36,7 @@ fn Graph::dfs(self : Graph, i : Int) -> Graph {
   }
 }
 
+///|
 fn can_visit_all_rooms(rooms : @immut/list.T[@immut/list.T[Int]]) -> Bool {
   let graph = Graph::new(rooms)
   let graph = graph.dfs(0)

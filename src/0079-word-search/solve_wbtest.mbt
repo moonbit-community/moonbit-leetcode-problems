@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let board : Array[Array[Char]] = [
     ['A', 'B', 'C', 'E'],
@@ -8,6 +9,7 @@ test "example 1" {
   assert_eq!(exist(board, word), true)
 }
 
+///|
 test "example 2" {
   let board : Array[Array[Char]] = [
     ['A', 'B', 'C', 'E'],
@@ -18,6 +20,7 @@ test "example 2" {
   assert_eq!(exist(board, word), true)
 }
 
+///|
 test "example 3" {
   let board : Array[Array[Char]] = [
     ['A', 'B', 'C', 'E'],

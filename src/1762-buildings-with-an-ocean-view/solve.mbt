@@ -1,3 +1,4 @@
+///|
 fn buildings_with_ocean_view(heights : Array[Int]) -> Array[Int] {
   let n = heights.length()
   let result : Array[Int] = []

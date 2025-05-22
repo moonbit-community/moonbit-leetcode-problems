@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let solution = Solution::{ p: [] }
   assert_eq!(
@@ -6,6 +7,7 @@ test "example 1" {
   )
 }
 
+///|
 test "example 2" {
   let solution = Solution::{ p: [] }
   assert_eq!(Solution::num_similar_groups(solution, ["omv", "ovm"]), 1)

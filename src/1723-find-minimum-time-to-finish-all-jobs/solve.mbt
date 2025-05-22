@@ -1,3 +1,4 @@
+///|
 fn find_minimum_time_to_finish_all_jobs(jobs : Array[Int], k : Int) -> Int {
   jobs.sort_by(fn(a, b) { return b - a }) // Sort jobs in descending order
   let result = 2_0000_0000 // Initialize result with a large number
@@ -33,6 +34,7 @@ fn find_minimum_time_to_finish_all_jobs(jobs : Array[Int], k : Int) -> Int {
   result
 }
 
+///|
 fn max_array(arr : Array[Int]) -> Int {
   let mut max_val = arr[0]
   for i = 1; i < arr.length(); i = i + 1 {

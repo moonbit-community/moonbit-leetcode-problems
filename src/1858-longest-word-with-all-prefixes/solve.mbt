@@ -1,3 +1,4 @@
+///|
 fn longest_word_with_all_prefixes(words : Array[String]) -> String {
   // Sort words by length in ascending order
   words.sort_by(fn(a, b) { a.length() - b.length() })
@@ -19,8 +20,8 @@ fn longest_word_with_all_prefixes(words : Array[String]) -> String {
     // If the word is valid, add it to the set and update the longest word
     if valid {
       word_set.set(word, ())
-      if word.length() > longest_word.length() || (word.length() == longest_word.length() &&
-      word < longest_word) {
+      if word.length() > longest_word.length() ||
+        (word.length() == longest_word.length() && word < longest_word) {
         longest_word = word
       }
     }

@@ -1,3 +1,4 @@
+///|
 fn search_matrix(matrix : Array[Array[Int]], target : Int) -> Bool {
   let n = matrix[0].length()
   let mut row_index = 0

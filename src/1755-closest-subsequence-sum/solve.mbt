@@ -1,3 +1,4 @@
+///|
 fn closest_subsequence_sum(nums : Array[Int], goal : Int) -> Int {
   let n = nums.length()
   let half = n / 2
@@ -26,13 +27,14 @@ fn closest_subsequence_sum(nums : Array[Int], goal : Int) -> Int {
   min_diff
 }
 
+///|
 fn generate_sums(nums : Array[Int], start : Int, end : Int) -> Array[Int] {
   let n = end - start
   let sums = Array::make((1).lsl(n), 0)
   for mask = 0; mask < (1).lsl(n); mask = mask + 1 {
     let mut sum = 0
     for i = 0; i < n; i = i + 1 {
-      if mask.land((1).lsl(i)) != 0 {
+      if (mask & (1).lsl(i)) != 0 {
         sum = sum + nums[start + i]
       }
     }
@@ -41,6 +43,7 @@ fn generate_sums(nums : Array[Int], start : Int, end : Int) -> Array[Int] {
   sums
 }
 
+///|
 fn find_closest(sums : Array[Int], target : Int) -> Int {
   let mut left = 0
   let mut right = sums.length() - 1

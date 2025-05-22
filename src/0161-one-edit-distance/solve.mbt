@@ -1,3 +1,4 @@
+///|
 fn is_one_edit_distance(s : String, t : String) -> Bool {
   let m = s.length()
   let n = t.length()
@@ -18,6 +19,7 @@ fn is_one_edit_distance(s : String, t : String) -> Bool {
   return m == n + 1
 }
 
+///|
 fn slice(s : String, start : Int, end : Int) -> String {
   let mut result = ""
   for i = start; i < end; i = i + 1 {

@@ -1,3 +1,4 @@
+///|
 test "example" {
   let nums : Array[Int] = [4, 5, 8, 2]
   let kth_largest = KthLargest::new(3, nums)

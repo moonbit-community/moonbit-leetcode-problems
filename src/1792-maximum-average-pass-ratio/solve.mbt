@@ -1,12 +1,15 @@
+///|
 struct Class {
   pass : Int
   total : Int
 }
 
+///|
 fn new_class(pass : Int, total : Int) -> Class {
   Class::{ pass, total }
 }
 
+///|
 fn max_average_pass_ratio(
   classes : Array[Class],
   extra_students : Int
@@ -34,16 +37,19 @@ fn max_average_pass_ratio(
   total_pass.to_double() / total_students.to_double()
 }
 
+///|
 fn heapify(heap : Array[Class], index : Int, size : Int) -> Unit {
   let mut largest = index
   let left = 2 * index + 1
   let right = 2 * index + 2
-  if left < size && heap[left].pass.to_double() / heap[left].total.to_double() >
-  heap[largest].pass.to_double() / heap[largest].total.to_double() {
+  if left < size &&
+    heap[left].pass.to_double() / heap[left].total.to_double() >
+    heap[largest].pass.to_double() / heap[largest].total.to_double() {
     largest = left
   }
-  if right < size && heap[right].pass.to_double() / heap[right].total.to_double() >
-  heap[largest].pass.to_double() / heap[largest].total.to_double() {
+  if right < size &&
+    heap[right].pass.to_double() / heap[right].total.to_double() >
+    heap[largest].pass.to_double() / heap[largest].total.to_double() {
     largest = right
   }
   if largest != index {
@@ -54,11 +60,8 @@ fn heapify(heap : Array[Class], index : Int, size : Int) -> Unit {
   }
 }
 
-fn assert_approx_eq(
-  result : Double,
-  expect : Double,
-  error : Double
-) -> Unit! {
+///|
+fn assert_approx_eq(result : Double, expect : Double, error : Double) -> Unit! {
   if (result - expect).abs() < error {
     ()
   } else {

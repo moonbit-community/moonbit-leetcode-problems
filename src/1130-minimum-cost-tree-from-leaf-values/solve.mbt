@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -6,6 +7,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a
@@ -14,6 +16,7 @@ fn min(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn mct_from_leaf_values(arr : Array[Int]) -> Int {
   let n = arr.length()
   // Initialize f and g matrices

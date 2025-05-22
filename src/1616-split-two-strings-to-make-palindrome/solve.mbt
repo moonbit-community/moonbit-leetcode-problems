@@ -1,3 +1,4 @@
+///|
 fn check_palindrome_formation(a : String, b : String) -> Bool {
   fn check1(a : String, b : String) -> Bool {
     let mut i = 0

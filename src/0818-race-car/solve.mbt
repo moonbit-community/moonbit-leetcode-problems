@@ -1,3 +1,4 @@
+///|
 fn racecar(target : Int) -> Int {
   let dp : Array[Int] = Array::make(target + 1, 0)
   let mut i = 1
@@ -18,6 +19,7 @@ fn racecar(target : Int) -> Int {
   dp[target]
 }
 
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a
@@ -26,6 +28,7 @@ fn min(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn clz(x : Int) -> Int {
   let mut n = 0
   let mut x = x

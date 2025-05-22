@@ -1,7 +1,9 @@
+///|
 struct CharCount {
   mut counts : @immut/list.T[(Char, Int)]
 }
 
+///|
 fn CharCount::increment(self : CharCount, c : Char) -> Unit {
   match self.counts {
     Nil => self.counts = Cons((c, 1), Nil)
@@ -18,6 +20,7 @@ fn CharCount::increment(self : CharCount, c : Char) -> Unit {
   }
 }
 
+///|
 fn CharCount::decrement(self : CharCount, c : Char) -> Unit {
   match self.counts {
     Nil => ()
@@ -36,6 +39,7 @@ fn CharCount::decrement(self : CharCount, c : Char) -> Unit {
   }
 }
 
+///|
 fn CharCount::size(self : CharCount) -> Int {
   match self.counts {
     Nil => 0
@@ -46,6 +50,7 @@ fn CharCount::size(self : CharCount) -> Int {
   }
 }
 
+///|
 fn length_of_longest_substring_two_distinct(s : String) -> Int {
   let count_map = CharCount::{ counts: Nil }
   let mut ans = 0
@@ -65,6 +70,7 @@ fn length_of_longest_substring_two_distinct(s : String) -> Int {
   ans
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a

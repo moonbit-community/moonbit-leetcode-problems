@@ -1,3 +1,4 @@
+///|
 fn add_binary(a : String, b : String) -> String {
   let mut reverse_ans = ""
   let mut ca = 0

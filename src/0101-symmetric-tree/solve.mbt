@@ -1,12 +1,15 @@
+///|
 enum TreeNode {
   Empty
   Node(Int, TreeNode, TreeNode)
 }
 
+///|
 fn is_symmetric(root : TreeNode) -> Bool {
   dfs(root, root)
 }
 
+///|
 fn dfs(root1 : TreeNode, root2 : TreeNode) -> Bool {
   match (root1, root2) {
     (Empty, Empty) => true

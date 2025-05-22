@@ -1,7 +1,9 @@
+///|
 struct Solution {
   p : Array[Int]
 }
 
+///|
 fn Solution::remove_stones(self : Solution, stones : Array[Array[Int]]) -> Int {
   let n = 10010
   for i = 0; i < n / 2; i = i + 1 {
@@ -22,6 +24,7 @@ fn Solution::remove_stones(self : Solution, stones : Array[Array[Int]]) -> Int {
   stones.length() - s.length()
 }
 
+///|
 fn Solution::find(self : Solution, x : Int) -> Int {
   let mut x = x
   while self.p[x] != x {

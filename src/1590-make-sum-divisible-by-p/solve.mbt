@@ -1,3 +1,4 @@
+///|
 fn min_subarray(nums : Array[Int], p : Int) -> Int {
   let mut k = 0
   nums.each(fn(x) { k = (k + x) % p })
@@ -25,6 +26,7 @@ fn min_subarray(nums : Array[Int], p : Int) -> Int {
   }
 }
 
+///|
 fn min(x : Int, y : Int) -> Int {
   if x < y {
     x

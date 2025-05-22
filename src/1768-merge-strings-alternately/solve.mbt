@@ -1,3 +1,4 @@
+///|
 fn merge_strings_alternately(word1 : String, word2 : String) -> String {
   let mut merged_string = ""
   let len1 = word1.length()

@@ -1,3 +1,4 @@
+///|
 fn can_make_equal_with_one_swap(s1 : String, s2 : String) -> Bool {
   let len = s1.length()
   if len != s2.length() {

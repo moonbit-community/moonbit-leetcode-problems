@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -6,6 +7,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn longest_valid_parentheses(s : String) -> Int {
   let mut max_length = 0
   let stack : Array[Int] = Array::new()

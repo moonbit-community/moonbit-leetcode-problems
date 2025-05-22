@@ -1,7 +1,9 @@
+///|
 fn init_2d_array(rows : Int, cols : Int) -> Array[Array[Int]] {
   Array::make(rows, Array::make(cols, 0))
 }
 
+///|
 fn number_of_sets(n : Int, k : Int) -> Int {
   let f = init_2d_array(n + 1, k + 1)
   let g = init_2d_array(n + 1, k + 1)

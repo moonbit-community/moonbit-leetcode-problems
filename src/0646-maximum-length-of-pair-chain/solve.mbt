@@ -1,3 +1,4 @@
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a
@@ -6,6 +7,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn sort_pairs(pairs : Array[Array[Int]]) -> Unit {
   // Bubble sort for simplicity
   let n = pairs.length()
@@ -21,6 +23,7 @@ fn sort_pairs(pairs : Array[Array[Int]]) -> Unit {
   }
 }
 
+///|
 fn find_longest_chain(pairs : Array[Array[Int]]) -> Int {
   sort_pairs(pairs)
   let n = pairs.length()

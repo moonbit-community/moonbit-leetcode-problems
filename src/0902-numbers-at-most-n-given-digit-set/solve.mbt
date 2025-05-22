@@ -1,9 +1,11 @@
+///|
 struct Solution {
   a : Array[Int]
   dp : Array[Array[Int]]
   mut s : @immut/list.T[Int]
 }
 
+///|
 fn Solution::new() -> Solution {
   let a : Array[Int] = Array::make(12, 0) // Equivalent to new int[12] in Java
   let dp : Array[Array[Int]] = Array::make(12, Array::make(2, -1)) // Equivalent to new int[12][2] in Java with all elements initialized to -1
@@ -11,10 +13,12 @@ fn Solution::new() -> Solution {
   Solution::{ a, dp, s }
 }
 
+///|
 fn add(s : @immut/list.T[Int], value : Int) -> @immut/list.T[Int] {
   Cons(value, s)
 }
 
+///|
 fn Solution::at_most_n_given_digit_set(
   self : Solution,
   digits : Array[String],
@@ -36,9 +40,10 @@ fn Solution::at_most_n_given_digit_set(
   self.dfs(len, 1, true)
 }
 
+///|
 fn Solution::dfs(self : Solution, pos : Int, lead : Int, limit : Bool) -> Int {
   if pos <= 0 {
-    return lead.lxor(1)
+    return lead ^ 1
   }
   if not(limit) && lead != 1 && self.dp[pos][lead] != -1 {
     return self.dp[pos][lead]

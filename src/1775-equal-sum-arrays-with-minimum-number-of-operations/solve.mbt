@@ -1,5 +1,7 @@
+///|
 type ArrayInt Array[Int]
 
+///|
 fn ArrayInt::compare(self : ArrayInt, other : ArrayInt) -> Int {
   for i = 0; i < @math.minimum(self.0.length(), other.0.length()); i = i + 1 {
     if self.0[i] != other.0[i] {
@@ -10,6 +12,7 @@ fn ArrayInt::compare(self : ArrayInt, other : ArrayInt) -> Int {
   }
 }
 
+///|
 fn ArrayInt::op_equal(self : ArrayInt, other : ArrayInt) -> Bool {
   if self.0.length() != other.0.length() {
     return false
@@ -24,6 +27,7 @@ fn ArrayInt::op_equal(self : ArrayInt, other : ArrayInt) -> Bool {
   }
 }
 
+///|
 fn min_operations(nums1 : Array[Int], nums2 : Array[Int]) -> Int {
   let sum1 : Int = sum_array(nums1)
   let sum2 : Int = sum_array(nums2)
@@ -56,6 +60,7 @@ fn min_operations(nums1 : Array[Int], nums2 : Array[Int]) -> Int {
   return -1
 }
 
+///|
 fn sum_array(arr : Array[Int]) -> Int {
   let mut sum : Int = 0
   for i = 0; i < arr.length(); i = i + 1 {
@@ -64,6 +69,7 @@ fn sum_array(arr : Array[Int]) -> Int {
   sum
 }
 
+///|
 fn abs(x : Int) -> Int {
   if x < 0 {
     -x

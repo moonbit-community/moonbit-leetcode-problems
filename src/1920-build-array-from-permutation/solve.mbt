@@ -1,3 +1,4 @@
+///|
 fn build_array_from_permutation(nums : Array[Int]) -> Array[Int] {
   let n = nums.length()
   let ans = Array::make(n, 0)

@@ -1,13 +1,11 @@
+///|
 fn remove_all_occurrences_of_substring(s : String, part : String) -> String {
   let mut result = s
   let part_length = part.length()
   loop find_substring(result, part) {
     Some(index) => {
-      result = slice(result, 0, index) + slice(
-          result,
-          index + part_length,
-          result.length(),
-        )
+      result = slice(result, 0, index) +
+        slice(result, index + part_length, result.length())
       continue find_substring(result, part)
     }
     None => ()
@@ -15,6 +13,7 @@ fn remove_all_occurrences_of_substring(s : String, part : String) -> String {
   result
 }
 
+///|
 fn find_substring(s : String, part : String) -> Int? {
   let s_length = s.length()
   let part_length = part.length()
@@ -26,6 +25,7 @@ fn find_substring(s : String, part : String) -> Int? {
   None
 }
 
+///|
 fn slice(s : String, start : Int, end : Int) -> String {
   let mut result = ""
   for i = start; i < end; i = i + 1 {

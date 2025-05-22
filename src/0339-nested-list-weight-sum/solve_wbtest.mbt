@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let nestedList = @immut/list.T::Cons(
     NestedInteger::Single(1),
@@ -19,11 +20,13 @@ test "example 1" {
   assert_eq!(main_depth_sum(nestedList), 27)
 }
 
+///|
 test "example 2" {
   let nestedList = @immut/list.T::Nil
   assert_eq!(main_depth_sum(nestedList), 0)
 }
 
+///|
 test "example 3" {
   let nestedList = @immut/list.T::Cons(
     NestedInteger::Single(1),

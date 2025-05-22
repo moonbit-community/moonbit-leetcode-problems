@@ -1,3 +1,4 @@
+///|
 fn min(x : Int, y : Int) -> Int {
   if x < y {
     x
@@ -6,6 +7,7 @@ fn min(x : Int, y : Int) -> Int {
   }
 }
 
+///|
 fn max(x : Int, y : Int) -> Int {
   if x > y {
     x
@@ -14,6 +16,7 @@ fn max(x : Int, y : Int) -> Int {
   }
 }
 
+///|
 fn num_moves_stones(a : Int, b : Int, c : Int) -> (Int, Int) {
   let x = min(a, min(b, c))
   let z = max(a, max(b, c))

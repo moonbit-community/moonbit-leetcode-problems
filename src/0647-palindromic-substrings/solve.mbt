@@ -1,3 +1,4 @@
+///|
 fn count_substrings(s : String) -> Int {
   let mut t : String = "^#"
   for i = 0; i < s.length(); i = i + 1 {
@@ -23,6 +24,7 @@ fn count_substrings(s : String) -> Int {
   ans
 }
 
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a

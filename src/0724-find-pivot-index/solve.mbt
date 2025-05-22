@@ -1,3 +1,4 @@
+///|
 fn sum(nums : Array[Int]) -> Int {
   let mut total = 0
   let mut i = 0
@@ -8,6 +9,7 @@ fn sum(nums : Array[Int]) -> Int {
   total
 }
 
+///|
 fn pivot_index(nums : Array[Int]) -> Int {
   let mut left = 0
   let mut right = sum(nums)

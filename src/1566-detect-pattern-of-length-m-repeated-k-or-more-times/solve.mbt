@@ -1,3 +1,4 @@
+///|
 fn contains_pattern(arr : Array[Int], m : Int, k : Int) -> Bool {
   let n = arr.length()
   for i = 0; i <= n - m * k; i = i + 1 {

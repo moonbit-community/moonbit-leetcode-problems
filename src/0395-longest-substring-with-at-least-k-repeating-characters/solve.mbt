@@ -1,17 +1,21 @@
+///|
 struct Solution {
   s : String
   k : Int
 }
 
+///|
 fn Solution::longestSubstring(self : Solution) -> Int {
   self.dfs(0, self.s.length() - 1)
 }
 
+///|
 fn Solution::dfs(self : Solution, l : Int, r : Int) -> Int {
   let cnt : Array[Int] = Array::make(26, 0)
   let mut i = l
   while i <= r {
-    cnt[self.s.get(i).to_int() - 'a'.to_int()] = cnt[self.s.get(i).to_int() - 'a'.to_int()] +
+    cnt[self.s.get(i).to_int() - 'a'.to_int()] = cnt[self.s.get(i).to_int() -
+      'a'.to_int()] +
       1
     i = i + 1
   }

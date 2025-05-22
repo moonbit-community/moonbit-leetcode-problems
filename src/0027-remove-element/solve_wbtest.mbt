@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let nums1 = [3, 2, 2, 3]
   let val1 = 3
@@ -5,6 +6,7 @@ test "example 1" {
   assert_eq!(result1, 2)
 }
 
+///|
 test "example 2" {
   let nums2 = [0, 1, 2, 2, 3, 0, 4, 2]
   let val2 = 2
@@ -14,6 +16,7 @@ test "example 2" {
 
 // Additional test cases
 
+///|
 test "no removal needed" {
   let nums = [1, 3, 4, 5]
   let val = 6
@@ -21,6 +24,7 @@ test "no removal needed" {
   assert_eq!(result, 4)
 }
 
+///|
 test "remove all elements" {
   let nums = [2, 2, 2]
   let val = 2

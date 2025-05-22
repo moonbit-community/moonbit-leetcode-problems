@@ -1,7 +1,9 @@
+///|
 fn is_vowel(c : Char) -> Bool {
   c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'
 }
 
+///|
 fn max_vowels(s : String, k : Int) -> Int {
   let mut t = 0
   for i = 0; i < k; i = i + 1 {
@@ -23,6 +25,7 @@ fn max_vowels(s : String, k : Int) -> Int {
   ans
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a >= b {
     a

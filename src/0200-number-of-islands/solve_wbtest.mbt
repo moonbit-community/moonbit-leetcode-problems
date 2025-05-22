@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let grid : Array[Array[String]] = [
     ["1", "1", "1", "1", "0"],
@@ -9,6 +10,7 @@ test "example 1" {
   assert_eq!(result, 1)
 }
 
+///|
 test "example 2" {
   let grid : Array[Array[String]] = [
     ["1", "1", "0", "0", "0"],

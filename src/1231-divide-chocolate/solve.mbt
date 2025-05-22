@@ -1,3 +1,4 @@
+///|
 fn sum(arr : Array[Int]) -> Int {
   let mut result = 0
   for i = 0; i < arr.length(); i = i + 1 {
@@ -7,6 +8,7 @@ fn sum(arr : Array[Int]) -> Int {
   result
 }
 
+///|
 fn maximize_sweetness(sweetness : Array[Int], k : Int) -> Int {
   let mut l = 0
   let mut r = sum(sweetness)

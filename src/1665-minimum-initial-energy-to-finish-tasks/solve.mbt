@@ -1,3 +1,4 @@
+///|
 fn custom_sort(tasks : Array[(Int, Int)]) -> Array[(Int, Int)] {
   let mut i = 1
   while i < tasks.length() {
@@ -14,6 +15,7 @@ fn custom_sort(tasks : Array[(Int, Int)]) -> Array[(Int, Int)] {
   tasks
 }
 
+///|
 fn minimum_effort(tasks : Array[(Int, Int)]) -> Int {
   let sorted_tasks = custom_sort(tasks)
   let ans = 0

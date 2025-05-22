@@ -1,8 +1,10 @@
+///|
 enum ListNode {
   Empty
   Node(Int, ListNode)
 } derive(Eq, Show)
 
+///|
 fn has_cycle(head : ListNode) -> Bool {
   let mut slow : ListNode = head
   let mut fast : ListNode = head

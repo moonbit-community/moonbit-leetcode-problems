@@ -1,3 +1,4 @@
+///|
 fn dfs(
   n : Int,
   k : Int,
@@ -19,6 +20,7 @@ fn dfs(
   }
 }
 
+///|
 fn nums_same_consec_diff(n : Int, k : Int) -> @immut/list.T[Int] {
   let mut res : @immut/list.T[Int] = @immut/list.T::Nil
   for i = 1; i < 10; i = i + 1 {

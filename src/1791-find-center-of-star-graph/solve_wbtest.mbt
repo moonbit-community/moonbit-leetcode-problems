@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let edges = Array::make(3, Array::make(2, 0))
   edges[0] = [1, 2]
@@ -6,6 +7,7 @@ test "example 1" {
   assert_eq!(find_center(edges), 2)
 }
 
+///|
 test "example 2" {
   let edges = Array::make(4, Array::make(2, 0))
   edges[0] = [1, 2]

@@ -1,8 +1,10 @@
+///|
 struct ListNode {
   val : Int
   mut next : ListNode?
 } derive(Eq, Show)
 
+///|
 fn rotate_right(head : ListNode, k : Int) -> ListNode {
   if k == 0 || head.next == None {
     return head

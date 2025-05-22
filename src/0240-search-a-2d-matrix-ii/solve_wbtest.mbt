@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let matrix = [
     [1, 4, 7, 11, 15],
@@ -11,6 +12,7 @@ test "example 1" {
   assert_eq!(found, true)
 }
 
+///|
 test "example 2" {
   let matrix = [
     [1, 4, 7, 11, 15],

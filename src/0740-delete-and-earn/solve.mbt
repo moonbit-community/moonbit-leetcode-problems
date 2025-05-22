@@ -1,3 +1,4 @@
+///|
 fn delete_and_earn(nums : Array[Int]) -> Int {
   if nums.length() == 0 {
     return 0
@@ -22,6 +23,7 @@ fn delete_and_earn(nums : Array[Int]) -> Int {
   max(select[maxV], nonSelect[maxV])
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a

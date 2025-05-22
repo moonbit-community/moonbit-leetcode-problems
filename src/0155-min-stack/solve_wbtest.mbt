@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let minStack = new_min_stack()
   let minStack = push(minStack, -2)

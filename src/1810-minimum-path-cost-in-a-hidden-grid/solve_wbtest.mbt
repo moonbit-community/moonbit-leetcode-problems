@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let master = GridMaster::{
     can_move: fn(dir) {
@@ -19,6 +20,7 @@ test "example 1" {
   assert_eq!(min_path_cost(master, 0, 1), 2)
 }
 
+///|
 test "example 2" {
   let master = GridMaster::{
     can_move: fn(dir) {
@@ -52,6 +54,7 @@ test "example 2" {
   assert_eq!(min_path_cost(master, 2, 0), 9)
 }
 
+///|
 test "example 3" {
   let master = GridMaster::{
     can_move: fn(dir) {

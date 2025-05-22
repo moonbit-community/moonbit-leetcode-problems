@@ -1,3 +1,4 @@
+///|
 fn is_strictly_increasing(nums : Array[Int]) -> Bool {
   for i = 1; i < nums.length(); i = i + 1 {
     if nums[i] <= nums[i - 1] {
@@ -7,6 +8,7 @@ fn is_strictly_increasing(nums : Array[Int]) -> Bool {
   true
 }
 
+///|
 fn can_be_made_strictly_increasing(nums : Array[Int]) -> Bool {
   let n = nums.length()
   for i = 0; i < n; i = i + 1 {

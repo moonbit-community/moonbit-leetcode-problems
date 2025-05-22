@@ -1,3 +1,4 @@
+///|
 fn min(a : Int, b : Int) -> Int {
   if a < b {
     a
@@ -6,6 +7,7 @@ fn min(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn min_path_sum(grid : Array[Array[Int]]) -> Int {
   let m = grid.length() // Grid rows
   let n = grid[0].length() // Grid columns

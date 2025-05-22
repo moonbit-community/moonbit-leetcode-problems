@@ -1,13 +1,19 @@
+///|
 struct Image {
   image : Array[Array[Int]]
   nc : Int
   oc : Int
 }
 
+///|
 fn Image::dfs(self : Image, i : Int, j : Int) -> Unit {
   let dirs : Array[Int] = [-1, 0, 1, 0, -1]
-  if i < 0 || i >= self.image.length() || j < 0 || j >= self.image[0].length() ||
-  self.image[i][j] != self.oc || self.image[i][j] == self.nc {
+  if i < 0 ||
+    i >= self.image.length() ||
+    j < 0 ||
+    j >= self.image[0].length() ||
+    self.image[i][j] != self.oc ||
+    self.image[i][j] == self.nc {
     ()
   } else {
     self.image[i][j] = self.nc
@@ -17,6 +23,7 @@ fn Image::dfs(self : Image, i : Int, j : Int) -> Unit {
   }
 }
 
+///|
 fn flood_fill(
   image : Array[Array[Int]],
   sr : Int,

@@ -1,3 +1,4 @@
+///|
 fn min(min_val1 : Int, min_val2 : Int) -> Int {
   if min_val1 < min_val2 {
     return min_val1
@@ -6,6 +7,7 @@ fn min(min_val1 : Int, min_val2 : Int) -> Int {
   }
 }
 
+///|
 fn min_cost_climbing_stairs(cost : Array[Int]) -> Int {
   let n : Int = cost.length()
   let f : Array[Int] = Array::make(n + 1, 0)

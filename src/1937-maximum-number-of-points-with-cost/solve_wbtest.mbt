@@ -1,3 +1,4 @@
+///|
 test "example_1" {
   let points = Array::make(3, Array::make(3, 0))
   points[0] = [1, 2, 3]
@@ -6,6 +7,7 @@ test "example_1" {
   assert_eq!(max_number_of_points_with_cost(points), 9)
 }
 
+///|
 test "example_2" {
   let points = Array::make(3, Array::make(2, 0))
   points[0] = [1, 5]

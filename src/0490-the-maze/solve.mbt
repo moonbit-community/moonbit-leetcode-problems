@@ -1,8 +1,10 @@
+///|
 struct Point {
   x : Int
   y : Int
 }
 
+///|
 fn dfs(
   maze : Array[Array[Int]],
   vis : Array[Array[Bool]],
@@ -25,8 +27,11 @@ fn dfs(
     let mut y : Int = current.y
     let a : Int = dirs[k]
     let b : Int = dirs[k + 1]
-    while x + a >= 0 && x + a < m && y + b >= 0 && y + b < n && maze[x + a][y + b] ==
-          0 {
+    while x + a >= 0 &&
+          x + a < m &&
+          y + b >= 0 &&
+          y + b < n &&
+          maze[x + a][y + b] == 0 {
       x = x + a
       y = y + b
     }
@@ -35,6 +40,7 @@ fn dfs(
   }
 }
 
+///|
 fn has_path(
   maze : Array[Array[Int]],
   start : Array[Int],

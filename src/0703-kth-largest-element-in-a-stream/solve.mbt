@@ -1,8 +1,10 @@
+///|
 struct KthLargest {
   q : @immut/list.T[Int]
   size : Int
 }
 
+///|
 fn KthLargest::new(k : Int, nums : Array[Int]) -> KthLargest {
   let mut obj = KthLargest::{ q: Nil, size: k }
   let n = nums.length()
@@ -14,6 +16,7 @@ fn KthLargest::new(k : Int, nums : Array[Int]) -> KthLargest {
   obj
 }
 
+///|
 fn KthLargest::add(self : KthLargest, val : Int) -> KthLargest {
   let mut q = self.insert_sorted(self.q, val)
   while self.len(q) > self.size {
@@ -22,6 +25,7 @@ fn KthLargest::add(self : KthLargest, val : Int) -> KthLargest {
   KthLargest::{ q, size: self.size }
 }
 
+///|
 fn KthLargest::peek(self : KthLargest) -> Int {
   match self.q {
     Cons(head, _) => head
@@ -29,6 +33,7 @@ fn KthLargest::peek(self : KthLargest) -> Int {
   }
 }
 
+///|
 fn KthLargest::insert_sorted(
   self : KthLargest,
   list : @immut/list.T[Int],
@@ -45,6 +50,7 @@ fn KthLargest::insert_sorted(
   }
 }
 
+///|
 fn KthLargest::pop(
   self : KthLargest,
   list : @immut/list.T[Int]
@@ -55,6 +61,7 @@ fn KthLargest::pop(
   }
 }
 
+///|
 fn KthLargest::len(self : KthLargest, list : @immut/list.T[Int]) -> Int {
   match list {
     Nil => 0

@@ -1,3 +1,4 @@
+///|
 fn is_subsequence(
   s : String,
   p : String,
@@ -17,6 +18,7 @@ fn is_subsequence(
   return j == p.length()
 }
 
+///|
 fn maximum_number_of_removable_characters(
   s : String,
   p : String,

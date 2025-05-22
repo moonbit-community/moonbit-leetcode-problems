@@ -1,16 +1,15 @@
+///|
 fn max_sum_range_query(nums : Array[Int], requests : Array[Array[Int]]) -> Int {
   let n = nums.length()
   let d = Array::make(n, 0)
-  requests.each(
-    fn(request) {
-      let l = request[0]
-      let r = request[1]
-      d[l] = d[l] + 1
-      if r + 1 < n {
-        d[r + 1] = d[r + 1] - 1
-      }
-    },
-  )
+  requests.each(fn(request) {
+    let l = request[0]
+    let r = request[1]
+    d[l] = d[l] + 1
+    if r + 1 < n {
+      d[r + 1] = d[r + 1] - 1
+    }
+  })
   for i = 1; i < n - 1; i = i + 1 {
     d[i] = d[i] + d[i - 1]
   }

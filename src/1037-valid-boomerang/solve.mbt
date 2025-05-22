@@ -1,3 +1,4 @@
+///|
 fn is_boomerang(points : Array[Array[Int]]) -> Bool {
   let x1 = points[0][0]
   let y1 = points[0][1]

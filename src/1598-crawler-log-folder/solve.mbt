@@ -1,3 +1,4 @@
+///|
 fn min_operations(logs : Array[String]) -> Int {
   let mut depth = 0
   for i = 0; i < logs.length(); i = i + 1 {
@@ -11,6 +12,7 @@ fn min_operations(logs : Array[String]) -> Int {
   depth
 }
 
+///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {
     a

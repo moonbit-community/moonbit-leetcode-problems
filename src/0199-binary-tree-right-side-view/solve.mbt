@@ -1,8 +1,10 @@
+///|
 enum TreeNode {
   Empty
   Node(Int, TreeNode, TreeNode)
 }
 
+///|
 fn dfs(
   node : TreeNode,
   depth : Int,
@@ -22,10 +24,12 @@ fn dfs(
   }
 }
 
+///|
 fn right_side_view(root : TreeNode) -> @immut/list.T[Int] {
   dfs(root, 0, Nil)
 }
 
+///|
 fn append_to_list(list : @immut/list.T[Int], value : Int) -> @immut/list.T[Int] {
   match list {
     Nil => Cons(value, Nil)
@@ -33,6 +37,7 @@ fn append_to_list(list : @immut/list.T[Int], value : Int) -> @immut/list.T[Int] 
   }
 }
 
+///|
 fn get_length(list : @immut/list.T[Int]) -> Int {
   match list {
     Nil => 0

@@ -1,3 +1,4 @@
+///|
 test "example 1" {
   let root : Tree = Node(
     Node(Node(Empty, 1, Empty), 2, Node(Empty, 3, Empty)),
@@ -15,6 +16,7 @@ test "example 1" {
   )
 }
 
+///|
 test "example 2" {
   let root : Tree = Node(Node(Empty, 1, Empty), 2, Node(Empty, 3, Empty))
   let inverted : Tree = invert_tree(root)

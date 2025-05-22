@@ -1,9 +1,11 @@
+///|
 struct FindSumPairs {
   nums1 : Array[Int]
   nums2 : Array[Int]
   freq_map : @hashmap.T[Int, Int]
 }
 
+///|
 fn FindSumPairs::new(nums1 : Array[Int], nums2 : Array[Int]) -> FindSumPairs {
   let freq_map = @hashmap.new()
   for i = 0; i < nums2.length(); i = i + 1 {
@@ -13,6 +15,7 @@ fn FindSumPairs::new(nums1 : Array[Int], nums2 : Array[Int]) -> FindSumPairs {
   FindSumPairs::{ nums1, nums2, freq_map }
 }
 
+///|
 fn FindSumPairs::add(self : FindSumPairs, index : Int, val : Int) -> Unit {
   let old_val = self.nums2[index]
   let new_val = old_val + val
@@ -23,6 +26,7 @@ fn FindSumPairs::add(self : FindSumPairs, index : Int, val : Int) -> Unit {
   self.freq_map.set(new_val, self.freq_map.get_or_default(new_val, 0) + 1)
 }
 
+///|
 fn FindSumPairs::count(self : FindSumPairs, tot : Int) -> Int {
   let mut count = 0
   for i = 0; i < self.nums1.length(); i = i + 1 {

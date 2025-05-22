@@ -1,22 +1,17 @@
+///|
 test "example 1" {
   let head = ListNode::{
     val: 1,
-    next: Option::Some(
-      ListNode::{
-        val: 2,
-        next: Option::Some(
-          ListNode::{
-            val: 3,
-            next: Option::Some(
-              ListNode::{
-                val: 4,
-                next: Option::Some(ListNode::{ val: 5, next: Option::None }),
-              },
-            ),
-          },
-        ),
-      },
-    ),
+    next: Option::Some(ListNode::{
+      val: 2,
+      next: Option::Some(ListNode::{
+        val: 3,
+        next: Option::Some(ListNode::{
+          val: 4,
+          next: Option::Some(ListNode::{ val: 5, next: Option::None }),
+        }),
+      }),
+    }),
   }
   inspect!(
     rotate_right(head, 2),
@@ -24,15 +19,14 @@ test "example 1" {
   )
 }
 
+///|
 test "example 2" {
   let head = ListNode::{
     val: 0,
-    next: Option::Some(
-      ListNode::{
-        val: 1,
-        next: Option::Some(ListNode::{ val: 2, next: Option::None }),
-      },
-    ),
+    next: Option::Some(ListNode::{
+      val: 1,
+      next: Option::Some(ListNode::{ val: 2, next: Option::None }),
+    }),
   }
   inspect!(
     rotate_right(head, 4),

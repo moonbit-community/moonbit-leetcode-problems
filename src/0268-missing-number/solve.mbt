@@ -1,3 +1,4 @@
+///|
 fn missing_number(nums : Array[Int]) -> Int {
   let n = nums.length() // Length of the input array
   let mut ans = n

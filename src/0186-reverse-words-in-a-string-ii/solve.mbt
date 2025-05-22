@@ -1,3 +1,4 @@
+///|
 fn reverse(s : Array[Char], i : Int, j : Int) -> Unit {
   let mut i = i
   let mut j = j
@@ -10,6 +11,7 @@ fn reverse(s : Array[Char], i : Int, j : Int) -> Unit {
   }
 }
 
+///|
 fn reverse_words(s : Array[Char]) -> Array[Char] {
   let n = s.length()
   let mut i = 0

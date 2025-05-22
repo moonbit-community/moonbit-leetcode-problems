@@ -4,13 +4,13 @@ fn racecar(target : Int) -> Int {
   let mut i = 1
   while i <= target {
     let k = 32 - clz(i) // clz stands for Count Leading Zeros
-    if i == (1).lsl(k) - 1 {
+    if i == (1 << (k - 1)) {
       dp[i] = k
     } else {
-      dp[i] = dp[(1).lsl(k) - 1 - i] + k + 1
+      dp[i] = dp[1 << (k - 1 - i)] + k + 1
       let mut j = 0
       while j < k {
-        dp[i] = min(dp[i], dp[i - (1).lsl(k - 1) + (1).lsl(j)] + k - 1 + j + 2)
+        dp[i] = min(dp[i], dp[(i - 1) << (k - 1 + 1) << j] + k - 1 + j + 2)
         j = j + 1
       }
     }

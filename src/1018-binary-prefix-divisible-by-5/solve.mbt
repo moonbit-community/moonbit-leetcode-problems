@@ -6,7 +6,7 @@ fn prefixes_div_by5(nums : Array[Int]) -> Array[Bool] {
   let mut i = 0
   while i < len {
     let v = nums[i]
-    x = (x.lsl(1) | v) % 5
+    x = ((x << 1) | v) % 5
     ans = ans.concat(@immut/list.of([x == 0]))
     i = i + 1
   }

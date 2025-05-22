@@ -15,7 +15,7 @@ fn dfs(root : TreeNode) -> (Int, Int, Int) {
   match root {
     Empty => {
       let one = 1
-      (one.lsl(29), 0, 0)
+      (one << 29, 0, 0)
     }
     Node(_, left, right) => {
       let l = dfs(left)

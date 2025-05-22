@@ -11,7 +11,7 @@ fn count_good_numbers(n : Int) -> Int {
       if (exp & 1) == 1 {
         result = result * base % mod_value
       }
-      exp = exp.lsr(1)
+      exp = exp >> 1
       base = base * base % mod_value
     }
     result

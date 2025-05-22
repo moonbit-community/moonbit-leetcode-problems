@@ -4,7 +4,7 @@ fn minimum_one_bit_operations(n : Int) -> Int {
   let mut n = n
   while n > 0 {
     ans = ans ^ n
-    n = n.lsr(1)
+    n = n >> 1
   }
   ans
 }

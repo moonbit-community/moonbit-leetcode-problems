@@ -47,7 +47,7 @@ fn merge_stones(stones : Array[Int], big_k : Int) -> Int {
     return -1
   }
   let s = sum_array(stones, n)
-  let inf = (1).lsl(20)
+  let inf = 1 << 20
   let f : Array[Array[Array[Int]]] = Array::make(
     n + 1,
     Array::make(n + 1, Array::make(big_k + 1, 0)),

@@ -1,5 +1,5 @@
 ///|
-fn longest_substring_without_repeating_characters(s : String) -> Int {
+fn length_of_longest_substring(s : String) -> Int {
   let mut max_length = 0
   let mut start = 0
   let char_index_map : @hashmap.T[Char, Int] = @hashmap.new()

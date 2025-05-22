@@ -1,19 +1,19 @@
 ///|
 test "example 1" {
-  assert_eq!(longest_palindromic_substring("babad"), "bab")
+  assert_true!(longest_palindrome("babad") is ("bab" | "aba"))
 }
 
 ///|
 test "example 2" {
-  assert_eq!(longest_palindromic_substring("cbbd"), "bb")
+  assert_eq!(longest_palindrome("cbbd"), "bb")
 }
 
 ///|
 test "example 3" {
-  assert_eq!(longest_palindromic_substring("a"), "a")
+  assert_eq!(longest_palindrome("a"), "a")
 }
 
 ///|
 test "example 4" {
-  assert_eq!(longest_palindromic_substring("ac"), "a")
+  assert_true!(longest_palindrome("ac") is ("a" | "c"))
 }

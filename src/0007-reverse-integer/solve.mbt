@@ -1,5 +1,5 @@
 ///|
-fn reverse_integer(x : Int) -> Int {
+fn reverse(x : Int) -> Int {
   let max_int = @int.max_value
   let is_negative = x < 0
   let mut num = if is_negative { -x } else { x }

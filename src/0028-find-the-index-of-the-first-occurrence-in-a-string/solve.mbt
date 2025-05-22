@@ -1,5 +1,5 @@
 ///|
-fn find_index(haystack : String, needle : String) -> Int {
+fn str_str(haystack : String, needle : String) -> Int {
   let haystack_len = haystack.length()
   let needle_len = needle.length()
   for i = 0; i <= haystack_len - needle_len; i = i + 1 {

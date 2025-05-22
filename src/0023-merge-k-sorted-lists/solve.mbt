@@ -15,7 +15,7 @@ fn insert_into_sorted_list(
 }
 
 ///|
-fn merge_k_sorted_lists(
+fn merge_k_lists(
   lists : Array[@immut/list.T[Int]]
 ) -> @immut/list.T[Int] {
   let mut result = @immut/list.T::Nil

@@ -1,6 +1,6 @@
 ///|
-fn generate_matrix(n : Int) -> Array[Array[Int]] {
-  let ans = Array::make(n, Array::make(n, 0))
+pub fn generate_matrix(n : Int) -> Array[Array[Int]] {
+  let ans = Array::makei(n, fn(_) { Array::make(n, 0) })
   let mut u = 0
   let mut d = n - 1
   let mut l = 0

@@ -1,5 +1,5 @@
 ///|
-fn n_queens(n : Int) -> Array[Array[String]] {
+fn solve_n_queens(n : Int) -> Array[Array[String]] {
   let sol : Array[Array[String]] = []
   let queens = Array::make(n, -1)
   let columns : @hashset.T[Int] = @hashset.new()

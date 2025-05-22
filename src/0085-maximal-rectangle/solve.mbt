@@ -1,11 +1,11 @@
 ///|
-fn maximal_rect(matrix : Array[Array[String]]) -> Int {
+pub fn maximal_rectangle(matrix : Array[Array[String]]) -> Int {
   let m = matrix.length()
   if m == 0 {
     return 0
   }
   let n = matrix[0].length()
-  let left = Array::make(m, Array::make(n, 0))
+  let left = Array::makei(m, fn(_) { Array::make(n, 0) })
   for i = 0; i < m; i = i + 1 {
     for j = 0; j < n; j = j + 1 {
       if matrix[i][j] == "1" {

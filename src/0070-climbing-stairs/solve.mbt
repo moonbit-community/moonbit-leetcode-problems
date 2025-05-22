@@ -1,9 +1,12 @@
 ///|
 fn climb_stairs(n : Int) -> Int {
-  if n <= 1 {
-    return n
+  guard n >= 1 else { n }
+  let mut a = 1
+  let mut b = 2
+  for _ in 3..<n {
+    let c = a + b
+    a = b
+    b = c
   }
-  let dp = [0, 1, 2]
-  dp[n] = dp[n - 1] + dp[n - 2]
-  dp[n]
+  b
 }

@@ -2,7 +2,7 @@
 fn unique_paths_with_obstacles(obstacle_grid : Array[Array[Int]]) -> Int {
   let m = obstacle_grid.length()
   let n = obstacle_grid[0].length()
-  let dp : Array[Array[Int]] = Array::make(m, Array::make(n, 0))
+  let dp : Array[Array[Int]] = Array::makei(m, fn(_) { Array::make(n, 0) })
   let mut i = 0
   while i < m && obstacle_grid[i][0] == 0 {
     dp[i][0] = 1

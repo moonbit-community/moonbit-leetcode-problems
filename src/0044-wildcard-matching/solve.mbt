@@ -2,7 +2,9 @@
 fn is_match(s : String, p : String) -> Bool {
   let m = s.length()
   let n = p.length()
-  let dp : Array[Array[Bool]] = Array::make(m + 1, Array::make(n + 1, false))
+  let dp : Array[Array[Bool]] = Array::makei(m + 1, fn(_) {
+    Array::make(n + 1, false)
+  })
   dp[0][0] = true
   for j = 1; j <= n; j = j + 1 {
     if p[j - 1] == '*' {

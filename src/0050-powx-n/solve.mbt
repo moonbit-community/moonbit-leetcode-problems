@@ -17,14 +17,3 @@ fn qpow(a : Double, n : Int) -> Double {
   }
   ans
 }
-
-// custom assertion function
-///|
-fn assert_eps(result : Double, expect : Double) -> Unit! {
-  let delta = result - expect
-  if (delta < 1.0e-6 && delta >= 0.0) || (delta < 0.0 && delta > -1.0e-6) {
-    ()
-  } else {
-    fail!("Assertion failed: \{result}, expecting \{expect}")
-  }
-}

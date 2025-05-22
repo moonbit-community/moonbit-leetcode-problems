@@ -1,20 +1,26 @@
 ///|
+fn permute1(nums : Array[Int]) -> @immut/sorted_set.T[@immut/sorted_set.T[Int]] {
+  let mut res = @immut/sorted_set.new()
+  for i in permute(nums) {
+    res = res.add(@immut/sorted_set.from_iter(i.iter()))
+  }
+  res
+}
+
+///|
 test "example 1" {
   inspect!(
-    permute([1, 2, 3]),
-    content="List::[List::[1, 2, 2], List::[2, 1, 3], List::[1, 3, 3], List::[3, 1, 2], List::[2, 3, 3], List::[3, 2, 1]]",
+    permute1([1, 2, 3]),
+    content="@immut/sorted_set.of([@immut/sorted_set.of([1, 2]), @immut/sorted_set.of([1, 2, 3]), @immut/sorted_set.of([1, 3]), @immut/sorted_set.of([2, 3])])",
   )
 }
 
 ///|
 test "example 2" {
-  assert_eq!(
-    permute([0, 1]),
-    @immut/list.of([@immut/list.of([0, 1]), @immut/list.of([1, 0])]),
-  )
+  inspect!(permute1([0, 1]), content="@immut/sorted_set.of([@immut/sorted_set.of([0, 1])])")
 }
 
 ///|
 test "example 3" {
-  assert_eq!(permute([1]), @immut/list.of([@immut/list.of([1])]))
+  inspect!(permute1([1]), content="@immut/sorted_set.of([@immut/sorted_set.of([1])])")
 }

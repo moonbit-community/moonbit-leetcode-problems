@@ -1,5 +1,5 @@
 ///|
-struct Trie {
+priv struct Trie {
   children : Array[Trie?]
   mut is_end : Bool
 }
@@ -37,31 +37,34 @@ fn Trie::search(self : Trie, word : String) -> Bool {
 }
 
 ///|
-fn dfs(trie : Trie, s : String) -> @immut/list.T[@immut/list.T[String]] {
+fn Trie::word_break(self : Trie, s : String) -> Array[Array[String]] {
   if s.length() == 0 {
-    return Cons(Cons("", Nil), Nil)
+    return [[]]
   }
-  let mut res : @immut/list.T[@immut/list.T[String]] = Nil
+  let res = []
   let mut i = 1
   while i <= s.length() {
-    let check = trie.search(slice(s, 0, i))
+    let check = self.search(slice(s, 0, i))
     if check {
-      let suffixes = dfs(trie, slice(s, i, s.length()))
-      fn prepend(
-        val : String,
-        lists : @immut/list.T[@immut/list.T[String]]
-      ) -> @immut/list.T[@immut/list.T[String]] {
-        match lists {
-          @immut/list.T::Nil => Nil
-          Cons(list, rest) => Cons(Cons(val, list), prepend(val, rest))
-        }
+      let suffixes = self.word_break(slice(s, i, s.length()))
+      let addition = slice(s, 0, i)
+      for suffix in suffixes {
+        suffix.push(addition)
       }
-
-      res = res.concat(prepend(slice(s, 0, i), suffixes))
+      res.append(suffixes)
     }
     i = i + 1
   }
   res
+}
+
+///|
+pub fn word_break(s : String, wordDict : Array[String]) -> Array[String] {
+  let t = Trie::new()
+  for w in wordDict {
+    t.insert(w)
+  }
+  t.word_break(s).map(fn(ss) { ss.rev_iter().join(" ") })
 }
 
 ///|
@@ -73,24 +76,4 @@ fn slice(s : String, start : Int, end : Int) -> String {
     i = i + 1
   }
   result
-}
-
-///|
-fn list_to_string(
-  lists : @immut/list.T[@immut/list.T[String]]
-) -> @immut/list.T[String] {
-  match lists {
-    @immut/list.T::Nil => Nil
-    @immut/list.T::Cons(list, rest) =>
-      @immut/list.T::Cons(join(list, " "), list_to_string(rest))
-  }
-}
-
-///|
-fn join(list : @immut/list.T[String], sep : String) -> String {
-  match list {
-    Nil => ""
-    Cons(head, Nil) => head
-    Cons(head, tail) => head + sep + join(tail, sep)
-  }
 }

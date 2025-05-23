@@ -1,8 +1,8 @@
 ///|
-fn min_cut(s : String) -> Int {
+pub fn min_cut(s : String) -> Int {
   let n = s.length()
   // Initializing the grid `g`.
-  let g : Array[Array[Bool]] = Array::make(n, Array::make(n, true))
+  let g : Array[Array[Bool]] = Array::makei(n, fn(_) { Array::make(n, true) })
   let mut i = n - 1
   while i >= 0 {
     let mut j = i + 1

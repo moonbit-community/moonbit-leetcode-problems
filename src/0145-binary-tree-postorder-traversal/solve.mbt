@@ -1,33 +1,8 @@
 ///|
-enum TreeNode {
-  Empty
-  Node(Int, TreeNode, TreeNode)
-} derive(Eq)
-
-///|
-fn[X] concat(
-  list1 : @immut/list.T[X],
-  list2 : @immut/list.T[X]
-) -> @immut/list.T[X] {
-  match list1 {
-    Nil => list2
-    Cons(head, tail) => Cons(head, concat(tail, list2))
-  }
-}
-
-///|
-fn dfs(node : TreeNode) -> @immut/list.T[Int] {
-  match node {
-    Empty => Nil
-    Node(val, left, right) => {
-      let left_traverse = dfs(left)
-      let right_traverse = dfs(right)
-      concat(left_traverse, concat(right_traverse, Cons(val, Nil)))
-    }
-  }
-}
-
-///|
-fn postorder_traversal(root : TreeNode) -> @immut/list.T[Int] {
-  dfs(root)
+fn postorder_traversal(root : TreeNode?, res~ : Array[Int] = []) -> Array[Int] {
+  guard root is Some(Node(v, l, r)) else { res }
+  let _ = postorder_traversal(l, res~)
+  let _ = postorder_traversal(r, res~)
+  res.push(v)
+  res
 }

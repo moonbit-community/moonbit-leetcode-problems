@@ -1,5 +1,5 @@
 ///|
-fn longest_palindromic_substring(s : String) -> String {
+fn longest_palindrome(s : String) -> String {
   let n = s.length()
   if n < 2 {
     return s
@@ -19,20 +19,11 @@ fn longest_palindromic_substring(s : String) -> String {
   for i = 0; i < n; i = i + 1 {
     let len1 = expand_around_center(s, i, i)
     let len2 = expand_around_center(s, i, i + 1)
-    let len = if len1 > len2 { len1 } else { len2 }
+    let len = @math.maximum(len1, len2)
     if len > end - start {
       start = i - (len - 1) / 2
       end = i + len / 2
     }
   }
-  return slice(s, start, end + 1)
-}
-
-///|
-fn slice(string : String, start : Int, stop : Int) -> String {
-  let mut result = ""
-  for i = start; i < stop; i = i + 1 {
-    result = result + string[i].to_string()
-  }
-  result
+  return s.view(start_offset=start, end_offset=end + 1).to_string()
 }

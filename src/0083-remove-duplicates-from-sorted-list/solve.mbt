@@ -1,5 +1,5 @@
 ///|
-fn remove_duplicates(head : @immut/list.T[Int]) -> @immut/list.T[Int] {
+fn delete_duplicates(head : @immut/list.T[Int]) -> @immut/list.T[Int] {
   let mut ans : @immut/list.T[Int] = @immut/list.T::Nil
   let next = match head {
     Nil => return head

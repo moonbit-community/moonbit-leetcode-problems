@@ -6,10 +6,10 @@ fn single_number(nums : Array[Int]) -> Int {
     let mut count = 0
     let mut j = 0
     while j < nums.length() {
-      count = count + (nums[j].lsr(i) & 1)
+      count = count + ((nums[j] >> i) & 1)
       j = j + 1
     }
-    ans = ans | (count % 3).lsl(i)
+    ans = ans | ((count % 3) << i)
     i = i + 1
   }
   ans

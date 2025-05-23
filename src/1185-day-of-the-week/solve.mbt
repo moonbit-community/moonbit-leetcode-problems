@@ -23,7 +23,7 @@ fn day_of_the_week(d : Int, m : Int, y : Int) -> String {
       1
     ) %
     7
-  let weeks = @immut/list.T::of([
+  let weeks = @immut/list.of([
     "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",
   ])
   weeks.nth_exn((w + 7) % 7)

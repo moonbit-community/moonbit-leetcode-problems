@@ -4,7 +4,7 @@ fn maximum_xor_for_each_query(
   maximum_bit : Int
 ) -> Array[Int] {
   let n = nums.length()
-  let max_xor = (1).lsl(maximum_bit) - 1
+  let max_xor = 1 << (maximum_bit - 1)
   let mut xor_sum = 0
   let answer = Array::make(n, 0)
 

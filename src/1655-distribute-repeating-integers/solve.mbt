@@ -1,11 +1,11 @@
 ///|
 fn can_distribute(nums : Array[Int], quantity : Array[Int]) -> Bool {
   let m = quantity.length()
-  let s = Array::make((1).lsl(m), 0)
-  for i = 1; i < (1).lsl(m); i = i + 1 {
+  let s = Array::make(1 << m, 0)
+  for i = 1; i < (1 << m); i = i + 1 {
     for j = 0; j < m; j = j + 1 {
-      if (i.lsr(j) & 1) == 1 {
-        s[i] = s[i ^ (1).lsl(j)] + quantity[j]
+      if ((i >> j) & 1) == 1 {
+        s[i] = s[i ^ (1 << j)] + quantity[j]
         break
       }
     }
@@ -19,15 +19,15 @@ fn can_distribute(nums : Array[Int], quantity : Array[Int]) -> Bool {
     }
   })
   let n = cnt.capacity()
-  let mut arr = @immut/list.T::of([])
-  cnt.each(fn(k, v) { arr = arr.concat(@immut/list.T::of([v])) })
+  let mut arr = @immut/list.of([])
+  cnt.each(fn(k, v) { arr = arr.concat(@immut/list.of([v])) })
   let arr = arr.to_array()
-  let f = Array::make(n, Array::make((1).lsl(m), false))
+  let f = Array::make(n, Array::make(1 << m, false))
   for i = 0; i < n; i = i + 1 {
     f[i][0] = true
   }
   for i = 0; i < n; i = i + 1 {
-    for j = 0; j < (1).lsl(m); j = j + 1 {
+    for j = 0; j < (1 << m); j = j + 1 {
       if i > 0 && f[i - 1][j] {
         f[i][j] = true
         continue
@@ -44,5 +44,5 @@ fn can_distribute(nums : Array[Int], quantity : Array[Int]) -> Bool {
       }
     }
   }
-  f[n - 1][(1).lsl(m) - 1]
+  f[n - 1][1 << (m - 1)]
 }

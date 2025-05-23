@@ -21,26 +21,26 @@ fn shortest_common_supersequence(str1 : String, str2 : String) -> String {
       }
     }
   }
-  let mut ans = @immut/list.T::of([])
+  let mut ans = @immut/list.of([])
   let mut i = m
   let mut j = n
   while i > 0 || j > 0 {
     if i == 0 {
       j = j - 1
-      ans = ans.concat(@immut/list.T::of([str2[j]]))
+      ans = ans.concat(@immut/list.of([str2[j]]))
     } else if j == 0 {
       i = i - 1
-      ans = ans.concat(@immut/list.T::of([str1[i]]))
+      ans = ans.concat(@immut/list.of([str1[i]]))
     } else if f[i][j] == f[i - 1][j] {
       i = i - 1
-      ans = ans.concat(@immut/list.T::of([str1[i]]))
+      ans = ans.concat(@immut/list.of([str1[i]]))
     } else if f[i][j] == f[i][j - 1] {
       j = j - 1
-      ans = ans.concat(@immut/list.T::of([str2[j]]))
+      ans = ans.concat(@immut/list.of([str2[j]]))
     } else {
       i = i - 1
       j = j - 1
-      ans = ans.concat(@immut/list.T::of([str1[i]]))
+      ans = ans.concat(@immut/list.of([str1[i]]))
     }
   }
   ans.fold_left(init="", fn(s, c) { s + c.to_string() })

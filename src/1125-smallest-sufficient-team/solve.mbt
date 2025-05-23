@@ -11,15 +11,15 @@ fn smallest_sufficient_team(
   }
   let p : Array[Int] = Array::make(n, 0)
   for i = 0; i < n; i = i + 1 {
-    let f = fn(s) { p[i] = p[i] | (1).lsl(d.get(s).or(0)) }
+    let f = fn(s) { p[i] = p[i] | (1 << d.get(s).or(0)) }
     people[i].each(f)
   }
   let inf = @int.max_value
-  let f : Array[Int] = Array::make((1).lsl(m), inf)
-  let g : Array[Int] = Array::make((1).lsl(m), 0)
-  let h : Array[Int] = Array::make((1).lsl(m), 0)
+  let f : Array[Int] = Array::make(1 << m, inf)
+  let g : Array[Int] = Array::make(1 << m, 0)
+  let h : Array[Int] = Array::make(1 << m, 0)
   f[0] = 0
-  for i = 0; i < (1).lsl(m); i = i + 1 {
+  for i = 0; i < (1 << m); i = i + 1 {
     if f[i] == inf {
       continue
     }
@@ -33,7 +33,7 @@ fn smallest_sufficient_team(
     }
   }
   let ans : Array[Int] = []
-  let mut i = (1).lsl(m) - 1
+  let mut i = 1 << (m - 1)
   while i != 0 {
     ans.push(g[i])
     i = h[i]

@@ -2,7 +2,7 @@
 fn generate_possible_next_moves(
   current_state : String
 ) -> @immut/list.T[String] {
-  let mut ans : @immut/list.T[String] = @immut/list.T::of([])
+  let mut ans : @immut/list.T[String] = @immut/list.of([])
   let mut i = 0
   while i < current_state.length() - 1 {
     if current_state[i] == '+' && current_state[i + 1] == '+' {

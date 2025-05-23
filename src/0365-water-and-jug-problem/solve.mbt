@@ -28,7 +28,7 @@ fn dfs(
   j : Int
 ) -> Bool {
   let st = f(i, j)
-  let vis = set.concat(@immut/list.T::of([st]))
+  let vis = set.concat(@immut/list.of([st]))
   if set.contains(st) {
     false
   } else if i == z || j == z || i + j == z {

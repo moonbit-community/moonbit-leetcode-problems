@@ -20,7 +20,7 @@ fn sort(points : Array[Array[Int]]) -> Array[Array[Int]] {
 fn find_min_arrow_shots(points : Array[Array[Int]]) -> Int {
   let sorted_points = sort(points)
   let mut ans : Int = 0
-  let mut last : Int = -1073741824 // Equivalent to -(1L.lsl(30)) to avoid 64-bit overflow issue in the provided context
+  let mut last : Int = -1073741824 // Equivalent to -(1L << (30)) to avoid 64-bit overflow issue in the provided context
   let n : Int = sorted_points.length()
   let mut i : Int = 0
   while i < n {

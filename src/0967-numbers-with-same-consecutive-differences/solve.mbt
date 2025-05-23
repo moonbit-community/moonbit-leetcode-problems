@@ -6,7 +6,7 @@ fn dfs(
   res : @immut/list.T[Int]
 ) -> @immut/list.T[Int] {
   if n == 0 {
-    res.concat(@immut/list.T::of([t]))
+    res.concat(@immut/list.of([t]))
   } else {
     let last = t % 10
     let mut result = res

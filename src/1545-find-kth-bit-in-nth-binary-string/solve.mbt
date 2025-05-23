@@ -6,7 +6,7 @@ fn find_kth_bit(n : Int, k : Int) -> String {
     } else if (k & (k - 1)) == 0 {
       1
     } else {
-      let m = (1).lsl(n)
+      let m = 1 << n
       if k * 2 < m - 1 {
         dfs(n - 1, k)
       } else {

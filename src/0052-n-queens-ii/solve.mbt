@@ -1,5 +1,5 @@
 ///|
-fn n_queens_count(n : Int) -> Int {
+fn total_n_queens(n : Int) -> Int {
   let columns : @hashset.T[Int] = @hashset.new()
   let diagonals1 : @hashset.T[Int] = @hashset.new()
   let diagonals2 : @hashset.T[Int] = @hashset.new()

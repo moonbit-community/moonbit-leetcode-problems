@@ -29,7 +29,7 @@ fn f(n : Int) -> Int {
     outer
   }
 
-  let dp = create_2d_array(11, (1).lsl(11), -1)
+  let dp = create_2d_array(11, 1 << 11, -1)
   fn dfs(
     pos : Int,
     mask : Int,
@@ -50,14 +50,14 @@ fn f(n : Int) -> Int {
       let up = if limit { nums[pos] } else { 9 }
       let mut ans = 0
       for i = 0; i <= up; i = i + 1 {
-        if (mask.lsr(i) & 1) == 1 {
+        if ((mask >> i) & 1) == 1 {
           continue
         }
         if lead && i == 0 {
           ans = ans + dfs(pos - 1, mask, lead, limit && i == up, nums, dp)
         } else {
           ans = ans +
-            dfs(pos - 1, mask.lor(1).lsl(i), false, limit && i == up, nums, dp)
+            dfs(pos - 1, (mask | 1) << i, false, limit && i == up, nums, dp)
         }
       }
       if not(lead) && not(limit) {

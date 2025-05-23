@@ -1,14 +1,20 @@
 ///|
 test "wordBreak example 1" {
-  let trie = Trie::new()
-  trie.insert("cat")
-  trie.insert("cats")
-  trie.insert("and")
-  trie.insert("sand")
-  trie.insert("dog")
-  let result = dfs(trie, "catsanddog")
-  let expected : @immut/list.T[@immut/list.T[String]] = @immut/list.T::of([
-    @immut/list.T::of(["cats and dog", "cat sand dog"]),
-  ])
-  assert_eq!(list_to_string(result), list_to_string(expected))
+  @json.inspect!(
+    word_break("catsanddog", ["cat", "cats", "and", "sand", "dog"])
+    |> Set::from_array,
+    content=["cat sand dog", "cats and dog"],
+  )
+  @json.inspect!(
+    word_break("pineapplepenapple", [
+      "apple", "pen", "applepen", "pine", "pineapple",
+    ])
+    |> Set::from_array,
+    content=["pine apple pen apple","pine applepen apple","pineapple pen apple"],
+  )
+  @json.inspect!(
+    word_break("catsandog", ["cat", "cats", "and", "sand", "dog"])
+    |> Set::from_array,
+    content=[],
+  )
 }

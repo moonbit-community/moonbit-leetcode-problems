@@ -76,7 +76,7 @@ fn palindrome_pairs(words : Array[String]) -> @immut/list.T[@immut/list.T[Int]] 
         match trie.search(w, 0, j - 1) {
           Some(k) =>
             if k != i {
-              ans = @immut/list.T::Cons(@immut/list.T::of([i, k]), ans)
+              ans = @immut/list.T::Cons(@immut/list.of([i, k]), ans)
             }
           None => ()
         }
@@ -85,7 +85,7 @@ fn palindrome_pairs(words : Array[String]) -> @immut/list.T[@immut/list.T[Int]] 
         match trie.search(w, j, m - 1) {
           Some(k) =>
             if k != i {
-              ans = @immut/list.T::Cons(@immut/list.T::of([k, i]), ans)
+              ans = @immut/list.T::Cons(@immut/list.of([k, i]), ans)
             }
           None => ()
         }

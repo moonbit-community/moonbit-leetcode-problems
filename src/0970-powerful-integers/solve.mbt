@@ -7,7 +7,7 @@ fn powerful_integers(x : Int, y : Int, bound : Int) -> Array[Int] {
     while a + b <= bound {
       // Check if `a + b` already exists in ans_set
       if not(ans_set.contains(a + b)) {
-        ans_set = ans_set.concat(@immut/list.T::of([a + b]))
+        ans_set = ans_set.concat(@immut/list.of([a + b]))
       }
       if y == 1 {
         break

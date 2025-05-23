@@ -5,7 +5,7 @@ type IntInt (Int, Int) derive(Hash, Eq)
 fn min_changes(nums : Array[Int], k : Int) -> Int {
   let n = nums.length()
   let xor_counts : @hashmap.T[IntInt, Int] = @hashmap.new()
-  let max_num = (1).lsl(10)
+  let max_num = 1 << 10
   for i = 0; i < n; i = i + 1 {
     let key = (i % k, nums[i])
     xor_counts.set(key, xor_counts.get_or_default(key, 0) + 1)

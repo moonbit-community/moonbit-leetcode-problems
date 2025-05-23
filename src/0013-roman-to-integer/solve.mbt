@@ -1,5 +1,5 @@
 ///|
-fn roman_to_integer(s : String) -> Int {
+fn roman_to_int(s : String) -> Int {
   let roman_map : Map[Char, Int] = {
     'I': 1,
     'V': 5,

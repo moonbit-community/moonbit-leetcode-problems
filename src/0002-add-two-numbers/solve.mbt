@@ -1,11 +1,5 @@
 ///|
-struct ListNode {
-  val : Int
-  mut next : ListNode?
-} derive(Eq, Show)
-
-///|
-fn add_two_numbers(l1 : ListNode?, l2 : ListNode?) -> ListNode? {
+pub fn add_two_numbers(l1 : ListNode?, l2 : ListNode?) -> ListNode? {
   let dummy_head = ListNode::{ val: 0, next: Option::None }
   let mut current = dummy_head
   let mut carry = 0

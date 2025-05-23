@@ -1,17 +1,24 @@
 ///|
 test "example 1" {
-  let root : TreeNode = Node(1, Empty, Node(2, Node(3, Empty, Empty), Empty))
-  assert_eq!(preorder_traversal(root), Cons(1, Cons(2, Cons(3, Nil))))
+  let root : TreeNode = Node(
+    1,
+    None,
+    Some(Node(2, Some(Node(3, None, None)), None)),
+  )
+  @json.inspect!(preorder_traversal(Some(root)), content=[1, 2, 3])
 }
 
 ///|
 test "example 2" {
-  let root : TreeNode = Empty
-  assert_eq!(preorder_traversal(root), Nil)
+  assert_eq!(preorder_traversal(None), [])
 }
 
 ///|
 test "example 3" {
-  let root : TreeNode = Node(1, Node(2, Empty, Empty), Node(3, Empty, Empty))
-  assert_eq!(preorder_traversal(root), Cons(1, Cons(2, Cons(3, Nil))))
+  let root : TreeNode = Node(
+    1,
+    Some(Node(2, None, None)),
+    Some(Node(3, None, None)),
+  )
+  @json.inspect!(preorder_traversal(Some(root)), content=[1, 2, 3])
 }

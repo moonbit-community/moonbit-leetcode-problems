@@ -8,7 +8,7 @@ fn max_number_of_families(n : Int, reserved_seats : Array[(Int, Int)]) -> Int {
       Some(value) => value
       None => 0
     }
-    d.set(i, current_value | (1).lsl(10 - j))
+    d.set(i, current_value | (1 << (10 - j)))
   }
   let mut ans = (n - d.capacity()) * 2
   let left = 0b0111100000

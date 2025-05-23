@@ -36,7 +36,7 @@ fn Solution::lower_bound(self : Solution, x : Int) -> Int {
   let mut left = 0
   let mut right = self.n
   while left < right {
-    let mid = (left + right).lsr(1)
+    let mid = (left + right) >> 1
     if self.days[mid] >= x {
       right = mid
     } else {

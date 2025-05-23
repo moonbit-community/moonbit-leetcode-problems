@@ -1,5 +1,5 @@
 ///|
-fn edit_distance(a : String, b : String) -> Int {
+fn min_distance(a : String, b : String) -> Int {
   let m = a.length()
   let n = b.length()
   let s = [[], []]

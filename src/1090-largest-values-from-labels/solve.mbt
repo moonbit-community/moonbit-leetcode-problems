@@ -36,9 +36,9 @@ fn largest_vals_from_labels(
   use_limit : Int
 ) -> Int {
   let n = values.length()
-  let mut pairs = @immut/list.T::of([])
+  let mut pairs = @immut/list.of([])
   for i = 0; i < n; i = i + 1 {
-    pairs = pairs.concat(@immut/list.T::of([(values[i], labels[i])]))
+    pairs = pairs.concat(@immut/list.of([(values[i], labels[i])]))
   }
   let sorted_pairs = sort_pairs(pairs)
   let cnt : @hashmap.T[Int, Int] = @hashmap.new()

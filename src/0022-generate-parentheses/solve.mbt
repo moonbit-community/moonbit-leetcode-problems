@@ -1,7 +1,7 @@
 // Define a structure to represent the stack
 // Function to generate all combinations of well-formed parentheses
 ///|
-fn generate_parentheses(n : Int) -> Array[String] {
+fn generate_parenthesis(n : Int) -> Array[String] {
   let result = []
   let stack = []
   let open_count = n // Number of remaining open parentheses

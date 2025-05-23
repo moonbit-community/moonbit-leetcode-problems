@@ -17,7 +17,7 @@ fn Solution::findIntegers(self : Solution, n : Int) -> Int {
   while n > 0 {
     len = len + 1
     self.a[len] = n & 1
-    n = n.lsr(1)
+    n = n >> 1
   }
   self.dfs(len, 0, true)
 }

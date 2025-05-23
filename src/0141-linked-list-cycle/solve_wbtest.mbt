@@ -1,7 +1,7 @@
 ///|
 test "example 1" {
   let list_no_cycle : ListNode = Node(1, Node(2, Node(3, Empty)))
-  @test.is_false!(has_cycle(list_no_cycle))
+  assert_false!(has_cycle(list_no_cycle))
 }
 
 ///|

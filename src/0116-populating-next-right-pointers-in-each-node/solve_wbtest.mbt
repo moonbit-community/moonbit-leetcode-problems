@@ -11,22 +11,16 @@ test "example 1" {
     Node(3, Node(6, Empty, Empty, Empty), Node(7, Empty, Empty, Empty), Empty),
     Empty,
   )
-  let connected_tree = connect(tree)
-  let expected_tree = Tree::Node(
+  let null = Json::null()
+  @json.inspect!(connect(tree), content=[
     1,
-    Node(
+    [
       2,
-      Node(4, Empty, Empty, Node(5, Empty, Empty, Node(3, Empty, Empty, Empty))),
-      Node(5, Empty, Empty, Node(3, Empty, Empty, Empty)),
-      Node(3, Empty, Empty, Empty),
-    ),
-    Node(
-      3,
-      Node(6, Empty, Empty, Node(7, Empty, Empty, Empty)),
-      Node(7, Empty, Empty, Empty),
-      Empty,
-    ),
-    Empty,
-  )
-  assert_eq!(connected_tree, expected_tree)
+      [4, null, null, [5, null, null, null]],
+      [5, null, null, [6, null, null, null]],
+      [3, [6, null, null, null], [7, null, null, null], null],
+    ],
+    [3, [6, null, null, [7, null, null, null]], [7, null, null, null], null],
+    null,
+  ])
 }

@@ -1,11 +1,8 @@
 ///|
-enum TreeNode {
-  Empty
-  Node(Int, TreeNode, TreeNode)
-}
+fnalias @math.maximum as max
 
 ///|
-fn max_path_sum(root : TreeNode) -> Int {
+pub fn max_path_sum(root : TreeNode) -> Int {
   let ans = -1001 // Removed mut as its mutability is never used
   fn dfs(root : TreeNode, ans : Int) -> (Int, Int) {
     match root {
@@ -24,13 +21,4 @@ fn max_path_sum(root : TreeNode) -> Int {
 
   let (_, ans) = dfs(root, ans)
   ans
-}
-
-///|
-fn max(a : Int, b : Int) -> Int {
-  if a > b {
-    a
-  } else {
-    b
-  }
 }

@@ -1,87 +1,51 @@
 ///|
-struct Queue {
-  mut elems : @immut/list.T[String]
-}
-
-// Defining push operation as methods for Queue
-///|
-fn Queue::push(self : Queue, elem : String) -> Unit {
-  self.elems = Cons(elem, self.elems)
-}
-
-// Define the pop operation for Queue
-///|
-fn Queue::pop(self : Queue) -> String {
-  fn aux(
-    elems : @immut/list.T[String],
-    acc : @immut/list.T[String]
-  ) -> (String, @immut/list.T[String]) {
-    match elems {
-      Cons(head, Nil) => (head, acc)
-      Cons(head, tail) => aux(tail, Cons(head, acc))
-      Nil => abort("Queue is empty")
-    }
-  }
-
-  let (result, elems_reversed) = aux(self.elems, Nil)
-  self.elems = elems_reversed
-  result
-}
-
-// Calculate the size of the Queue
-///|
-fn Queue::size(self : Queue) -> Int {
-  loop self.elems, 0 {
-    Cons(_, tail), acc => continue tail, acc + 1
-    Nil, acc => acc
-  }
-}
-
-// Factory function to create a Queue
-///|
-fn create_queue() -> Queue {
-  Queue::{ elems: Nil }
-}
-
-// Function to remove an element from a list
-///|
-fn remove(list : @immut/list.T[String], elem : String) -> @immut/list.T[String] {
-  match list {
-    Cons(head, tail) =>
-      if head == elem {
-        tail
-      } else {
-        Cons(head, remove(tail, elem))
-      }
-    Nil => Nil
-  }
-}
-
-// Given a begin word, an end word, and a list of valid words, find the length of the shortest transformation sequence from begin to end
-///|
-fn ladder_length(
+pub fn ladder_length(
   begin_word : String,
   end_word : String,
-  word_list : @immut/list.T[String]
+  word_list : Array[String]
 ) -> Int {
-  let mut words = word_list
-  let q = create_queue()
-  Queue::push(q, begin_word)
-  let mut ans = 1
-  while Queue::size(q) != 0 {
-    let layer_size = Queue::size(q)
-    let mut i = 0
-    while i < layer_size {
-      i = i + 1
-      let word = Queue::pop(q)
-      if word == end_word {
-        return ans
-      }
-      if words.contains(word) {
-        words = remove(words, word)
+  let words = @hashset.from_array(word_list)
+  fn extend(
+    curr : @hashmap.T[String, Int],
+    oppo : @hashmap.T[String, Int],
+    q : @deque.T[String]
+  ) {
+    let word = q.pop_front().unwrap()
+    let step = curr.get(word).unwrap()
+    for i, _ in word {
+      for nch = b'a'; nch <= 'z'; nch = nch + 1 {
+        let replaced = StringBuilder::new()
+        replaced.write_substring(word, 0, i)
+        replaced.write_char(nch.to_char())
+        replaced.write_substring(word, i + 1, word.length() - (i + 1))
+        let replaced = replaced.to_string()
+        guard words.contains(replaced) && not(curr.contains(replaced)) else {
+          continue
+        }
+        if oppo.get(replaced) is Some(ostep) {
+          return Some(step + ostep)
+        }
+        curr[replaced] = step + 1
+        q.push_back(replaced)
       }
     }
-    ans = ans + 1
+    None
+  }
+
+  guard words.contains(end_word) else { 0 }
+  let qbegin = @deque.from_array([begin_word])
+  let qend = @deque.from_array([end_word])
+  let fbegin : @hashmap.T[String, Int] = @hashmap.from_array([(begin_word, 1)])
+  let fend : @hashmap.T[String, Int] = @hashmap.from_array([(end_word, 1)])
+  while not(qbegin.is_empty() || qend.is_empty()) {
+    let res = if qbegin.length() <= qend.length() {
+      extend(fbegin, fend, qbegin)
+    } else {
+      extend(fend, fbegin, qend)
+    }
+    if res is Some(res) {
+      return res
+    }
   }
   0
 }

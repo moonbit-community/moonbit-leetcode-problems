@@ -1,11 +1,5 @@
 ///|
-enum TreeNode {
-  Empty
-  Node(Int, TreeNode, TreeNode)
-}
-
-///|
-fn sum_numbers(root : TreeNode) -> Int {
+pub fn sum_numbers(root : TreeNode) -> Int {
   dfs(root, 0)
 }
 

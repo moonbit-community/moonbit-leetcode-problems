@@ -1,16 +1,24 @@
 ///|
 test "example 1" {
-  let list : ListNode = Node(4, Node(2, Node(1, Node(3, Empty))))
-  let sorted_list : ListNode = Node(1, Node(2, Node(3, Node(4, Empty))))
-  assert_eq!(insertion_sort_list(list), sorted_list)
+  let list = ListNode::from_array([4, 2, 1, 3])
+  @json.inspect!(insertion_sort_list(list), content=[
+    {
+      "val": 1,
+      "next": { "val": 2, "next": { "val": 3, "next": { "val": 4 } } },
+    },
+  ])
 }
 
 ///|
 test "example 2" {
-  let list : ListNode = Node(-1, Node(5, Node(3, Node(4, Node(0, Empty)))))
-  let sorted_list : ListNode = Node(
-    -1,
-    Node(0, Node(3, Node(4, Node(5, Empty)))),
-  )
-  assert_eq!(insertion_sort_list(list), sorted_list)
+  let list = ListNode::from_array([-1, 5, 3, 4, 0])
+  @json.inspect!(insertion_sort_list(list), content=[
+    {
+      "val": -1,
+      "next": {
+        "val": 0,
+        "next": { "val": 3, "next": { "val": 4, "next": { "val": 5 } } },
+      },
+    },
+  ])
 }

@@ -1,23 +1,8 @@
 ///|
-fn min(a : Int, b : Int) -> Int {
-  if a < b {
-    a
-  } else {
-    b
-  }
-}
+fnalias @math.(maximum as max, minimum as min)
 
 ///|
-fn max(a : Int, b : Int) -> Int {
-  if a > b {
-    a
-  } else {
-    b
-  }
-}
-
-///|
-fn maximum_gap(nums : Array[Int]) -> Int {
+pub fn maximum_gap(nums : Array[Int]) -> Int {
   let n = nums.length()
   if n < 2 {
     return 0
@@ -31,7 +16,9 @@ fn maximum_gap(nums : Array[Int]) -> Int {
   }
   let bucket_size = max(1, (mx - mi) / (n - 1))
   let bucket_count = (mx - mi) / bucket_size + 1
-  let buckets : Array[Array[Int]] = Array::make(bucket_count, [inf, -inf])
+  let buckets : Array[Array[Int]] = Array::makei(bucket_count, fn(_) {
+    [inf, -inf]
+  })
   for i = 0; i < n; i = i + 1 {
     let idx = (nums[i] - mi) / bucket_size
     buckets[idx][0] = min(buckets[idx][0], nums[i])

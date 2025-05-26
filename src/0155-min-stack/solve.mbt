@@ -1,65 +1,36 @@
 ///|
-fn new_min_stack() -> (@immut/list.T[Int], @immut/list.T[Int]) {
-  let stk1 : @immut/list.T[Int] = Nil
-  let stk2 : @immut/list.T[Int] = Cons(max_value(), Nil)
+pub typealias MinStack = (@list.T[Int], @list.T[Int])
+
+///|
+pub fn new_min_stack() -> MinStack {
+  let stk1 = @list.new()
+  let stk2 = @list.new().add(@int.max_value)
   (stk1, stk2)
 }
 
 ///|
-fn push(
-  stack : (@immut/list.T[Int], @immut/list.T[Int]),
-  val : Int
-) -> (@immut/list.T[Int], @immut/list.T[Int]) {
+pub fn push(stack : MinStack, val : Int) -> MinStack {
   let (stk1, stk2) = stack
-  let newStk1 : @immut/list.T[Int] = Cons(val, stk1)
-  let newMin : Int = min(val, stk2.head_exn())
-  let newStk2 : @immut/list.T[Int] = Cons(newMin, stk2)
+  let newStk1 = stk1.add(val)
+  let newMin : Int = @math.minimum(val, stk2.unsafe_head())
+  let newStk2 = stk2.add(newMin)
   (newStk1, newStk2)
 }
 
 ///|
-fn pop(
-  stack : (@immut/list.T[Int], @immut/list.T[Int])
-) -> (@immut/list.T[Int], @immut/list.T[Int]) {
+pub fn pop(stack : MinStack) -> MinStack {
   let (stk1, stk2) = stack
-  match stk1 {
-    Cons(_, xs) =>
-      match stk2 {
-        Cons(_, ys) => (xs, ys)
-        Nil => (xs, stk2) // Should never happen
-      }
-    Nil => (stk1, stk2) // No-op; stack was empty
-  }
+  guard stk1 is More(_, tail=xs) else { stack }
+  guard stk2 is More(_, tail=ys)
+  (xs, ys)
 }
 
 ///|
-fn top(stack : (@immut/list.T[Int], @immut/list.T[Int])) -> Int {
-  let (stk1, _) = stack
-  match stk1 {
-    Cons(x, _) => x
-    Nil => abort("Stack is empty")
-  }
+pub fn top(stack : MinStack) -> Int {
+  stack.0.head().unwrap()
 }
 
 ///|
-fn get_min(stack : (@immut/list.T[Int], @immut/list.T[Int])) -> Int {
-  let (_, stk2) = stack
-  match stk2 {
-    Cons(x, _) => x
-    Nil => abort("Stack is empty")
-  }
-}
-
-///|
-fn min(x : Int, y : Int) -> Int {
-  if x < y {
-    x
-  } else {
-    y
-  }
-}
-
-///|
-fn max_value() -> Int {
-  2147483647
+pub fn get_min(stack : MinStack) -> Int {
+  stack.1.head().unwrap()
 }

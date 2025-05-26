@@ -5,5 +5,8 @@ test "example" {
 
 ///|
 test "example 2" {
-  assert_eq!(reverse_bits(-3), 1073741825)
+  assert_eq!(
+    reverse_bits(0b11111111111111111111111111111101),
+    3221225471U.reinterpret_as_int(),
+  )
 }

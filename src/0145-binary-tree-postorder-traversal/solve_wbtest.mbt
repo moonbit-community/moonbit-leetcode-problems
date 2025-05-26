@@ -30,5 +30,5 @@ test "example 4" {
     Some(Node(2, Some(Node(3, None, None)), Some(Node(4, None, None)))),
     Some(Node(5, None, Some(Node(6, None, None)))),
   )
-  @json.inspect!(postorder_traversal(Some(root)), content=[3,4,2,6,5,1])
+  @json.inspect!(postorder_traversal(Some(root)), content=[3, 4, 2, 6, 5, 1])
 }

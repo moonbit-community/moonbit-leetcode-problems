@@ -1,3 +1,4 @@
+///|
 fn f(x : Int, tops : Array[Int], bottoms : Array[Int], n : Int) -> Int {
   let mut cnt1 = 0
   let mut cnt2 = 0

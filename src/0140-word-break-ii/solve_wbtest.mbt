@@ -10,7 +10,9 @@ test "wordBreak example 1" {
       "apple", "pen", "applepen", "pine", "pineapple",
     ])
     |> Set::from_array,
-    content=["pine apple pen apple","pine applepen apple","pineapple pen apple"],
+    content=[
+      "pine apple pen apple", "pine applepen apple", "pineapple pen apple",
+    ],
   )
   @json.inspect!(
     word_break("catsandog", ["cat", "cats", "and", "sand", "dog"])

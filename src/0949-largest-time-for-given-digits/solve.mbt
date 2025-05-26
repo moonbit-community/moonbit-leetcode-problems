@@ -7,6 +7,7 @@ fn max(a : Int, b : Int) -> Int {
   }
 }
 
+///|
 fn largest_time_from_digits(arr : Array[Int]) -> String {
   let mut ans = -1
   for i = 0; i < 4; i = i + 1 {
@@ -31,7 +32,9 @@ fn largest_time_from_digits(arr : Array[Int]) -> String {
         "0" + hours.to_string()
       } else {
         hours.to_string()
-      }) + ":" + (if minutes < 10 {
+      }) +
+      ":" +
+      (if minutes < 10 {
         "0" + minutes.to_string()
       } else {
         minutes.to_string()

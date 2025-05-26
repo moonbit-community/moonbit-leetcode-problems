@@ -24,6 +24,7 @@ fn add_strings(num1 : String, num2 : String) -> String {
   ans
 }
 
+///|
 fn sub_strings(num1 : String, num2 : String) -> String {
   let m = num1.length()
   let n = num2.length()
@@ -33,11 +34,10 @@ fn sub_strings(num1 : String, num2 : String) -> String {
   let mut ans = ""
   let mut c = 0
   for i = num1.length() - 1, j = num2.length() - 1; i >= 0; {
-    let diff = num1.get(i).to_int() - '0'.to_int() - c - (if j < 0 {
-        0
-      } else {
-        num2.get(j).to_int() - '0'.to_int()
-      })
+    let diff = num1.get(i).to_int() -
+      '0'.to_int() -
+      c -
+      (if j < 0 { 0 } else { num2.get(j).to_int() - '0'.to_int() })
     ans = ((diff + 10) % 10).to_string() + ans
     c = if diff < 0 { 1 } else { 0 }
     if i > 0 {

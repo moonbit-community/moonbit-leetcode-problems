@@ -1,3 +1,4 @@
+///|
 fn diagonal_sum(mat : Array[Array[Int]]) -> Int {
   let mut ans = 0
   let n = mat.length()

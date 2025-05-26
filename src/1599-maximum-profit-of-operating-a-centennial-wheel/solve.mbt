@@ -7,6 +7,7 @@ fn min(value1 : Int, value2 : Int) -> Int {
   }
 }
 
+///|
 fn min_operations_max_profit(
   customers : Array[Int],
   boarding_cost : Int,

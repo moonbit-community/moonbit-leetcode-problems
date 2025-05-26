@@ -17,8 +17,5 @@ test "example 1" {
 
 ///|
 test "example 2" {
-  inspect!(
-    subsets_with_dup1([0]),
-    content="@immut/sorted_set.of([[], [0]])",
-  )
+  inspect!(subsets_with_dup1([0]), content="@immut/sorted_set.of([[], [0]])")
 }

@@ -15,7 +15,6 @@ test "example 1" {
     group_anagrams1(["eat", "tea", "tan", "ate", "nat", "bat"]),
     content=
       #|@immut/sorted_set.of([@immut/sorted_set.of(["ate", "eat", "tea"]), @immut/sorted_set.of(["bat"]), @immut/sorted_set.of(["nat", "tan"])])
-
     ,
   )
 }
@@ -26,7 +25,6 @@ test "example 2" {
     group_anagrams1([""]),
     content=
       #|@immut/sorted_set.of([@immut/sorted_set.of([""])])
-
     ,
   )
 }
@@ -37,7 +35,6 @@ test "example 3" {
     group_anagrams1(["a"]),
     content=
       #|@immut/sorted_set.of([@immut/sorted_set.of(["a"])])
-
     ,
   )
 }

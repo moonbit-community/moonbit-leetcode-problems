@@ -1,8 +1,10 @@
+///|
 enum TreeNode {
   Empty
   Node(Int, mut left~ : TreeNode, mut right~ : TreeNode)
 } derive(Show, Eq)
 
+///|
 fn is_leaf(node : TreeNode) -> Bool {
   match node {
     Node(_, left=Empty, right=Empty) => true
@@ -10,6 +12,7 @@ fn is_leaf(node : TreeNode) -> Bool {
   }
 }
 
+///|
 fn find_leaf_nodes(root : TreeNode) -> Array[Int] {
   let leaves = Array::new()
   let stack = Array::new()
@@ -30,6 +33,7 @@ fn find_leaf_nodes(root : TreeNode) -> Array[Int] {
   leaves
 }
 
+///|
 fn merge_trees(trees : Array[TreeNode]) -> TreeNode? {
   let root_map = @hashmap.new()
   let leaf_map = @hashmap.new()
@@ -45,26 +49,25 @@ fn merge_trees(trees : Array[TreeNode]) -> TreeNode? {
     }
   }
   let mut merged_root = None
-  root_map.each(
-    fn(root_val, root_node) {
-      if leaf_map.contains(root_val) {
-        let leaf_node = leaf_map.get(root_val)
-        match leaf_node {
-          Some(leaf) => {
-            let new_tree = replace_leaf(leaf, root_val, root_node)
-            merged_root = Some(new_tree)
-          }
-          None => ()
+  root_map.each(fn(root_val, root_node) {
+    if leaf_map.contains(root_val) {
+      let leaf_node = leaf_map.get(root_val)
+      match leaf_node {
+        Some(leaf) => {
+          let new_tree = replace_leaf(leaf, root_val, root_node)
+          merged_root = Some(new_tree)
         }
+        None => ()
       }
-    },
-  )
+    }
+  })
   match merged_root {
     Some(root) => if is_valid_bst(root) { Some(root) } else { None }
     None => None
   }
 }
 
+///|
 fn replace_leaf(
   tree : TreeNode,
   _leaf_val : Int,
@@ -93,6 +96,7 @@ fn replace_leaf(
   tree
 }
 
+///|
 fn is_valid_bst(root : TreeNode) -> Bool {
   fn helper(node : TreeNode, min : Int, max : Int) -> Bool {
     match node {

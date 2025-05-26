@@ -1,3 +1,4 @@
+///|
 fn can_split_into_descending_consecutive_values(s : String) -> Bool {
   let n = s.length()
   for i = 1; i < n; i = i + 1 {
@@ -14,6 +15,7 @@ fn can_split_into_descending_consecutive_values(s : String) -> Bool {
   return false
 }
 
+///|
 fn check_descending(s : String, start : Int, prev_value : Int) -> Bool {
   let mut prev_value = prev_value
   let n = s.length()
@@ -30,6 +32,7 @@ fn check_descending(s : String, start : Int, prev_value : Int) -> Bool {
   return true
 }
 
+///|
 fn find_next_split(s : String, start : Int) -> Int {
   let n = s.length()
   for i = start + 1; i <= n; i = i + 1 {

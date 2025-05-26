@@ -17,10 +17,16 @@ test "example 1" {
 
 ///|
 test "example 2" {
-  inspect!(permute1([0, 1]), content="@immut/sorted_set.of([@immut/sorted_set.of([0, 1])])")
+  inspect!(
+    permute1([0, 1]),
+    content="@immut/sorted_set.of([@immut/sorted_set.of([0, 1])])",
+  )
 }
 
 ///|
 test "example 3" {
-  inspect!(permute1([1]), content="@immut/sorted_set.of([@immut/sorted_set.of([1])])")
+  inspect!(
+    permute1([1]),
+    content="@immut/sorted_set.of([@immut/sorted_set.of([1])])",
+  )
 }

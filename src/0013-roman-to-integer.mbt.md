@@ -1,3 +1,8 @@
+---
+difficulty: Easy
+verified: true
+---
+
 # Roman to Integer
 
 Roman numerals are represented by seven different symbols: `I`, `V`, `X`, `L`, `C`, `D` and `M`.
@@ -44,3 +49,62 @@ Given a roman numeral, convert it to an integer.
 * `1 <= s.length <= 15`
 * `s` contains only the characters `('I', 'V', 'X', 'L', 'C', 'D', 'M')`.
 * It is **guaranteed** that `s` is a valid roman numeral in the range `[1, 3999]`.
+
+## Suggested Approach
+
+```mbt nocheck
+pub fn roman_to_int(s: String) -> Int {
+  ...
+}
+```
+
+## Solution
+
+```mbt
+pub fn roman_to_int(s : String) -> Int {
+  let roman_map : Map[Char, Int] = {
+    'I': 1,
+    'V': 5,
+    'X': 10,
+    'L': 50,
+    'C': 100,
+    'D': 500,
+    'M': 1000,
+  }
+  let mut total = 0
+  let mut i = 0
+  let s_len = s.length()
+  while i < s_len {
+    let current_value = roman_map.get_or_default(s[i], 0)
+    let next_value = if i + 1 < s_len {
+      roman_map.get_or_default(s[i + 1], 0)
+    } else {
+      0
+    }
+    if current_value < next_value {
+      total = total + (next_value - current_value)
+      i = i + 2
+    } else {
+      total = total + current_value
+      i = i + 1
+    }
+  }
+  total
+}
+```
+
+## Tests
+
+```moonbit
+test "example 1" {
+  assert_eq(roman_to_int("III"), 3)
+}
+
+test "example 2" {
+  assert_eq(roman_to_int("LVIII"), 58)
+}
+
+test "example 3" {
+  assert_eq(roman_to_int("MCMXCIV"), 1994)
+}
+```

@@ -38,11 +38,18 @@ You can return the answer in any order.
 
 **Follow-up:** Can you come up with an algorithm that is less than `O(n2)` time complexity?
 
+# Suggested Approach
+
+```mbt nocheck
+pub fn twoSum(nums : Array[Int], target : Int) -> Array[Int] {
+  ...
+}
+```
 
 # Solution
 
 ```mbt
-fn two_sum(nums : Array[Int], target : Int) -> Array[Int] {
+pub fn twoSum(nums : Array[Int], target : Int) -> Array[Int] {
   let num_to_index : @hashmap.T[Int, Int] = @hashmap.new()
   for i = 0; i < nums.length(); i = i + 1 {
     let current_num = nums[i]
@@ -54,31 +61,29 @@ fn two_sum(nums : Array[Int], target : Int) -> Array[Int] {
   }
   return []
 }
-
 ```
 
 # Tests
 
 ```moonbit
-///|
+///
 test "example 1" {
   let nums = [2, 7, 11, 15]
   let target = 9
-  assert_eq(two_sum(nums, target), [0, 1])
+  assert_eq(twoSum(nums, target), [0, 1])
 }
 
-///|
+///
 test "example 2" {
   let nums = [3, 2, 4]
   let target = 6
-  assert_eq(two_sum(nums, target), [1, 2])
+  assert_eq(twoSum(nums, target), [1, 2])
 }
 
-///|
+///
 test "example 3" {
   let nums = [3, 3]
   let target = 6
-  assert_eq(two_sum(nums, target), [0, 1])
+  assert_eq(twoSum(nums, target), [0, 1])
 }
-
 ```

@@ -318,7 +318,7 @@ class LeetCodeSubmitter:
                         print(f"Memory: {memory}")
 
                         return {
-                            "success": True,
+                            "success": status_display == "Accepted",
                             "status": status_display,
                             "runtime": runtime,
                             "memory": memory,

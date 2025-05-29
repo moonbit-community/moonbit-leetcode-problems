@@ -231,7 +231,10 @@ class LeetCodeSubmitter:
         # Get CSRF token
         csrf_token = self.get_csrf_token()
         if not csrf_token:
-            return {"success": False, "error": "Could not get CSRF token"}
+            return {
+                "success": False,
+                "error": "Could not get CSRF token, is `--cookies` assigned a valid `cookies.json`?",
+            }
 
         # Get problem info
         problem_info = self.get_problem_info(problem_slug)

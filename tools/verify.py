@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 """
 Usage:
-  ./verify.py --cookies cookies.json --solution solution.js <PROBLEM_NUMBER>
-  ./verify.py --cookies cookies.json --solution <SOLUTION_STRING> <PROBLEM_NUMBER>
-  ./verify.py --cookies cookies.json --md <MBT_MD>
-
-Please note that cookies.json must have a valid "csrftoken" entry.
+  ./tools/verify.py --cookies cookies.json --solution solution.js <PROBLEM_NUMBER>
+  ./tools/verify.py --cookies cookies.json --solution <SOLUTION_STRING> <PROBLEM_NUMBER>
+  ./tools/verify.py --md <MBT_MD>
 
 You can use Chromium browser to log into https://leetcode.com/problems
 and then use https://chromewebstore.google.com/detail/ojfebgpkimhlhcblbalbfjblapadhbol
-to export the required cookies.json as a string.
+to export the required `cookies.json` as a string.
+
+Please note that:
+  1. `--cookies` defaults to `cookies.json` right next to `verify.py`;
+  2. `cookies.json` must have a valid "csrftoken" entry.
 
 The --md flag accepts .mbt.md files and extracts MoonBit code from the Solution section,
 then converts it to JavaScript using the MoonBit compiler. When using --md, the problem
@@ -319,7 +321,7 @@ class LeetCodeSubmitter:
                             "memory": memory,
                             "full_result": result,
                         }
-                    elif state == "PENDING":
+                    elif state == "PENDING" or state == "STARTED":
                         print(
                             f"Checking submission status... (attempt {attempt + 1}/{max_attempts})"
                         )
@@ -353,7 +355,7 @@ def number_to_slug(problem_number: int) -> str | None:
         Problem slug string
     """
     # Look for problem directory
-    src_dir = Path("..") / "src"
+    src_dir = Path("src")
     if not src_dir.exists():
         return f"problem-{problem_number}"
 
@@ -514,7 +516,12 @@ def main():
         "--solution", "-s", help="JavaScript solution code (or file path)"
     )
     parser.add_argument("--md", help="Path to .mbt.md file containing MoonBit solution")
-    parser.add_argument("--cookies", "-c", help="Path to cookies JSON file")
+    parser.add_argument(
+        "--cookies",
+        "-c",
+        default=str(Path(__file__).parent / "cookies.json"),
+        help="Path to cookies JSON file (default: cookies.json in script directory)",
+    )
     parser.add_argument(
         "--language",
         "-l",

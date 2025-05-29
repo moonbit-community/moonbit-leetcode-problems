@@ -3,24 +3,33 @@
 Usage:
   ./verify.py --cookies cookies.json --solution solution.js <PROBLEM_NUMBER>
   ./verify.py --cookies cookies.json --solution <SOLUTION_STRING> <PROBLEM_NUMBER>
+  ./verify.py --cookies cookies.json --md <MBT_MD>
 
 Please note that cookies.json must have a valid "csrftoken" entry.
 
 You can use Chromium browser to log into https://leetcode.com/problems
 and then use https://chromewebstore.google.com/detail/ojfebgpkimhlhcblbalbfjblapadhbol
 to export the required cookies.json as a string.
+
+The --md flag accepts .mbt.md files and extracts MoonBit code from the Solution section,
+then converts it to JavaScript using the MoonBit compiler. When using --md, the problem
+number and slug are automatically extracted from the filename (e.g., 0001-two-sum.mbt.md).
 """
 
-import os
-import sys
-import json
-import time
 import argparse
+import json
+import os
+import re
+import shutil
+import subprocess
+import sys
+import tempfile
+import time
+from http.cookiejar import Cookie, CookieJar
 from pathlib import Path
-from typing import Optional, Dict, Any, Tuple
-from urllib.request import Request, HTTPCookieProcessor, build_opener
+from typing import Any, Dict, Optional, Tuple
 from urllib.error import HTTPError, URLError
-from http.cookiejar import CookieJar, Cookie
+from urllib.request import HTTPCookieProcessor, Request, build_opener, urlopen
 
 
 class LeetCodeSubmitter:
@@ -344,7 +353,7 @@ def number_to_slug(problem_number: int) -> str | None:
         Problem slug string
     """
     # Look for problem directory
-    src_dir = Path("../src")
+    src_dir = Path("..") / "src"
     if not src_dir.exists():
         return f"problem-{problem_number}"
 
@@ -353,7 +362,7 @@ def number_to_slug(problem_number: int) -> str | None:
     matches = list(src_dir.glob(pattern))
 
     if matches:
-        name = matches[0].name
+        name = matches[0].name.removesuffix(".mbt.md")
         # Extract slug from path (remove number prefix)
         slug = name.split("-", 1)[1] if "-" in name else name
         return slug
@@ -361,15 +370,150 @@ def number_to_slug(problem_number: int) -> str | None:
     return None
 
 
+RE_TO_SNAKE = re.compile(r"(?<=[a-z])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])")
+
+
+def camel_to_snake(camel: str) -> str:
+    return RE_TO_SNAKE.sub("_", camel).lower()
+
+
+def fn_name_camel(title_slug: str):
+    url = "https://leetcode.cn/graphql/"
+
+    query = """
+    query questionDetail($titleSlug: String!) {
+        question(titleSlug: $titleSlug) {
+            titleSlug questionId questionFrontendId metaData
+        }
+    }
+    """
+
+    data = {
+        "operationName": "questionDetail",
+        "query": query,
+        "variables": {"titleSlug": title_slug},
+    }
+
+    headers = {"Content-Type": "application/json", "User-Agent": "Mozilla/5.0"}
+
+    req = Request(
+        url, data=json.dumps(data).encode("utf-8"), headers=headers, method="POST"
+    )
+
+    with urlopen(req) as resp_json:
+        resp_json = json.loads(resp_json.read().decode("utf-8"))
+
+    metadata = json.loads(resp_json["data"]["question"]["metaData"])
+    return metadata["name"]
+
+
+class MbtSrc:
+    src_txt: str
+    camel_exports: list[str]
+    prefix: Path
+
+    def __init__(
+        self, src_txt: str, camel_exports: list[str], prefix: Optional[Path] = None
+    ):
+        self.src_txt = src_txt
+        self.camel_exports = camel_exports
+        if prefix is None:
+            self.prefix = Path(tempfile.mkdtemp())
+        else:
+            self.prefix = prefix
+
+    def __enter__(self):
+        self.prefix.mkdir(parents=True, exist_ok=True)
+        (self.prefix / "moon.pkg.json").write_text(
+            '{"link":{"js":{"format":"cjs","exports":['
+            + ",".join(f'"{camel_to_snake(e)}"' for e in self.camel_exports)
+            + "]}}}"
+        )
+        (self.prefix / "moon.mod.json").write_text(
+            '{ "name": "dummy/index", "version": "0.1.0" }'
+        )
+        (self.prefix / "main.mbt").write_text(self.src_txt)
+        return self
+
+    def __exit__(self, _ty, _val, _tb):
+        shutil.rmtree(self.prefix)
+
+    def to_js(self) -> str:
+        subprocess.run(["moon", "build", "--target=js"], check=True, cwd=self.prefix)
+        js_file = self.prefix / "target" / "js" / "release" / "build" / "index.js"
+        res = js_file.read_text()
+        for camel in self.camel_exports:
+            snake = camel_to_snake(camel)
+            res = res.replace("exports." + snake, "const " + camel)
+        return res
+
+
+def parse_moonbit_from_markdown(md_file: str) -> Optional[str]:
+    """
+    Parse a .mbt.md file and extract MoonBit code from the Solution section.
+
+    Args:
+        md_file: Path to the .mbt.md file
+
+    Returns:
+        MoonBit source code or None if not found
+    """
+    try:
+        with open(md_file, "r") as f:
+            content = f.read()
+
+        # Find the Solution section
+        solution_match = re.search(r"^## Solution\s*$", content, re.MULTILINE)
+        if not solution_match:
+            print("Error: No '## Solution' section found in markdown file")
+            return None
+
+        # Extract content after the Solution section
+        solution_start = solution_match.end()
+
+        # Find the next section (starts with ##) or end of file
+        next_section_match = re.search(r"^## ", content[solution_start:], re.MULTILINE)
+        if next_section_match:
+            solution_content = content[
+                solution_start : solution_start + next_section_match.start()
+            ]
+        else:
+            solution_content = content[solution_start:]
+
+        # Find code blocks with mbt or moonbit language tags
+        code_block_pattern = r"```(?:mbt|moonbit)\s*\n(.*?)\n```"
+        code_matches = re.findall(code_block_pattern, solution_content, re.DOTALL)
+
+        if not code_matches:
+            print("Error: No MoonBit code block found in Solution section")
+            print("Expected code block with 'mbt' or 'moonbit' language tag")
+            return None
+
+        if len(code_matches) > 1:
+            print("Warning: Multiple MoonBit code blocks found, using the first one")
+
+        return code_matches[0].strip()
+
+    except Exception as e:
+        print(f"Error parsing markdown file: {e}")
+        return None
+
+
 def main():
     """Main function to handle command line arguments and execute submission."""
     parser = argparse.ArgumentParser(
         description="Submit JavaScript solutions to LeetCode"
     )
-    parser.add_argument("problem_number", type=int, help="LeetCode problem number")
+    parser.add_argument(
+        "problem_number",
+        type=int,
+        nargs="?",
+        help="LeetCode problem number (optional when using --md)",
+    )
     parser.add_argument(
         "--solution", "-s", help="JavaScript solution code (or file path)"
     )
+    parser.add_argument("--md", help="Path to .mbt.md file containing MoonBit solution")
     parser.add_argument("--cookies", "-c", help="Path to cookies JSON file")
     parser.add_argument(
         "--language",
@@ -382,7 +526,47 @@ def main():
 
     # Get solution code
     solution_code = None
-    if args.solution:
+    problem_slug = None
+
+    if args.md:
+        # Parse MoonBit code from markdown file
+        if not os.path.isfile(args.md):
+            print(f"Error: Markdown file not found: {args.md}")
+            sys.exit(1)
+
+        base_name = Path(args.md).name.removesuffix(".mbt.md")
+        if match := re.match(r"^(\d{4})-(.+)$", base_name):
+            args.problem_number = int(match.group(1))
+            problem_slug = match.group(2)
+
+    # Convert problem number to slug
+    if problem_slug is None:
+        problem_slug = number_to_slug(args.problem_number)
+
+    if problem_slug is None:
+        print(f"Error: unknown slug for problem #{args.problem_number}")
+        print("Hint: Does the problem exist in `src`?")
+        sys.exit(1)
+
+    if args.md:
+        mbt_code = parse_moonbit_from_markdown(args.md)
+        if not mbt_code:
+            print("Error: Could not extract MoonBit code from markdown file")
+            sys.exit(1)
+
+        print(
+            f"Converting MoonBit code to JavaScript for problem slug `{problem_slug}`..."
+        )
+        try:
+            camel = fn_name_camel(problem_slug)
+            with MbtSrc(src_txt=mbt_code, camel_exports=[camel]) as src:
+                solution_code = src.to_js()
+            print(":: MoonBit to JavaScript conversion successful")
+        except Exception as e:
+            print(":: Error converting MoonBit to JavaScript")
+            raise e
+
+    elif args.solution:
         if os.path.isfile(args.solution):
             # Read from file
             with open(args.solution, "r") as f:
@@ -392,14 +576,7 @@ def main():
             solution_code = args.solution
 
     if not solution_code:
-        print("Error: No solution code provided")
-        sys.exit(1)
-
-    # Convert problem number to slug
-    problem_slug = number_to_slug(args.problem_number)
-    if problem_slug is None:
-        print(f"Error: unknown slug for problem #{args.problem_number}")
-        print("Hint: Does the problem exist in `src`?")
+        print("Error: No solution code provided. Use --solution or --md flag.")
         sys.exit(1)
 
     # Create submitter and submit

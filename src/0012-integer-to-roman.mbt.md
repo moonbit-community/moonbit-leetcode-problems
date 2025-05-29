@@ -1,3 +1,8 @@
+---
+difficulty: Medium
+verified: true
+---
+
 # Integer to Roman
 
 Roman numerals are represented by seven different symbols: `I`, `V`, `X`, `L`, `C`, `D` and `M`.
@@ -42,3 +47,71 @@ Given an integer, convert it to a roman numeral.
 **Constraints:**
 
 * `1 <= num <= 3999`
+
+## Suggested Approach
+
+```mbt nocheck
+pub fn int_to_roman(num: Int) -> String {
+  ...
+}
+```
+
+## Solution
+
+```mbt
+pub fn int_to_roman(num : Int) -> String {
+  let roman_map : Array[(Int, String)] = [
+    (1000, "M"),
+    (900, "CM"),
+    (500, "D"),
+    (400, "CD"),
+    (100, "C"),
+    (90, "XC"),
+    (50, "L"),
+    (40, "XL"),
+    (10, "X"),
+    (9, "IX"),
+    (5, "V"),
+    (4, "IV"),
+    (1, "I"),
+  ]
+  let mut result : String = "" // Make result mutable
+  let mut remaining = num
+  for i = 0; i < roman_map.length(); i = i + 1 {
+    let (value, symbol) = roman_map[i]
+    while remaining >= value {
+      result = result + symbol
+      remaining = remaining - value
+    }
+  }
+  result
+}
+```
+
+## Tests
+
+```moonbit
+test "example 1" {
+  assert_eq(int_to_roman(3), "III")
+}
+
+test "example 2" {
+  assert_eq(int_to_roman(58), "LVIII")
+}
+
+test "example 3" {
+  assert_eq(int_to_roman(1994), "MCMXCIV")
+}
+
+test "additional cases" {
+  assert_eq(int_to_roman(1), "I")
+  assert_eq(int_to_roman(4), "IV")
+  assert_eq(int_to_roman(9), "IX")
+  assert_eq(int_to_roman(10), "X")
+  assert_eq(int_to_roman(40), "XL")
+  assert_eq(int_to_roman(90), "XC")
+  assert_eq(int_to_roman(400), "CD")
+  assert_eq(int_to_roman(900), "CM")
+  assert_eq(int_to_roman(3999), "MMMCMXCIX")
+}
+```

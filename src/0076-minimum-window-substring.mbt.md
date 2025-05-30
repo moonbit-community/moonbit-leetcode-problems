@@ -1,5 +1,26 @@
-///|
-fn min_window(s : String, t : String) -> String {
+---
+difficulty: Hard
+verified: true
+---
+
+# Minimum Window Substring
+
+Given two strings `s` and `t` of lengths `m` and `n` respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string "".
+
+The testcases will be generated such that the answer is _unique_.
+
+## Suggested Approach
+
+```mbt nocheck
+pub fn min_window(s: String, t: String) -> String {
+  ...
+}
+```
+
+## Solution
+
+```mbt
+pub fn min_window(s : String, t : String) -> String {
   let ori : @hashmap.T[Char, Int] = @hashmap.new()
   let cnt : @hashmap.T[Char, Int] = @hashmap.new()
   let t_len = t.length()
@@ -36,18 +57,33 @@ fn min_window(s : String, t : String) -> String {
   return slice(s, ans_l, ans_r)
 }
 
-///|
-fn check(ori : @hashmap.T[Char, Int], cnt : @hashmap.T[Char, Int]) -> Bool {
+pub fn check(ori : @hashmap.T[Char, Int], cnt : @hashmap.T[Char, Int]) -> Bool {
   let mut res = true
   ori.each(fn(k, v) { if cnt.get_or_default(k, 0) < v { res = false } })
   res
 }
 
-///|
-fn slice(string : String, start : Int, stop : Int) -> String {
+pub fn slice(string : String, start : Int, stop : Int) -> String {
   let mut result = ""
   for i = start; i < stop; i = i + 1 {
     result = result + string[i].to_string()
   }
   result
 }
+```
+
+## Tests
+
+```moonbit
+test "example 1" {
+  assert_eq(min_window("ADOBECODEBANC", "ABC"), "BANC")
+}
+
+test "example 2" {
+  assert_eq(min_window("a", "a"), "a")
+}
+
+test "example 3" {
+  assert_eq(min_window("a", "aa"), "")
+}
+```

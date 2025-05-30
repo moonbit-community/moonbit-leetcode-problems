@@ -1,4 +1,23 @@
-///|
+---
+difficulty: Medium
+verified: true
+---
+
+# Spiral Matrix II
+
+Given a positive integer `n`, generate an `n x n` `matrix` filled with elements from 1 to n^2 in spiral order.
+
+## Suggested Approach
+
+```mbt nocheck
+pub fn generate_matrix(n: Int) -> Array[Array[Int]] {
+  ...
+}
+```
+
+## Solution
+
+```mbt
 pub fn generate_matrix(n : Int) -> Array[Array[Int]] {
   let ans = Array::makei(n, fn(_) { Array::make(n, 0) })
   let mut u = 0
@@ -31,3 +50,16 @@ pub fn generate_matrix(n : Int) -> Array[Array[Int]] {
   }
   ans
 }
+```
+
+## Tests
+
+```moonbit
+test "example 1" {
+  assert_eq(generate_matrix(3), [[1, 2, 3], [8, 9, 4], [7, 6, 5]])
+}
+
+test "example 2" {
+  assert_eq(generate_matrix(1), [[1]])
+}
+```

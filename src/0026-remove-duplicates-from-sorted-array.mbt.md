@@ -1,3 +1,8 @@
+---
+difficulty: Easy
+verified: true
+---
+
 # Remove Duplicates from Sorted Array
 
 Given an integer array `nums` sorted in **non-decreasing order**, remove the duplicates [**in-place**](https://en.wikipedia.org/wiki/In-place_algorithm) such that each unique element appears only **once**. The **relative order** of the elements should be kept the **same**. Then return _the number of unique elements in_ `nums`.
@@ -44,3 +49,48 @@ Explanation: Your function should return `k = 5`, with the first five elements o
 - `1 <= nums.length <= 3 * 10^4`
 - `-100 <= nums[i] <= 100`
 - `nums` is sorted in **non-decreasing** order.
+
+## Suggested Approach
+
+```mbt nocheck
+pub fn remove_duplicates(nums: Array[Int]) -> Int {
+  ...
+}
+```
+
+## Solution
+
+```mbt
+pub fn remove_duplicates(nums : Array[Int]) -> Int {
+  let mut i = 0
+  for j = 1; j < nums.length(); j = j + 1 {
+    if nums[i] != nums[j] {
+      i = i + 1
+      nums[i] = nums[j]
+    }
+  }
+  i + 1
+}
+```
+
+## Tests
+
+```moonbit
+test "example 1" {
+  assert_eq(remove_duplicates([1, 1, 2]), 2)
+}
+
+test "example 2" {
+  assert_eq(remove_duplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]), 5)
+}
+
+// Additional Tests
+
+test "no duplicates" {
+  assert_eq(remove_duplicates([1, 2, 3, 4, 5]), 5)
+}
+
+test "all duplicates" {
+  assert_eq(remove_duplicates([1, 1, 1, 1, 1]), 1)
+}
+```

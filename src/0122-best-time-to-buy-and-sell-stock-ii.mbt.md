@@ -1,3 +1,8 @@
+---
+difficulty: Medium
+verified: true
+---
+
 # Best Time to Buy and Sell Stock II
 
 You are given an integer array prices where prices[i] is the price of a given stock on the ith day.
@@ -29,3 +34,39 @@ Constraints:
 
 1 <= prices.length <= 3 * 10^4
 0 <= prices[i] <= 10^4
+
+## Suggested Approach
+
+```mbt nocheck
+pub fn max_profit(prices: Array[Int]) -> Int {
+  ...
+}
+```
+
+## Solution
+
+```mbt
+pub fn max_profit(prices : Array[Int]) -> Int {
+  let mut res = 0
+  for i in 0..<(prices.length() - 1) {
+    res += @math.maximum(0, prices[i + 1] - prices[i])
+  }
+  res
+}
+```
+
+## Tests
+
+```moonbit
+test "example 1" {
+  assert_eq(max_profit([7, 1, 5, 3, 6, 4]), 7)
+}
+
+test "example 2" {
+  assert_eq(max_profit([7, 6, 4, 3, 1]), 0)
+}
+
+test "example 3" {
+  assert_eq(max_profit([1, 2, 3, 4, 5]), 4)
+}
+```

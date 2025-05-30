@@ -1,3 +1,8 @@
+---
+difficulty: Medium
+verified: true
+---
+
 # House Robber
 
 You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security systems connected and it will automatically contact the police if two adjacent houses were broken into on the same night.
@@ -21,3 +26,53 @@ Constraints:
 
 1 <= nums.length <= 100
 0 <= nums[i] <= 400
+
+## Suggested Approach
+
+```mbt nocheck
+pub fn rob(nums: Array[Int]) -> Int {
+  ...
+}
+```
+
+## Solution
+
+```mbt
+pub fn max(a : Int, b : Int) -> Int {
+  if a > b {
+    a
+  } else {
+    b
+  }
+}
+
+pub fn rob(nums : Array[Int]) -> Int {
+  let mut f = 0
+  let mut g = 0
+  let n = nums.length()
+  let mut i = 0
+  while i < n {
+    let ff = max(f, g)
+    g = f + nums[i]
+    f = ff
+    i = i + 1
+  }
+  max(f, g)
+}
+```
+
+## Tests
+
+```moonbit
+test "example 1" {
+  assert_eq(rob([1, 2, 3, 1]), 4)
+}
+
+test "example 2" {
+  assert_eq(rob([2, 7, 9, 3, 1]), 12)
+}
+
+test "example 3" {
+  assert_eq(rob([2]), 2)
+}
+```

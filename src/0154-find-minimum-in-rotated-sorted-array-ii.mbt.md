@@ -1,3 +1,8 @@
+---
+difficulty: Hard
+verified: true
+---
+
 # Find Minimum in Rotated Sorted Array II
 
 Suppose an array of length n sorted in ascending order is rotated between 1 and n times. For example, the array `nums = [0,1,4,4,5,6,7]` might become:
@@ -24,3 +29,42 @@ n == nums.length
 nums is sorted and rotated between 1 and n times.
 
 Follow up: This problem is similar to Find Minimum in Rotated Sorted Array, but nums may contain duplicates. Would this affect the runtime complexity? How and why?
+
+## Suggested Approach
+
+```mbt nocheck
+pub fn find_min(nums: Array[Int]) -> Int {
+  ...
+}
+```
+
+## Solution
+
+```mbt
+pub fn find_min(nums : Array[Int]) -> Int {
+  let mut left = 0
+  let mut right = nums.length() - 1
+  while left < right {
+    let mid = (left + right) >> 1
+    if nums[mid] > nums[right] {
+      left = mid + 1
+    } else if nums[mid] < nums[right] {
+      right = mid
+    } else {
+      right = right - 1
+    }
+  }
+  nums[left]
+}
+```
+
+## Tests
+
+```moonbit
+test "find_min" {
+  let result_1 = find_min([3, 4, 5, 1, 2])
+  assert_eq(result_1, 1)
+  let result_2 = find_min([4, 5, 6, 7, 0, 1, 2])
+  assert_eq(result_2, 0)
+}
+```

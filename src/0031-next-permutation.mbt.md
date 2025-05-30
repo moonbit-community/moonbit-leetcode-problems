@@ -1,3 +1,8 @@
+---
+difficulty: Medium
+verified: true
+---
+
 # Next Permutation
 
 A **permutation** of an array of integers is an arrangement of its members into a sequence or linear order.
@@ -35,3 +40,68 @@ Output: `[1, 5,1]`
 
 - `1 <= nums.length <= 100`
 - `0 <= nums[i] <= 100`
+
+## Suggested Approach
+
+```mbt nocheck
+pub fn next_permutation(nums: Array[Int]) -> Unit {
+  ...
+}
+```
+
+## Solution
+
+```mbt
+pub fn swap(nums : Array[Int], i : Int, j : Int) -> Unit {
+  let temp = nums[i]
+  nums[i] = nums[j]
+  nums[j] = temp
+}
+
+pub fn reverse(nums : Array[Int], start : Int, end : Int) -> Array[Int] {
+  let mut i = start
+  let mut j = end
+  while i < j {
+    swap(nums, i, j)
+    i = i + 1
+    j = j - 1
+  }
+  nums
+}
+
+pub fn next_permutation(nums : Array[Int]) -> Array[Int] {
+  let n = nums.length()
+  let mut i = n - 2
+  while i >= 0 && nums[i] >= nums[i + 1] {
+    i -= 1
+  }
+  if i >= 0 {
+    let mut j = n - 1
+    while nums[j] <= nums[i] && j >= 0 {
+      j = j - 1
+    }
+    swap(nums, i, j)
+  }
+  reverse(nums, i + 1, n - 1)
+}
+```
+
+## Tests
+
+```moonbit
+test "example 1" {
+  inspect!(next_permutation([1, 2, 3]), content="[1, 3, 2]")
+}
+
+test "example 2" {
+  inspect!(next_permutation([3, 2, 1]), content="[1, 2, 3]")
+}
+
+test "example 3" {
+  inspect!(next_permutation([1, 1, 5]), content="[1, 5, 1]")
+}
+
+test "example 2" {
+  inspect!(next_permutation([1, 3, 2]), content="[2, 1, 3]")
+}
+```

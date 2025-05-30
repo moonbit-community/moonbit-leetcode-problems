@@ -1,7 +1,42 @@
+---
+difficulty: Medium
+verified: true
+---
+
+# Generate Parentheses
+
+Given `n` pairs of parentheses, write a function to _generate all combinations of well-formed parentheses_.
+
+## Examples
+
+### Example 1
+
+Input: `n = 3`
+Output: `["((()))","(()())","(())()","()(())","()()()"]`
+
+### Example 2
+
+Input: `n = 1`
+Output: `["()"]`
+
+## Constraints
+
+- `1 <= n <= 8`
+
+## Suggested Approach
+
+```mbt nocheck
+pub fn generate_parenthesis(n: Int) -> Array[String] {
+  ...
+}
+```
+
+## Solution
+
+```mbt
 // Define a structure to represent the stack
 // Function to generate all combinations of well-formed parentheses
-///|
-fn generate_parenthesis(n : Int) -> Array[String] {
+pub fn generate_parenthesis(n : Int) -> Array[String] {
   let result = []
   let stack = []
   let open_count = n // Number of remaining open parentheses
@@ -38,7 +73,6 @@ fn generate_parenthesis(n : Int) -> Array[String] {
   result
 }
 
-///|
 fn[X] clone(array : Array[X]) -> Array[X] {
   let len = array.length()
   if len == 0 {
@@ -52,9 +86,27 @@ fn[X] clone(array : Array[X]) -> Array[X] {
   }
 }
 
-///|
 fn[X : Compare + Eq] sort(array : Array[X]) -> Array[X] {
   let return_array = array |> clone
   return_array.sort()
   return_array
 }
+```
+
+## Tests
+
+```moonbit
+test "example 1" {
+  assert_eq(generate_parenthesis(3) |> sort, [
+    "((()))", "(()())", "(())()", "()(())", "()()()",
+  ])
+}
+
+test "example 2" {
+  assert_eq(generate_parenthesis(1) |> sort, ["()"])
+}
+
+test "example 3" {
+  assert_eq(generate_parenthesis(2) |> sort, ["(())", "()()"])
+}
+```

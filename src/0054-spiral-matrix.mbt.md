@@ -1,5 +1,24 @@
-///|
-fn spiral_order(matrix : Array[Array[Int]]) -> Array[Int] {
+---
+difficulty: Medium
+verified: true
+---
+
+# Spiral Matrix
+
+Given an `m x n` `matrix`, return all elements of the `matrix` in spiral order.
+
+## Suggested Approach
+
+```mbt nocheck
+pub fn spiral_order(matrix: Array[Array[Int]]) -> Array[Int] {
+  ...
+}
+```
+
+## Solution
+
+```mbt
+pub fn spiral_order(matrix : Array[Array[Int]]) -> Array[Int] {
   let ans : Array[Int] = []
   if matrix.length() == 0 {
     return ans
@@ -40,3 +59,20 @@ fn spiral_order(matrix : Array[Array[Int]]) -> Array[Int] {
   }
   ans
 }
+```
+
+## Tests
+
+```moonbit
+test "example 1" {
+  assert_eq(spiral_order([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), [
+    1, 2, 3, 6, 9, 8, 7, 4, 5,
+  ])
+}
+
+test "example 2" {
+  assert_eq(spiral_order([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]), [
+    1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7,
+  ])
+}
+```

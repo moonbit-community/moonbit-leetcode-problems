@@ -5,6 +5,7 @@ Script to merge problem files into a single .mbt.md file.
 Usage:
   python merge.py <directory>
   python merge.py --verify <directory>
+  python merge.py --verify --commit <directory>
 """
 
 import re
@@ -234,6 +235,11 @@ def main():
     parser.add_argument(
         "--verify", action="store_true", help="Run verification after successful merge"
     )
+    parser.add_argument(
+        "--commit",
+        action="store_true",
+        help="Run `git commit` after successful verification",
+    )
 
     args = parser.parse_args()
 
@@ -258,6 +264,26 @@ def main():
 
     print(f"Removing original directory `{old_dir}`")
     shutil.rmtree(old_dir)
+
+    if args.commit:
+        try:
+            problem_num = output_file.name.split("-", maxsplit=1)[0]
+            subprocess.run(
+                [
+                    "git",
+                    "add",
+                    str(output_file).removesuffix(".mbt.md"),
+                    output_file,
+                ],
+                check=True,
+            )
+            commit_cmd = ["git", "commit", "-m", f"Convert {problem_num} to `.mbt.md`"]
+            print(f"Committing changes: {' '.join(commit_cmd)}")
+            subprocess.run(commit_cmd, check=True)
+            print("Changes committed successfully")
+        except subprocess.CalledProcessError as e:
+            print(f"Commit failed with exit code {e.returncode}")
+            sys.exit(1)
 
 
 if __name__ == "__main__":

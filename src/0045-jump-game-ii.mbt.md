@@ -1,3 +1,8 @@
+---
+difficulty: Medium
+verified: true
+---
+
 # Jump Game II
 
 You are given a 0-indexed array of integers nums of length n. You are initially positioned at nums[0].
@@ -24,3 +29,41 @@ Constraints:
 1 <= nums.length <= 10^4
 0 <= nums[i] <= 1000
 It's guaranteed that you can reach nums[n - 1].
+
+## Suggested Approach
+
+```mbt nocheck
+pub fn jump(nums: Array[Int]) -> Int {
+  ...
+}
+```
+
+## Solution
+
+```mbt
+pub fn jump(nums : Array[Int]) -> Int {
+  let mut ans = 0
+  let mut mx = 0
+  let mut last = 0
+  for i = 0; i < nums.length() - 1; i = i + 1 {
+    mx = @math.maximum(mx, i + nums[i])
+    if last == i {
+      ans = ans + 1
+      last = mx
+    }
+  }
+  ans
+}
+```
+
+## Tests
+
+```moonbit
+test "example 1" {
+  assert_eq(jump([2, 3, 1, 1, 4]), 2)
+}
+
+test "example 2" {
+  assert_eq(jump([2, 3, 0, 1, 4]), 2)
+}
+```

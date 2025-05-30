@@ -1,13 +1,33 @@
-///|
-fn total_n_queens(n : Int) -> Int {
+---
+difficulty: Hard
+verified: true
+---
+
+# N-Queens II
+
+The n-queens puzzle is the problem of placing n queens on an n x n chessboard such that no two queens attack each other.
+
+Given an integer `n`, return the number of distinct solutions to the n-queens puzzle.
+
+## Suggested Approach
+
+```mbt nocheck
+pub fn total_n_queens(n: Int) -> Int {
+  ...
+}
+```
+
+## Solution
+
+```mbt
+pub fn total_n_queens(n : Int) -> Int {
   let columns : @hashset.T[Int] = @hashset.new()
   let diagonals1 : @hashset.T[Int] = @hashset.new()
   let diagonals2 : @hashset.T[Int] = @hashset.new()
   backtrack(n, 0, columns, diagonals1, diagonals2)
 }
 
-///|
-fn backtrack(
+pub fn backtrack(
   n : Int,
   row : Int,
   columns : @hashset.T[Int],
@@ -41,3 +61,16 @@ fn backtrack(
     count
   }
 }
+```
+
+## Tests
+
+```moonbit
+test "example 1" {
+  assert_eq(total_n_queens(4), 2)
+}
+
+test "example 2" {
+  assert_eq(total_n_queens(1), 1)
+}
+```

@@ -1,3 +1,8 @@
+---
+difficulty: Hard
+verified: true
+---
+
 # Best Time to Buy and Sell Stock III
 
 You are given an array `prices` where `prices[i]` is the price of a given stock on the `i`th day.
@@ -32,3 +37,61 @@ Note that you cannot buy on day 1, buy on day 2 and sell them later, as you enga
 
 - `1 <= prices.length <= 10^5`
 - `0 <= prices[i] <= 10^5`
+
+## Suggested Approach
+
+```mbt nocheck
+pub fn max_profit(prices: Array[Int]) -> Int {
+  ...
+}
+```
+
+## Solution
+
+```mbt
+pub fn max_profit(prices : Array[Int]) -> Int {
+  let mut f1 = -prices[0]
+  let mut f2 = 0
+  let mut f3 = -prices[0]
+  let mut f4 = 0
+  let mut i = 1
+  while i < prices.length() {
+    f1 = max(f1, -prices[i])
+    f2 = max(f2, f1 + prices[i])
+    f3 = max(f3, f2 - prices[i])
+    f4 = max(f4, f3 + prices[i])
+    i = i + 1
+  }
+  f4
+}
+
+pub fn max(x : Int, y : Int) -> Int {
+  if x > y {
+    x
+  } else {
+    y
+  }
+}
+```
+
+## Tests
+
+```moonbit
+test "example 1" {
+  let prices = [3, 3, 5, 0, 0, 3, 1, 4]
+  let profit = max_profit(prices)
+  assert_eq(profit, 6)
+}
+
+test "example 2" {
+  let prices = [1, 2, 3, 4, 5]
+  let profit = max_profit(prices)
+  assert_eq(profit, 4)
+}
+
+test "example 3" {
+  let prices = [7, 6, 4, 3, 1]
+  let profit = max_profit(prices)
+  assert_eq(profit, 0)
+}
+```

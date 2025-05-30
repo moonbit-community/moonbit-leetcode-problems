@@ -1,5 +1,24 @@
-///|
-fn largest_rectangle_area(heights : Array[Int]) -> Int {
+---
+difficulty: Hard
+verified: true
+---
+
+# Largest Rectangle in Histogram
+
+Given an array of integers `heights` representing the histogram's bar height where the width of each bar is 1, return the area of the largest rectangle in the histogram.
+
+## Suggested Approach
+
+```mbt nocheck
+pub fn largest_rectangle_area(heights: Array[Int]) -> Int {
+  ...
+}
+```
+
+## Solution
+
+```mbt
+pub fn largest_rectangle_area(heights : Array[Int]) -> Int {
   let n = heights.length()
   let left = Array::make(n, 0)
   let right = Array::make(n, 0)
@@ -35,3 +54,16 @@ fn largest_rectangle_area(heights : Array[Int]) -> Int {
   }
   ans
 }
+```
+
+## Tests
+
+```moonbit
+test "example 1" {
+  assert_eq(largest_rectangle_area([2, 1, 5, 6, 2, 3]), 10)
+}
+
+test "example 2" {
+  assert_eq(largest_rectangle_area([2, 4]), 4)
+}
+```

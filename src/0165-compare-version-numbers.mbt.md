@@ -1,3 +1,8 @@
+---
+difficulty: Medium
+verified: true
+---
+
 # Compare Version Numbers
 
 Given two version numbers, version1 and version2, compare them.
@@ -34,3 +39,69 @@ Constraints:
 version1 and version2 only contain digits and '.'.
 version1 and version2 are valid version numbers.
 All the given revisions in version1 and version2 can be stored in a 32-bit integer.
+
+## Suggested Approach
+
+```mbt nocheck
+pub fn compare_version(version1: String, version2: String) -> Int {
+  ...
+}
+```
+
+## Solution
+
+```mbt
+pub fn compare_version(version1 : String, version2 : String) -> Int {
+  let m = version1.length()
+  let n = version2.length()
+  let mut i = 0
+  let mut j = 0
+  while i < m || j < n {
+    let mut a = 0
+    let mut b = 0
+    while i < m && version1[i] != '.' {
+      a = a * 10 + (version1[i].to_int() - '0'.to_int())
+      i = i + 1
+    }
+    while j < n && version2[j] != '.' {
+      b = b * 10 + (version2[j].to_int() - '0'.to_int())
+      j = j + 1
+    }
+    if a != b {
+      return if a < b { -1 } else { 1 }
+    }
+    // Skip the dot
+    if i < m {
+      i = i + 1
+    }
+    if j < n {
+      j = j + 1
+    }
+  }
+  0
+}
+```
+
+## Tests
+
+```moonbit
+test "example 1" {
+  assert_eq(compare_version("1.01", "1.001"), 0)
+}
+
+test "example 2" {
+  assert_eq(compare_version("1.0", "1.0.0"), 0)
+}
+
+test "example 3" {
+  assert_eq(compare_version("0.1", "1.1"), -1)
+}
+
+test "example 4" {
+  assert_eq(compare_version("1.0.1", "1"), 1)
+}
+
+test "example 5" {
+  assert_eq(compare_version("7.5.2.4", "7.5.3"), -1)
+}
+```

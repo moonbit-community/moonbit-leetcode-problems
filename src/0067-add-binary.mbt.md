@@ -1,5 +1,24 @@
-///|
-fn add_binary(a : String, b : String) -> String {
+---
+difficulty: Easy
+verified: true
+---
+
+# Add Binary
+
+Given two binary strings `a` and `b`, return their sum as a binary string.
+
+## Suggested Approach
+
+```mbt nocheck
+pub fn add_binary(a: String, b: String) -> String {
+  ...
+}
+```
+
+## Solution
+
+```mbt
+pub fn add_binary(a : String, b : String) -> String {
   let mut reverse_ans = ""
   let mut ca = 0
   for i = a.length() - 1, j = b.length() - 1
@@ -24,3 +43,16 @@ fn add_binary(a : String, b : String) -> String {
   }
   ans
 }
+```
+
+## Tests
+
+```moonbit
+test "example 1" {
+  assert_eq(add_binary("11", "1"), "100")
+}
+
+test "example 2" {
+  assert_eq(add_binary("1010", "1011"), "10101")
+}
+```

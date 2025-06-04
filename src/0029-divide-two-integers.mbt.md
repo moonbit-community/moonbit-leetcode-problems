@@ -1,3 +1,8 @@
+---
+difficulty: Medium
+verified: true
+---
+
 # Divide Two Integers
 
 Given two integers `dividend` and `divisor`, divide two integers **without** using multiplication, division, and mod operator.
@@ -26,3 +31,47 @@ Explanation: 7/-3 = -2.33333.. which is truncated to -2.
 
 - `-2^31 <= dividend, divisor <= 2^31 - 1`
 - `divisor != 0`
+
+## Suggested Approach
+
+```mbt nocheck
+pub fn divide(dividend: Int, divisor: Int) -> Int {
+  ...
+}
+```
+
+## Solution
+
+```mbt
+pub fn divide(dividend : Int, divisor : Int) -> Int {
+  let is_negative = dividend < 0 != (divisor < 0)
+  let mut dividend = dividend.to_int64().abs()
+  let divisor = divisor.to_int64().abs()
+  let mut total = 0L
+  while dividend >= divisor {
+    let mut count = 0
+    while dividend >= (divisor << (count + 1)) {
+      count += 1
+    }
+    total += 1 << count
+    dividend -= divisor << count
+  }
+  match (if is_negative { -1L } else { 1 }) * total {
+    -2147483648..=2147483647 as n => n.to_int()
+    n if n < 0 => -2147483648
+    _ => 2147483647
+  }
+}
+```
+
+## Tests
+
+```moonbit
+test "example 1" {
+  assert_eq(divide(10, 3), 3)
+}
+
+test "example 2" {
+  assert_eq(divide(7, -3), -2)
+}
+```

@@ -16,5 +16,5 @@ test "example 1" {
     Person::{ height: 4, k: 4 },
     Person::{ height: 7, k: 1 },
   ])
-  assert_eq!(reconstruct_queue(people), expected)
+  assert_eq(reconstruct_queue(people), expected)
 }

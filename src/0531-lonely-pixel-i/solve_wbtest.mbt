@@ -5,7 +5,7 @@ test "example 1" {
     ['W', 'B', 'W'],
     ['B', 'W', 'W'],
   ]
-  assert_eq!(find_lonely_pixel(picture), 3)
+  assert_eq(find_lonely_pixel(picture), 3)
 }
 
 ///|
@@ -15,5 +15,5 @@ test "example 2" {
     ['B', 'B', 'W'],
     ['B', 'B', 'B'],
   ]
-  assert_eq!(find_lonely_pixel(picture), 0)
+  assert_eq(find_lonely_pixel(picture), 0)
 }

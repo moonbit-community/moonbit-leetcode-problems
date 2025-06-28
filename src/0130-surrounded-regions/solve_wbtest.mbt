@@ -13,7 +13,7 @@ test "example 1" {
     ['X', 'X', 'X', 'X'],
     ['X', 'O', 'X', 'X'],
   ]
-  assert_eq!(board, expected)
+  assert_eq(board, expected)
 }
 
 ///|
@@ -21,5 +21,5 @@ test "example 2" {
   let board : Array[Array[Char]] = [['X']]
   solve(board)
   let expected : Array[Array[Char]] = [['X']]
-  assert_eq!(board, expected)
+  assert_eq(board, expected)
 }

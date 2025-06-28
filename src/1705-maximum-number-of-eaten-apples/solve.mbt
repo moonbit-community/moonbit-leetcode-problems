@@ -3,9 +3,9 @@ type IntInt (Int, Int)
 
 ///|
 impl Compare for IntInt with compare(self : IntInt, other : IntInt) -> Int {
-  let compare_first = self._.0.compare(other._.0)
+  let compare_first = self.inner().0.compare(other.inner().0)
   if compare_first == 0 {
-    self._.1.compare(other._.1)
+    self.inner().1.compare(other.inner().1)
   } else {
     compare_first
   }
@@ -13,7 +13,7 @@ impl Compare for IntInt with compare(self : IntInt, other : IntInt) -> Int {
 
 ///|
 impl Eq for IntInt with op_equal(self : IntInt, other : IntInt) -> Bool {
-  self._.0 == other._.0 && self._.1 == other._.1
+  self.inner().0 == other.inner().0 && self.inner().1 == other.inner().1
 }
 
 ///|
@@ -31,7 +31,7 @@ fn max_number_of_eaten_apples(apples : Array[Int], days : Array[Int]) -> Int {
       }
     }
     while not(pq.is_empty()) {
-      let (rotten_day, apple_count) = pq.peek().unwrap()._
+      let (rotten_day, apple_count) = pq.peek().unwrap().inner()
       if rotten_day <= day {
         pq.pop() |> ignore
       } else {
@@ -39,7 +39,7 @@ fn max_number_of_eaten_apples(apples : Array[Int], days : Array[Int]) -> Int {
       }
     }
     if not(pq.is_empty()) {
-      let (rotten_day, apple_count) = pq.peek().unwrap()._
+      let (rotten_day, apple_count) = pq.peek().unwrap().inner()
       if apple_count > 0 {
         pq.pop() |> ignore
         pq.push((rotten_day, apple_count - 1))

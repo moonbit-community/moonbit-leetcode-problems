@@ -1,4 +1,5 @@
 // Union-Find data structure
+
 ///|
 struct UnionFind {
   parent : Array[Int]
@@ -40,6 +41,7 @@ fn union(uf : UnionFind, x : Int, y : Int) -> Unit {
 }
 
 // Function to minimize hamming distance
+
 ///|
 fn minimize_hamming_distance(
   source : Array[Int],

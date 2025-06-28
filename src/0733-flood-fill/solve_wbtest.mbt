@@ -6,5 +6,5 @@ test "floodFill example" {
   let color = 2
   let filled_image = flood_fill(image, sr, sc, color)
   let expected : Array[Array[Int]] = [[2, 2, 2], [2, 2, 0], [2, 0, 1]]
-  assert_eq!(filled_image, expected)
+  assert_eq(filled_image, expected)
 }

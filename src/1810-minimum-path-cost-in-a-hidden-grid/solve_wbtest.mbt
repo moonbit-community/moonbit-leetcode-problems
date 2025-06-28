@@ -17,7 +17,7 @@ test "example 1" {
     move: fn(dir) { if dir == 'L' { 2 } else if dir == 'D' { 1 } else { -1 } },
     is_target: fn() { false },
   }
-  assert_eq!(min_path_cost(master, 0, 1), 2)
+  assert_eq(min_path_cost(master, 0, 1), 2)
 }
 
 ///|
@@ -51,7 +51,7 @@ test "example 2" {
     },
     is_target: fn() { false },
   }
-  assert_eq!(min_path_cost(master, 2, 0), 9)
+  assert_eq(min_path_cost(master, 2, 0), 9)
 }
 
 ///|
@@ -73,5 +73,5 @@ test "example 3" {
     move: fn(dir) { -1 },
     is_target: fn() { false },
   }
-  assert_eq!(min_path_cost(master, 0, 0), -1)
+  assert_eq(min_path_cost(master, 0, 0), -1)
 }

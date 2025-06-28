@@ -1,4 +1,5 @@
 // Define the TreeNode structure
+
 ///|
 enum TreeNode {
   Empty
@@ -6,6 +7,7 @@ enum TreeNode {
 }
 
 // Function to insert a value into the BST and return the depth of the tree
+
 ///|
 fn insert_and_get_depth(root : TreeNode, val : Int) -> (TreeNode, Int) {
   match root {
@@ -22,6 +24,7 @@ fn insert_and_get_depth(root : TreeNode, val : Int) -> (TreeNode, Int) {
 }
 
 // Main function to calculate the depth of the BST given the insertion order
+
 ///|
 fn depth_of_bst_given_insertion_order(order : Array[Int]) -> Int {
   let mut root = Empty

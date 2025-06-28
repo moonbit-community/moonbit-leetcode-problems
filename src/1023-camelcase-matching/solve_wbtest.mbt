@@ -1,6 +1,6 @@
 ///|
 test "example 1" {
-  assert_eq!(
+  assert_eq(
     camel_match(
       ["FooBar", "FooBarTest", "FootBall", "FrameBuffer", "ForceFeedBack"],
       "FB",
@@ -11,7 +11,7 @@ test "example 1" {
 
 ///|
 test "example 2" {
-  assert_eq!(
+  assert_eq(
     camel_match(
       ["FooBar", "FooBarTest", "FootBall", "FrameBuffer", "ForceFeedBack"],
       "FoBa",
@@ -22,7 +22,7 @@ test "example 2" {
 
 ///|
 test "example 3" {
-  assert_eq!(
+  assert_eq(
     camel_match(
       ["FooBar", "FooBarTest", "FootBall", "FrameBuffer", "ForceFeedBack"],
       "FoBaT",

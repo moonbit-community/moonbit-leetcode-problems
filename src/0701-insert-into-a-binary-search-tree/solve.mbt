@@ -1,4 +1,5 @@
 // Definition for a binary tree node
+
 ///|
 enum TreeNode[T] {
   Empty

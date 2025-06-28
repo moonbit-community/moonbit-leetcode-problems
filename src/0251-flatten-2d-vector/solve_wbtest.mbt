@@ -10,6 +10,6 @@ test "example 1" {
   let hasNext = Vector2D::hasNext(obj)
   let next = Vector2D::next(obj)
   let hasNext = Vector2D::hasNext(obj)
-  assert_eq!(next, 4)
-  assert_eq!(hasNext, false)
+  assert_eq(next, 4)
+  assert_eq(hasNext, false)
 }

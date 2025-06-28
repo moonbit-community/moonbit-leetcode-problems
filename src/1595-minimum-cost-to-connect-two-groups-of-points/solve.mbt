@@ -17,7 +17,7 @@ fn connect_two_groups(cost : Array[Array[Int]]) -> Int {
   })
   f[0][0] = 0
   for i = 1; i <= m; i = i + 1 {
-    for j = 0; j < (1 << n); j = j + 1 {
+    for j = 0; j < 1 << n; j = j + 1 {
       for k = 0; k < n; k = k + 1 {
         if ((j >> k) & 1) == 1 {
           let c = cost[i - 1][k]

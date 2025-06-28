@@ -2,21 +2,21 @@
 test "example 1" {
   let n = 6
   let edges = [[1, 2], [1, 3], [3, 2], [4, 1], [5, 2], [3, 6]]
-  assert_eq!(min_degree_of_connected_trio(n, edges), 3)
+  assert_eq(min_degree_of_connected_trio(n, edges), 3)
 }
 
 ///|
 test "example 2" {
   let n = 7
   let edges = [[1, 3], [4, 1], [4, 3], [2, 5], [5, 6], [6, 7], [7, 5], [2, 6]]
-  assert_eq!(min_degree_of_connected_trio(n, edges), 0)
+  assert_eq(min_degree_of_connected_trio(n, edges), 0)
 }
 
 ///|
 test "no trios" {
   let n = 4
   let edges = [[1, 2], [2, 3], [3, 4]]
-  assert_eq!(min_degree_of_connected_trio(n, edges), -1)
+  assert_eq(min_degree_of_connected_trio(n, edges), -1)
 }
 
 ///|
@@ -30,5 +30,5 @@ test "large graph" {
       idx = idx + 1
     }
   }
-  assert_eq!(min_degree_of_connected_trio(n, edges), 397)
+  assert_eq(min_degree_of_connected_trio(n, edges), 397)
 }

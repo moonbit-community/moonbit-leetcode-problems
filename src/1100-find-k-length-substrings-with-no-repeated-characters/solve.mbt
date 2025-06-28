@@ -32,6 +32,7 @@ fn num_k_len_substr_no_repeats(s : String, k : Int) -> Int {
 }
 
 // Helper function to slice a String since Moonbit standard library doesn't include it
+
 ///|
 fn slice(string : String, start : Int, stop : Int) -> String {
   let mut result = ""

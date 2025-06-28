@@ -5,7 +5,7 @@ test "sparse_vector_dot_product_example_1" {
   let v1 = SparseVector::new(nums1)
   let v2 = SparseVector::new(nums2)
   let ans = SparseVector::dot_product(v1, v2)
-  assert_eq!(ans, 8)
+  assert_eq(ans, 8)
 }
 
 ///|
@@ -15,5 +15,5 @@ test "sparse_vector_dot_product_example_2" {
   let v1 = SparseVector::new(nums1)
   let v2 = SparseVector::new(nums2)
   let ans = SparseVector::dot_product(v1, v2)
-  assert_eq!(ans, 0)
+  assert_eq(ans, 0)
 }

@@ -17,6 +17,7 @@ fn maximum_product_difference(nums : Array[Int]) -> Int {
 }
 
 // Helper function to sort an array
+
 ///|
 fn sort(arr : Array[Int]) -> Array[Int] {
   // Implementing a simple sorting algorithm (e.g., bubble sort) for demonstration

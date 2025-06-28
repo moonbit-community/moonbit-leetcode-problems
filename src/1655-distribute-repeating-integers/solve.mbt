@@ -2,7 +2,7 @@
 fn can_distribute(nums : Array[Int], quantity : Array[Int]) -> Bool {
   let m = quantity.length()
   let s = Array::make(1 << m, 0)
-  for i = 1; i < (1 << m); i = i + 1 {
+  for i = 1; i < 1 << m; i = i + 1 {
     for j = 0; j < m; j = j + 1 {
       if ((i >> j) & 1) == 1 {
         s[i] = s[i ^ (1 << j)] + quantity[j]
@@ -27,7 +27,7 @@ fn can_distribute(nums : Array[Int], quantity : Array[Int]) -> Bool {
     f[i][0] = true
   }
   for i = 0; i < n; i = i + 1 {
-    for j = 0; j < (1 << m); j = j + 1 {
+    for j = 0; j < 1 << m; j = j + 1 {
       if i > 0 && f[i - 1][j] {
         f[i][j] = true
         continue

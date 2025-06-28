@@ -21,7 +21,7 @@ test "example 1" {
       next: Option::Some(ListNode::{ val: 8, next: Option::None }),
     }),
   })
-  assert_eq!(add_two_numbers(l1, l2), expected)
+  assert_eq(add_two_numbers(l1, l2), expected)
 }
 
 ///|
@@ -29,7 +29,7 @@ test "example 2" {
   let l1 = Option::Some(ListNode::{ val: 0, next: Option::None })
   let l2 = Option::Some(ListNode::{ val: 0, next: Option::None })
   let expected = Option::Some(ListNode::{ val: 0, next: Option::None })
-  assert_eq!(add_two_numbers(l1, l2), expected)
+  assert_eq(add_two_numbers(l1, l2), expected)
 }
 
 ///|
@@ -85,5 +85,5 @@ test "example 3" {
       }),
     }),
   })
-  assert_eq!(add_two_numbers(l1, l2), expected)
+  assert_eq(add_two_numbers(l1, l2), expected)
 }

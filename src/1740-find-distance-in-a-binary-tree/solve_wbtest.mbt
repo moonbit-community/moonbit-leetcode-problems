@@ -17,7 +17,7 @@ test "example 1" {
       right: Some(TreeNode::{ val: 8, left: None, right: None }),
     }),
   }
-  assert_eq!(find_distance_between_nodes(root, 5, 0), 3)
+  assert_eq(find_distance_between_nodes(root, 5, 0), 3)
 }
 
 ///|
@@ -39,7 +39,7 @@ test "example 2" {
       right: Some(TreeNode::{ val: 8, left: None, right: None }),
     }),
   }
-  assert_eq!(find_distance_between_nodes(root, 5, 7), 2)
+  assert_eq(find_distance_between_nodes(root, 5, 7), 2)
 }
 
 ///|
@@ -61,5 +61,5 @@ test "example 3" {
       right: Some(TreeNode::{ val: 8, left: None, right: None }),
     }),
   }
-  assert_eq!(find_distance_between_nodes(root, 5, 5), 0)
+  assert_eq(find_distance_between_nodes(root, 5, 5), 0)
 }

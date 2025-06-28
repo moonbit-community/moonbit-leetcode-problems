@@ -9,13 +9,13 @@ test "rhombus_sum_calculator" {
   ]
   let calculator1 = RhombusSumCalculator::new(grid1)
   let result1 = calculator1.get_biggest_three_rhombus_sums()
-  assert_eq!(result1, [228, 216, 211])
+  assert_eq(result1, [228, 216, 211])
   let grid2 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
   let calculator2 = RhombusSumCalculator::new(grid2)
   let result2 = calculator2.get_biggest_three_rhombus_sums()
-  assert_eq!(result2, [20, 9, 8])
+  assert_eq(result2, [20, 9, 8])
   let grid3 = [[7, 7, 7]]
   let calculator3 = RhombusSumCalculator::new(grid3)
   let result3 = calculator3.get_biggest_three_rhombus_sums()
-  assert_eq!(result3, [7])
+  assert_eq(result3, [7])
 }

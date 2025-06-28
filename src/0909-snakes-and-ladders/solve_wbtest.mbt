@@ -8,5 +8,5 @@ test "example 1" {
     [-1, -1, -1, -1, -1, -1],
     [-1, 15, -1, -1, -1, -1],
   ]
-  assert_eq!(snakes_and_ladders(board), 4)
+  assert_eq(snakes_and_ladders(board), 4)
 }

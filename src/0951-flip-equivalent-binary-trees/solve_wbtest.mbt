@@ -26,7 +26,7 @@ test "example 1" {
       TreeNode::Node(4, TreeNode::Empty, TreeNode::Empty),
     ),
   )
-  assert_eq!(flip_equiv(root1, root2), true)
+  assert_eq(flip_equiv(root1, root2), true)
 }
 
 ///|
@@ -49,5 +49,5 @@ test "example 2" {
     ),
     TreeNode::Empty,
   )
-  assert_eq!(flip_equiv(root1, root2), false)
+  assert_eq(flip_equiv(root1, root2), false)
 }

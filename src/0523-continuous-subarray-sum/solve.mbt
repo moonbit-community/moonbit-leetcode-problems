@@ -5,6 +5,7 @@ struct Pair {
 }
 
 // Since MoonBit does not directly support maps, we simulate it with a list of Pair structs.
+
 ///|
 fn add_pair(
   pairs : @immut/list.T[Pair],

@@ -18,6 +18,7 @@ fn max_equal_rows_after_flips(matrix : Array[Array[Int]]) -> Int {
 }
 
 // Custom max function (MoonBit has no built-in max function)
+
 ///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {

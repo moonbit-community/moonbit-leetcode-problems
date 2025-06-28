@@ -1,6 +1,6 @@
 ///|
 test "example 1" {
-  assert_eq!(flip_and_invert([[1, 1, 0], [1, 0, 1], [0, 0, 0]]), [
+  assert_eq(flip_and_invert([[1, 1, 0], [1, 0, 1], [0, 0, 0]]), [
     [1, 0, 0],
     [0, 1, 0],
     [1, 1, 1],
@@ -9,7 +9,7 @@ test "example 1" {
 
 ///|
 test "example 2" {
-  assert_eq!(
+  assert_eq(
     flip_and_invert([[1, 1, 0, 0], [1, 0, 0, 1], [0, 1, 1, 1], [1, 0, 1, 0]]),
     [[1, 1, 0, 0], [0, 1, 1, 0], [0, 0, 0, 1], [1, 0, 1, 0]],
   )

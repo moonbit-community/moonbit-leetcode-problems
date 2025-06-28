@@ -9,7 +9,7 @@ test "example 1" {
     ),
     TreeNode::Node(7, Leaf, Leaf),
   )
-  assert_eq!(
+  assert_eq(
     search_bst(root, 2),
     TreeNode::Node(
       2,
@@ -30,11 +30,11 @@ test "example 2" {
     ),
     TreeNode::Node(7, Leaf, Leaf),
   )
-  assert_eq!(search_bst(root, 5), Leaf)
+  assert_eq(search_bst(root, 5), Leaf)
 }
 
 ///|
 test "example 3" {
   let root = TreeNode::Leaf
-  assert_eq!(search_bst(root, 1), Leaf)
+  assert_eq(search_bst(root, 1), Leaf)
 }

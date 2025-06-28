@@ -13,6 +13,7 @@ fn subtract_product_and_sum(n : Int) -> Int {
 }
 
 // Implement the floor division manually as no direct function is provided
+
 ///|
 fn floor_div(numerator : Int, denominator : Int) -> Int {
   let is_negative = (numerator < 0 && denominator > 0) ||

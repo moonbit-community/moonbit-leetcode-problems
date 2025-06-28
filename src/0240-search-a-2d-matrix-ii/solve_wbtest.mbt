@@ -9,7 +9,7 @@ test "example 1" {
   ]
   let target = 5
   let found = search_matrix(matrix, target)
-  assert_eq!(found, true)
+  assert_eq(found, true)
 }
 
 ///|
@@ -23,5 +23,5 @@ test "example 2" {
   ]
   let target = 20
   let found = search_matrix(matrix, target)
-  assert_eq!(found, false)
+  assert_eq(found, false)
 }

@@ -1,4 +1,5 @@
 // Define the ListNode type for the linked list
+
 ///|
 struct ListNode {
   mut val : Int
@@ -6,12 +7,14 @@ struct ListNode {
 }
 
 // Implement the Eq trait for ListNode
+
 ///|
 impl Eq for ListNode with op_equal(self : ListNode, other : ListNode) -> Bool {
   self.val == other.val && self.next == other.next
 }
 
 // Function to swap the kth node from the beginning and the kth node from the end
+
 ///|
 fn swap_nodes_in_linked_list(head : ListNode?, k : Int) -> ListNode? {
   if head == None {
@@ -59,6 +62,7 @@ fn swap_nodes_in_linked_list(head : ListNode?, k : Int) -> ListNode? {
 }
 
 // Helper function to create a linked list from an array
+
 ///|
 fn create_linked_list(arr : Array[Int]) -> ListNode? {
   if arr.length() == 0 {
@@ -74,6 +78,7 @@ fn create_linked_list(arr : Array[Int]) -> ListNode? {
 }
 
 // Helper function to convert a linked list to an array
+
 ///|
 fn linked_list_to_array(head : ListNode?) -> Array[Int] {
   let arr = Array::make(0, 0)

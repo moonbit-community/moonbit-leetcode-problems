@@ -7,5 +7,5 @@ test "palindrome_pairs example" {
     @immut/list.of([3, 2]),
     @immut/list.of([2, 4]),
   ])
-  assert_eq!(palindrome_pairs(words), expected)
+  assert_eq(palindrome_pairs(words), expected)
 }

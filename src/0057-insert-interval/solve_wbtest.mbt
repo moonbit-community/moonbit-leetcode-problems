@@ -10,7 +10,7 @@ test "example 1" {
     Interval::{ start: 1, end: 5 },
     Interval::{ start: 6, end: 9 },
   ]
-  assert_eq!(merged_intervals, expected)
+  assert_eq(merged_intervals, expected)
 }
 
 ///|
@@ -29,5 +29,5 @@ test "example 2" {
     Interval::{ start: 3, end: 10 },
     Interval::{ start: 12, end: 16 },
   ]
-  assert_eq!(merged_intervals, expected)
+  assert_eq(merged_intervals, expected)
 }

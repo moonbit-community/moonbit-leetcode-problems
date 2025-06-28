@@ -7,5 +7,5 @@ test "example test" {
     TreeNode::Node(3, Empty, Empty),
   )
   let expected_result = @immut/list.T::Nil // No flips are needed
-  assert_eq!(sol.flip_match_voyage(tree), expected_result)
+  assert_eq(sol.flip_match_voyage(tree), expected_result)
 }

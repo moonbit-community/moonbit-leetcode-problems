@@ -9,11 +9,11 @@ test "example 1" {
     ),
     Empty,
   )
-  assert_eq!(min_camera_cover(root), 1)
+  assert_eq(min_camera_cover(root), 1)
 }
 
 ///|
 test "example 2" {
   let root = TreeNode::Empty
-  assert_eq!(min_camera_cover(root), 0)
+  assert_eq(min_camera_cover(root), 0)
 }

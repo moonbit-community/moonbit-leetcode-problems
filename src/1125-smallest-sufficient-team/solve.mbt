@@ -19,7 +19,7 @@ fn smallest_sufficient_team(
   let g : Array[Int] = Array::make(1 << m, 0)
   let h : Array[Int] = Array::make(1 << m, 0)
   f[0] = 0
-  for i = 0; i < (1 << m); i = i + 1 {
+  for i = 0; i < 1 << m; i = i + 1 {
     if f[i] == inf {
       continue
     }

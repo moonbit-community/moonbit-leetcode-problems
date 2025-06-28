@@ -10,7 +10,7 @@ test "example 1" {
     [4, 5, 15],
   ]
   let passing_fees = [5, 1, 2, 20, 20, 3]
-  assert_eq!(
+  assert_eq(
     min_cost_to_reach_destination_in_time(max_time, edges, passing_fees),
     11,
   )
@@ -28,7 +28,7 @@ test "example 2" {
     [4, 5, 15],
   ]
   let passing_fees = [5, 1, 2, 20, 20, 3]
-  assert_eq!(
+  assert_eq(
     min_cost_to_reach_destination_in_time(max_time, edges, passing_fees),
     48,
   )
@@ -46,7 +46,7 @@ test "example 3" {
     [4, 5, 15],
   ]
   let passing_fees = [5, 1, 2, 20, 20, 3]
-  assert_eq!(
+  assert_eq(
     min_cost_to_reach_destination_in_time(max_time, edges, passing_fees),
     -1,
   )

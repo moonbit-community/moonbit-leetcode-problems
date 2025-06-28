@@ -13,7 +13,7 @@ fn close_strings(word1 : String, word2 : String) -> Bool {
   let cnt1 = count_characters(word1)
   let cnt2 = count_characters(word2)
   for i = 0; i < 26; i = i + 1 {
-    if cnt1[i] == 0 != (cnt2[i] == 0) {
+    if (cnt1[i] == 0) != (cnt2[i] == 0) {
       return false
     }
   }

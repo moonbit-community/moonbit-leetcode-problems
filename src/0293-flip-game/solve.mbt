@@ -18,6 +18,7 @@ fn generate_possible_next_moves(
 }
 
 // Helper function to set a character at a specific position in a string
+
 ///|
 fn set_char_at(s : String, index : Int, c : Char) -> String {
   let mut new_string = ""

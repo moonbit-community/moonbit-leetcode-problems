@@ -10,7 +10,7 @@ test "example 1" {
     [3, 5, 1],
     [5, 4, 10],
   ]
-  assert_eq!(count_restricted_paths(n, edges), 3)
+  assert_eq(count_restricted_paths(n, edges), 3)
 }
 
 ///|
@@ -26,5 +26,5 @@ test "example 2" {
     [7, 5, 3],
     [2, 6, 4],
   ]
-  assert_eq!(count_restricted_paths(n, edges), 1)
+  assert_eq(count_restricted_paths(n, edges), 1)
 }

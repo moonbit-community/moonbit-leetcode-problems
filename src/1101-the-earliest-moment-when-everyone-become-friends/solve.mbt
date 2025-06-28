@@ -8,6 +8,7 @@ fn find(p : Array[Int], x : Int) -> Int {
 }
 
 // Custom sort function for logs based on the first element of each subarray
+
 ///|
 fn sort_logs(logs : Array[Array[Int]]) -> Unit {
   for i = 1; i < logs.length(); i = i + 1 {

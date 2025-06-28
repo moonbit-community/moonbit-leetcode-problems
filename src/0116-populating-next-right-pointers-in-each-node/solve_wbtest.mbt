@@ -12,7 +12,7 @@ test "example 1" {
     Empty,
   )
   let null = Json::null()
-  @json.inspect!(connect(tree), content=[
+  @json.inspect(connect(tree), content=[
     1,
     [
       2,

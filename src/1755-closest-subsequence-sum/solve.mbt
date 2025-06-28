@@ -31,7 +31,7 @@ fn closest_subsequence_sum(nums : Array[Int], goal : Int) -> Int {
 fn generate_sums(nums : Array[Int], start : Int, end : Int) -> Array[Int] {
   let n = end - start
   let sums = Array::make(1 << n, 0)
-  for mask = 0; mask < (1 << n); mask = mask + 1 {
+  for mask = 0; mask < 1 << n; mask = mask + 1 {
     let mut sum = 0
     for i = 0; i < n; i = i + 1 {
       if (mask & (1 << i)) != 0 {

@@ -1,6 +1,6 @@
 ///|
 test "example 1" {
-  assert_eq!(
+  assert_eq(
     earliest_acq(
       [
         [20190101, 0, 1],

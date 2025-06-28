@@ -17,7 +17,7 @@ test "example 1" {
       TreeNode::Node(4, Empty, TreeNode::Node(1, Empty, Empty)),
     ),
   )
-  assert_eq!(has_path_sum(root, 22), true)
+  assert_eq(has_path_sum(root, 22), true)
 }
 
 ///|
@@ -27,11 +27,11 @@ test "example 2" {
     TreeNode::Node(2, Empty, Empty),
     TreeNode::Node(3, Empty, Empty),
   )
-  assert_eq!(has_path_sum(root, 5), false)
+  assert_eq(has_path_sum(root, 5), false)
 }
 
 ///|
 test "example 3" {
   let root = TreeNode::Empty
-  assert_eq!(has_path_sum(root, 0), false)
+  assert_eq(has_path_sum(root, 0), false)
 }

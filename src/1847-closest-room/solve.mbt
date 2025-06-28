@@ -4,7 +4,10 @@ fn closest_room(
   queries : Array[(Int, Int)]
 ) -> Array[Int] {
   let sorted_rooms : Array[(Int, Int)] = rooms
-  sorted_rooms.sort_by_key(fn { (_, size) => size })
+  sorted_rooms.sort_by_key(fn(x) {
+    let (_, size) = x
+    size
+  })
   fn find_closest_room(
     preferred : Int,
     min_size : Int,

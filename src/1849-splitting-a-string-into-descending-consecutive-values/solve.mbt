@@ -3,8 +3,8 @@ fn can_split_into_descending_consecutive_values(s : String) -> Bool {
   let n = s.length()
   for i = 1; i < n; i = i + 1 {
     for j = i + 1; j < n; j = j + 1 {
-      let first = @strconv.parse_int?(s.substring(start=0, end=i)).unwrap()
-      let second = @strconv.parse_int?(s.substring(start=i, end=j)).unwrap()
+      let first = (try? @strconv.parse_int(s.substring(start=0, end=i))).unwrap()
+      let second = (try? @strconv.parse_int(s.substring(start=i, end=j))).unwrap()
       if first == second + 1 {
         if check_descending(s, j, second) {
           return true
@@ -22,7 +22,7 @@ fn check_descending(s : String, start : Int, prev_value : Int) -> Bool {
   let mut i = start
   while i < n {
     let end = find_next_split(s, i)
-    let current_value = @strconv.parse_int?(s.substring(start=i, end~)).unwrap()
+    let current_value = (try? @strconv.parse_int(s.substring(start=i, end~))).unwrap()
     if current_value != prev_value - 1 {
       return false
     }

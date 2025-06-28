@@ -5,10 +5,10 @@ struct Time {
 }
 
 ///|
-fn parse_time(time_str : String) -> Time! {
+fn parse_time(time_str : String) -> Time raise {
   let parts = time_str.split(":").to_array()
-  let hours = @strconv.parse_int!(parts[0].to_string())
-  let minutes = @strconv.parse_int!(parts[1].to_string())
+  let hours = @strconv.parse_int(parts[0].to_string())
+  let minutes = @strconv.parse_int(parts[1].to_string())
   Time::{ hours, minutes }
 }
 
@@ -33,8 +33,8 @@ fn count_full_rounds(login_time : Time, logout_time : Time) -> Int {
 fn count_full_rounds_string(
   login_time_str : String,
   logout_time_str : String
-) -> Int! {
-  let login_time = parse_time!(login_time_str)
-  let logout_time = parse_time!(logout_time_str)
+) -> Int raise {
+  let login_time = parse_time(login_time_str)
+  let logout_time = parse_time(logout_time_str)
   count_full_rounds(login_time, logout_time)
 }

@@ -9,7 +9,7 @@ test "example 1" {
     ),
     TreeNode::Node(15, Empty, TreeNode::Node(18, Empty, Empty)),
   )
-  assert_eq!(range_sum_bst(root, 7, 15), 32)
+  assert_eq(range_sum_bst(root, 7, 15), 32)
 }
 
 ///|
@@ -27,5 +27,5 @@ test "example 2" {
       TreeNode::Node(18, Empty, Empty),
     ),
   )
-  assert_eq!(range_sum_bst(root, 6, 10), 23)
+  assert_eq(range_sum_bst(root, 6, 10), 23)
 }

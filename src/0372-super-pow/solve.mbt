@@ -1,8 +1,10 @@
 // Define a constant for the mod value
+
 ///|
 let mod : Int = 1337
 
 // Calculate the power of a number with modulus
+
 ///|
 fn qpow(a : Int, n : Int) -> Int {
   let mut ans : Int = 1
@@ -19,6 +21,7 @@ fn qpow(a : Int, n : Int) -> Int {
 }
 
 // Calculate super power of a number given an array of exponents
+
 ///|
 fn super_pow(a : Int, b : Array[Int]) -> Int {
   let b_len : Int = b.length()

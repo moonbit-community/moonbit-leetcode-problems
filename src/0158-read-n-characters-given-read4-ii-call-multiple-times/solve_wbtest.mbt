@@ -5,7 +5,7 @@ test "example 1" {
   let buf = ArrayChar::Cons('-', Cons('-', Cons('-', Cons('-', Nil))))
   let n = 1
   let num_read = Solution::read(solution, buf, n)
-  assert_eq!(num_read, 1)
+  assert_eq(num_read, 1)
 }
 
 ///|
@@ -15,5 +15,5 @@ test "example 2" {
   let buf = ArrayChar::Cons('-', Cons('-', Cons('-', Cons('-', Nil))))
   let n = 2
   let num_read = Solution::read(solution, buf, n)
-  assert_eq!(num_read, 2)
+  assert_eq(num_read, 2)
 }

@@ -9,7 +9,7 @@ test "example 1" {
       TreeNode::Node(2, TreeNode::Empty, TreeNode::Empty),
     ),
   )
-  assert_eq!(distribute_coins(root, 0), 3)
+  assert_eq(distribute_coins(root, 0), 3)
 }
 
 ///|
@@ -19,7 +19,7 @@ test "example 2" {
     TreeNode::Node(3, TreeNode::Empty, TreeNode::Empty),
     TreeNode::Node(0, TreeNode::Empty, TreeNode::Empty),
   )
-  assert_eq!(distribute_coins(root, 0), 2)
+  assert_eq(distribute_coins(root, 0), 2)
 }
 
 ///|
@@ -33,5 +33,5 @@ test "example 3" {
     ),
     TreeNode::Node(0, TreeNode::Empty, TreeNode::Empty),
   )
-  assert_eq!(distribute_coins(root, 0), 4)
+  assert_eq(distribute_coins(root, 0), 4)
 }

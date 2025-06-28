@@ -1,4 +1,5 @@
 // main solution
+
 ///|
 struct Solution {
   a : Array[Int]

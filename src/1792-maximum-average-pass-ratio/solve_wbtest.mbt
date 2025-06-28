@@ -7,7 +7,7 @@ test "example 1" {
   ]
   let extra_students = 2
   let result = max_average_pass_ratio(classes, extra_students)
-  assert_approx_eq!(result, 0.78333, 0.00001)
+  assert_approx_eq(result, 0.78333, 0.00001)
 }
 
 ///|
@@ -20,5 +20,5 @@ test "example 2" {
   ]
   let extra_students = 4
   let result = max_average_pass_ratio(classes, extra_students)
-  assert_approx_eq!(result, 0.53485, 0.00001)
+  assert_approx_eq(result, 0.53485, 0.00001)
 }

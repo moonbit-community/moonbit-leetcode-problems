@@ -1,6 +1,6 @@
 ///|
 test "Example 1" {
-  inspect!(
+  inspect(
     find_ball([
       [1, 1, 1, -1, -1],
       [1, 1, 1, -1, -1],
@@ -14,12 +14,12 @@ test "Example 1" {
 
 ///|
 test "Example 2" {
-  inspect!(find_ball([[-1]]), content="[-1]")
+  inspect(find_ball([[-1]]), content="[-1]")
 }
 
 ///|
 test "Example 3" {
-  inspect!(
+  inspect(
     find_ball([
       [1, 1, 1, 1, 1, 1],
       [-1, -1, -1, -1, -1, -1],

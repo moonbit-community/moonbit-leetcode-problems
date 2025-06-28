@@ -7,7 +7,8 @@ fn replace_question_mark(s : String) -> String {
     cs[i] = s[i]
   }
   fn not_adjacent(cs : Array[Char], i : Int, c : Char) -> Bool {
-    (i > 0 && cs[i - 1] == c) || (i + 1 < cs.length() && cs[i + 1] == c) |> not
+    ((i > 0 && cs[i - 1] == c) || (i + 1 < cs.length() && cs[i + 1] == c))
+    |> not
   }
 
   for i = 0; i < n; i = i + 1 {

@@ -1,4 +1,5 @@
 // Function to append an integer element to a @immut/list.T of int
+
 ///|
 fn append(list : @immut/list.T[Int], value : Int) -> @immut/list.T[Int] {
   match list {
@@ -8,6 +9,7 @@ fn append(list : @immut/list.T[Int], value : Int) -> @immut/list.T[Int] {
 }
 
 // The DFS function to explore numbers lexically
+
 ///|
 fn dfs(u : Int, n : Int, ans : @immut/list.T[Int]) -> @immut/list.T[Int] {
   if u > n {
@@ -24,6 +26,7 @@ fn dfs(u : Int, n : Int, ans : @immut/list.T[Int]) -> @immut/list.T[Int] {
 }
 
 // Function to generate the lexical ordering of numbers less than or equal to n
+
 ///|
 fn lexical_order(n : Int) -> @immut/list.T[Int] {
   let mut ans : @immut/list.T[Int] = Nil

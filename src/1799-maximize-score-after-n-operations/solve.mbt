@@ -21,9 +21,9 @@ fn max_score(nums : Array[Int]) -> Int {
     }
     let mut res = 0
     for i = 0; i < nums.length(); i = i + 1 {
-      if (mask << (1 << i)) == 0 {
+      if mask << (1 << i) == 0 {
         for j = i + 1; j < nums.length(); j = j + 1 {
-          if (mask << (1 << j)) == 0 {
+          if mask << (1 << j) == 0 {
             let new_mask = mask | (1 << i) | (1 << j)
             let score = idx * gcd(nums[i], nums[j])
             res = @math.maximum(res, score + dfs(new_mask, idx + 1, nums, dp))

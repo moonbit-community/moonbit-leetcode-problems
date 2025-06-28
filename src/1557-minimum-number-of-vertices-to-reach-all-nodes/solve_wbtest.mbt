@@ -7,7 +7,7 @@ test "example 1" {
     @immut/list.of([3, 4]),
     @immut/list.of([4, 2]),
   ])
-  assert_eq!(find_smallest_set_of_vertices(6, edges), [0, 3])
+  assert_eq(find_smallest_set_of_vertices(6, edges), [0, 3])
 }
 
 ///|
@@ -18,5 +18,5 @@ test "example 2" {
     @immut/list.of([4, 1]),
     @immut/list.of([4, 2]),
   ])
-  assert_eq!(find_smallest_set_of_vertices(5, edges), [4])
+  assert_eq(find_smallest_set_of_vertices(5, edges), [4])
 }

@@ -9,7 +9,7 @@ test "example 1" {
   ]
   let k = 3
   let expected : Array[Int] = [2, 0, 3]
-  assert_eq!(k_weakest_rows(mat, k), expected)
+  assert_eq(k_weakest_rows(mat, k), expected)
 }
 
 ///|
@@ -22,5 +22,5 @@ test "example 2" {
   ]
   let k = 2
   let expected : Array[Int] = [0, 2]
-  assert_eq!(k_weakest_rows(mat, k), expected)
+  assert_eq(k_weakest_rows(mat, k), expected)
 }

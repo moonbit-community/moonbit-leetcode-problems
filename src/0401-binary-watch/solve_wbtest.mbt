@@ -5,7 +5,7 @@ test "example 1" {
     "0:01",
     @immut/list.T::Cons("0:02", @immut/list.T::Cons("0:04", @immut/list.T::Nil)),
   ) // Simpified for brevity
-  assert_eq!(result, expectedResult)
+  assert_eq(result, expectedResult)
 }
 
 ///|
@@ -15,5 +15,5 @@ test "example 2" {
     "0:03",
     @immut/list.T::Cons("0:05", @immut/list.T::Nil),
   ) // Simpified for brevity
-  assert_eq!(concat(result, ", "), concat(expectedResult, ", "))
+  assert_eq(concat(result, ", "), concat(expectedResult, ", "))
 }

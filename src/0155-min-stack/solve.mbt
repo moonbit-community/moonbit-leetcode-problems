@@ -1,5 +1,5 @@
 ///|
-pub typealias MinStack = (@list.T[Int], @list.T[Int])
+pub typealias (@list.T[Int], @list.T[Int]) as MinStack
 
 ///|
 pub fn new_min_stack() -> MinStack {

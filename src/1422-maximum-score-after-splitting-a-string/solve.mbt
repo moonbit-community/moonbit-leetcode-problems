@@ -27,6 +27,7 @@ fn max_score(s : String) -> Int {
 }
 
 // Helper function to find max of two integers
+
 ///|
 fn max(a : Int, b : Int) -> Int {
   if a > b {

@@ -23,14 +23,14 @@ fn intersection(nums1 : Array[Int], nums2 : Array[Int]) -> Array[Int] {
 }
 
 ///|
-fn assert_eq(result : Array[Int], expect : Array[Int]) -> Unit! {
+fn assert_eq(result : Array[Int], expect : Array[Int]) -> Unit raise {
   if result.length() != expect.length() {
-    fail!("Length mismatch")
+    fail("Length mismatch")
   }
   let mut i = 0
   while i < result.length() {
     if not(result[i] == expect[i]) {
-      fail!("Element mismatch at index \{i}")
+      fail("Element mismatch at index \{i}")
     }
     i = i + 1
   }

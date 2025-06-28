@@ -14,7 +14,7 @@ test "example 1" {
     [1, 0, 1, 1, 0],
     [0, 1, 0, 1, 0],
   ]
-  assert_eq!(count_sub_islands(grid1, grid2), 3)
+  assert_eq(count_sub_islands(grid1, grid2), 3)
 }
 
 ///|
@@ -33,5 +33,5 @@ test "example 2" {
     [0, 1, 0, 1, 0],
     [1, 0, 0, 0, 1],
   ]
-  assert_eq!(count_sub_islands(grid1, grid2), 2)
+  assert_eq(count_sub_islands(grid1, grid2), 2)
 }

@@ -38,6 +38,7 @@ fn remove_duplicates(head : ListNode?) -> ListNode? {
 }
 
 // Helper function to create a linked list from an array
+
 ///|
 fn create_linked_list(values : Array[Int]) -> ListNode? {
   if values.length() == 0 {
@@ -53,6 +54,7 @@ fn create_linked_list(values : Array[Int]) -> ListNode? {
 }
 
 // Helper function to convert a linked list to an array for testing
+
 ///|
 fn linked_list_to_array(head : ListNode?) -> Array[Int] {
   let result : Array[Int] = []

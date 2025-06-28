@@ -4,7 +4,7 @@ fn racecar(target : Int) -> Int {
   let mut i = 1
   while i <= target {
     let k = 32 - clz(i) // clz stands for Count Leading Zeros
-    if i == (1 << (k - 1)) {
+    if i == 1 << (k - 1) {
       dp[i] = k
     } else {
       dp[i] = dp[1 << (k - 1 - i)] + k + 1

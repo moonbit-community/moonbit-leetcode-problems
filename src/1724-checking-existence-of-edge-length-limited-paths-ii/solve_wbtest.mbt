@@ -7,8 +7,8 @@ test "example 1" {
     [2, 3, 1],
     [4, 5, 5],
   ])
-  assert_eq!(query(dlpe, 2, 3, 2), true)
-  assert_eq!(query(dlpe, 1, 3, 3), false)
-  assert_eq!(query(dlpe, 2, 0, 3), true)
-  assert_eq!(query(dlpe, 0, 5, 6), false)
+  assert_eq(query(dlpe, 2, 3, 2), true)
+  assert_eq(query(dlpe, 1, 3, 3), false)
+  assert_eq(query(dlpe, 2, 0, 3), true)
+  assert_eq(query(dlpe, 0, 5, 6), false)
 }

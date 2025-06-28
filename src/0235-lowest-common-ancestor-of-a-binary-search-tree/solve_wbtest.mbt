@@ -12,7 +12,7 @@ test "example 1" {
   let p = 2
   let q = 8
   let ancestor = lowest_common_ancestor(root, p, q)
-  assert_eq!(get_val(ancestor), 6)
+  assert_eq(get_val(ancestor), 6)
 }
 
 ///|
@@ -29,5 +29,5 @@ test "example 2" {
   let p = 2
   let q = 4
   let ancestor = lowest_common_ancestor(root, p, q)
-  assert_eq!(get_val(ancestor), 2)
+  assert_eq(get_val(ancestor), 2)
 }

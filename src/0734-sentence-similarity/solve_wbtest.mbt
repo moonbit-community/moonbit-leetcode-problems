@@ -7,7 +7,7 @@ test "example 1" {
     Pair::{ first: "extraordinary", second: "good" },
     Pair::{ first: "meal", second: "dinner" },
   ])
-  @test.is_false!(are_sentences_similar(sentence1, sentence2, similar_pairs))
+  @test.is_false(are_sentences_similar(sentence1, sentence2, similar_pairs))
 }
 
 ///|
@@ -19,5 +19,5 @@ test "example 2" {
     Pair::{ first: "acting", second: "drama" },
     Pair::{ first: "skills", second: "talent" },
   ])
-  @test.is_true!(are_sentences_similar(sentence1, sentence2, similar_pairs))
+  @test.is_true(are_sentences_similar(sentence1, sentence2, similar_pairs))
 }

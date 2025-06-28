@@ -6,7 +6,7 @@ test "example 1" {
   words[2] = "kir "
   words[3] = "kira "
   words[4] = "kiran "
-  assert_eq!(longest_word_with_all_prefixes(words), "kiran ")
+  assert_eq(longest_word_with_all_prefixes(words), "kiran ")
 }
 
 ///|
@@ -19,7 +19,7 @@ test "example 2" {
   words[4] = "ap "
   words[5] = "apply "
   words[6] = "apple "
-  assert_eq!(longest_word_with_all_prefixes(words), "apple ")
+  assert_eq(longest_word_with_all_prefixes(words), "apple ")
 }
 
 ///|
@@ -29,5 +29,5 @@ test "example 3" {
   words[1] = "bc "
   words[2] = "ab "
   words[3] = "qwe "
-  assert_eq!(longest_word_with_all_prefixes(words), " ")
+  assert_eq(longest_word_with_all_prefixes(words), " ")
 }

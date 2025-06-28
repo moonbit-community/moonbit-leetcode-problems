@@ -6,7 +6,7 @@ test "example 1" {
     f: [],
     n: 0,
   }
-  assert_eq!(solution.mincost_tickets(), 11)
+  assert_eq(solution.mincost_tickets(), 11)
 }
 
 ///|
@@ -17,5 +17,5 @@ test "example 2" {
     f: [],
     n: 0,
   }
-  assert_eq!(solution.mincost_tickets(), 50)
+  assert_eq(solution.mincost_tickets(), 50)
 }

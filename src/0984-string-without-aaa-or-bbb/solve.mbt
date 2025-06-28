@@ -25,6 +25,7 @@ fn str_without_3a3b(a : Int, b : Int) -> String {
 }
 
 // Helper function to simulate Java's repeat function
+
 ///|
 fn repeat_string(s : String, n : Int) -> String {
   let mut result = ""

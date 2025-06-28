@@ -1,4 +1,5 @@
 // Function to calculate the greatest common divisor (gcd) of two numbers
+
 ///|
 fn gcd(a : Int, b : Int) -> Int {
   if b == 0 {
@@ -9,6 +10,7 @@ fn gcd(a : Int, b : Int) -> Int {
 }
 
 // Function that generates simplified fractions for given n
+
 ///|
 fn simplified_fractions(n : Int) -> Array[String] {
   let ans : Array[String] = []

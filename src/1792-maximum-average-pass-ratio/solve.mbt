@@ -61,10 +61,14 @@ fn heapify(heap : Array[Class], index : Int, size : Int) -> Unit {
 }
 
 ///|
-fn assert_approx_eq(result : Double, expect : Double, error : Double) -> Unit! {
+fn assert_approx_eq(
+  result : Double,
+  expect : Double,
+  error : Double
+) -> Unit raise {
   if (result - expect).abs() < error {
     ()
   } else {
-    fail!("Expecting \{expect}, got \{result} instead")
+    fail("Expecting \{expect}, got \{result} instead")
   }
 }

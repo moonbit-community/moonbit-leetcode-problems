@@ -1,6 +1,6 @@
 ///|
 test "example 1" {
-  inspect!(
+  inspect(
     find_substring("barfoothefoobarman", ["foo", "bar"]),
     content="[0, 9]",
   )
@@ -8,7 +8,7 @@ test "example 1" {
 
 ///|
 test "example 2" {
-  inspect!(
+  inspect(
     find_substring("wordgoodgoodgoodbestword", ["word", "good", "best", "word"]),
     content="[]",
   )
@@ -16,7 +16,7 @@ test "example 2" {
 
 ///|
 test "example 3" {
-  inspect!(
+  inspect(
     find_substring("barfoofoobarthefoobarman", ["bar", "foo", "the"]),
     content="[6, 9, 12]",
   )

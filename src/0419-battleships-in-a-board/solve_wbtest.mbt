@@ -5,7 +5,7 @@ test "example 1" {
     ['.', '.', '.', 'X'],
     ['.', '.', '.', 'X'],
   ]
-  assert_eq!(count_battleships(board), 2)
+  assert_eq(count_battleships(board), 2)
 }
 
 ///|
@@ -15,5 +15,5 @@ test "example 2" {
     ['.', 'X', '.', 'X'],
     ['.', '.', '.', 'X'],
   ]
-  assert_eq!(count_battleships(board), 3)
+  assert_eq(count_battleships(board), 3)
 }

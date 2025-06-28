@@ -7,5 +7,5 @@ test "example" {
   )
   let node3 : TreeNode = Node(3, TreeNode::Empty, TreeNode::Empty)
   let root : TreeNode = Node(1, node2, node3)
-  assert_eq!(btree_game_winning_move(root, 5, 3), true)
+  assert_eq(btree_game_winning_move(root, 5, 3), true)
 }

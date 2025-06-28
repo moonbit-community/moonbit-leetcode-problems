@@ -14,11 +14,11 @@ fn remove_nth_from_end(
   }
 
   // Move first to the end, maintaining the gap
-  let (_, second) = loop first, second {
-    Nil, _ => break (first, second)
-    Cons(_), Nil => abort("Unreachable")
-    Cons(_, first_next), Cons(_, second_next) =>
-      continue first_next, second_next
+  let (_, second) = loop (first, second) {
+    (Nil, _) => break (first, second)
+    (Cons(_), Nil) => abort("Unreachable")
+    (Cons(_, first_next), Cons(_, second_next)) =>
+      continue (first_next, second_next)
   }
   match second {
     Cons(_, nextNext) => nextNext

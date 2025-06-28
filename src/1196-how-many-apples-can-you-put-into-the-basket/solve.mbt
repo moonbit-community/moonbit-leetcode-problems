@@ -1,6 +1,6 @@
 ///|
 fn max_number_of_apples(weights : @immut/list.T[Int]) -> Int {
-  fn merge_sort(list : @immut/list.T[Int]) -> @immut/list.T[Int] {
+  letrec merge_sort = fn(list : @immut/list.T[Int]) -> @immut/list.T[Int] {
     match list {
       Nil => list
       Cons(_, Nil) => list
@@ -10,15 +10,13 @@ fn max_number_of_apples(weights : @immut/list.T[Int]) -> Int {
       }
     }
   }
-
-  fn split(
+  and split = fn(
     list : @immut/list.T[Int]
   ) -> (@immut/list.T[Int], @immut/list.T[Int]) {
     let mid = list.length() / 2
     (list.take(mid), list.drop(mid))
   }
-
-  fn merge(
+  and merge = fn(
     left : @immut/list.T[Int],
     right : @immut/list.T[Int]
   ) -> @immut/list.T[Int] {

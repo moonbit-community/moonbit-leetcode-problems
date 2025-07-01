@@ -8,8 +8,7 @@ fn find_min_fibonacci_numbers(k : Int) -> Int {
   ]
   let mut k = k
   let mut res = 0
-  for i = 0; i < arr.length(); i = i + 1 {
-    let num = arr[i]
+  for num in arr {
     if k >= num {
       k = k - num
       res = res + 1

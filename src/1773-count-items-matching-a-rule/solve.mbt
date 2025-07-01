@@ -11,8 +11,8 @@ fn count_items_matching_a_rule(
     _ => -1
   }
   let mut count = 0
-  for i = 0; i < items.length(); i = i + 1 {
-    if items[i][index_to_check] == rule_value {
+  for item in items {
+    if item[index_to_check] == rule_value {
       count = count + 1
     }
   }

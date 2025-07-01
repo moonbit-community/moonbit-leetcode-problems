@@ -61,11 +61,8 @@ fn longest_common_subpath(_n : Int, paths : Array[Array[Int]]) -> Int {
       }
     }
     let first_set = hash_sets[0]
-    let first_set_keys = first_set
-      .iter()
-      .map(fn { (key, _value) => key })
-      .collect()
-    for i = 0; i < first_set_keys.length(); i = i + 1 {
+    let first_set_keys = first_set.iter().map(((key, _value)) => key).collect()
+    for i in 0..<first_set_keys.length() {
       let hash_value = first_set_keys[i]
       let mut all_contain = true
       for i = 1; i < hash_sets.length(); i = i + 1 {

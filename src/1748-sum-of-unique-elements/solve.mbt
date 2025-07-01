@@ -4,8 +4,7 @@ fn sum_of_unique_elements(nums : Array[Int]) -> Int {
   let nums_length = nums.length()
 
   // Count the occurrences of each element
-  for i = 0; i < nums_length; i = i + 1 {
-    let num = nums[i]
+  for num in nums {
     count_map.set(num, count_map.get_or_default(num, 0) + 1)
   }
   let mut sum_unique = 0

@@ -3,7 +3,7 @@ fn is_robot_bounded(instructions : String) -> Bool {
   let dist : Array[Int] = [0, 0, 0, 0]
   let mut k = 0
   let instr_length = instructions.length()
-  for i = 0; i < instr_length; i = i + 1 {
+  for i in 0..<instr_length {
     match instructions[i] {
       'L' => k = (k + 1) % 4
       'R' => k = (k + 3) % 4

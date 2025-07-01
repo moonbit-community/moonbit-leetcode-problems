@@ -13,12 +13,12 @@ fn min_absolute_difference_queries(
   let freq_map = @hashmap.new()
 
   // Preprocess the array to build the frequency map
-  for i = 0; i < n; i = i + 1 {
+  for i in 0..<n {
     let count = freq_map.get_or_default(nums[i], 0)
     freq_map.set(nums[i], count + 1)
   }
   let result = Array::make(queries.length(), 0)
-  for i = 0; i < queries.length(); i = i + 1 {
+  for i in 0..<queries.length() {
     let query = queries[i]
     let left = query.left
     let right = query.right
@@ -42,8 +42,8 @@ fn min_absolute_difference_queries(
       result[i] = -1
     } else {
       // Compute the minimum absolute difference
-      let keys = subarray_freq_map.iter().map(fn { (key, _) => key }).collect()
-      for j = 0; j < keys.length(); j = j + 1 {
+      let keys = subarray_freq_map.iter().map(((key, _)) => key).collect()
+      for j in 0..<keys.length() {
         for k = j + 1; k < keys.length(); k = k + 1 {
           let diff = (keys[j] - keys[k]).abs()
           if diff < min_diff {

@@ -26,7 +26,7 @@ fn matrices_equal(mat1 : Array[Array[Int]], mat2 : Array[Array[Int]]) -> Bool {
 ///|
 fn can_obtain_by_rotation(
   mat : Array[Array[Int]],
-  target : Array[Array[Int]]
+  target : Array[Array[Int]],
 ) -> Bool {
   let mut current = mat
   for _i = 0; _i < 4; _i = _i + 1 {

@@ -1,0 +1,16 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/0158-read-n-characters-given-read4-ii-call-multiple-times"
+
+// Values
+
+// Errors
+
+// Types and methods
+type ArrayChar derive(Eq, Show)
+
+type Solution
+
+// Type aliases
+
+// Traits
+

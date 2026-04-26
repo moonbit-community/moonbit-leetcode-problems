@@ -7,7 +7,7 @@ fn dfs(
   j : Int,
   diff : Int,
   k : Int,
-  n : Int
+  n : Int,
 ) -> Int {
   if i >= k {
     if j == 0 && diff == k {

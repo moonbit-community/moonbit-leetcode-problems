@@ -47,7 +47,7 @@ struct DistanceLimitedPathsExist {
 ///|
 fn new_distance_limited_paths_exist(
   n : Int,
-  edge_list : Array[Array[Int]]
+  edge_list : Array[Array[Int]],
 ) -> DistanceLimitedPathsExist {
   let sorted_edges = edge_list.copy()
   sorted_edges.sort_by(fn(a, b) { a[2].compare(b[2]) })
@@ -64,7 +64,7 @@ fn query(
   dlpe : DistanceLimitedPathsExist,
   p : Int,
   q : Int,
-  limit : Int
+  limit : Int,
 ) -> Bool {
   let uf = new_union_find(dlpe.uf.parent.length())
   for i = 0; i < dlpe.edge_list.length(); i = i + 1 {

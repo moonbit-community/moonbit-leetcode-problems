@@ -25,8 +25,10 @@ fn fizz_buzz(n : Int) -> @immut/list.T[String] {
 
 ///|
 fn reverseList(list : @immut/list.T[String]) -> @immut/list.T[String] {
-  loop list, @immut/list.T::Nil {
-    @immut/list.T::Nil, acc => acc
-    @immut/list.T::Cons(x, xs), acc => continue xs, @immut/list.T::Cons(x, acc)
+  for xs = list, acc = @immut/list.T::Nil {
+    match xs {
+      @immut/list.T::Nil => break acc
+      @immut/list.T::Cons(x, rest) => continue rest, @immut/list.T::Cons(x, acc)
+    }
   }
 }

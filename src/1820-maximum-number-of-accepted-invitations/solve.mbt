@@ -10,7 +10,7 @@ fn max_number_of_accepted_invitations(grid : Array[Array[Int]]) -> Int {
     seen : Array[Bool],
     match_boy_to_girl : Array[Int],
     match_girl_to_boy : Array[Int],
-    grid : Array[Array[Int]]
+    grid : Array[Array[Int]],
   ) -> Bool {
     let n = grid[0].length()
     for girl = 0; girl < n; girl = girl + 1 {

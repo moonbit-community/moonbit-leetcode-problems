@@ -2,7 +2,7 @@
 fn make_matrix(
   rows : Int,
   cols : Int,
-  default_value : Int
+  default_value : Int,
 ) -> Array[Array[Int]] {
   let matrix = Array::make(rows, Array::make(cols, 0))
   for i = 0; i < rows; i = i + 1 {
@@ -18,7 +18,7 @@ fn color_border(
   grid : Array[Array[Int]],
   row : Int,
   col : Int,
-  color : Int
+  color : Int,
 ) -> Array[Array[Int]] {
   let m = grid.length()
   let n = grid[0].length()
@@ -33,7 +33,7 @@ fn color_border(
     dirs : Array[Int],
     m : Int,
     n : Int,
-    color : Int
+    color : Int,
   ) {
     vis[i][j] = 1
     for k = 0; k < 4; k = k + 1 {

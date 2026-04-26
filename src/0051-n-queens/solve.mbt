@@ -17,7 +17,7 @@ fn backtrack(
   row : Int,
   columns : @hashset.T[Int],
   diagonals1 : @hashset.T[Int],
-  diagonals2 : @hashset.T[Int]
+  diagonals2 : @hashset.T[Int],
 ) -> Unit {
   if row == n {
     let board = generate_board(queens, n)

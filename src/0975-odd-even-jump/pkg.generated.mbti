@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/0975-odd-even-jump"
+
+// Values
+
+// Errors
+
+// Types and methods
+type HiLo
+
+// Type aliases
+
+// Traits
+

@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/1851-minimum-interval-to-include-each-query"
+
+// Values
+
+// Errors
+
+// Types and methods
+type Interval derive(Eq)
+
+// Type aliases
+
+// Traits
+

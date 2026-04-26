@@ -42,9 +42,11 @@ fn formatTime(hour : Int, minute : Int) -> String {
 
 ///|
 fn concat(list : @immut/list.T[String], sep : String) -> String {
-  loop list, "" {
-    @immut/list.T::Nil, str => str
-    @immut/list.T::Cons(x, xs), str =>
-      continue xs, if str == "" { x } else { x + sep + str }
+  for xs = list, str = "" {
+    match xs {
+      @immut/list.T::Nil => break str
+      @immut/list.T::Cons(x, rest) =>
+        continue rest, if str == "" { x } else { x + sep + str }
+    }
   }
 }

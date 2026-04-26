@@ -4,7 +4,7 @@ fn replace_question_mark(s : String) -> String {
   let cs = Array::make(n, '0') // Initialize an empty array with NULL characters to store the result
   // Copy characters from s to cs
   for i = 0; i < n; i = i + 1 {
-    cs[i] = s[i]
+    cs[i] = s.code_unit_at(i).unsafe_to_char()
   }
   fn not_adjacent(cs : Array[Char], i : Int, c : Char) -> Bool {
     ((i > 0 && cs[i - 1] == c) || (i + 1 < cs.length() && cs[i + 1] == c))

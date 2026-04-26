@@ -3,7 +3,7 @@ fn diet_plan_performance(
   calories : Array[Int],
   k : Int,
   lower : Int,
-  upper : Int
+  upper : Int,
 ) -> Int {
   let n = calories.length()
   let s : Array[Int] = Array::make(n + 1, 0)

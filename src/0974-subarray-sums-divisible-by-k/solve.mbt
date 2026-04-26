@@ -12,7 +12,7 @@ fn CountMap::new() -> CountMap {
 fn CountMap::get_or_default(
   self : CountMap,
   key : Int,
-  default_val : Int
+  default_val : Int,
 ) -> Int {
   let mut default_val = default_val
   self.data.each(fn(val) { if val.0 == key { default_val = val.1 } })

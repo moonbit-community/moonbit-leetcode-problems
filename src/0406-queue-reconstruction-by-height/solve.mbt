@@ -8,7 +8,7 @@ struct Person {
 fn insert_at_index(
   people : @immut/list.T[Person],
   index : Int,
-  person : Person
+  person : Person,
 ) -> @immut/list.T[Person] {
   match people {
     Nil => Cons(person, Nil)

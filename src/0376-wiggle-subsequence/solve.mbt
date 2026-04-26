@@ -16,10 +16,8 @@ fn wiggle_max_length(nums : Array[Int]) -> Int {
   while i < n {
     if nums[i] > nums[i - 1] {
       let up = max(up, down + 1)
-
     } else if nums[i] < nums[i - 1] {
       let down = max(down, up + 1)
-
     }
     i = i + 1
   }

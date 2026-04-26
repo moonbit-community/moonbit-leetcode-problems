@@ -11,7 +11,7 @@ fn dfs(
   current : Point,
   destination : Point,
   m : Int,
-  n : Int
+  n : Int,
 ) -> Unit {
   if vis[current.x][current.y] {
     return
@@ -44,7 +44,7 @@ fn dfs(
 fn has_path(
   maze : Array[Array[Int]],
   start : Array[Int],
-  destination : Array[Int]
+  destination : Array[Int],
 ) -> Bool {
   let m : Int = maze.length()
   let n : Int = maze[0].length()

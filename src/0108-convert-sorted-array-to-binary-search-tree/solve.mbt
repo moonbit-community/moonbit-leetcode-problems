@@ -10,7 +10,7 @@ fn sorted_arr_to_bst(nums : Array[Int]) -> Tree[Int] {
     tree : Tree[Int],
     arr : Array[Int],
     lo : Int,
-    hi : Int
+    hi : Int,
   ) -> Tree[Int] {
     let mut new_tree = tree
     new_tree = match tree {

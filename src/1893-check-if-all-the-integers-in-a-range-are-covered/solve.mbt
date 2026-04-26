@@ -2,7 +2,7 @@
 fn is_range_covered(
   ranges : Array[Array[Int]],
   left : Int,
-  right : Int
+  right : Int,
 ) -> Bool {
   for i = left; i <= right; i = i + 1 {
     let mut covered = false

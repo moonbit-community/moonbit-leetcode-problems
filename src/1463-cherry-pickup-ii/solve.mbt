@@ -15,7 +15,7 @@ fn cherry_pickup(grid : Array[Array[Int]]) -> Int {
     x : Int,
     y : Int,
     z : Int,
-    initial_value : Int
+    initial_value : Int,
   ) -> Array[Array[Array[Int]]] {
     Array::make(x, Array::make(y, Array::make(z, initial_value)))
   }

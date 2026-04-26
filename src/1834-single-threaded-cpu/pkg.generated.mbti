@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/1834-single-threaded-cpu"
+
+// Values
+
+// Errors
+
+// Types and methods
+type Task derive(Eq)
+
+// Type aliases
+
+// Traits
+

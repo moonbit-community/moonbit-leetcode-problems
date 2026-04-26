@@ -1,0 +1,18 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/0141-linked-list-cycle"
+
+// Values
+pub fn has_cycle(ListNode) -> Bool
+
+// Errors
+
+// Types and methods
+pub enum ListNode {
+  Empty
+  Node(Int, ListNode)
+} derive(Eq, Show)
+
+// Type aliases
+
+// Traits
+

@@ -2,7 +2,7 @@
 fn reconstruct_matrix(
   upper : Int,
   lower : Int,
-  colsum : Array[Int]
+  colsum : Array[Int],
 ) -> Array[Array[Int]] {
   let n = colsum.length()
   let ans : Array[Array[Int]] = Array::make(2, Array::make(n, 0))

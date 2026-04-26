@@ -25,7 +25,7 @@ fn simulate_round(players : Array[Int]) -> Array[Int] {
 fn find_earliest_latest_rounds(
   n : Int,
   first_player : Int,
-  second_player : Int
+  second_player : Int,
 ) -> TournamentResult {
   let mut earliest_round = n
   let mut latest_round = 1

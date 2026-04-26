@@ -1,7 +1,7 @@
 ///|
 fn count_pairs_of_equal_substrings_with_minimum_difference(
   first_string : String,
-  second_string : String
+  second_string : String,
 ) -> Int {
   let n = first_string.length()
   let m = second_string.length()

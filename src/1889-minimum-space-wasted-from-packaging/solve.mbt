@@ -1,7 +1,7 @@
 ///|
 fn min_space_wasted_from_packaging(
   packages : Array[Int],
-  boxes : Array[Array[Int]]
+  boxes : Array[Array[Int]],
 ) -> Int {
   let mod_value = 1_000_000_007
   let n = packages.length()
@@ -13,7 +13,7 @@ fn min_space_wasted_from_packaging(
   // Function to calculate wasted space for a given supplier
   fn calculate_wasted_space(
     packages : Array[Int],
-    supplier_boxes : Array[Int]
+    supplier_boxes : Array[Int],
   ) -> Int {
     let mut wasted_space = 0
     let mut package_index = 0

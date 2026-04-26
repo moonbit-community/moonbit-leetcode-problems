@@ -40,7 +40,7 @@ fn odd_even_jumps(arr : Array[Int]) -> Int {
     g : Array[HiLo],
     n : Int,
     i : Int,
-    k : Int
+    k : Int,
   ) -> Int {
     if i == n - 1 {
       return 1

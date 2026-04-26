@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/1900-the-earliest-and-latest-rounds-where-players-compete"
+
+// Values
+
+// Errors
+
+// Types and methods
+type TournamentResult derive(Show)
+
+// Type aliases
+
+// Traits
+

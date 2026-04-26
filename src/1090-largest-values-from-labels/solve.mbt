@@ -14,7 +14,7 @@ fn sort_pairs(pairs : @immut/list.T[(Int, Int)]) -> @immut/list.T[(Int, Int)] {
         init=(@immut/list.T::Nil, @immut/list.T::Nil),
         fn(
           acc : (@immut/list.T[(Int, Int)], @immut/list.T[(Int, Int)]),
-          item : (Int, Int)
+          item : (Int, Int),
         ) -> (@immut/list.T[(Int, Int)], @immut/list.T[(Int, Int)]) {
           if larger_pair(item, pivot) {
             (Cons(item, acc.0), acc.1)
@@ -33,7 +33,7 @@ fn largest_vals_from_labels(
   values : Array[Int],
   labels : Array[Int],
   num_wanted : Int,
-  use_limit : Int
+  use_limit : Int,
 ) -> Int {
   let n = values.length()
   let mut pairs = @immut/list.of([])

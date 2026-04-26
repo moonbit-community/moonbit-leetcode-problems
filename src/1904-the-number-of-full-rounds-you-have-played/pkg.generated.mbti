@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/1904-the-number-of-full-rounds-you-have-played"
+
+// Values
+
+// Errors
+
+// Types and methods
+type Time
+
+// Type aliases
+
+// Traits
+

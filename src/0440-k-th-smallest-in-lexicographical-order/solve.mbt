@@ -5,7 +5,7 @@ fn count(n : Int, curr : Int) -> Int {
       cnt = cnt + min(n - curr + 1, next - curr), next = next * 10, curr = curr *
         10 {
 
-  } else {
+  } nobreak {
     cnt
   }
 }

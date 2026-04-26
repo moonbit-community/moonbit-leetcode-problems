@@ -7,7 +7,7 @@ struct Query {
 ///|
 fn min_absolute_difference_queries(
   nums : Array[Int],
-  queries : Array[Query]
+  queries : Array[Query],
 ) -> Array[Int] {
   let n = nums.length()
   let freq_map = @hashmap.new()
@@ -42,7 +42,7 @@ fn min_absolute_difference_queries(
       result[i] = -1
     } else {
       // Compute the minimum absolute difference
-      let keys = subarray_freq_map.iter().map(fn { (key, _) => key }).collect()
+      let keys = subarray_freq_map.iter().map(fn(kv) { kv.0 }).collect()
       for j = 0; j < keys.length(); j = j + 1 {
         for k = j + 1; k < keys.length(); k = k + 1 {
           let diff = (keys[j] - keys[k]).abs()

@@ -29,7 +29,7 @@ fn min_limit_of_balls_in_bag(nums : Array[Int], max_operations : Int) -> Int {
 fn can_achieve_penalty(
   nums : Array[Int],
   penalty : Int,
-  max_operations : Int
+  max_operations : Int,
 ) -> Bool {
   let mut operations_needed = 0
   for i = 0; i < nums.length(); i = i + 1 {

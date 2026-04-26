@@ -1,0 +1,16 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/1724-checking-existence-of-edge-length-limited-paths-ii"
+
+// Values
+
+// Errors
+
+// Types and methods
+type DistanceLimitedPathsExist
+
+type UnionFind
+
+// Type aliases
+
+// Traits
+

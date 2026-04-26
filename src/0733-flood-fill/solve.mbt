@@ -28,7 +28,7 @@ fn flood_fill(
   image : Array[Array[Int]],
   sr : Int,
   sc : Int,
-  color : Int
+  color : Int,
 ) -> Array[Array[Int]] {
   let nc = color
   let oc = image[sr][sc]

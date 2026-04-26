@@ -16,7 +16,7 @@ fn f(n : Int) -> Int {
   fn create_2d_array(
     rows : Int,
     cols : Int,
-    initial : Int
+    initial : Int,
   ) -> Array[Array[Int]] {
     let outer : Array[Array[Int]] = []
     for i = 0; i < rows; i = i + 1 {
@@ -36,7 +36,7 @@ fn f(n : Int) -> Int {
     lead : Bool,
     limit : Bool,
     nums : Array[Int],
-    dp : Array[Array[Int]]
+    dp : Array[Array[Int]],
   ) -> Int {
     if pos < 0 {
       if lead {

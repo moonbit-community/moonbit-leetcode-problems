@@ -7,7 +7,7 @@ fn min_operations(a : String, b : String) -> Int {
   fn count_operations_less_than(s : String, threshold : Char) -> Int {
     let mut count = 0
     for i = 0; i < s.length(); i = i + 1 {
-      if s[i] >= threshold {
+      if s.code_unit_at(i).to_int() >= threshold.to_int() {
         count = count + 1
       }
     }
@@ -18,7 +18,7 @@ fn min_operations(a : String, b : String) -> Int {
   fn count_operations_equal_to(s : String, target : Char) -> Int {
     let mut count = 0
     for i = 0; i < s.length(); i = i + 1 {
-      if s[i] != target {
+      if s.code_unit_at(i).to_int() != target.to_int() {
         count = count + 1
       }
     }
@@ -27,7 +27,7 @@ fn min_operations(a : String, b : String) -> Int {
 
   // Condition 1: Every letter in `a` is strictly less than every letter in `b`
   let mut min_ops_condition1 = 2_0000_0000
-  for ch = 'a'; ch <= 'z'; ch = Char::from_int(ch.to_int() + 1) {
+  for ch = 'a'; ch <= 'z'; ch = (ch.to_int() + 1).unsafe_to_char() {
     let ops_a = count_operations_less_than(a, ch)
     let ops_b = count_operations_less_than(b, ch)
     if ops_a + ops_b < min_ops_condition1 {
@@ -37,7 +37,7 @@ fn min_operations(a : String, b : String) -> Int {
 
   // Condition 2: Every letter in `b` is strictly less than every letter in `a`
   let mut min_ops_condition2 = 2_0000_0000
-  for ch = 'a'; ch <= 'z'; ch = Char::from_int(ch.to_int() + 1) {
+  for ch = 'a'; ch <= 'z'; ch = (ch.to_int() + 1).unsafe_to_char() {
     let ops_a = count_operations_less_than(a, ch)
     let ops_b = count_operations_less_than(b, ch)
     if ops_b + ops_a < min_ops_condition2 {
@@ -47,7 +47,7 @@ fn min_operations(a : String, b : String) -> Int {
 
   // Condition 3: Both `a` and `b` consist of only one distinct letter
   let mut min_ops_condition3 = 2_0000_0000
-  for ch = 'a'; ch <= 'z'; ch = Char::from_int(ch.to_int() + 1) {
+  for ch = 'a'; ch <= 'z'; ch = (ch.to_int() + 1).unsafe_to_char() {
     let ops_a = count_operations_equal_to(a, ch)
     let ops_b = count_operations_equal_to(b, ch)
     if ops_a + ops_b < min_ops_condition3 {

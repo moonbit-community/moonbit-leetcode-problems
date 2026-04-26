@@ -1,0 +1,42 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/compat/immut_list"
+
+// Values
+
+// Errors
+
+// Types and methods
+pub(all) enum T[A] {
+  Nil
+  Cons(A, T[A])
+} derive(Eq)
+pub fn[A] T::concat(Self[A], Self[A]) -> Self[A]
+pub fn[A : Eq] T::contains(Self[A], A) -> Bool
+pub fn[A] T::drop(Self[A], Int) -> Self[A]
+pub fn[A] T::each(Self[A], (A) -> Unit raise?) -> Unit raise?
+#as_free_fn
+pub fn[A] T::empty() -> Self[A]
+pub fn[A, B] T::fold_left(Self[A], init~ : B, (B, A) -> B) -> B
+#as_free_fn(of)
+#as_free_fn
+pub fn[A] T::from_array(ArrayView[A]) -> Self[A]
+pub fn[A] T::get(Self[A], Int) -> A?
+pub fn[A] T::head_exn(Self[A]) -> A
+pub fn[A] T::is_empty(Self[A]) -> Bool
+pub fn[A] T::iter(Self[A]) -> Iter[A]
+pub fn[A] T::length(Self[A]) -> Int
+pub fn[A, B] T::map(Self[A], (A) -> B) -> Self[B]
+pub fn[A] T::nth(Self[A], Int) -> A?
+pub fn[A] T::nth_exn(Self[A], Int) -> A
+pub fn[A] T::remove_at(Self[A], Int) -> Self[A]
+pub fn[A] T::rev(Self[A]) -> Self[A]
+pub fn[A : Compare] T::sort(Self[A]) -> Self[A]
+pub fn[A] T::tail(Self[A]) -> Self[A]
+pub fn[A] T::take(Self[A], Int) -> Self[A]
+pub fn[A] T::to_array(Self[A]) -> Array[A]
+pub impl[A : Show] Show for T[A]
+
+// Type aliases
+
+// Traits
+

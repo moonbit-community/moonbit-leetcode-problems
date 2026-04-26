@@ -1,7 +1,7 @@
 ///|
 fn can_make_pali_queries(
   s : String,
-  queries : @immut/list.T[(Int, Int, Int)]
+  queries : @immut/list.T[(Int, Int, Int)],
 ) -> @immut/list.T[Bool] {
   let n = s.length()
   let ss = Array::make(n + 1, Array::make(26, 0))

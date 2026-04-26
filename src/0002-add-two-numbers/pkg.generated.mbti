@@ -1,0 +1,15 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/0002-add-two-numbers"
+
+// Values
+pub fn add_two_numbers(ListNode?, ListNode?) -> ListNode?
+
+// Errors
+
+// Types and methods
+type ListNode derive(Eq, Show)
+
+// Type aliases
+
+// Traits
+

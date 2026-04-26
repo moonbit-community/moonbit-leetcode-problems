@@ -5,7 +5,7 @@ fn reformat_number(number : String) -> String {
 
   // Filtering out spaces and dashes from the input string
   while index < number.length() {
-    let c = number[index]
+    let c = number.code_unit_at(index).unsafe_to_char()
     if c != ' ' && c != '-' {
       chars.push(c)
     }

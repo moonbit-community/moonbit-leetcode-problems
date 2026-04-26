@@ -17,7 +17,7 @@ fn max_profit(prices : Array[Int]) -> Int {
     j : Int,
     prices : Array[Int],
     f : Array[Array[Int]],
-    n : Int
+    n : Int,
   ) -> Int {
     if i >= n {
       0

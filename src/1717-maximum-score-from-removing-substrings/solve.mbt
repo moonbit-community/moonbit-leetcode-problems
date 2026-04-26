@@ -8,7 +8,7 @@ fn max_score_from_removing_substrings(s : String, x : Int, y : Int) -> Int {
     (y, x, 'b', 'a')
   }
   for i = 0; i < s.length(); i = i + 1 {
-    let current_char = s[i]
+    let current_char = s.code_unit_at(i).unsafe_to_char()
     if stack.length() > 0 &&
       stack[stack.length() - 1] == low_char &&
       current_char == high_char {

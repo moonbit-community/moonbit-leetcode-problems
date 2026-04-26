@@ -1,7 +1,7 @@
 ///|
 fn maximum_xor_for_each_query(
   nums : Array[Int],
-  maximum_bit : Int
+  maximum_bit : Int,
 ) -> Array[Int] {
   let n = nums.length()
   let max_xor = 1 << (maximum_bit - 1)

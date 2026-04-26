@@ -11,7 +11,7 @@ fn is_palindrome(head : ListNode) -> Bool {
     Nil => Nil
     Node(_, next) => next
   }
-  while {
+  while ({
           let result = match fast {
             Nil => false
             Node(_, next) =>
@@ -21,7 +21,7 @@ fn is_palindrome(head : ListNode) -> Bool {
               }
           }
           result
-        } {
+        }) {
     slow = match slow {
       Node(val, next) => next
       Nil => Nil

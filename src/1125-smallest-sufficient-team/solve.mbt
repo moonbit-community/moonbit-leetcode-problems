@@ -1,7 +1,7 @@
 ///|
 fn smallest_sufficient_team(
   req_skills : Array[String],
-  people : Array[Array[String]]
+  people : Array[Array[String]],
 ) -> Array[Int] {
   let d : @hashmap.T[String, Int] = @hashmap.new()
   let m = req_skills.length()

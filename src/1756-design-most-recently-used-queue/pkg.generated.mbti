@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/1756-design-most-recently-used-queue"
+
+// Values
+
+// Errors
+
+// Types and methods
+type MRUQueue
+
+// Type aliases
+
+// Traits
+

@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/1928-minimum-cost-to-reach-destination-in-time"
+
+// Values
+
+// Errors
+
+// Types and methods
+type Edge
+
+// Type aliases
+
+// Traits
+

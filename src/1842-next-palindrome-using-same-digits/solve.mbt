@@ -10,7 +10,7 @@ fn next_palindrome(num : String) -> String {
   let next_palindrome = construct_palindrome(
     next_permutation,
     n % 2 != 0,
-    num[half_len],
+    num.code_unit_at(half_len).unsafe_to_char(),
   )
   if next_palindrome > num {
     return next_palindrome
@@ -53,7 +53,7 @@ fn find_next_permutation(s : String) -> String {
 fn construct_palindrome(
   first_half : String,
   has_middle : Bool,
-  middle_char : Char
+  middle_char : Char,
 ) -> String {
   let second_half = first_half.to_array().rev_inplace().to_string()
   if has_middle {

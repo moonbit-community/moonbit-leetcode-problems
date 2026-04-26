@@ -10,7 +10,7 @@ fn min(a : Int, b : Int) -> Int {
 ///|
 fn restore_matrix(
   row_sum : Array[Int],
-  col_sum : Array[Int]
+  col_sum : Array[Int],
 ) -> Array[Array[Int]] {
   let m = row_sum.length()
   let n = col_sum.length()

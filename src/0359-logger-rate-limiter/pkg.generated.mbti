@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/0359-logger-rate-limiter"
+
+// Values
+
+// Errors
+
+// Types and methods
+type Logger
+
+// Type aliases
+
+// Traits
+

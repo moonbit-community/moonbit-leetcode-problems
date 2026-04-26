@@ -19,7 +19,7 @@ fn RollingHash::new(base : Int, modulus : Int, max_length : Int) -> RollingHash 
 fn RollingHash::hash(
   self : RollingHash,
   path : Array[Int],
-  length : Int
+  length : Int,
 ) -> Array[Int] {
   let n = path.length()
   let hash_values = Array::make(n - length + 1, 0)
@@ -49,7 +49,7 @@ fn longest_common_subpath(_n : Int, paths : Array[Array[Int]]) -> Int {
   let modulus = 1000000007
   let max_length = paths
     .map(fn(path) { path.length() })
-    .fold_left(fn(a, b) { @math.minimum(a, b) }, init=100000)
+    .fold(init=100000, fn(a, b) { @math.minimum(a, b) })
   let rolling_hash = RollingHash::new(base, modulus, max_length)
   fn check(length : Int) -> Bool {
     let hash_sets = Array::make(paths.length(), @hashmap.new())
@@ -61,10 +61,7 @@ fn longest_common_subpath(_n : Int, paths : Array[Array[Int]]) -> Int {
       }
     }
     let first_set = hash_sets[0]
-    let first_set_keys = first_set
-      .iter()
-      .map(fn { (key, _value) => key })
-      .collect()
+    let first_set_keys = first_set.iter().map(fn(kv) { kv.0 }).collect()
     for i = 0; i < first_set_keys.length(); i = i + 1 {
       let hash_value = first_set_keys[i]
       let mut all_contain = true

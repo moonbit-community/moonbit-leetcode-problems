@@ -8,7 +8,7 @@ enum TreeNode {
 fn dfs(
   node : TreeNode,
   depth : Int,
-  ans : @immut/list.T[Int]
+  ans : @immut/list.T[Int],
 ) -> @immut/list.T[Int] {
   match node {
     Empty => ans

@@ -22,12 +22,12 @@ fn add(s : @immut/list.T[Int], value : Int) -> @immut/list.T[Int] {
 fn Solution::at_most_n_given_digit_set(
   self : Solution,
   digits : Array[String],
-  n : Int
+  n : Int,
 ) -> Int {
   let mut s = self.s
   let mut n = n
   for i = 0; i < digits.length(); i = i + 1 {
-    let digit = @strconv.parse_int?(digits[i]).unwrap()
+    let digit = digits[i].code_unit_at(0).to_int() - '0'.to_int()
     s = add(s, digit)
   }
   let mut len = 0

@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/1721-swapping-nodes-in-a-linked-list"
+
+// Values
+
+// Errors
+
+// Types and methods
+type ListNode
+
+// Type aliases
+
+// Traits
+

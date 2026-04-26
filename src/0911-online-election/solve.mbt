@@ -7,7 +7,7 @@ struct TopVotedCandidate {
 ///|
 fn TopVotedCandidate::new(
   persons : Array[Int],
-  times : Array[Int]
+  times : Array[Int],
 ) -> TopVotedCandidate {
   let n = persons.length()
   let counter = Array::make(n + 1, 0)

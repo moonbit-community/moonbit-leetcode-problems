@@ -14,7 +14,7 @@ fn Trie::insert(self : Trie, w : String, idx : Int) -> Unit {
   let mut node = self
   let mut i = 0
   while i < w.length() {
-    let c = w.get(i).to_int() - 'a'.to_int()
+    let c = w.code_unit_at(i).to_int() - 'a'.to_int()
     if node.children[c] == None {
       node.children[c] = Some(Trie::new())
     }
@@ -32,7 +32,7 @@ fn Trie::search(self : Trie, w : String, i : Int, j : Int) -> Int? {
   let mut node = self
   let mut k = j
   while k >= i {
-    let idx = w.get(k).to_int() - 'a'.to_int()
+    let idx = w.code_unit_at(k).to_int() - 'a'.to_int()
     match node.children[idx] {
       Some(child) => node = child
       None => return None
@@ -47,7 +47,7 @@ fn isPalindrome(w : String, start : Int, end : Int) -> Bool {
   let mut i = start
   let mut j = end
   while i < j {
-    if w.get(i) != w.get(j) {
+    if w.code_unit_at(i) != w.code_unit_at(j) {
       return false
     }
     i = i + 1

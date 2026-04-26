@@ -1,0 +1,18 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/1810-minimum-path-cost-in-a-hidden-grid"
+
+// Values
+
+// Errors
+
+// Types and methods
+type Cell
+
+type GridMaster
+
+type IntInt derive(Eq, Hash)
+
+// Type aliases
+
+// Traits
+

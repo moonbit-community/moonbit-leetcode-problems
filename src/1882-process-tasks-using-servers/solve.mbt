@@ -16,7 +16,7 @@ impl Compare for Server with compare(self : Server, other : Server) -> Int {
 ///|
 fn process_tasks_using_servers(
   servers : Array[Int],
-  tasks : Array[Int]
+  tasks : Array[Int],
 ) -> Array[Int] {
   let n = servers.length()
   let m = tasks.length()

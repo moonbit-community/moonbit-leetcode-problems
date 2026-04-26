@@ -1,6 +1,6 @@
 ///|
 fn generate_possible_next_moves(
-  current_state : String
+  current_state : String,
 ) -> @immut/list.T[String] {
   let mut ans : @immut/list.T[String] = @immut/list.of([])
   let mut i = 0

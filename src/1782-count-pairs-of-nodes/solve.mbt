@@ -2,7 +2,7 @@
 fn count_pairs_of_nodes(
   n : Int,
   edges : Array[Array[Int]],
-  queries : Array[Int]
+  queries : Array[Int],
 ) -> Array[Int] {
   let node_counts = Array::make(n + 1, 0)
   let edge_counts = @hashmap.new()

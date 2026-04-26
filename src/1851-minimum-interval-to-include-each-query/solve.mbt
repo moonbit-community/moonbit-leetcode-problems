@@ -12,7 +12,7 @@ impl Compare for Interval with compare(self : Interval, other : Interval) -> Int
 ///|
 fn min_interval_to_include_each_query(
   intervals : Array[Array[Int]],
-  queries : Array[Int]
+  queries : Array[Int],
 ) -> Array[Int] {
   // Convert intervals to Interval struct
   let interval_list = intervals.map(fn(interval) {

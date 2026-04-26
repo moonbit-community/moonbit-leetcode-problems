@@ -79,7 +79,7 @@ fn kth_smallest_wonderful_number(num : String, k : Int) -> String {
 ///|
 fn min_adjacent_swaps_to_reach_kth_smallest_number(
   num : String,
-  k : Int
+  k : Int,
 ) -> Int {
   let target = kth_smallest_wonderful_number(num, k)
   min_swaps(num, target)

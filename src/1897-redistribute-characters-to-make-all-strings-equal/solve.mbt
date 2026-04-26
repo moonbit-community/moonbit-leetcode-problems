@@ -7,7 +7,7 @@ fn can_make_equal(words : Array[String]) -> Bool {
   for i = 0; i < num_words; i = i + 1 {
     let word = words[i]
     for j = 0; j < word.length(); j = j + 1 {
-      let char = word[j]
+      let char = word.code_unit_at(j).unsafe_to_char()
       let count = char_count.get_or_default(char, 0)
       char_count.set(char, count + 1)
     }

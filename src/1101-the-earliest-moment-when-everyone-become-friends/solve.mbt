@@ -17,7 +17,7 @@ fn sort_logs(logs : Array[Array[Int]]) -> Unit {
     while j >= 0 && logs[j][0] > key[0] {
       logs[j + 1] = logs[j]
       j = j - 1
-    } else {
+    } nobreak {
       logs[j + 1] = key
     }
   }

@@ -1,7 +1,7 @@
 ///|
 fn remove_nth_from_end(
   head : @immut/list.T[Int],
-  n : Int
+  n : Int,
 ) -> @immut/list.T[Int] {
   let mut first = head
   let second = head

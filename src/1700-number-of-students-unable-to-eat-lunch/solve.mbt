@@ -13,7 +13,7 @@ fn[X] concat(this : ArrayView[X], that : ArrayView[X]) -> ArrayView[X] {
 ///|
 fn count_students(
   students : ArrayView[Int],
-  sandwiches : ArrayView[Int]
+  sandwiches : ArrayView[Int],
 ) -> Int {
   let mut student_queue = students
   let mut sandwich_stack = sandwiches

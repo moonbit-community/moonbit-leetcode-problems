@@ -14,7 +14,7 @@ fn fill_inf(
   f : Array[Array[Array[Int]]],
   n : Int,
   big_k : Int,
-  inf : Int
+  inf : Int,
 ) -> Unit {
   let mut i = 1
   while i <= n {

@@ -14,13 +14,12 @@ fn character_replacement(s : String, k : Int) -> Int {
   let mut j : Int = 0
   let mut maxCnt : Int = 0
   while i < s.length() {
-    let c : Int = s.get(i).to_int() - 'A'.to_int()
+    let c : Int = s.code_unit_at(i).to_int() - 'A'.to_int()
     counter[c] = counter[c] + 1
     maxCnt = max(maxCnt, counter[c])
     if i - j + 1 - maxCnt > k {
-      counter[s.get(j).to_int() - 'A'.to_int()] = counter[s.get(j).to_int() -
-        'A'.to_int()] -
-        1
+      let left = s.code_unit_at(j).to_int() - 'A'.to_int()
+      counter[left] = counter[left] - 1
       j = j + 1
     }
     i = i + 1

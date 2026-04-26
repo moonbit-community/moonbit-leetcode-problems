@@ -12,7 +12,7 @@ fn Logger::new() -> Logger {
 fn Logger::should_print_message(
   self : Logger,
   timestamp : Int,
-  message : String
+  message : String,
 ) -> Bool {
   let t = self.limiter.find(message).or(0)
   if t > timestamp {

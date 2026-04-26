@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/0251-flatten-2d-vector"
+
+// Values
+
+// Errors
+
+// Types and methods
+type Vector2D
+
+// Type aliases
+
+// Traits
+

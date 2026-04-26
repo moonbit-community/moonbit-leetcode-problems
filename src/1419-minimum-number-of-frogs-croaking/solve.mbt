@@ -2,7 +2,7 @@
 fn index_of(chr : Char, str : String) -> Int {
   let n = str.length()
   for i = 0; i < n; i = i + 1 {
-    if str[i] == chr {
+    if str.code_unit_at(i).to_int() == chr.to_int() {
       return i
     }
   }
@@ -29,7 +29,7 @@ fn min_number_of_frogs(croak_of_frogs : String) -> Int {
   let mut ans = 0
   let mut x = 0
   for i = 0; i < n; i = i + 1 {
-    let c = croak_of_frogs[i]
+    let c = croak_of_frogs.code_unit_at(i).unsafe_to_char()
     let i = idx(c)
     cnt[i] = cnt[i] + 1
     if i == 0 {

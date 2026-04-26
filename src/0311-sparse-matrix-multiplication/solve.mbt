@@ -1,7 +1,7 @@
 ///|
 fn multiply(
   mat1 : Array[Array[Int]],
-  mat2 : Array[Array[Int]]
+  mat2 : Array[Array[Int]],
 ) -> Array[Array[Int]] {
   let m : Int = mat1.length()
   let n : Int = mat2[0].length()

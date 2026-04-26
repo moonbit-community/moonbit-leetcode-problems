@@ -10,7 +10,7 @@ fn min(a : Int, b : Int) -> Int {
 ///|
 fn shortest_distance_color(
   colors : Array[Int],
-  queries : @immut/list.T[(Int, Int)]
+  queries : @immut/list.T[(Int, Int)],
 ) -> @immut/list.T[Int] {
   let n = colors.length()
   let inf = @int.max_value

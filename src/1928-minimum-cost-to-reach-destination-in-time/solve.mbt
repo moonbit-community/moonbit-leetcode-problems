@@ -8,7 +8,7 @@ struct Edge {
 fn min_cost_to_reach_destination_in_time(
   max_time : Int,
   edges : Array[Array[Int]],
-  passing_fees : Array[Int]
+  passing_fees : Array[Int],
 ) -> Int {
   let n = passing_fees.length()
   let dp = Array::make(n, Array::make(max_time + 1, @int.max_value))

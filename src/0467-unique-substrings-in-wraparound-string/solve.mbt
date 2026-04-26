@@ -13,13 +13,13 @@ fn find_substring_in_wrapround_string(p : String) -> Int {
   let mut k = 0
   let mut i = 0
   while i < p.length() {
-    let c = p.get(i)
-    if i > 0 && (c.to_int() - p.get(i - 1).to_int() + 26) % 26 == 1 {
+    let c = p.code_unit_at(i).to_int()
+    if i > 0 && (c - p.code_unit_at(i - 1).to_int() + 26) % 26 == 1 {
       k = k + 1
     } else {
       k = 1
     }
-    let index = c.to_int() - 'a'.to_int()
+    let index = c - 'a'.to_int()
     dp[index] = max(dp[index], k)
     i = i + 1
   }

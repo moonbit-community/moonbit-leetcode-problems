@@ -10,7 +10,7 @@ fn dfs(
   x : Int,
   y : Int,
   n : Int,
-  q : @immut/list.T[Point]
+  q : @immut/list.T[Point],
 ) -> @immut/list.T[Point] {
   let mut q = q
   if x >= 0 && x < n && y >= 0 && y < n && grid[x][y] == 1 {

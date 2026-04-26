@@ -2,7 +2,7 @@
 fn check_if_prerequisite(
   n : Int,
   prerequisites : Array[(Int, Int)],
-  queries : Array[(Int, Int)]
+  queries : Array[(Int, Int)],
 ) -> Array[Bool] {
   // Initialize the f matrix
   let f : Array[Array[Bool]] = Array::make(n, Array::make(n, false))

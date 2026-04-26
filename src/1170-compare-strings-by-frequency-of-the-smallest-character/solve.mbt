@@ -30,7 +30,7 @@ fn bin_search(nums : Array[Int], x : Int) -> Int {
 ///|
 fn num_smaller_by_frequency(
   queries : @immut/list.T[String],
-  words : @immut/list.T[String]
+  words : @immut/list.T[String],
 ) -> @immut/list.T[Int] {
   let nums = words.map(f)
   nums.to_array().sort_by(fn(a, b) { a - b })

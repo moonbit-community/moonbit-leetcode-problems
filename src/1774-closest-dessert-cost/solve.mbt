@@ -2,7 +2,7 @@
 fn closest_dessert_cost(
   base_costs : Array[Int],
   topping_costs : Array[Int],
-  target : Int
+  target : Int,
 ) -> Int {
   let closest_cost = 2_0000_0000 // A large number to start with
   let closest_diff = 2_0000_0000 // A large number to start with
@@ -12,7 +12,7 @@ fn closest_dessert_cost(
     current_cost : Int,
     target : Int,
     closest_cost : Ref[Int],
-    closest_diff : Ref[Int]
+    closest_diff : Ref[Int],
   ) {
     if index == topping_costs.length() {
       let diff = (current_cost - target).abs()

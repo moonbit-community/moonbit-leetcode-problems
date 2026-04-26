@@ -11,7 +11,7 @@ fn min(value1 : Int, value2 : Int) -> Int {
 fn min_operations_max_profit(
   customers : Array[Int],
   boarding_cost : Int,
-  running_cost : Int
+  running_cost : Int,
 ) -> Int {
   let mut ans = -1
   let mut mx = 0

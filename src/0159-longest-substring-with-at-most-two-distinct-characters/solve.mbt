@@ -1,10 +1,10 @@
 ///|
 struct CharCount {
-  mut counts : @immut/list.T[(Char, Int)]
+  mut counts : @immut/list.T[(UInt16, Int)]
 }
 
 ///|
-fn CharCount::increment(self : CharCount, c : Char) -> Unit {
+fn CharCount::increment(self : CharCount, c : UInt16) -> Unit {
   match self.counts {
     Nil => self.counts = Cons((c, 1), Nil)
     Cons(head, tail) => {
@@ -21,7 +21,7 @@ fn CharCount::increment(self : CharCount, c : Char) -> Unit {
 }
 
 ///|
-fn CharCount::decrement(self : CharCount, c : Char) -> Unit {
+fn CharCount::decrement(self : CharCount, c : UInt16) -> Unit {
   match self.counts {
     Nil => ()
     Cons((ch, count), tail) =>

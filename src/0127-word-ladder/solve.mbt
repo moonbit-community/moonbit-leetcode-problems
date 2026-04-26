@@ -2,13 +2,13 @@
 pub fn ladder_length(
   begin_word : String,
   end_word : String,
-  word_list : Array[String]
+  word_list : Array[String],
 ) -> Int {
   let words = @hashset.from_array(word_list)
   fn extend(
     curr : @hashmap.T[String, Int],
     oppo : @hashmap.T[String, Int],
-    q : @deque.T[String]
+    q : @deque.T[String],
   ) {
     let word = q.pop_front().unwrap()
     let step = curr.get(word).unwrap()

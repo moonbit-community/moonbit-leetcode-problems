@@ -1,7 +1,7 @@
 ///|
 fn find_smallest_set_of_vertices(
   n : Int,
-  edges : @immut/list.T[@immut/list.T[Int]]
+  edges : @immut/list.T[@immut/list.T[Int]],
 ) -> Array[Int] {
   let cnt : Array[Int] = Array::make(n, 0)
   for i = 0; i < edges.length(); i = i + 1 {

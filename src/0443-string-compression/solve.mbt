@@ -14,7 +14,7 @@ fn compress(chars : Array[Char]) -> Int {
       let cnt : String = int_to_string(j - i)
       let mut c_index : Int = 0
       while c_index < cnt.length() {
-        chars[k] = cnt[c_index]
+        chars[k] = cnt[c_index].unsafe_to_char()
         k = k + 1
         c_index = c_index + 1
       }
@@ -32,7 +32,7 @@ fn int_to_string(num : Int) -> String {
   let mut num = num
   let mut str : String = ""
   while num > 0 {
-    str = (num % 10 + '0'.to_int()).to_string() + str
+    str = (num % 10 + '0'.to_int()).unsafe_to_char().to_string() + str
     num = num / 10
   }
   str

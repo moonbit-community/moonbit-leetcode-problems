@@ -19,45 +19,12 @@ fn pop(stack : Stack) -> (Int, Stack) {
 
 ///|
 fn eval_rpn(tokens : @immut/list.T[String]) -> Int {
-  let mut stack : Stack = Empty
-  fn is_digit(c : Char) -> Bool {
-    c >= '0' && c <= '9'
-  }
-
-  fn is_number(token : String) -> Bool {
-    if token.length() > 1 {
-      return true
-    } else {
-      return is_digit(token[0])
-    }
-  }
-
-  fn to_int(token : String) -> Int {
-    if token == "-" {
-      return -1
-    } else {
-      let mut intValue = 0
-      loop 0, token.length() {
-        i, limit =>
-          if i == limit {
-            break intValue
-          } else {
-            intValue = intValue * 10 + (token[i].to_int() - '0'.to_int())
-            continue i + 1, limit
-          }
-      }
-    }
-  }
-
-  loop tokens {
-    Nil => break
-    Cons(token, rest) => {
-      if is_number(token) {
-        let intValue = to_int(token)
-        stack = push(stack, intValue)
-      } else {
-        let (y, tmpStack) = pop(stack)
-        let (x, newStack) = pop(tmpStack)
+  let stack : Array[Int] = []
+  for token in tokens.iter() {
+    match token {
+      "+" | "-" | "*" | "/" => {
+        let y = stack.pop().unwrap()
+        let x = stack.pop().unwrap()
         let result = match token {
           "+" => x + y
           "-" => x - y
@@ -65,11 +32,10 @@ fn eval_rpn(tokens : @immut/list.T[String]) -> Int {
           "/" => x / y
           _ => abort("Unsupported operation.")
         }
-        stack = push(newStack, result)
+        stack.push(result)
       }
-      continue rest
+      _ => stack.push((try? @string.parse_int(token)).unwrap())
     }
   }
-  let (result, _) = pop(stack)
-  return result
+  stack.pop().unwrap()
 }

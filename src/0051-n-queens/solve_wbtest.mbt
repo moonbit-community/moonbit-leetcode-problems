@@ -2,9 +2,9 @@
 test "example 1" {
   inspect(
     solve_n_queens(1),
-    content=
+    content=(
       #|[["['Q']"]]
-    ,
+    ),
   )
 }
 
@@ -12,8 +12,8 @@ test "example 1" {
 test "example 2" {
   inspect(
     solve_n_queens(4),
-    content=
+    content=(
       #|[["['.', 'Q', '.', '.']", "['.', '.', '.', 'Q']", "['Q', '.', '.', '.']", "['.', '.', 'Q', '.']"], ["['.', '.', 'Q', '.']", "['Q', '.', '.', '.']", "['.', '.', '.', 'Q']", "['.', 'Q', '.', '.']"]]
-    ,
+    ),
   )
 }

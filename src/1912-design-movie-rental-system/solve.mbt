@@ -1,5 +1,5 @@
 ///|
-type IntInt (Int, Int) derive(Eq, Hash)
+struct IntInt(Int, Int) derive(Eq, Hash)
 
 ///|
 struct MovieEntry {
@@ -30,7 +30,7 @@ impl Compare for MovieEntry with compare(a : MovieEntry, b : MovieEntry) -> Int 
 ///|
 fn MovieRentingSystem::new(
   n : Int,
-  entries : Array[Array[Int]]
+  entries : Array[Array[Int]],
 ) -> MovieRentingSystem {
   let movie_map = @hashmap.new()
   let rented_movies = @priority_queue.new()
@@ -52,7 +52,7 @@ fn MovieRentingSystem::new(
 ///|
 fn MovieRentingSystem::search(
   self : MovieRentingSystem,
-  movie : Int
+  movie : Int,
 ) -> Array[Int] {
   let result = Array::new()
   if not(self.movie_map.contains(movie)) {
@@ -62,7 +62,7 @@ fn MovieRentingSystem::search(
   let temp_pq = @priority_queue.new()
   while pq.length() > 0 && result.length() < 5 {
     let entry = pq.pop().unwrap()
-    if not(self.rented_set.contains((entry.shop, entry.movie))) {
+    if not(self.rented_set.contains(IntInt(entry.shop, entry.movie))) {
       result.push(entry.shop)
     }
     temp_pq.push(entry)
@@ -77,20 +77,20 @@ fn MovieRentingSystem::search(
 fn MovieRentingSystem::rent(
   self : MovieRentingSystem,
   shop : Int,
-  movie : Int
+  movie : Int,
 ) -> Unit {
   let entry = self.movie_map.get(movie).unwrap().pop().unwrap()
   self.rented_movies.push(entry)
-  self.rented_set.set((shop, movie), entry)
+  self.rented_set.set(IntInt(shop, movie), entry)
 }
 
 ///|
 fn MovieRentingSystem::drop(
   self : MovieRentingSystem,
   shop : Int,
-  movie : Int
+  movie : Int,
 ) -> Unit {
-  let entry = self.rented_set.get((shop, movie)).unwrap()
+  let entry = self.rented_set.get(IntInt(shop, movie)).unwrap()
   let new_rented_movies = @priority_queue.new()
   self.rented_movies
   .iter()
@@ -101,7 +101,7 @@ fn MovieRentingSystem::drop(
   })
   self.rented_movies = new_rented_movies
   self.movie_map.get(movie).unwrap().push(entry)
-  self.rented_set.remove((shop, movie))
+  self.rented_set.remove(IntInt(shop, movie))
 }
 
 ///|

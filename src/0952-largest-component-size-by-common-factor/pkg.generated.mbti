@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/0952-largest-component-size-by-common-factor"
+
+// Values
+
+// Errors
+
+// Types and methods
+type UnionFind
+
+// Type aliases
+
+// Traits
+

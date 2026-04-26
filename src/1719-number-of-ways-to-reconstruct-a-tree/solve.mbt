@@ -12,8 +12,8 @@ fn number_of_ways_to_reconstruct_a_tree(pairs : Array[Array[Int]]) -> Int {
     if not(adjacency_list.contains(y)) {
       adjacency_list[y] = []
     }
-    adjacency_list[x].unwrap().push(y)
-    adjacency_list[y].unwrap().push(x)
+    adjacency_list[x].push(y)
+    adjacency_list[y].push(x)
   }
 
   // Function to check if the graph is a tree
@@ -25,8 +25,8 @@ fn number_of_ways_to_reconstruct_a_tree(pairs : Array[Array[Int]]) -> Int {
     let mut nodes_visited = 1
     while stack.length() > 0 {
       let node = stack.pop().or(0)
-      for i = 0; i < adjacency_list[node].unwrap().length(); i = i + 1 {
-        let neighbor = adjacency_list[node].unwrap()[i]
+      for i = 0; i < adjacency_list[node].length(); i = i + 1 {
+        let neighbor = adjacency_list[node][i]
         if not(visited[neighbor]) {
           visited[neighbor] = true
           stack.push(neighbor)
@@ -57,8 +57,8 @@ fn number_of_ways_to_reconstruct_a_tree(pairs : Array[Array[Int]]) -> Int {
     let mut nodes_visited = 1
     while stack.length() > 0 {
       let node = stack.pop().or(0)
-      for i = 0; i < adjacency_list[node].unwrap().length(); i = i + 1 {
-        let neighbor = adjacency_list[node].unwrap()[i]
+      for i = 0; i < adjacency_list[node].length(); i = i + 1 {
+        let neighbor = adjacency_list[node][i]
         if not(visited[neighbor]) {
           visited[neighbor] = true
           stack.push(neighbor)

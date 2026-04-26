@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/0235-lowest-common-ancestor-of-a-binary-search-tree"
+
+// Values
+
+// Errors
+
+// Types and methods
+type Tree
+
+// Type aliases
+
+// Traits
+

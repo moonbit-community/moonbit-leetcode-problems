@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/1705-maximum-number-of-eaten-apples"
+
+// Values
+
+// Errors
+
+// Types and methods
+type IntInt derive(Eq)
+
+// Type aliases
+
+// Traits
+

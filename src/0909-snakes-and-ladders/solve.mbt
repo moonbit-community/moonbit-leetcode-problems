@@ -22,16 +22,8 @@ fn snakes_and_ladders(board : Array[Array[Int]]) -> Int {
   vis[1] = true
   let mut ans = 0
   while not(queue == Nil) {
-    let mut size = 0
+    let mut size = queue.length()
     let mut new_queue : @immut/list.T[Int] = Nil
-    loop queue, size {
-      Cons(_front, rest), s => {
-        queue = rest
-        size = s + 1
-        continue rest, size
-      }
-      Nil, _s => break
-    }
     while size > 0 {
       size = size - 1
       let curr = match queue {

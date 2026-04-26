@@ -12,7 +12,7 @@ fn FrontMiddleBackQueue::new() -> FrontMiddleBackQueue {
 ///|
 fn FrontMiddleBackQueue::push_front(
   self : FrontMiddleBackQueue,
-  val : Int
+  val : Int,
 ) -> Unit {
   self.q1.push_front(val)
   self.rebalance()
@@ -21,7 +21,7 @@ fn FrontMiddleBackQueue::push_front(
 ///|
 fn FrontMiddleBackQueue::push_middle(
   self : FrontMiddleBackQueue,
-  val : Int
+  val : Int,
 ) -> Unit {
   self.q1.push_back(val)
   self.rebalance()
@@ -30,7 +30,7 @@ fn FrontMiddleBackQueue::push_middle(
 ///|
 fn FrontMiddleBackQueue::push_back(
   self : FrontMiddleBackQueue,
-  val : Int
+  val : Int,
 ) -> Unit {
   self.q2.push_back(val)
   self.rebalance()

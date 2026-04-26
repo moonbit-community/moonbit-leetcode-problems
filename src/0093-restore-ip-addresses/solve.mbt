@@ -3,7 +3,7 @@ fn substring(s : String, start : Int, end : Int) -> String {
   let mut res = ""
   let mut i = start
   while i < end {
-    res = res + s.charcode_at(i).unsafe_to_char().to_string()
+    res = res + s.code_unit_at(i).unsafe_to_char().to_string()
     i = i + 1
   }
   return res
@@ -14,7 +14,7 @@ fn string_to_int(s : String) -> Int {
   let mut res = 0
   let mut i = 0
   while i < s.length() {
-    res = res * 10 + s.charcode_at(i) - '0'
+    res = res * 10 + s.code_unit_at(i).to_int() - '0'.to_int()
     i = i + 1
   }
   return res
@@ -31,7 +31,8 @@ pub fn restore_ip_addresses(s : String) -> @immut/list.T[String] {
     // last octet check
     if octet == 3 {
       // check if the last octet is valid
-      if s.charcode_at(index) != '0' || index + 1 == s.length() {
+      if s.code_unit_at(index).to_int() != '0'.to_int() ||
+        index + 1 == s.length() {
         if string_to_int(substring(s, index, s.length())) < 256 {
           ip_res = ip_res + substring(s, index, s.length())
           res = @immut/list.T::Cons(ip_res, @immut/list.T::Nil)
@@ -45,7 +46,7 @@ pub fn restore_ip_addresses(s : String) -> @immut/list.T[String] {
         dfs(ip_res + substring(s, index, index + i) + ".", index + i, octet + 1)
       }
       // check for leading 0
-      if s.charcode_at(index) == '0' {
+      if s.code_unit_at(index).to_int() == '0'.to_int() {
         return
       }
       i = i + 1
@@ -58,7 +59,7 @@ pub fn restore_ip_addresses(s : String) -> @immut/list.T[String] {
       dfs(substring(s, 0, i) + ".", i, 1)
     }
     // check for leading 0
-    if s.charcode_at(0) == '0' {
+    if s.code_unit_at(0).to_int() == '0'.to_int() {
       return res
     }
     i = i + 1

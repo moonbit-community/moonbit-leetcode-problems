@@ -8,7 +8,7 @@ struct MapEntry {
 fn map_get_default(
   map : @immut/list.T[MapEntry],
   key : Int,
-  default : Int
+  default : Int,
 ) -> Int {
   match map {
     Nil => default
@@ -25,7 +25,7 @@ fn map_get_default(
 fn map_merge(
   map : @immut/list.T[MapEntry],
   key : Int,
-  value : Int
+  value : Int,
 ) -> @immut/list.T[MapEntry] {
   match map {
     Nil => Cons(MapEntry::{ key, value }, Nil)

@@ -1,7 +1,7 @@
 ///|
 fn largest_color_value_in_directed_graph(
   colors : String,
-  edges : Array[Array[Int]]
+  edges : Array[Array[Int]],
 ) -> Int {
   let n = colors.length()
   let graph : @hashmap.T[Int, Array[Int]] = @hashmap.new()

@@ -52,7 +52,7 @@ fn longest_str_chain(words : Array[String]) -> Int {
   fn hash_set(
     table : @immut/list.T[(String, Int)],
     key : String,
-    value : Int
+    value : Int,
   ) -> @immut/list.T[(String, Int)] {
     @immut/list.T::Cons((key, value), table)
   }

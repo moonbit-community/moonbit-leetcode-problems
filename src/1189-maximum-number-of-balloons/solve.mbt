@@ -3,10 +3,12 @@ fn min(numbers : @immut/list.T[Int]) -> Int {
   match numbers {
     Nil => abort("Empty list has no minimum")
     Cons(first, rest) =>
-      loop rest, first {
-        Nil, current_min => current_min
-        Cons(x, xs), current_min =>
-          continue xs, if x < current_min { x } else { current_min }
+      for xs = rest, current_min = first {
+        match xs {
+          Nil => break current_min
+          Cons(x, xs) =>
+            continue xs, if x < current_min { x } else { current_min }
+        }
       }
   }
 }

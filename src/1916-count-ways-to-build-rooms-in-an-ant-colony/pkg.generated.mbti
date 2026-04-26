@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/1916-count-ways-to-build-rooms-in-an-ant-colony"
+
+// Values
+
+// Errors
+
+// Types and methods
+type Graph
+
+// Type aliases
+
+// Traits
+

@@ -34,14 +34,15 @@ fn generate_states_helper(
   m : Int,
   colors : Array[Char],
   current : String,
-  states : Array[String]
+  states : Array[String],
 ) -> Unit {
   if current.length() == m {
     states.push(current)
     return
   }
   for i = 0; i < colors.length(); i = i + 1 {
-    if current.length() == 0 || current[current.length() - 1] != colors[i] {
+    if current.length() == 0 ||
+      current.code_unit_at(current.length() - 1).to_int() != colors[i].to_int() {
       generate_states_helper(
         m,
         colors,
@@ -60,7 +61,7 @@ fn generate_states_helper(
 ///|
 fn valid_transition(state1 : String, state2 : String) -> Bool {
   for i = 0; i < state1.length(); i = i + 1 {
-    if state1[i] == state2[i] {
+    if state1.code_unit_at(i) == state2.code_unit_at(i) {
       return false
     }
   }

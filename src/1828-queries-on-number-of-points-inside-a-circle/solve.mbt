@@ -9,7 +9,7 @@ fn is_point_inside_circle(point : (Int, Int), circle : (Int, Int, Int)) -> Bool 
 ///|
 fn count_points_inside_circles(
   points : Array[(Int, Int)],
-  queries : Array[(Int, Int, Int)]
+  queries : Array[(Int, Int, Int)],
 ) -> Array[Int] {
   let answer = Array::make(queries.length(), 0)
   for i = 0; i < queries.length(); i = i + 1 {

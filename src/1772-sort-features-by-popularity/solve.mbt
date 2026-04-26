@@ -3,8 +3,9 @@ fn split(string : String, delimiter : Char) -> Array[String] {
   let buffer = @buffer.new()
   let array = []
   for i = 0; i < string.length(); i = i + 1 {
-    if string[i] == delimiter {
-      buffer.write_char(string[i])
+    let c = string.code_unit_at(i).unsafe_to_char()
+    if c == delimiter {
+      buffer.write_char(c)
     } else {
       array.push(buffer.to_string())
       buffer.reset()
@@ -16,7 +17,7 @@ fn split(string : String, delimiter : Char) -> Array[String] {
 ///|
 fn sort_features_by_popularity(
   features : Array[String],
-  responses : Array[String]
+  responses : Array[String],
 ) -> Array[String] {
   let feature_count : @hashmap.T[String, Int] = @hashmap.new()
   let response_set : Array[@hashmap.T[String, Bool]] = Array::make(

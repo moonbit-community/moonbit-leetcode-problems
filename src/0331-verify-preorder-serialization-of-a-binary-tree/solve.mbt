@@ -3,7 +3,7 @@ fn split(s : String, delim : Char) -> @immut/list.T[String] {
   fn helper(
     acc : @immut/list.T[String],
     curr : String,
-    i : Int
+    i : Int,
   ) -> @immut/list.T[String] {
     if i == s.length() {
       if curr != "" {
@@ -11,10 +11,10 @@ fn split(s : String, delim : Char) -> @immut/list.T[String] {
       } else {
         acc
       }
-    } else if s.get(i) == delim {
+    } else if s.code_unit_at(i).to_int() == delim.to_int() {
       helper(Cons(curr, acc), "", i + 1)
     } else {
-      helper(acc, curr + s.get(i).to_string(), i + 1)
+      helper(acc, curr + s.code_unit_at(i).unsafe_to_char().to_string(), i + 1)
     }
   }
 

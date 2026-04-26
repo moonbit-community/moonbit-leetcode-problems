@@ -1,6 +1,6 @@
 ///|
 fn number_of_rectangles_that_can_form_the_largest_square(
-  rectangles : Array[Array[Int]]
+  rectangles : Array[Array[Int]],
 ) -> Int {
   let mut max_len = 0
   let mut count = 0

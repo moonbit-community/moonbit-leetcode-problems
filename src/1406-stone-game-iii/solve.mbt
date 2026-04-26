@@ -17,7 +17,7 @@ fn stone_game_iii(stone_value : Array[Int]) -> String {
     n : Int,
     stone_value : Array[Int],
     f : Array[Int],
-    inf : Int
+    inf : Int,
   ) -> Int {
     if i >= n {
       0

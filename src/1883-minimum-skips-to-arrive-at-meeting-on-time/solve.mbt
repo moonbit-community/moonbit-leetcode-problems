@@ -2,7 +2,7 @@
 fn min_skips_to_arrive_at_meeting_on_time(
   dist : Array[Int],
   speed : Int,
-  hours_before : Int
+  hours_before : Int,
 ) -> Int {
   let n = dist.length()
   let eps = 1.0e-9

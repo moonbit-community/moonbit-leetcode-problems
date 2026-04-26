@@ -36,7 +36,7 @@ fn compress(nums : Array[Int]) -> Array[Pair] {
 ///|
 fn product_of_encoded_arrays(
   encoded1 : Array[Pair],
-  encoded2 : Array[Pair]
+  encoded2 : Array[Pair],
 ) -> Array[Pair] {
   let nums1 = expand(encoded1)
   let nums2 = expand(encoded2)

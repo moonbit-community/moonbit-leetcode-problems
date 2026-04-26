@@ -2,7 +2,7 @@
 fn latest_time_by_replacing_hidden_digits(time : String) -> String {
   let time_chars = Array::make(5, ' ')
   for i = 0; i < 5; i = i + 1 {
-    time_chars[i] = time[i]
+    time_chars[i] = time.code_unit_at(i).unsafe_to_char()
   }
   if time_chars[0] == '?' {
     if time_chars[1] == '?' || time_chars[1] <= '3' {

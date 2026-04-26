@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/0980-unique-paths-iii"
+
+// Values
+
+// Errors
+
+// Types and methods
+type GridInfo
+
+// Type aliases
+
+// Traits
+

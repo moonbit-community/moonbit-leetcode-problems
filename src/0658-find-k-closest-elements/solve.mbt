@@ -2,7 +2,7 @@
 fn find_closest_elements(
   arr : Array[Int],
   k : Int,
-  x : Int
+  x : Int,
 ) -> @immut/list.T[Int] {
   // Convert the immutable Array to a mutable @immut/list.T for easier manipulation
   let mut list : @immut/list.T[Int] = @immut/list.from_array(arr).rev()
@@ -13,7 +13,7 @@ fn find_closest_elements(
     } else {
       continue l + 1, r
     }
-  } else {
+  } nobreak {
     let mut ans : @immut/list.T[Int] = Nil
     for i = l; i < r; i = i + 1 {
       ans = Cons(list.nth_exn(i), ans)

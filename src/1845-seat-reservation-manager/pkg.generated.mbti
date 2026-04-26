@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/1845-seat-reservation-manager"
+
+// Values
+
+// Errors
+
+// Types and methods
+type SeatManager
+
+// Type aliases
+
+// Traits
+

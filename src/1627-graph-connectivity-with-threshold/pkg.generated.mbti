@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/1627-graph-connectivity-with-threshold"
+
+// Values
+
+// Errors
+
+// Types and methods
+type UnionFind
+
+// Type aliases
+
+// Traits
+

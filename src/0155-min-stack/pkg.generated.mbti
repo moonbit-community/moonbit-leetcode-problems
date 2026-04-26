@@ -1,0 +1,27 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/0155-min-stack"
+
+import {
+  "moonbitlang/core/list",
+}
+
+// Values
+pub fn get_min((@list.List[Int], @list.List[Int])) -> Int
+
+pub fn new_min_stack() -> (@list.List[Int], @list.List[Int])
+
+pub fn pop((@list.List[Int], @list.List[Int])) -> (@list.List[Int], @list.List[Int])
+
+pub fn push((@list.List[Int], @list.List[Int]), Int) -> (@list.List[Int], @list.List[Int])
+
+pub fn top((@list.List[Int], @list.List[Int])) -> Int
+
+// Errors
+
+// Types and methods
+
+// Type aliases
+pub type MinStack = (@list.List[Int], @list.List[Int])
+
+// Traits
+

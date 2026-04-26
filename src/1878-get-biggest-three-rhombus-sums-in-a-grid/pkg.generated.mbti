@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/1878-get-biggest-three-rhombus-sums-in-a-grid"
+
+// Values
+
+// Errors
+
+// Types and methods
+type RhombusSumCalculator
+
+// Type aliases
+
+// Traits
+

@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/1902-depth-of-bst-given-insertion-order"
+
+// Values
+
+// Errors
+
+// Types and methods
+type TreeNode
+
+// Type aliases
+
+// Traits
+

@@ -1,0 +1,18 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/0116-populating-next-right-pointers-in-each-node"
+
+// Values
+pub fn connect(Tree) -> Tree
+
+// Errors
+
+// Types and methods
+pub enum Tree {
+  Empty
+  Node(Int, Tree, Tree, Tree)
+} derive(Eq, Show)
+
+// Type aliases
+
+// Traits
+

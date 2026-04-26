@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/0933-number-of-recent-calls"
+
+// Values
+
+// Errors
+
+// Types and methods
+type RecentCounter
+
+// Type aliases
+
+// Traits
+

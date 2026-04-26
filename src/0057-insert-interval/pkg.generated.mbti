@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/0057-insert-interval"
+
+// Values
+
+// Errors
+
+// Types and methods
+type Interval derive(Eq, Show)
+
+// Type aliases
+
+// Traits
+

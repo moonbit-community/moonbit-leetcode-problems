@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/0934-shortest-bridge"
+
+// Values
+
+// Errors
+
+// Types and methods
+type Point
+
+// Type aliases
+
+// Traits
+

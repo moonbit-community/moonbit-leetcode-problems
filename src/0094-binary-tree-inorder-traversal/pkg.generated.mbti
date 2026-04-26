@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/0094-binary-tree-inorder-traversal"
+
+// Values
+
+// Errors
+
+// Types and methods
+type Tree[Int]
+
+// Type aliases
+
+// Traits
+

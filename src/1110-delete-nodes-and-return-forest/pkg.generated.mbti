@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/1110-delete-nodes-and-return-forest"
+
+// Values
+
+// Errors
+
+// Types and methods
+type TreeNode derive(Eq, Show)
+
+// Type aliases
+
+// Traits
+

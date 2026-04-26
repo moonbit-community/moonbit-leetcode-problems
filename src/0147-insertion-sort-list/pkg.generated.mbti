@@ -1,0 +1,19 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/0147-insertion-sort-list"
+
+// Values
+pub fn insertion_sort_list(ListNode?) -> ListNode?
+
+// Errors
+
+// Types and methods
+pub struct ListNode {
+  val : Int
+  mut next : ListNode?
+} derive(Eq, Show, ToJson)
+pub fn ListNode::from_array(Array[Int]) -> Self?
+
+// Type aliases
+
+// Traits
+

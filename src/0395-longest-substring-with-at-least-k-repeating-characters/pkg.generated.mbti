@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/0395-longest-substring-with-at-least-k-repeating-characters"
+
+// Values
+
+// Errors
+
+// Types and methods
+type Solution
+
+// Type aliases
+
+// Traits
+

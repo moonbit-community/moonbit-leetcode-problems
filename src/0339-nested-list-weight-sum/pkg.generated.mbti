@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/0339-nested-list-weight-sum"
+
+// Values
+
+// Errors
+
+// Types and methods
+type NestedInteger
+
+// Type aliases
+
+// Traits
+

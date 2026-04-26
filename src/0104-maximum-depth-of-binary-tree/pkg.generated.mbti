@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/0104-maximum-depth-of-binary-tree"
+
+// Values
+
+// Errors
+
+// Types and methods
+type Tree
+
+// Type aliases
+
+// Traits
+

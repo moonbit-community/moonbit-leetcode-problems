@@ -1,0 +1,18 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/0124-binary-tree-maximum-path-sum"
+
+// Values
+pub fn max_path_sum(TreeNode) -> Int
+
+// Errors
+
+// Types and methods
+pub enum TreeNode {
+  Empty
+  Node(Int, TreeNode, TreeNode)
+}
+
+// Type aliases
+
+// Traits
+

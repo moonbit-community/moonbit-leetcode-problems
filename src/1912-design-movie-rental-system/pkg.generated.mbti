@@ -1,0 +1,18 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/1912-design-movie-rental-system"
+
+// Values
+
+// Errors
+
+// Types and methods
+type IntInt derive(Eq, Hash)
+
+type MovieEntry derive(Eq)
+
+type MovieRentingSystem
+
+// Type aliases
+
+// Traits
+

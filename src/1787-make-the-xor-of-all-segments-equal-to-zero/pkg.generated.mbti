@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/1787-make-the-xor-of-all-segments-equal-to-zero"
+
+// Values
+
+// Errors
+
+// Types and methods
+type IntInt derive(Eq, Hash)
+
+// Type aliases
+
+// Traits
+

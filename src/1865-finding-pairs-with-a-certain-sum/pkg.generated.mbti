@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/1865-finding-pairs-with-a-certain-sum"
+
+// Values
+
+// Errors
+
+// Types and methods
+type FindSumPairs
+
+// Type aliases
+
+// Traits
+

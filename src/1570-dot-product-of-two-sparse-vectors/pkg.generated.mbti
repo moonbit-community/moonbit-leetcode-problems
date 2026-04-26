@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/1570-dot-product-of-two-sparse-vectors"
+
+// Values
+
+// Errors
+
+// Types and methods
+type SparseVector
+
+// Type aliases
+
+// Traits
+

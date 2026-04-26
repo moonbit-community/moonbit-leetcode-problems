@@ -1,0 +1,14 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "leetcode/src/0127-word-ladder"
+
+// Values
+pub fn ladder_length(String, String, Array[String]) -> Int
+
+// Errors
+
+// Types and methods
+
+// Type aliases
+
+// Traits
+

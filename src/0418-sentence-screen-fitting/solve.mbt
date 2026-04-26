@@ -20,10 +20,10 @@ fn words_typing(sentence : Array[String], rows : Int, cols : Int) -> Int {
   let mut rows = rows
   while rows > 0 {
     cur = cur + cols
-    if s.get(cur % m) == ' ' {
+    if s.code_unit_at(cur % m).to_int() == ' '.to_int() {
       cur = cur + 1
     } else {
-      while cur > 0 && s.get((cur - 1) % m) != ' ' {
+      while cur > 0 && s.code_unit_at((cur - 1) % m).to_int() != ' '.to_int() {
         cur = cur - 1
       }
     }

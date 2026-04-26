@@ -24,7 +24,7 @@ fn is_path_crossing(path : String) -> Bool {
   let vis : @hashset.T[Int] = @hashset.of([])
   vis.insert(0)
   for idx = 0; idx < path.length(); idx = idx + 1 {
-    let c = path[idx]
+    let c = path.code_unit_at(idx).unsafe_to_char()
     let dir = char_to_direction(c)
     match dir {
       Some(Direction::N) => i = i - 1

@@ -6,7 +6,7 @@ fn longest_beautiful_substring(word : String) -> Int {
   let mut current_vowel_index = 0
   let mut last_char = ' '
   for i = 0; i < word.length(); i = i + 1 {
-    let char = word[i]
+    let char = word.code_unit_at(i).unsafe_to_char()
     if char == vowels[current_vowel_index] {
       current_length += 1
       last_char = char

@@ -7,7 +7,8 @@ fn char_to_numerical_value(c : Char) -> Int {
 fn word_to_numerical_value(word : String) -> Int {
   let mut numerical_value = 0
   for i = 0; i < word.length(); i = i + 1 {
-    numerical_value = numerical_value * 10 + char_to_numerical_value(word[i])
+    numerical_value = numerical_value * 10 +
+      char_to_numerical_value(word.code_unit_at(i).unsafe_to_char())
   }
   numerical_value
 }

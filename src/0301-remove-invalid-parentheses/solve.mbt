@@ -24,16 +24,16 @@ fn Solution::dfs(
   if self.n - i < l + r || lcnt < rcnt {
     return
   }
-  let c = self.s.get(i).to_string()
+  let c = self.s.code_unit_at(i).unsafe_to_char().to_string()
   if c == "(" && l > 0 {
-    dfs(self, i + 1, l - 1, r, lcnt, rcnt, t)
+    Solution::dfs(self, i + 1, l - 1, r, lcnt, rcnt, t)
   }
   if c == ")" && r > 0 {
-    dfs(self, i + 1, l, r - 1, lcnt, rcnt, t)
+    Solution::dfs(self, i + 1, l, r - 1, lcnt, rcnt, t)
   }
   let x = if c == "(" { 1 } else { 0 }
   let y = if c == ")" { 1 } else { 0 }
-  dfs(self, i + 1, l, r, lcnt + x, rcnt + y, t + c)
+  Solution::dfs(self, i + 1, l, r, lcnt + x, rcnt + y, t + c)
 }
 
 ///|
@@ -43,7 +43,7 @@ fn remove_invalid_parentheses(s : String) -> Solution {
   let mut r = 0
   let mut i = 0
   while i < n {
-    match s.get(i).to_string() {
+    match s.code_unit_at(i).unsafe_to_char().to_string() {
       "(" => l = l + 1
       ")" => if l > 0 { l = l - 1 } else { r = r + 1 }
       _ => ()
@@ -52,6 +52,6 @@ fn remove_invalid_parentheses(s : String) -> Solution {
   }
   let ans : @immut/list.T[String] = @immut/list.T::Nil
   let sol = Solution::{ s, n, ans }
-  dfs(sol, 0, l, r, 0, 0, "")
+  Solution::dfs(sol, 0, l, r, 0, 0, "")
   sol
 }

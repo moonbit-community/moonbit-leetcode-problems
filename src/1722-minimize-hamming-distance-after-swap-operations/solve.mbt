@@ -60,7 +60,7 @@ fn minimize_hamming_distance(
   }
 
   // Map to store elements in each group
-  let group_elements = {}
+  let group_elements : Map[Int, Map[Int, Int]] = {}
 
   // Populate the map with elements from source
   for i = 0; i < n; i = i + 1 {
@@ -68,22 +68,22 @@ fn minimize_hamming_distance(
     if not(group_elements.contains(root)) {
       group_elements[root] = {}
     }
-    let count = group_elements[root].map_or_else(fn() { 0 }, fn(x) {
-      x[source[i]].or_else(fn() { 0 })
-    })
-    group_elements[root].unwrap()[source[i]] = count + 1
+    let group = group_elements[root]
+    let count = if group.contains(source[i]) { group[source[i]] } else { 0 }
+    group[source[i]] = count + 1
   }
 
   // Calculate the minimum hamming distance
   let mut min_hamming_distance = 0
   for i = 0; i < n; i = i + 1 {
     let root = find(uf, i)
-    if not(group_elements[root].unwrap().contains(target[i])) {
+    let group = group_elements[root]
+    if not(group.contains(target[i])) {
       min_hamming_distance = min_hamming_distance + 1
     } else {
-      let count = group_elements[root].unwrap()[target[i]].unwrap()
+      let count = group[target[i]]
       if count > 0 {
-        group_elements[root].unwrap()[target[i]] = count - 1
+        group[target[i]] = count - 1
       } else {
         min_hamming_distance = min_hamming_distance + 1
       }

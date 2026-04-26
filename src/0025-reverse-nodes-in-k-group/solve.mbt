@@ -1,16 +1,18 @@
 ///|
 fn[X : Show] split(
   this : @immut/list.T[X],
-  k : Int
+  k : Int,
 ) -> (@immut/list.T[X], @immut/list.T[X]) {
-  loop this, k, @immut/list.T::Nil {
-    Nil, _, acc => break (acc, Nil)
-    Cons(x, xs), k, acc =>
-      if k > 1 {
-        continue xs, k - 1, Cons(x, acc)
-      } else {
-        break (Cons(x, acc), xs)
-      }
+  for xs = this, remaining = k, acc = @immut/list.T::Nil {
+    match xs {
+      Nil => break (acc, Nil)
+      Cons(x, rest) =>
+        if remaining > 1 {
+          continue rest, remaining - 1, Cons(x, acc)
+        } else {
+          break (Cons(x, acc), rest)
+        }
+    }
   }
 }
 

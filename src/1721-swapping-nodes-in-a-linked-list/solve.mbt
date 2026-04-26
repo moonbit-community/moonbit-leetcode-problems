@@ -9,7 +9,7 @@ struct ListNode {
 // Implement the Eq trait for ListNode
 
 ///|
-impl Eq for ListNode with op_equal(self : ListNode, other : ListNode) -> Bool {
+impl Eq for ListNode with equal(self : ListNode, other : ListNode) -> Bool {
   self.val == other.val && self.next == other.next
 }
 

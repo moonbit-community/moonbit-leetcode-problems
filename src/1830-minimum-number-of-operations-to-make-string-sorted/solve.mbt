@@ -4,7 +4,7 @@ fn min_number_of_operations_to_make_string_sorted(s : String) -> Int {
   let mut operations = 0
   let s_array = Array::make(s.length(), ' ')
   for i = 0; i < s.length(); i = i + 1 {
-    s_array[i] = s[i]
+    s_array[i] = s.code_unit_at(i).unsafe_to_char()
   }
   while true {
     let mut i = -1

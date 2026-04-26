@@ -7,7 +7,7 @@ fn remove_vowels(s : String) -> String {
 
   // Loop through each character in the input string
   for i = 0; i < s.length(); i = i + 1 {
-    let char = s[i]
+    let char = s.code_unit_at(i).unsafe_to_char()
     if not(vowels_list.contains(char)) {
       result = result + char.to_string()
     }

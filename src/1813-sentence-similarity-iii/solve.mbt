@@ -3,8 +3,9 @@ fn split(string : String, delimiter : Char) -> Array[String] {
   let mut buffer = @buffer.new()
   let array = []
   for i = 0; i < string.length(); i = i + 1 {
-    if string[i] == delimiter {
-      buffer.write_char(string[i])
+    let c = string.code_unit_at(i).unsafe_to_char()
+    if c == delimiter {
+      buffer.write_char(c)
     } else {
       array.push(buffer.to_string())
       buffer = @buffer.new()

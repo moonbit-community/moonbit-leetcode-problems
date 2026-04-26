@@ -8,7 +8,7 @@ fn max_number_of_words_you_can_type(
   // Convert broken_letters into a set for quick lookup
   let broken_set = @hashmap.new()
   for i = 0; i < broken_letters.length(); i = i + 1 {
-    broken_set.set(broken_letters[i], true)
+    broken_set.set(broken_letters.code_unit_at(i), true)
   }
 
   // Count the number of words that can be fully typed
@@ -16,7 +16,7 @@ fn max_number_of_words_you_can_type(
   for word in words {
     let mut can_type = true
     for j = 0; j < word.length(); j = j + 1 {
-      if broken_set.contains(word.char_at(j)) {
+      if broken_set.contains(word.code_unit_at(j)) {
         can_type = false
         break
       }

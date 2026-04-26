@@ -3,7 +3,7 @@ fn string_to_long(s : String) -> Int {
   let mut res = 0
   let mut i = 0
   while i < s.length() {
-    res = res * 10 + s.get(i).to_int() - '0'.to_int()
+    res = res * 10 + s.code_unit_at(i).to_int() - '0'.to_int()
     i = i + 1
   }
   res

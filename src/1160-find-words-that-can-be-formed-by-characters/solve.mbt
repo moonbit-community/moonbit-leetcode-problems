@@ -1,5 +1,5 @@
 ///|
-fn index_of_char(c : Char) -> Int {
+fn index_of_char(c : UInt16) -> Int {
   c.to_int() - 'a'.to_int()
 }
 

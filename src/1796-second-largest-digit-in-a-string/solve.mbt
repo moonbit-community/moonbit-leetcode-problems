@@ -13,7 +13,7 @@ fn second_largest_digit_in_string(s : String) -> Int {
   let mut largest_digit = -1
   let mut second_largest_digit = -1
   for i = 0; i < s.length(); i = i + 1 {
-    let char = s[i]
+    let char = s.code_unit_at(i).unsafe_to_char()
     if is_digit(char) {
       let digit = char_to_digit(char)
       if digit > largest_digit {

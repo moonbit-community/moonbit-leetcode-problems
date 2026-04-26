@@ -10,7 +10,7 @@ fn is_vowel(c : Char) -> Bool {
 fn count_vowels(s : String) -> Int {
   let mut count = 0
   for i = 0; i < s.length(); i = i + 1 {
-    let c = s[i]
+    let c = s.code_unit_at(i).unsafe_to_char()
     if is_vowel(c) {
       count = count + 1
     }

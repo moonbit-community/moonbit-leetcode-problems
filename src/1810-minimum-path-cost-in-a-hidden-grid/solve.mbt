@@ -12,7 +12,7 @@ struct Cell {
 }
 
 ///|
-type IntInt (Int, Int) derive(Hash, Eq)
+struct IntInt(Int, Int) derive(Hash, Eq)
 
 ///|
 fn explore_grid(
@@ -31,16 +31,15 @@ fn explore_grid(
       let (dir, d_row, d_col) = directions[i]
       let new_row = cell.row + d_row
       let new_col = cell.col + d_col
-      if not(grid.contains(IntInt((new_row, new_col)))) &&
-        (master.can_move)(dir) {
+      if not(grid.contains(IntInt(new_row, new_col))) && (master.can_move)(dir) {
         let cost = (master.move)(dir)
         if cost != -1 {
-          grid.set((new_row, new_col), cost)
+          grid.set(IntInt(new_row, new_col), cost)
           if (master.is_target)() {
             target = (new_row, new_col)
           }
           stack.push(Cell::{ row: new_row, col: new_col })
-          (master.move)(reverse_direction[dir].unwrap()) |> ignore
+          (master.move)(reverse_direction[dir]) |> ignore
         }
       }
     }
@@ -57,7 +56,7 @@ fn min_path_cost(master : GridMaster, start_row : Int, start_col : Int) -> Int {
   let directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
   let queue = [(start_row, start_col, 0)]
   let visited = @hashmap.new()
-  visited.set(IntInt((start_row, start_col)), 0)
+  visited.set(IntInt(start_row, start_col), 0)
   while queue.length() > 0 {
     let (row, col, cost) = queue.pop().unwrap()
     if (row, col) == target {
@@ -67,11 +66,11 @@ fn min_path_cost(master : GridMaster, start_row : Int, start_col : Int) -> Int {
       let (d_row, d_col) = directions[i]
       let new_row = row + d_row
       let new_col = col + d_col
-      if grid.contains((new_row, new_col)) {
-        let new_cost = cost + grid.get((new_row, new_col)).unwrap()
-        if not(visited.contains((new_row, new_col))) ||
-          visited.get((new_row, new_col)).unwrap() > new_cost {
-          visited.set((new_row, new_col), new_cost)
+      let key = IntInt(new_row, new_col)
+      if grid.contains(key) {
+        let new_cost = cost + grid.get(key).unwrap()
+        if not(visited.contains(key)) || visited.get(key).unwrap() > new_cost {
+          visited.set(key, new_cost)
           queue.push((new_row, new_col, new_cost))
         }
       }

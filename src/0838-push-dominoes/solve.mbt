@@ -10,7 +10,7 @@ fn pushDominoes(dominoes : String) -> String {
   let forces = Array::make(n, { time: -1, forces: @immut/list.T::Nil })
   let q : @queue.T[Int] = @queue.new()
   for i = 0; i < n; i = i + 1 {
-    let f = dominoes[i]
+    let f = dominoes.code_unit_at(i).unsafe_to_char()
     if f != '.' {
       q.push(i)
       forces[i] = { time: 0, forces: Cons(f, @immut/list.T::Nil) }

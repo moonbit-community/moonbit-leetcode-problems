@@ -1,0 +1,3 @@
+import {
+  "leetcode/src/compat/immut_list" @immut/list,
+}

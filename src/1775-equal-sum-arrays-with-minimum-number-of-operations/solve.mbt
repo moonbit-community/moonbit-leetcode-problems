@@ -1,35 +1,4 @@
 ///|
-type ArrayInt Array[Int]
-
-///|
-fn ArrayInt::compare(self : ArrayInt, other : ArrayInt) -> Int {
-  for i = 0
-      i < @math.minimum(self.inner().length(), other.inner().length())
-      i = i + 1 {
-    if self.inner()[i] != other.inner()[i] {
-      return self.inner()[i] - other.inner()[i]
-    }
-  } nobreak {
-    self.inner().length() - other.inner().length()
-  }
-}
-
-///|
-fn ArrayInt::op_equal(self : ArrayInt, other : ArrayInt) -> Bool {
-  if self.inner().length() != other.inner().length() {
-    return false
-  } else {
-    for i = 0; i < self.inner().length(); i = i + 1 {
-      if self.inner()[i] != other.inner()[i] {
-        return false
-      }
-    } nobreak {
-      return true
-    }
-  }
-}
-
-///|
 fn min_operations(nums1 : Array[Int], nums2 : Array[Int]) -> Int {
   let sum1 : Int = sum_array(nums1)
   let sum2 : Int = sum_array(nums2)

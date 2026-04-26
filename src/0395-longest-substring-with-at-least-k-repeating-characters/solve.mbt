@@ -14,9 +14,8 @@ fn Solution::dfs(self : Solution, l : Int, r : Int) -> Int {
   let cnt : Array[Int] = Array::make(26, 0)
   let mut i = l
   while i <= r {
-    cnt[self.s.get(i).to_int() - 'a'.to_int()] = cnt[self.s.get(i).to_int() -
-      'a'.to_int()] +
-      1
+    let c = self.s.code_unit_at(i).to_int() - 'a'.to_int()
+    cnt[c] = cnt[c] + 1
     i = i + 1
   }
   let mut split = 0
@@ -34,14 +33,14 @@ fn Solution::dfs(self : Solution, l : Int, r : Int) -> Int {
   let mut ans = 0
   i = l
   while i <= r {
-    while i <= r && self.s.get(i).to_int() == split {
+    while i <= r && self.s.code_unit_at(i).to_int() == split {
       i = i + 1
     }
     if i > r {
       break
     }
     let mut j = i
-    while j <= r && self.s.get(j).to_int() != split {
+    while j <= r && self.s.code_unit_at(j).to_int() != split {
       j = j + 1
     }
     let t = self.dfs(i, j - 1)

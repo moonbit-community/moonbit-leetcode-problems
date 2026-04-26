@@ -2,7 +2,7 @@
 fn char_to_uppercase(c : Char) -> Char {
   let ascii_val = c.to_int()
   if ascii_val >= 97 && ascii_val <= 122 {
-    return Char::from_int(ascii_val - 32)
+    return (ascii_val - 32).unsafe_to_char()
   }
   c
 }
@@ -11,7 +11,7 @@ fn char_to_uppercase(c : Char) -> Char {
 fn char_to_lowercase(c : Char) -> Char {
   let ascii_val = c.to_int()
   if ascii_val >= 65 && ascii_val <= 90 {
-    return Char::from_int(ascii_val + 32)
+    return (ascii_val + 32).unsafe_to_char()
   }
   c
 }
@@ -20,10 +20,10 @@ fn char_to_lowercase(c : Char) -> Char {
 fn is_nice_substring(substring : String) -> Bool {
   let char_set : @hashmap.T[Char, Bool] = @hashmap.new()
   for i = 0; i < substring.length(); i = i + 1 {
-    char_set.set(substring[i], true)
+    char_set.set(substring.code_unit_at(i).unsafe_to_char(), true)
   }
   for i = 0; i < substring.length(); i = i + 1 {
-    let char = substring[i]
+    let char = substring.code_unit_at(i).unsafe_to_char()
     let upper_char = char_to_uppercase(char)
     let lower_char = char_to_lowercase(char)
     if char_set.contains(upper_char) && not(char_set.contains(lower_char)) {

@@ -1,7 +1,7 @@
 ///|
 fn merge_two_lists(
   l1 : @immut/list.T[Int],
-  l2 : @immut/list.T[Int]
+  l2 : @immut/list.T[Int],
 ) -> @immut/list.T[Int] {
   match (l1, l2) {
     (Nil, _) => l2

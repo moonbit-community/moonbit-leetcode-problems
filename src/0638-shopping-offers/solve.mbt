@@ -14,7 +14,7 @@ fn total(price : Array[Int], needs : Array[Int]) -> Int {
 fn shoppingOffers(
   price : Array[Int],
   special : Array[Array[Int]],
-  needs : Array[Int]
+  needs : Array[Int],
 ) -> Int {
   let mut ans = total(price, needs)
   let t : Array[Int] = Array::make(needs.length(), 0)

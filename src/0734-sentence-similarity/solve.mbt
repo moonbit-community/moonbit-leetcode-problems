@@ -21,7 +21,7 @@ fn set_contains(s : @immut/list.T[Pair], elem : Pair) -> Bool {
 fn are_sentences_similar(
   sentence1 : Array[String],
   sentence2 : Array[String],
-  similarPairs : @immut/list.T[Pair]
+  similarPairs : @immut/list.T[Pair],
 ) -> Bool {
   if sentence1.length() != sentence2.length() {
     return false

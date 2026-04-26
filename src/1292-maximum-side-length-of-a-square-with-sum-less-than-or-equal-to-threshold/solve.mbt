@@ -18,7 +18,7 @@ fn max_side_length(mat : Array[Array[Int]], threshold : Int) -> Int {
     s : Array[Array[Int]],
     m : Int,
     n : Int,
-    threshold : Int
+    threshold : Int,
   ) -> Bool {
     for i = 0; i < m - k + 1; i = i + 1 {
       for j = 0; j < n - k + 1; j = j + 1 {

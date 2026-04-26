@@ -3,7 +3,7 @@ fn split(s : String, delim : Char) -> @immut/list.T[String] {
   fn helper(
     acc : @immut/list.T[String],
     curr : String,
-    i : Int
+    i : Int,
   ) -> @immut/list.T[String] {
     if i == s.length() {
       if curr != "" {

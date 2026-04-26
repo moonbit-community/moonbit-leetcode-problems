@@ -21,7 +21,7 @@ fn longest_palindrome_subseq(s : String) -> Int {
 ///|
 fn max_palindrome_length_from_subsequences(
   word1 : String,
-  word2 : String
+  word2 : String,
 ) -> Int {
   let word1_len = word1.length()
   let word2_len = word2.length()

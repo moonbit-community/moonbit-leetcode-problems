@@ -17,7 +17,7 @@ fn[X : Show] split(
 ///|
 fn[X : Eq + Show] reverse_k_group(
   head : @immut/list.T[X],
-  k : Int
+  k : Int,
 ) -> @immut/list.T[X] {
   if k <= 1 || head == Nil {
     return head

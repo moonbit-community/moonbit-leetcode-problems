@@ -25,7 +25,7 @@ fn compute_area(
   bx1 : Int,
   by1 : Int,
   bx2 : Int,
-  by2 : Int
+  by2 : Int,
 ) -> Int {
   let a = (ax2 - ax1) * (ay2 - ay1)
   let b = (bx2 - bx1) * (by2 - by1)

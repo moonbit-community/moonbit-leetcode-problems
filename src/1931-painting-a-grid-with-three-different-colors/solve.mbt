@@ -34,7 +34,7 @@ fn generate_states_helper(
   m : Int,
   colors : Array[Char],
   current : String,
-  states : Array[String]
+  states : Array[String],
 ) -> Unit {
   if current.length() == m {
     states.push(current)

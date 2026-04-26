@@ -21,7 +21,7 @@ fn stone_game_ii(piles : Array[Int]) -> Int {
     f : Array[Array[Int]],
     i : Int,
     m : Int,
-    n : Int
+    n : Int,
   ) -> Int {
     if m * 2 >= n - i {
       return s[n] - s[i]

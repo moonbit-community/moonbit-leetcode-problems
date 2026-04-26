@@ -1,7 +1,7 @@
 ///|
 fn can_eat_favorite_candy_on_favorite_day(
   candies_count : Array[Int],
-  queries : Array[Array[Int]]
+  queries : Array[Array[Int]],
 ) -> Array[Bool] {
   let n = candies_count.length()
   let prefix_sums = Array::make(n + 1, 0)

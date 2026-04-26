@@ -1,7 +1,7 @@
 ///|
 fn evaluate_bracket_pairs(
   s : String,
-  knowledge : Array[Array[String]]
+  knowledge : Array[Array[String]],
 ) -> String {
   let knowledge_map : @hashmap.T[String, String] = @hashmap.new()
 

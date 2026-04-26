@@ -1,7 +1,7 @@
 ///|
 fn sum_even_after_queries(
   nums : Array[Int],
-  queries : Array[Array[Int]]
+  queries : Array[Array[Int]],
 ) -> Array[Int] {
   let mut s = 0
   for i = 0; i < nums.length(); i = i + 1 {

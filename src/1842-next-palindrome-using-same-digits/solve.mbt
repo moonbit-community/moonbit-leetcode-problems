@@ -53,7 +53,7 @@ fn find_next_permutation(s : String) -> String {
 fn construct_palindrome(
   first_half : String,
   has_middle : Bool,
-  middle_char : Char
+  middle_char : Char,
 ) -> String {
   let second_half = first_half.to_array().rev_inplace().to_string()
   if has_middle {

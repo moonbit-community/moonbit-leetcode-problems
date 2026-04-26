@@ -3,7 +3,7 @@ fn create_array3d(
   m : Int,
   n : Int,
   k : Int,
-  initial_value : Int
+  initial_value : Int,
 ) -> Array[Array[Array[Int]]] {
   Array::make(m, Array::make(n, Array::make(k, initial_value)))
 }
@@ -34,7 +34,7 @@ fn ways(pizza : Array[String], k : Int) -> Int {
     s : Array[Array[Int]],
     m : Int,
     n : Int,
-    mod : Int
+    mod : Int,
   ) -> Int {
     if f[i][j][k] != -1 {
       return f[i][j][k]

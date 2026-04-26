@@ -20,7 +20,7 @@ fn Solution::new(voyage : Array[Int]) -> Solution {
 ///|
 fn Solution::flip_match_voyage(
   self : Solution,
-  root : TreeNode
+  root : TreeNode,
 ) -> @immut/list.T[Int] {
   self.dfs(root)
   if self.ok {

@@ -8,7 +8,7 @@ fn sort_transformed_array(
   nums : Array[Int],
   a : Int,
   b : Int,
-  c : Int
+  c : Int,
 ) -> Array[Int] {
   let n : Int = nums.length()
   let mut i : Int = 0

@@ -13,7 +13,7 @@ fn OrderedStream::new(n : Int) -> OrderedStream {
 fn OrderedStream::insert(
   self : OrderedStream,
   id_key : Int,
-  value : String
+  value : String,
 ) -> Array[String] {
   self.vals[id_key - 1] = value
   let res : Array[String] = []

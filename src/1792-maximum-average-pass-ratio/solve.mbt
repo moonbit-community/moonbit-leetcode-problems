@@ -12,7 +12,7 @@ fn new_class(pass : Int, total : Int) -> Class {
 ///|
 fn max_average_pass_ratio(
   classes : Array[Class],
-  extra_students : Int
+  extra_students : Int,
 ) -> Double {
   let max_heap : Array[Class] = []
   for i = 0; i < classes.length(); i = i + 1 {
@@ -64,7 +64,7 @@ fn heapify(heap : Array[Class], index : Int, size : Int) -> Unit {
 fn assert_approx_eq(
   result : Double,
   expect : Double,
-  error : Double
+  error : Double,
 ) -> Unit raise {
   if (result - expect).abs() < error {
     ()

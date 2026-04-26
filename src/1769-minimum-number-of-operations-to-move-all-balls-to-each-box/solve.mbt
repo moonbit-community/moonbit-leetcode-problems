@@ -1,6 +1,6 @@
 ///|
 fn min_number_of_operations_to_move_all_balls_to_each_box(
-  boxes : String
+  boxes : String,
 ) -> Array[Int] {
   let n = boxes.length()
   let answer = Array::make(n, 0)

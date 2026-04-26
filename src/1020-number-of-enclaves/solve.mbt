@@ -9,7 +9,7 @@ fn num_enclaves(grid : Array[Array[Int]]) -> Int {
     j : Int,
     dirs : Array[Int],
     m : Int,
-    n : Int
+    n : Int,
   ) {
     self[i][j] = 0
     for k = 0; k < 4; k = k + 1 {

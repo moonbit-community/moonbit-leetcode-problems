@@ -25,7 +25,7 @@ fn minimum_effort(tasks : Array[(Int, Int)]) -> Int {
     len : Int,
     sorted_tasks : Array[(Int, Int)],
     ans : Int,
-    cur : Int
+    cur : Int,
   ) -> Int {
     if i == len {
       ans

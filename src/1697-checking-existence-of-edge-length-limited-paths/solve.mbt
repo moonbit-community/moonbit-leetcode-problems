@@ -52,7 +52,7 @@ fn query_cmp(a : Array[Int], b : Array[Int]) -> Int {
 fn distance_limited_paths_exist(
   n : Int,
   edge_list : Array[Array[Int]],
-  queries : Array[Array[Int]]
+  queries : Array[Array[Int]],
 ) -> Array[Bool] {
   edge_list.sort_by(edge_cmp)
   queries.mapi_inplace(fn(i, q) { [q[0], q[1], q[2], i] })

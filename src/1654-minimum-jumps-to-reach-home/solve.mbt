@@ -7,7 +7,7 @@ struct Coordinate {
 ///|
 fn minimum_jumps(forbidden : Array[Int], a : Int, b : Int, x : Int) -> Int {
   fn shift_front(
-    q : @immut/list.T[Coordinate]
+    q : @immut/list.T[Coordinate],
   ) -> (Coordinate, @immut/list.T[Coordinate]) {
     match q {
       @immut/list.T::Nil => abort("Trying to shift from an empty list")

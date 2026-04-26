@@ -71,7 +71,7 @@ fn merge_trees(trees : Array[TreeNode]) -> TreeNode? {
 fn replace_leaf(
   tree : TreeNode,
   _leaf_val : Int,
-  new_tree : TreeNode
+  new_tree : TreeNode,
 ) -> TreeNode {
   let stack = Array::new()
   stack.push(tree)

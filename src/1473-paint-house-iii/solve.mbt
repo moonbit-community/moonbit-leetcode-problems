@@ -13,7 +13,7 @@ fn min_cost(
   cost : Array[Array[Int]],
   m : Int,
   n : Int,
-  target : Int
+  target : Int,
 ) -> Int {
   let inf = 2_0000_0000
   let f = Array::make(m, Array::make(n + 1, Array::make(target + 1, inf)))

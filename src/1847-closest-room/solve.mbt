@@ -1,7 +1,7 @@
 ///|
 fn closest_room(
   rooms : Array[(Int, Int)],
-  queries : Array[(Int, Int)]
+  queries : Array[(Int, Int)],
 ) -> Array[Int] {
   let sorted_rooms : Array[(Int, Int)] = rooms
   sorted_rooms.sort_by_key(fn(x) {
@@ -11,7 +11,7 @@ fn closest_room(
   fn find_closest_room(
     preferred : Int,
     min_size : Int,
-    rooms : Array[(Int, Int)]
+    rooms : Array[(Int, Int)],
   ) -> Int {
     let mut closest_room = -1
     let mut min_diff = 2_0000_0000 // A large number to represent infinity

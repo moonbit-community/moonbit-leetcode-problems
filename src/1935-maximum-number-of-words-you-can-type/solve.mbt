@@ -1,7 +1,7 @@
 ///|
 fn max_number_of_words_you_can_type(
   text : String,
-  broken_letters : String
+  broken_letters : String,
 ) -> Int {
   // Split the text into words
   let words = text.split(" ")

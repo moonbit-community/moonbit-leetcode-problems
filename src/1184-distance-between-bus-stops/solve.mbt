@@ -2,7 +2,7 @@
 fn distance_between_bus_stops(
   distance : Array[Int],
   start : Int,
-  destination : Int
+  destination : Int,
 ) -> Int {
   let s = distance.fold_left(init=0, fn(a, b) { a + b })
   let mut a = 0

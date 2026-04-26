@@ -6,28 +6,28 @@ struct SubrectangleQueries {
 
 ///|
 fn subrectangle_queries_new(
-  rectangle : Array[Array[Int]]
+  rectangle : Array[Array[Int]],
 ) -> SubrectangleQueries {
   SubrectangleQueries::{ g: rectangle, ops: [] }
 }
 
 ///|
-fn subrectangle_queries_update_subrectangle(
+fn SubrectangleQueries::subrectangle_queries_update_subrectangle(
   self : SubrectangleQueries,
   row1 : Int,
   col1 : Int,
   row2 : Int,
   col2 : Int,
-  new_value : Int
+  new_value : Int,
 ) -> Unit {
   self.ops.push((row1, col1, row2, col2, new_value))
 }
 
 ///|
-fn subrectangle_queries_get_value(
+fn SubrectangleQueries::subrectangle_queries_get_value(
   self : SubrectangleQueries,
   row : Int,
-  col : Int
+  col : Int,
 ) -> Int {
   let len = self.ops.length()
   for i = len - 1; i >= 0; i = i - 1 {

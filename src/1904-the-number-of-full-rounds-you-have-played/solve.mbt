@@ -32,7 +32,7 @@ fn count_full_rounds(login_time : Time, logout_time : Time) -> Int {
 ///|
 fn count_full_rounds_string(
   login_time_str : String,
-  logout_time_str : String
+  logout_time_str : String,
 ) -> Int raise {
   let login_time = parse_time(login_time_str)
   let logout_time = parse_time(logout_time_str)

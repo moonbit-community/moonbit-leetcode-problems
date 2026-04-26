@@ -2,7 +2,7 @@
 fn busy_student(
   start_time : Array[Int],
   end_time : Array[Int],
-  query_time : Int
+  query_time : Int,
 ) -> Int {
   let n = start_time.length()
   let mut res = 0

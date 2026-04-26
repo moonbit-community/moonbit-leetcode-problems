@@ -1,7 +1,7 @@
 ///|
 fn array_strings_are_equal(
   word1 : Array[String],
-  word2 : Array[String]
+  word2 : Array[String],
 ) -> Bool {
   let joined_word1 = join_array(word1)
   let joined_word2 = join_array(word2)

@@ -1,7 +1,7 @@
 ///|
 fn insert_into_sorted_list(
   node : Int,
-  list : @immut/list.T[Int]
+  list : @immut/list.T[Int],
 ) -> @immut/list.T[Int] {
   match list {
     Nil => Cons(node, Nil)

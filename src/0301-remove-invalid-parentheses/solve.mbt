@@ -6,14 +6,14 @@ struct Solution {
 }
 
 ///|
-fn dfs(
+fn Solution::dfs(
   self : Solution,
   i : Int,
   l : Int,
   r : Int,
   lcnt : Int,
   rcnt : Int,
-  t : String
+  t : String,
 ) -> Unit {
   if i == self.n {
     if l == 0 && r == 0 {

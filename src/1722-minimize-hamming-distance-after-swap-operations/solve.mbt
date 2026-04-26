@@ -46,7 +46,7 @@ fn union(uf : UnionFind, x : Int, y : Int) -> Unit {
 fn minimize_hamming_distance(
   source : Array[Int],
   target : Array[Int],
-  allowed_swaps : Array[Array[Int]]
+  allowed_swaps : Array[Array[Int]],
 ) -> Int {
   let n = source.length()
   let uf = make_union_find(n)

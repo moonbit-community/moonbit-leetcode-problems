@@ -10,7 +10,7 @@ fn dfs(
   preorder : Array[Int],
   next : Array[Int],
   left : Int,
-  right : Int
+  right : Int,
 ) -> TreeNode? {
   if left >= right {
     return None

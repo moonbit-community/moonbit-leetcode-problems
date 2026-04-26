@@ -30,7 +30,7 @@ impl Compare for MovieEntry with compare(a : MovieEntry, b : MovieEntry) -> Int 
 ///|
 fn MovieRentingSystem::new(
   n : Int,
-  entries : Array[Array[Int]]
+  entries : Array[Array[Int]],
 ) -> MovieRentingSystem {
   let movie_map = @hashmap.new()
   let rented_movies = @priority_queue.new()
@@ -52,7 +52,7 @@ fn MovieRentingSystem::new(
 ///|
 fn MovieRentingSystem::search(
   self : MovieRentingSystem,
-  movie : Int
+  movie : Int,
 ) -> Array[Int] {
   let result = Array::new()
   if not(self.movie_map.contains(movie)) {
@@ -77,7 +77,7 @@ fn MovieRentingSystem::search(
 fn MovieRentingSystem::rent(
   self : MovieRentingSystem,
   shop : Int,
-  movie : Int
+  movie : Int,
 ) -> Unit {
   let entry = self.movie_map.get(movie).unwrap().pop().unwrap()
   self.rented_movies.push(entry)
@@ -88,7 +88,7 @@ fn MovieRentingSystem::rent(
 fn MovieRentingSystem::drop(
   self : MovieRentingSystem,
   shop : Int,
-  movie : Int
+  movie : Int,
 ) -> Unit {
   let entry = self.rented_set.get((shop, movie)).unwrap()
   let new_rented_movies = @priority_queue.new()

@@ -53,7 +53,7 @@ fn multinomial_coefficient(n : Int, k_arr : Array[Int]) -> Int {
 
 ///|
 fn count_ways_to_make_array_with_product(
-  queries : Array[Array[Int]]
+  queries : Array[Array[Int]],
 ) -> Array[Int] {
   let result = Array::make(queries.length(), 0)
   for i = 0; i < queries.length(); i = i + 1 {

@@ -37,7 +37,7 @@ fn KthLargest::peek(self : KthLargest) -> Int {
 fn KthLargest::insert_sorted(
   self : KthLargest,
   list : @immut/list.T[Int],
-  val : Int
+  val : Int,
 ) -> @immut/list.T[Int] {
   match list {
     Nil => Cons(val, Nil)
@@ -53,7 +53,7 @@ fn KthLargest::insert_sorted(
 ///|
 fn KthLargest::pop(
   self : KthLargest,
-  list : @immut/list.T[Int]
+  list : @immut/list.T[Int],
 ) -> @immut/list.T[Int] {
   match list {
     Nil => Nil

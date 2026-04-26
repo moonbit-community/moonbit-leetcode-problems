@@ -10,7 +10,7 @@ fn RhombusSumCalculator::new(grid : Array[Array[Int]]) -> RhombusSumCalculator {
 
 ///|
 fn RhombusSumCalculator::get_biggest_three_rhombus_sums(
-  self : RhombusSumCalculator
+  self : RhombusSumCalculator,
 ) -> Array[Int] {
   let m = self.grid.length()
   let n = self.grid[0].length()
@@ -47,7 +47,7 @@ fn RhombusSumCalculator::calculate_rhombus_sum(
   self : RhombusSumCalculator,
   i : Int,
   j : Int,
-  size : Int
+  size : Int,
 ) -> Int {
   let mut sum = 0
   for k = 0; k < size; k = k + 1 {

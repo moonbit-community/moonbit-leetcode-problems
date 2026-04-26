@@ -3,7 +3,7 @@ fn dfs(
   n : Int,
   k : Int,
   t : Int,
-  res : @immut/list.T[Int]
+  res : @immut/list.T[Int],
 ) -> @immut/list.T[Int] {
   if n == 0 {
     res.concat(@immut/list.of([t]))

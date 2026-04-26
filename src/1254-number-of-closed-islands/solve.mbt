@@ -9,7 +9,7 @@ fn closed_island(grid : Array[Array[Int]]) -> Int {
     grid : Array[Array[Int]],
     m : Int,
     n : Int,
-    dirs : Array[Int]
+    dirs : Array[Int],
   ) -> Bool {
     if i < 0 || j < 0 || i >= m || j >= n {
       return false

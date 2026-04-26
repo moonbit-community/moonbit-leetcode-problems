@@ -1,7 +1,7 @@
 ///|
 fn can_form_target_triplet(
   triplets : Array[Array[Int]],
-  target : Array[Int]
+  target : Array[Int],
 ) -> Bool {
   let filtered_triplets = Array::new()
   for i = 0; i < triplets.length(); i = i + 1 {

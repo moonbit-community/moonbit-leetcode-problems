@@ -7,7 +7,7 @@ struct Interval {
 ///|
 fn insert(
   intervals : Array[Interval],
-  new_interval : Interval
+  new_interval : Interval,
 ) -> Array[Interval] {
   let intervals_len = intervals.length()
   let new_intervals : Array[Interval] = Array::make(intervals_len + 1, Interval::{

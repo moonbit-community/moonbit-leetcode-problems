@@ -9,7 +9,7 @@ fn ArrayInt::compare(self : ArrayInt, other : ArrayInt) -> Int {
     if self.inner()[i] != other.inner()[i] {
       return self.inner()[i] - other.inner()[i]
     }
-  } else {
+  } nobreak {
     self.inner().length() - other.inner().length()
   }
 }
@@ -23,7 +23,7 @@ fn ArrayInt::op_equal(self : ArrayInt, other : ArrayInt) -> Bool {
       if self.inner()[i] != other.inner()[i] {
         return false
       }
-    } else {
+    } nobreak {
       return true
     }
   }

@@ -10,7 +10,7 @@ struct Pair {
 fn add_pair(
   pairs : @immut/list.T[Pair],
   key : Int,
-  val : Int
+  val : Int,
 ) -> @immut/list.T[Pair] {
   Cons(Pair::{ index: key, value: val }, pairs)
 }

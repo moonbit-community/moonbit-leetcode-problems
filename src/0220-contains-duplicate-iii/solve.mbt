@@ -17,7 +17,7 @@ fn abs_diff_is_not_greater(a : Int, b : Int, max_diff : Int) -> Bool {
 fn contains_nearby_almost_duplicate(
   nums : Array[Int],
   index_diff : Int,
-  value_diff : Int
+  value_diff : Int,
 ) -> Bool {
   let n = nums.length()
   let mut i = 0

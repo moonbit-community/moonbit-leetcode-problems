@@ -9,7 +9,7 @@ fn count_numbers_with_unique_digits(n : Int) -> Int {
         i < n - 1
         i = i + 1, cur = cur * (9 - i), ans = ans + cur {
 
-    } else {
+    } nobreak {
       ans
     }
   }

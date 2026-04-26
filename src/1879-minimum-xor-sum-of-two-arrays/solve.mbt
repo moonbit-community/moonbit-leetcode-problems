@@ -9,7 +9,7 @@ fn min_xor_sum(nums1 : Array[Int], nums2 : Array[Int]) -> Int {
     l : Int,
     r : Int,
     min_sum : Int,
-    nums1 : Array[Int]
+    nums1 : Array[Int],
   ) -> Int {
     let arr = arr
     let mut min_sum = min_sum

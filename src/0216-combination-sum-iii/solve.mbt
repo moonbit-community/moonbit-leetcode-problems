@@ -4,7 +4,7 @@ fn combination_sum3_helper(
   ans : @immut/list.T[@immut/list.T[Int]],
   start : Int,
   remainingSum : Int,
-  k : Int
+  k : Int,
 ) -> @immut/list.T[@immut/list.T[Int]] {
   if remainingSum == 0 {
     if t.length() == k {

@@ -3,7 +3,7 @@ fn is_subsequence(
   s : String,
   p : String,
   removable : Array[Int],
-  k : Int
+  k : Int,
 ) -> Bool {
   let marked = Array::make(s.length(), false)
   for i = 0; i < k; i = i + 1 {
@@ -22,7 +22,7 @@ fn is_subsequence(
 fn maximum_number_of_removable_characters(
   s : String,
   p : String,
-  removable : Array[Int]
+  removable : Array[Int],
 ) -> Int {
   let mut left = 0
   let mut right = removable.length()

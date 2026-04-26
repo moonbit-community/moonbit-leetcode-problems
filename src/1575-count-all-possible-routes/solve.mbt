@@ -12,7 +12,7 @@ fn count_routes(
   locations : Array[Int],
   start : Int,
   finish : Int,
-  fuel : Int
+  fuel : Int,
 ) -> Int {
   let n = locations.length()
   let mod = 1000000007
@@ -24,7 +24,7 @@ fn count_routes(
     locations : Array[Int],
     f : Array[Array[Int]],
     finish : Int,
-    mod : Int
+    mod : Int,
   ) -> Int {
     if k < abs_diff(locations[i], locations[finish]) {
       0

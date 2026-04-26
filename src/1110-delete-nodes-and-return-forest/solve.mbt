@@ -7,7 +7,7 @@ enum TreeNode {
 ///|
 fn delete_nodes(
   root : TreeNode,
-  to_delete : Array[Int]
+  to_delete : Array[Int],
 ) -> @immut/list.T[TreeNode] {
   let s : Array[Bool] = Array::make(1001, false)
   for i = 0; i < to_delete.length(); i = i + 1 {

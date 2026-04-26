@@ -11,14 +11,14 @@ fn max_number_of_apples(weights : @immut/list.T[Int]) -> Int {
     }
   }
   and split = fn(
-    list : @immut/list.T[Int]
+    list : @immut/list.T[Int],
   ) -> (@immut/list.T[Int], @immut/list.T[Int]) {
     let mid = list.length() / 2
     (list.take(mid), list.drop(mid))
   }
   and merge = fn(
     left : @immut/list.T[Int],
-    right : @immut/list.T[Int]
+    right : @immut/list.T[Int],
   ) -> @immut/list.T[Int] {
     match (left, right) {
       (Nil, _) => right
@@ -35,7 +35,7 @@ fn max_number_of_apples(weights : @immut/list.T[Int]) -> Int {
   let sorted_weights = merge_sort(weights)
   let (count, _) = sorted_weights.fold_left(init=(0, 0), fn(
     acc : (Int, Int),
-    w : Int
+    w : Int,
   ) -> (Int, Int) {
     let (count, total) = acc
     let new_total = total + w

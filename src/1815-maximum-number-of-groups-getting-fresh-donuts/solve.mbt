@@ -26,7 +26,7 @@ fn max_happy_groups(batch_size : Int, groups : Array[Int]) -> Int {
 fn backtrack(
   batch_size : Int,
   remaining : Array[Int],
-  current_remainder : Int
+  current_remainder : Int,
 ) -> Int {
   let mut max_happy = 0
   for i = 1; i < batch_size; i = i + 1 {

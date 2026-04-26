@@ -1,7 +1,7 @@
 ///|
 fn count_sub_islands(
   grid1 : Array[Array[Int]],
-  grid2 : Array[Array[Int]]
+  grid2 : Array[Array[Int]],
 ) -> Int {
   let m = grid1.length()
   let n = grid1[0].length()
@@ -10,7 +10,7 @@ fn count_sub_islands(
     grid1 : Array[Array[Int]],
     grid2 : Array[Array[Int]],
     i : Int,
-    j : Int
+    j : Int,
   ) -> Bool {
     if i < 0 || i >= m || j < 0 || j >= n || grid2[i][j] == 0 {
       return true

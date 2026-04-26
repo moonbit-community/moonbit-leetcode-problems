@@ -3,7 +3,7 @@ fn is_magic_square(
   grid : Array[Array[Int]],
   x : Int,
   y : Int,
-  size : Int
+  size : Int,
 ) -> Bool {
   let mut target_sum = 0
   for i = 0; i < size; i = i + 1 {

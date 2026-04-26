@@ -1,5 +1,5 @@
 ///|
-fnalias @math.maximum as max
+using @math {maximum as max}
 
 ///|
 pub fn max_path_sum(root : TreeNode) -> Int {

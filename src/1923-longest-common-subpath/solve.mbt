@@ -19,7 +19,7 @@ fn RollingHash::new(base : Int, modulus : Int, max_length : Int) -> RollingHash 
 fn RollingHash::hash(
   self : RollingHash,
   path : Array[Int],
-  length : Int
+  length : Int,
 ) -> Array[Int] {
   let n = path.length()
   let hash_values = Array::make(n - length + 1, 0)

@@ -7,7 +7,7 @@ enum Pair {
 fn find_missing_ranges(
   nums : Array[Int],
   lower : Int,
-  upper : Int
+  upper : Int,
 ) -> @immut/list.T[Pair] {
   let n = nums.length()
   if n == 0 {

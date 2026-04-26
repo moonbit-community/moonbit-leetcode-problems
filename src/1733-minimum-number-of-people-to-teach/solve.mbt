@@ -2,7 +2,7 @@
 fn min_number_of_people_to_teach(
   n : Int,
   languages : Array[Array[Int]],
-  friendships : Array[Array[Int]]
+  friendships : Array[Array[Int]],
 ) -> Int {
   let m = languages.length()
   let can_communicate = Array::make(m, Array::make(m, false))

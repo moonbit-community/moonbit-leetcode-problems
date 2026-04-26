@@ -16,7 +16,7 @@ fn word_to_numerical_value(word : String) -> Int {
 fn check_if_word_equals_summation_of_two_words(
   first_word : String,
   second_word : String,
-  target_word : String
+  target_word : String,
 ) -> Bool {
   let first_word_value = word_to_numerical_value(first_word)
   let second_word_value = word_to_numerical_value(second_word)

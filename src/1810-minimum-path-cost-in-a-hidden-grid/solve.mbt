@@ -18,7 +18,7 @@ type IntInt (Int, Int) derive(Hash, Eq)
 fn explore_grid(
   master : GridMaster,
   start_row : Int,
-  start_col : Int
+  start_col : Int,
 ) -> (@hashmap.T[IntInt, Int], (Int, Int)) {
   let directions = [('U', -1, 0), ('D', 1, 0), ('L', 0, -1), ('R', 0, 1)]
   let reverse_direction = { 'U': 'D', 'D': 'U', 'L': 'R', 'R': 'L' }

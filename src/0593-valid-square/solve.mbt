@@ -25,7 +25,7 @@ fn valid_square(
   p1 : Array[Int],
   p2 : Array[Int],
   p3 : Array[Int],
-  p4 : Array[Int]
+  p4 : Array[Int],
 ) -> Bool {
   check(p1, p2, p3) &&
   check(p1, p3, p4) &&

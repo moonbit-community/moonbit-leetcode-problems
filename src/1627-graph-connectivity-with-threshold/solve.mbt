@@ -23,7 +23,7 @@ fn UnionFind::find(self : UnionFind, x : Int) -> Int {
 }
 
 ///|
-fn union(self : UnionFind, a : Int, b : Int) -> Bool {
+fn UnionFind::union(self : UnionFind, a : Int, b : Int) -> Bool {
   let pa = self.find(a)
   let pb = self.find(b)
   if pa == pb {
@@ -44,7 +44,7 @@ fn union(self : UnionFind, a : Int, b : Int) -> Bool {
 fn are_connected(
   n : Int,
   threshold : Int,
-  queries : Array[(Int, Int)]
+  queries : Array[(Int, Int)],
 ) -> Array[Bool] {
   let uf = UnionFind::new(n + 1)
   for a = threshold + 1; a < n + 1; a = a + 1 {

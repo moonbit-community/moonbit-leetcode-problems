@@ -2,7 +2,7 @@
 fn create_2d_array(
   rows : Int,
   cols : Int,
-  default_value : Int
+  default_value : Int,
 ) -> Array[Array[Int]] {
   let result = Array::make(rows, Array::make(cols, 0))
   for i = 0; i < rows; i = i + 1 {

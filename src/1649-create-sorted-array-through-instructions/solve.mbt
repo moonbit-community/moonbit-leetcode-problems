@@ -13,7 +13,7 @@ fn BinaryIndexedTree::new(n : Int) -> BinaryIndexedTree {
 fn BinaryIndexedTree::update(
   self : BinaryIndexedTree,
   x : Int,
-  v : Int
+  v : Int,
 ) -> Unit {
   let mut x = x
   while x <= self.n {

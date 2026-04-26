@@ -2,7 +2,7 @@
 fn count_pairs_with_xor_in_range(
   nums : Array[Int],
   low : Int,
-  high : Int
+  high : Int,
 ) -> Int {
   let mut count = 0
   let n = nums.length()

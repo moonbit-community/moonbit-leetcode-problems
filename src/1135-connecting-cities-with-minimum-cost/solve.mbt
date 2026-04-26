@@ -19,7 +19,7 @@ fn minimum_cost(n : Int, connections : Array[Array[Int]]) -> Int {
       let cost = key[2]
       for j = i - 1; j >= 0 && connections[j][2] > cost; j = j - 1 {
         connections[j + 1] = connections[j]
-      } else {
+      } nobreak {
         connections[j + 1] = key
       }
     }

@@ -2,7 +2,7 @@
 fn merge_and_sort(
   arr_a : Array[Int],
   arr_b : Array[Int],
-  max_size : Int
+  max_size : Int,
 ) -> Array[Int] {
   let mut result : Array[Int] = []
   for i = 0; i < arr_a.length(); i = i + 1 {

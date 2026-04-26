@@ -7,7 +7,7 @@ fn find_minimum_time_to_finish_all_jobs(jobs : Array[Int], k : Int) -> Int {
     jobs : Array[Int],
     start : Int,
     worker_times : Array[Int],
-    result : Ref[Int]
+    result : Ref[Int],
   ) {
     if start == jobs.length() {
       let max_time = max_array(worker_times)

@@ -25,7 +25,7 @@ fn dfs(
   y : Int,
   z : Int,
   i : Int,
-  j : Int
+  j : Int,
 ) -> Bool {
   let st = f(i, j)
   let vis = set.concat(@immut/list.of([st]))

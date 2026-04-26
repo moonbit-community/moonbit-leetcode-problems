@@ -21,7 +21,7 @@ fn dfs(
   node : TreeNode,
   nums : Array[Int],
   stack : Array[Int],
-  result : @hashmap.T[Int, Int]
+  result : @hashmap.T[Int, Int],
 ) -> Unit {
   let current_value = nums[node.value]
   let mut closest_ancestor = -1
